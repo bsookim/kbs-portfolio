@@ -127,6 +127,9 @@ section{position:relative}
 .st-dawn b{display:block;font-size:15px}
 .st-dawn span{font-size:12.5px;color:var(--muted);font-weight:700}
 .st-kcal{right:6%;bottom:6%;background:var(--leaf);color:#fff;border-radius:999px;padding:10px 18px;font-size:14px;transform:rotate(-8deg)}
+.hero-photo{position:absolute;left:-3%;top:5%;width:31%;aspect-ratio:1;margin:0;z-index:2;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 2px var(--ink),6px 8px 0 var(--ink);overflow:hidden;rotate:-6deg}
+.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.03)}
+.hero-photo-cap{position:absolute;left:1%;top:35%;z-index:3;background:var(--citrus);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;rotate:-8deg;box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
 .float{animation:bob 5s ease-in-out infinite}
 @keyframes bob{50%{translate:0 -8px}}
 
@@ -160,13 +163,21 @@ section{position:relative}
 .dish{background:var(--card);border-radius:var(--r-lg);overflow:hidden;border:1.5px solid var(--line);display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
 .dish:hover{transform:translateY(-6px);box-shadow:var(--shadow-2)}
 .dish-art{position:relative;aspect-ratio:16/11;display:grid;place-items:center;overflow:hidden}
-.dish-art svg{width:74%;height:auto;transition:transform .6s var(--ease)}
-.dish:hover .dish-art svg{transform:rotate(14deg) scale(1.04)}
+.dish-art > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.03);transition:transform .7s var(--ease)}
+.dish:hover .dish-art > img{transform:scale(1.06)}
+.dish-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,37,26,.28),transparent 30%,transparent 70%,rgba(19,37,26,.18));pointer-events:none}
+.dish-art .tag{z-index:2}
+/* the old illustrated plate lives on as a sticker */
+.plate-sticker{position:absolute;right:12px;bottom:-26px;width:92px;z-index:2;filter:drop-shadow(0 6px 10px rgba(19,37,26,.25));transition:transform .6s var(--ease)}
+.plate-sticker svg{width:100%;height:auto;display:block}
+.dish:hover .plate-sticker{transform:rotate(40deg)}
+.dish-art{overflow:visible}
+.dish-art > img,.dish-art::after{border-radius:inherit}
 .dish-art .tag{position:absolute;left:16px;top:16px;background:var(--ink);color:#fff;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px}
 .dish-art .tag.hot{background:var(--tomato-deep)}
 .dish-art .tag.new{background:var(--citrus);color:var(--ink)}
 .wedge{transform-box:fill-box;transform-origin:center}
-.dish-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dish-body{padding:26px 120px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
 .dish-body h3{margin:0;font-size:21px;font-weight:900;letter-spacing:-.04em}
 .dish-body p{margin:0;color:var(--muted);font-size:14.5px}
 .nut{display:flex;gap:8px;margin-top:auto;padding-top:16px;flex-wrap:wrap}
@@ -226,6 +237,11 @@ section{position:relative}
 .tl time{display:block;font-family:var(--f-num);font-weight:800;font-size:30px;letter-spacing:-.04em;margin:22px 0 4px;color:#fff}
 .tl h3{margin:0 0 6px;font-size:19px;font-weight:900;letter-spacing:-.03em}
 .tl p{margin:0;color:#B8C2B4;font-size:15px}
+.deliv .sec-head{align-items:center}
+.deliv-photo{position:relative;margin:0;width:min(420px,100%);flex:none}
+.deliv-photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r-lg);border:2px solid #3E5B47;filter:saturate(1.05) brightness(.96)}
+.deliv-photo figcaption{position:absolute;left:-14px;bottom:18px;background:var(--citrus);color:var(--ink);font-weight:900;font-size:14px;padding:8px 14px;border-radius:999px;rotate:-4deg;display:flex;gap:8px;align-items:center}
+.deliv-photo figcaption b{font-family:var(--f-num);font-weight:800}
 .deliv-note{margin-top:56px;display:flex;gap:14px;flex-wrap:wrap}
 .deliv-note span{border:1.5px solid #3E5B47;border-radius:999px;padding:10px 18px;font-weight:700;font-size:14.5px;color:#DCE4D6;display:inline-flex;gap:8px;align-items:center}
 .deliv-note svg{width:18px;height:18px;color:var(--leaf-vivid)}
@@ -279,6 +295,9 @@ section{position:relative}
 .apply-copy .eyebrow{color:var(--citrus)}
 .apply-copy .h2{color:#fff}
 .apply-copy .lead{color:#D8EDD2}
+.apply-photo{margin:34px 0 0;position:relative;max-width:460px}
+.apply-photo img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;border-radius:var(--r-lg);border:4px solid #fff;box-shadow:8px 8px 0 var(--leaf-deep);rotate:-2deg}
+.apply-photo span{position:absolute;right:-8px;top:-14px;background:var(--tomato);color:#fff;font-weight:900;font-size:13.5px;padding:7px 13px;border-radius:999px;rotate:6deg;border:2px solid var(--ink)}
 .coupon{margin-top:36px;position:relative;background:var(--citrus);color:var(--ink);border-radius:24px;padding:26px 28px;display:flex;align-items:center;gap:22px;max-width:440px;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--leaf-deep)}
 .coupon::before,.coupon::after{content:"";position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:var(--leaf)}
 .coupon::before{left:-13px}.coupon::after{right:-13px}
@@ -368,6 +387,7 @@ section{position:relative}
   .cd{grid-template-columns:1fr;padding:40px 28px}
   .faq-grid,.apply-grid{grid-template-columns:1fr;gap:36px}
   .apply{padding:80px 0}
+  .apply-photo{display:none}
   .cd-wrap{padding-bottom:80px}
 }
 @media (max-width:600px){
@@ -379,6 +399,12 @@ section{position:relative}
   .hero-meta{gap:18px;margin-top:28px;justify-content:space-between}
   .hero-meta b{font-size:24px}
   .hero-meta span{font-size:12.5px}
+  .hero-photo{width:30%;left:0;border-width:4px}
+  .hero-photo-cap{font-size:11.5px;padding:5px 10px;left:2%;top:34%}
+  .plate-sticker{width:74px;bottom:-20px}
+  .dish-body{padding-right:96px}
+  .deliv-photo figcaption{left:10px}
+  .apply-photo span{right:6px}
   .st-off{width:104px;height:104px;right:0}
   .st-off .in b{font-size:34px}
   .st-off .in span{font-size:11px}
@@ -547,6 +573,8 @@ section{position:relative}
         <path d="M64 272 A196 38 0 0 0 456 272" stroke="#43B85C" stroke-width="6" fill="none"/>
         <ellipse cx="260" cy="462" rx="120" ry="12" fill="#13251A" opacity=".12"/>
       </svg>
+      <figure class="hero-photo"><img src="img/hero-salad.webp" width="560" height="560" alt="" fetchpriority="high" decoding="async"></figure>
+      <span class="hero-photo-cap">실제 담기는 한 그릇</span>
       <div class="sticker st-off float">
         <svg class="ring" viewBox="0 0 132 132"><defs><path id="circ" d="M66 66m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text font-size="10.5" font-weight="900" fill="#13251A"><textPath href="#circ" textLength="312" lengthAdjust="spacing">FIRST ORDER · 40% OFF · GREENMEAL · </textPath></text></svg>
         <div class="in"><b>40%</b><span>첫 주문 OFF</span></div>
@@ -686,6 +714,10 @@ section{position:relative}
         <h2 class="h2" id="deliv-title">자는 동안 도착하는 새벽배송</h2>
         <p class="lead">전날 밤 주문 마감부터 아침 문 앞까지, 냉장 상태를 유지하며 배송해요.</p>
       </div>
+      <figure class="deliv-photo">
+        <img src="img/fresh-veg.webp" width="900" height="599" alt="오이, 래디시, 양상추 등 손질한 채소를 큰 볼에 담아 둔 조리대" loading="lazy" decoding="async">
+        <figcaption><b>01:00</b> 오늘 담을 채소 손질 중</figcaption>
+      </figure>
     </div>
     <div class="tl-wrap" id="timeline">
     <span class="prog" aria-hidden="true"></span>
@@ -716,7 +748,7 @@ section{position:relative}
     </div>
     <div class="reviews">
       <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>출근 전에 문 열면 바로 있어서 아침 챙기는 게 습관이 됐어요. 소스가 따로 담겨 와서 눅눅하지 않은 게 좋아요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#1E7B3C">김</span><span><b>김*윤 님</b><span>주 5회 · 1식 · 3개월째</span></span></figcaption></figure>
-      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>매주 메뉴가 바뀌니까 질리지가 않네요. 연어 포케는 거의 매주 고르고 있어요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#C2360F">박</span><span><b>박*진 님</b><span>주 3회 · 2식 · 6주째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>매주 메뉴가 바뀌니까 질리지가 않네요. 연어 샐러드는 거의 매주 고르고 있어요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#C2360F">박</span><span><b>박*진 님</b><span>주 3회 · 2식 · 6주째</span></span></figcaption></figure>
       <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>출장 주간엔 앱에서 건너뛰기만 누르면 돼서 부담이 없어요. 포장도 종이라 분리수거가 편해요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#7D4B91">이</span><span><b>이*아 님</b><span>주 5회 · 1식 · 5개월째</span></span></figcaption></figure>
       <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 4점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true" style="opacity:.25"><use href="#i-star"/></svg></div><blockquote>양이 생각보다 든든해요. 단백질 표기가 있어서 운동하는 날엔 그걸 보고 골라요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#9A6A00">최</span><span><b>최*호 님</b><span>주 5회 · 2식 · 2개월째</span></span></figcaption></figure>
       <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>혼자 살면서 채소 사면 늘 버렸는데, 이제 장바구니가 가벼워졌어요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#0F4D25">정</span><span><b>정*은 님</b><span>주 3회 · 1식 · 4주째</span></span></figcaption></figure>
@@ -774,6 +806,10 @@ section{position:relative}
         <div class="v num">40<small>%</small></div>
         <div class="d"><b>첫 주문 할인 쿠폰</b><span>신규 고객 1회 · <span class="cp-until">마감일까지</span></span></div>
       </div>
+      <figure class="apply-photo">
+        <img src="img/fresh-flatlay.webp" width="960" height="600" alt="아보카도, 키위, 라임, 민트를 도마 주변에 펼쳐 놓은 모습" loading="lazy" decoding="async">
+        <span aria-hidden="true">매일 새로 들어오는 재료</span>
+      </figure>
     </div>
 
     <div class="form-card rv">
@@ -892,17 +928,17 @@ section{position:relative}
 
   /* ---------- Menu cards ---------- */
   var DISHES = [
-    { name:"연어 아보카도 포케", desc:"생연어, 아보카도, 적양배추, 현미밥", kcal:548, pro:31, tag:"BEST", tagCls:"hot", bg:"#FFE7DA",
+    { name:"구운 연어 곡물 샐러드", img:"dish-salmon", alt:"구운 연어와 곡물, 어린잎 채소를 담은 샐러드", desc:"오븐에 구운 연어, 쿠스쿠스, 어린잎, 레몬", kcal:548, pro:31, tag:"BEST", tagCls:"hot", bg:"#FFE7DA",
       w:["#FF8A65","#C8DB6A","#8C4FA0","#FFD23F","#7BC95E"], top:"#F4A28C" },
-    { name:"그릴드 치킨 시저볼", desc:"허브 닭가슴살, 로메인, 파르메산, 크루통", kcal:486, pro:38, tag:"고단백", tagCls:"", bg:"#EAF4E4",
+    { name:"그릴드 치킨 시저볼", img:"dish-chicken", alt:"닭가슴살 구이와 크루통을 올린 시저 샐러드", desc:"허브 닭가슴살, 로메인, 파르메산, 크루통", kcal:486, pro:38, tag:"고단백", tagCls:"", bg:"#EAF4E4",
       w:["#7BC95E","#E7B377","#5DBB4A","#FFF3C9","#E7B377"], top:"#D9A064" },
-    { name:"두부 된장 곡물볼", desc:"구운 두부, 된장 드레싱, 퀴노아, 시금치", kcal:452, pro:24, tag:"NEW", tagCls:"new", bg:"#FFF3CC",
+    { name:"채소 퀴노아 곡물볼", img:"dish-quinoa", alt:"구운 채소와 고수를 올린 퀴노아 볼", desc:"퀴노아, 구운 가지·파프리카, 고수, 된장 드레싱", kcal:452, pro:24, tag:"NEW", tagCls:"new", bg:"#FFF3CC",
       w:["#F3E2B8","#3E9A3A","#FF8A3D","#E9C58A","#8FD17B"], top:"#F3E2B8" },
-    { name:"불고기 현미 도시락", desc:"저당 불고기, 현미밥, 나물 3종", kcal:589, pro:33, tag:"든든", tagCls:"", bg:"#F6E6DA",
+    { name:"불고기 현미 비빔볼", img:"dish-bulgogi", alt:"나물과 불고기, 달걀 노른자를 올린 비빔밥", desc:"저당 불고기, 현미밥, 나물 3종, 노른자", kcal:589, pro:33, tag:"든든", tagCls:"", bg:"#F6E6DA",
       w:["#8A5A2B","#F3EDE0","#5DBB4A","#FF8A3D","#C9A060"], top:"#A86B3C" },
-    { name:"새우 콥 샐러드", desc:"통새우, 삶은 달걀, 옥수수, 방울토마토", kcal:421, pro:29, tag:"가벼움", tagCls:"", bg:"#E4F0FA",
+    { name:"그릴드 새우 샐러드", img:"dish-shrimp", alt:"구운 통새우와 라임, 토마토를 올린 샐러드", desc:"직화 통새우, 방울토마토, 라임, 어린잎", kcal:421, pro:29, tag:"가벼움", tagCls:"", bg:"#E4F0FA",
       w:["#FFB8A0","#FFD23F","#E5461F","#7BC95E","#FFFDF5"], top:"#FF9E80" },
-    { name:"병아리콩 팔라펠 랩볼", desc:"팔라펠, 후무스, 오이, 토마토 살사", kcal:507, pro:21, tag:"비건", tagCls:"", bg:"#EFE3F4",
+    { name:"병아리콩 팔라펠 플레이트", img:"dish-falafel", alt:"팔라펠과 후무스, 토마토 샐러드를 담은 접시", desc:"팔라펠, 후무스, 타불레, 토마토 살사", kcal:507, pro:21, tag:"비건", tagCls:"", bg:"#EFE3F4",
       w:["#C99A5B","#E9C58A","#43B85C","#E5461F","#F3E2B8"], top:"#B8864A" }
   ];
   function arc(cx, cy, r, a0, a1){
@@ -936,7 +972,9 @@ section{position:relative}
   var grid = $("#menuGrid");
   grid.innerHTML = DISHES.map(function(d, i){
     return '<article class="dish rv">'+
-      '<div class="dish-art" style="background:'+d.bg+'"><span class="tag '+d.tagCls+'">'+d.tag+'</span>'+dishSVG(d,i)+'</div>'+
+      '<div class="dish-art" style="background:'+d.bg+'"><span class="tag '+d.tagCls+'">'+d.tag+'</span>'+
+      '<img src="img/'+d.img+'.webp" width="720" height="495" alt="'+d.alt+'" loading="lazy" decoding="async">'+
+      '<span class="plate-sticker" aria-hidden="true">'+dishSVG(d,i)+'</span></div>'+
       '<div class="dish-body"><h3>'+d.name+'</h3><p>'+d.desc+'</p>'+
       '<div class="nut"><span><b>'+d.kcal.toLocaleString("ko-KR")+'</b>kcal</span><span class="p">단백질 <b>'+d.pro+'</b>g</span></div></div>'+
       '</article>';
@@ -1088,7 +1126,7 @@ section{position:relative}
     anime.set(".bowl-body, .bg-disc", { opacity: 0 });
     anime.set(ings, { opacity: 0, translateY: -140, scale: .4, rotate: function(){ return anime.random(-40, 40); } });
     anime.set(flys, { opacity: 0, scale: 0 });
-    anime.set(".hero-art .sticker", { opacity: 0, scale: .6 });
+    anime.set(".hero-art .sticker, .hero-photo, .hero-photo-cap", { opacity: 0, scale: .6 });
     anime.set(".hx", { opacity: 0, translateY: 26 });
     anime.set(".u-path", { strokeDasharray: 320, strokeDashoffset: 320 });
     var tl = anime.timeline({ easing: "easeOutExpo" });
@@ -1098,7 +1136,7 @@ section{position:relative}
       .add({ targets: ings, opacity: [0,1], translateY: [-140,0], scale: [.4,1], rotate: 0, duration: 900,
              easing: "easeOutElastic(1, .7)", delay: anime.stagger(70) }, 520)
       .add({ targets: flys, opacity: [0,1], scale: [0,1], duration: 700, easing: "easeOutBack", delay: anime.stagger(90) }, 1100)
-      .add({ targets: ".hero-art .sticker", opacity: [0,1], scale: [.6,1], duration: 700, easing: "easeOutElastic(1, .6)", delay: anime.stagger(120) }, 1200)
+      .add({ targets: ".hero-photo, .hero-art .sticker, .hero-photo-cap", opacity: [0,1], scale: [.6,1], duration: 700, easing: "easeOutElastic(1, .6)", delay: anime.stagger(120) }, 1200)
       .add({ targets: ".u-path", strokeDashoffset: [320, 0], duration: 700, easing: "easeInOutQuad" }, 900);
     // idle float for garnish
     tl.finished.then(function(){
@@ -1139,10 +1177,13 @@ section{position:relative}
 <!-- kbs-backlink -->
 <a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
 <style>
-.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .kbs-back:hover{transform:translateY(-2px)}
 .kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
 @media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
 </style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
 </body>
 </html>

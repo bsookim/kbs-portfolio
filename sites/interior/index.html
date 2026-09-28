@@ -87,7 +87,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;position:relative}
 .hero__meta{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:10px 0;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:clamp(28px,3.4vw,48px)}
 .hero__meta span:nth-child(2){font-family:var(--latin);font-style:italic;text-transform:none;letter-spacing:.02em;font-size:16px}
-.hero__text{grid-column:1/9;grid-row:2;position:relative;z-index:3;padding-bottom:clamp(8px,4vw,64px)}
+.hero__text{grid-column:1/9;grid-row:2;position:relative;z-index:3;padding-bottom:clamp(8px,8.5vw,132px)}
 .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,6.3vw,104px);line-height:1.08;letter-spacing:-.045em;margin:0 0 36px}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .line>span{display:inline-block}
@@ -103,7 +103,13 @@ button,input,select,textarea{font:inherit;color:inherit}
 .link-line{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:15px;border-bottom:1px solid var(--ink);padding-top:4px}
 .hero__art{grid-column:7/13;grid-row:2;position:relative;z-index:1}
 .hero__frame{position:relative;aspect-ratio:600/700;overflow:hidden;background:var(--lime-2)}
-.hero__frame svg{width:100%;height:100%;will-change:transform}
+.hero__frame svg{width:100%;height:100%}
+/* photography: one grade for every photo so stock shots sit in the beige/terra palette */
+.ph{display:block;width:100%;height:100%;object-fit:cover;filter:sepia(.14) saturate(.86) contrast(1.04) brightness(1.01)}
+.hero__frame .ph{position:absolute;left:0;top:-5%;height:110%;object-position:58% 50%;will-change:transform}
+.hero__frame::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(30,27,24,.34) 0%,rgba(30,27,24,0) 26%,rgba(30,27,24,0) 72%,rgba(30,27,24,.22) 100%)}
+.hero__draft{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero__tag{position:absolute;left:20px;top:18px;z-index:2;font-size:11px;letter-spacing:.18em;color:var(--ivory)}
 .hero__caption{position:absolute;left:-1px;bottom:-1px;background:var(--lime);padding:14px 20px 0 0;font-size:12px;color:var(--stone);letter-spacing:.06em}
 .hero__caption b{display:block;font-family:var(--serif);color:var(--ink);font-size:15px;letter-spacing:-.01em}
 .hero__badge{position:absolute;right:clamp(-20px,-1.5vw,0px);top:-44px;z-index:4;width:118px;height:118px;border-radius:50%;background:var(--terra);color:var(--ivory);display:grid;place-items:center;text-align:center;line-height:1.1}
@@ -153,7 +159,7 @@ section{position:relative}
 .principles p{margin:0;font-size:14px;color:var(--ink-2)}
 .stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid var(--rule)}
 .stat{padding:28px 20px 0 0}
-.stat__n{margin:0;font-family:var(--latin);font-weight:400;font-size:clamp(64px,8.5vw,136px);line-height:.9;letter-spacing:-.03em;display:flex;align-items:baseline;gap:6px}
+.stat__n{margin:0;font-family:var(--latin);font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;font-weight:400;font-size:clamp(64px,8.5vw,136px);line-height:.9;letter-spacing:-.03em;display:flex;align-items:baseline;gap:6px}
 .stat__n small{font-family:var(--serif);font-size:18px;font-weight:700;letter-spacing:0;color:var(--terra)}
 .stat p:not(.stat__n){margin:12px 0 0;font-size:13px;color:var(--stone);letter-spacing:.04em}
 
@@ -174,9 +180,10 @@ section{position:relative}
 .work:nth-child(4) .work__media{aspect-ratio:16/10}
 .work:nth-child(5) .work__media{aspect-ratio:5/4}
 .work:nth-child(6) .work__media{aspect-ratio:3/4}
-.work__media svg{width:100%;height:100%;transition:transform 1.2s var(--ease)}
-.work:hover .work__media svg{transform:scale(1.04)}
-.work__idx{position:absolute;top:-.52em;right:-.06em;z-index:2;font-family:var(--latin);font-size:clamp(72px,8vw,128px);line-height:1;font-style:italic;font-weight:300;color:var(--ink);mix-blend-mode:multiply;pointer-events:none}
+.work__media .ph{transition:transform 1.4s var(--ease),filter .9s var(--ease)}
+.work__media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(176,81,43,.06),rgba(34,31,27,.16));mix-blend-mode:multiply}
+.work:hover .work__media .ph{transform:scale(1.035);filter:sepia(.06) saturate(.95) contrast(1.04) brightness(1.02)}
+.work__idx{position:absolute;top:-.74em;right:-.04em;z-index:2;font-family:var(--latin);font-size:clamp(72px,8vw,128px);line-height:1;font-style:italic;font-weight:300;color:var(--ink);pointer-events:none}
 .work__cap{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-top:20px;align-items:baseline}
 .work__cap h3{font-family:var(--serif);font-size:clamp(20px,1.9vw,28px);letter-spacing:-.035em;margin:0;line-height:1.3}
 .work__loc{font-size:12px;color:var(--stone);letter-spacing:.08em;white-space:nowrap}
@@ -287,7 +294,7 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
 .range:focus-visible::-moz-range-thumb{outline:2px solid var(--terra);outline-offset:3px}
 .range-scale{display:flex;justify-content:space-between;font-size:11px;color:var(--stone);letter-spacing:.06em}
 .agree{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:22px}
-.check{display:flex;gap:14px;align-items:flex-start;cursor:pointer;min-height:44px;font-size:14px}
+.agree .check{display:flex;justify-content:flex-start;gap:14px;align-items:flex-start;cursor:pointer;min-height:44px;font-size:14px;letter-spacing:0;font-weight:400;color:var(--ink);margin:0}
 .check input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1px solid var(--ink);margin:2px 0 0;flex:none;display:grid;place-items:center;cursor:pointer;background:transparent}
 .check input::after{content:"";width:10px;height:6px;border-left:2px solid var(--ivory);border-bottom:2px solid var(--ivory);transform:rotate(-45deg) translate(1px,-1px);opacity:0}
 .check input:checked{background:var(--terra);border-color:var(--terra)}
@@ -335,7 +342,7 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
 @media (max-width:1080px){
   .nav,.hd__cta{display:none}
   .menu-btn{display:block}
-  .hero__text{grid-column:1/-1;grid-row:2}
+  .hero__text{grid-column:1/-1;grid-row:2;padding-bottom:0}
   .hero__art{grid-column:4/-1;grid-row:3;margin-top:40px}
   .scroll-cue{display:none}
   .sec-head h2{grid-column:1/-1}
@@ -364,6 +371,7 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
   .hero__art{grid-column:2/-1;margin-top:48px}
   .hero__badge{width:96px;height:96px;top:-40px;right:auto;left:-32px}
   .hero__badge strong{font-size:26px}
+  .hero__tag{left:auto;right:14px;top:14px;font-size:10px}
   .hero__num{font-size:180px;bottom:auto;top:52%}
   .studio__body{grid-template-columns:1fr;gap:18px}
   .principles{grid-template-columns:1fr}
@@ -499,61 +507,21 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
           <div><strong>312</strong><small>완공 현장</small></div>
         </div>
         <div class="hero__frame" data-hero-frame>
-          <svg viewBox="0 0 600 760" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치형 문 너머로 햇살이 드는 거실과 라운지 체어를 그린 일러스트">
-            <g data-parallax>
-            <rect width="600" height="800" fill="url(#g-wall-stone)"/>
-            <path d="M0 0h600v70H0z" fill="#DCD3C4"/>
-            <path d="M0 70h600" stroke="#BFB3A0" stroke-width="2"/>
-            <!-- plant shadow on wall -->
-            <g fill="#8C8273" opacity=".13">
-              <path d="M40 180c60-10 90 40 100 90-40-10-80-40-100-90z"/><path d="M70 300c50-30 100 0 120 40-50 10-90 0-120-40z"/><path d="M20 260c30 20 40 60 30 100-30-20-40-60-30-100z"/><path d="M110 150c30 30 30 80 10 110-20-30-30-70-10-110z"/>
+          <img class="ph" src="img/hero-master-suite.webp" width="960" height="640" fetchpriority="high" decoding="async" data-parallax
+               alt="월넛 무늬목 벽 사이로 간접등이 감싸는 침실, 흰 리넨 커튼 너머로 빛이 드는 호텔형 안방">
+          <svg class="hero__draft" viewBox="0 0 600 700" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="#F6F1E8" stroke-width="1" opacity=".8">
+              <path d="M208 96h232M208 90v12M440 90v12"/>
+              <path d="M566 150v420M560 150h12M560 570h12"/>
             </g>
-            <!-- arch opening -->
-            <path d="M210 640V300a150 150 0 0 1 300 0v340z" fill="#CFC3AF"/>
-            <path d="M226 640V304a134 134 0 0 1 268 0v336z" fill="url(#g-sky)"/>
-            <!-- window in back room -->
-            <g stroke="#FFFFFF" stroke-opacity=".75" fill="none" stroke-width="2">
-              <rect x="300" y="300" width="120" height="200"/><path d="M360 300v200M300 400h120"/>
-            </g>
-            <polygon points="300,500 420,500 470,640 330,640" fill="#FFF7E7" opacity=".55"/>
-            <path d="M226 560h268v80H226z" fill="#E9D2AE" opacity=".6"/>
-            <!-- sunlight beam on wall -->
-            <polygon points="520,120 600,120 600,420 560,420" fill="#FFF3DC" opacity=".35"/>
-            <!-- floor -->
-            <rect y="640" width="600" height="160" fill="url(#g-floor-stone)"/>
-            <path d="M0 640h600" stroke="#9D917E" stroke-width="2"/>
-            <g stroke="#998C78" stroke-opacity=".35"><path d="M0 700h600M0 760h600M150 640l-40 160M330 640l10 160M500 640l60 160"/></g>
-            <polygon points="226,640 494,640 560,800 170,800" fill="#FFF5E2" opacity=".28"/>
-            <!-- lounge chair -->
-            <ellipse cx="170" cy="705" rx="130" ry="16" fill="url(#g-shadow)"/>
-            <path d="M70 690c-4-70 10-120 60-140 40-14 90-6 120 20 20 20 22 70 16 120z" fill="url(#g-terra)"/>
-            <path d="M92 690c0-40 20-70 70-72 50-2 80 20 90 72z" fill="#D77E55"/>
-            <path d="M84 690l-12 26M250 690l14 26" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
-            <!-- side table + vase -->
-            <rect x="330" y="640" width="70" height="4" fill="#2A2420"/>
-            <path d="M338 644l-6 60M392 644l6 60" stroke="#2A2420" stroke-width="3"/>
-            <path d="M352 640c-6-24 0-40 13-46 13 6 19 22 13 46z" fill="#EDE4D5"/>
-            <path d="M365 596c-6-40-30-60-50-76M365 596c10-44 36-62 56-70M365 596c0-40 4-70 0-96" stroke="#5B4A38" stroke-width="1.4" fill="none"/>
-            <g fill="#7C6B4E"><ellipse cx="318" cy="522" rx="7" ry="3" transform="rotate(-30 318 522)"/><ellipse cx="418" cy="530" rx="7" ry="3" transform="rotate(20 418 530)"/><ellipse cx="366" cy="504" rx="3" ry="7"/><ellipse cx="336" cy="546" rx="6" ry="2.5" transform="rotate(-40 336 546)"/><ellipse cx="398" cy="548" rx="6" ry="2.5" transform="rotate(30 398 548)"/></g>
-            <!-- pendant -->
-            <path d="M120 70v150" stroke="#2A2420" stroke-width="1.2"/>
-            <path d="M84 250a36 36 0 0 1 72 0z" fill="url(#g-brass)"/>
-            <circle cx="120" cy="262" r="120" fill="url(#g-glow)" opacity=".7"/>
-            </g>
-            <!-- drafting overlay -->
-            <g fill="none" stroke="#221F1B" stroke-width=".9" opacity=".55">
-              <path d="M210 250h300M210 244v12M510 244v12"/>
-              <path d="M540 300v340M534 300h12M534 640h12"/>
-              <path d="M226 640V304a134 134 0 0 1 268 0v336" stroke-dasharray="3 5"/>
-            </g>
-            <g font-family="Pretendard, sans-serif" font-size="11" fill="#221F1B" opacity=".75" letter-spacing="1.5">
-              <text x="340" y="242">2,400</text>
-              <text x="552" y="476" transform="rotate(90 552 476)">2,100</text>
-              <text x="28" y="44">A-01 · LIVING / 1:50</text>
+            <g font-family="Pretendard, sans-serif" font-size="11" fill="#F6F1E8" letter-spacing="1.5">
+              <text x="304" y="88">3,200</text>
+              <text x="578" y="380" transform="rotate(90 578 380)">2,400</text>
             </g>
           </svg>
+          <span class="hero__tag" aria-hidden="true">A-04 · MASTER / 1:50</span>
         </div>
-        <p class="hero__caption"><b>범어동 34평, 거실 아치 게이트</b>Project 01 · 2026</p>
+        <p class="hero__caption"><b>신천동 45평, 호텔처럼 비운 안방</b>Project 04 · 2026</p>
       </div>
     </div>
   </div>
@@ -629,37 +597,13 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
       <article class="work">
         <span class="work__idx" aria-hidden="true">01</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치 게이트와 리넨 소파가 있는 거실 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-warm)"/>
-            <polygon points="40,110 120,110 60,400 -40,400" fill="#FFF4DE" opacity=".35"/>
-            <path d="M150 400V210a70 70 0 0 1 140 0v190z" fill="url(#g-sky)"/>
-            <path d="M150 400V210a70 70 0 0 1 140 0v190" fill="none" stroke="#B89A76" stroke-width="6" opacity=".45"/>
-            <path d="M192 400V262h56v138" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
-            <rect y="400" width="400" height="100" fill="url(#g-floor-oak)"/>
-            <path d="M0 400h400" stroke="#7D5733" stroke-width="2"/>
-            <g stroke="#6E4C2C" stroke-opacity=".25"><path d="M0 428h400M0 458h400M0 488h400"/></g>
-            <polygon points="-40,400 60,400 10,500 -90,500" fill="#FFF4DE" opacity=".22"/>
-            <ellipse cx="150" cy="404" rx="130" ry="10" fill="url(#g-shadow)"/>
-            <rect x="30" y="330" width="235" height="70" rx="22" fill="url(#g-linen)"/>
-            <rect x="46" y="302" width="100" height="52" rx="18" fill="#EFE6D8"/>
-            <rect x="150" y="302" width="100" height="52" rx="18" fill="#E6DAC7"/>
-            <rect x="196" y="312" width="42" height="38" rx="10" fill="url(#g-terra)" transform="rotate(-9 217 331)"/>
-            <path d="M44 398l-4 12M250 398l4 12" stroke="#4E3320" stroke-width="4" stroke-linecap="round"/>
-            <ellipse cx="322" cy="368" rx="38" ry="8" fill="url(#g-walnut)"/>
-            <rect x="318" y="370" width="8" height="32" fill="#4E3320"/>
-            <path d="M312 366c-4-18 0-30 8-34 8 4 12 16 8 34z" fill="#E0D5C2"/>
-            <path d="M320 334c-4-26-18-38-30-46M320 334c6-28 20-38 34-42" stroke="#5B4A38" stroke-width="1.2" fill="none"/>
-            <path d="M366 400V190" stroke="#2A2622" stroke-width="2"/>
-            <path d="M341 200h50l-10-30h-30z" fill="url(#g-brass)"/>
-            <circle cx="366" cy="214" r="80" fill="url(#g-glow)"/>
-            <g fill="none" stroke="#221F1B" stroke-width=".8" opacity=".5"><path d="M150 170h140M150 164v12M290 164v12"/></g>
-            <text x="204" y="162" font-family="Pretendard, sans-serif" font-size="9" fill="#221F1B" opacity=".6" letter-spacing="1">1,400</text>
-          </svg>
+          <img class="ph" src="img/work-01-living.webp" width="1024" height="683" loading="lazy" decoding="async" style="object-position:40% 60%"
+               alt="오크 원목 마루 위에 회색 패브릭 소파와 낮은 화이트 테이블을 둔 밝은 거실">
         </div>
         <div class="work__cap">
           <h3>빛이 머무는 거실, 범어동 34평</h3>
           <span class="work__loc">수성구 범어동</span>
-          <p>남향 거실 창을 살리려고 주방 벽을 헐고 아치 게이트로 공간을 나눴습니다.</p>
+          <p>남향 창을 살리려고 소파를 창 쪽으로 돌리고, 바닥은 오크 원목 마루로 다시 깔았습니다.</p>
           <dl class="spec"><div><dt>평수</dt><dd>34평</dd></div><div><dt>유형</dt><dd>아파트 전체</dd></div><div><dt>기간</dt><dd>6주</dd></div><div><dt>예산</dt><dd>5~6천만원</dd></div></dl>
         </div>
       </article>
@@ -667,30 +611,13 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
       <article class="work">
         <span class="work__idx" aria-hidden="true">02</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="테라코타 플루팅 카운터와 펜던트 조명이 있는 카페 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-dark)"/>
-            <g stroke="#C9A36B" stroke-opacity=".5"><path d="M40 160h320M40 230h320"/></g>
-            <g fill="#E9DFCD"><rect x="60" y="140" width="14" height="20" rx="2"/><rect x="84" y="146" width="12" height="14" rx="2"/><rect x="120" y="136" width="10" height="24" rx="1"/><rect x="250" y="142" width="18" height="18" rx="9"/><rect x="290" y="138" width="12" height="22" rx="2"/><rect x="316" y="146" width="14" height="14" rx="2"/></g>
-            <g fill="#C98C5A"><rect x="70" y="208" width="22" height="22" rx="3"/><rect x="160" y="212" width="30" height="18" rx="2"/><rect x="300" y="206" width="16" height="24" rx="2"/></g>
-            <g stroke="#8C7B63" stroke-width="1"><path d="M110 0v120M200 0v90M290 0v120"/></g>
-            <g fill="url(#g-brass)"><path d="M92 120a18 18 0 0 1 36 0z"/><path d="M182 90a18 18 0 0 1 36 0z"/><path d="M272 120a18 18 0 0 1 36 0z"/></g>
-            <circle cx="110" cy="128" r="70" fill="url(#g-glow)" opacity=".75"/><circle cx="200" cy="98" r="70" fill="url(#g-glow)" opacity=".75"/><circle cx="290" cy="128" r="70" fill="url(#g-glow)" opacity=".75"/>
-            <rect y="420" width="400" height="80" fill="#2A241F"/>
-            <rect x="30" y="300" width="340" height="120" fill="url(#p-flute)"/>
-            <rect x="22" y="290" width="356" height="12" fill="#E8E0D2"/>
-            <rect x="22" y="302" width="356" height="4" fill="#000" opacity=".2"/>
-            <path d="M300 290v-30h8v12" stroke="#C9A36B" stroke-width="3" fill="none"/>
-            <rect x="90" y="270" width="30" height="20" rx="3" fill="#EFE7DA"/><rect x="130" y="276" width="18" height="14" rx="2" fill="#EFE7DA"/>
-            <g stroke="#C9A36B" stroke-width="3" fill="none"><path d="M80 500v-60M110 500v-60M70 440h50"/><path d="M270 500v-60M300 500v-60M260 440h50"/></g>
-            <ellipse cx="95" cy="436" rx="26" ry="6" fill="#D7B37C"/><ellipse cx="285" cy="436" rx="26" ry="6" fill="#D7B37C"/>
-            <text x="30" y="56" font-family="Cormorant Garamond, serif" font-style="italic" font-size="30" fill="#E9DFCD" opacity=".9">ohusesi</text>
-            <text x="30" y="76" font-family="Pretendard, sans-serif" font-size="9" letter-spacing="3" fill="#C9A36B">BAKERY &amp; COFFEE</text>
-          </svg>
+          <img class="ph" src="img/work-02-cafe.webp" width="960" height="640" loading="lazy" decoding="async" style="object-position:30% 50%"
+               alt="벽돌 벽과 가죽 벤치, 원목 원형 테이블이 놓인 따뜻한 조명의 카페 내부">
         </div>
         <div class="work__cap">
           <h3>빵 굽는 카페 ‘오후세시’</h3>
           <span class="work__loc">달서구 상인동</span>
-          <p>테라코타 플루팅 카운터 하나로 가게 인상을 정했습니다.</p>
+          <p>벽돌 한 면과 가죽 벤치, 낮게 내린 조명으로 오래 앉아 있고 싶은 자리를 만들었습니다.</p>
           <dl class="spec"><div><dt>평수</dt><dd>22평</dd></div><div><dt>유형</dt><dd>상가·카페</dd></div><div><dt>기간</dt><dd>5주</dd></div><div><dt>예산</dt><dd>4천만원대</dd></div></dl>
         </div>
       </article>
@@ -698,28 +625,8 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
       <article class="work">
         <span class="work__idx" aria-hidden="true">03</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="세이지색 벽과 아일랜드 식탁이 있는 주방 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-sage)"/>
-            <rect x="230" y="70" width="130" height="170" fill="url(#g-sky)"/>
-            <g stroke="#F6F1E8" stroke-width="5" fill="none"><rect x="230" y="70" width="130" height="170"/><path d="M295 70v170M230 155h130"/></g>
-            <polygon points="230,240 360,240 330,420 170,420" fill="#FFF6E4" opacity=".3"/>
-            <rect x="30" y="60" width="170" height="110" fill="#E9E4D6"/>
-            <g stroke="#B5B09E"><path d="M87 60v110M143 60v110"/></g>
-            <g stroke="#9A7641" stroke-width="3" stroke-linecap="round"><path d="M76 150v12M98 150v12M132 150v12M154 150v12"/></g>
-            <rect x="30" y="250" width="340" height="12" fill="#F2EEE6"/>
-            <rect x="30" y="262" width="340" height="120" fill="#D9D3C3"/>
-            <g stroke="#B5AE9A"><path d="M115 262v120M200 262v120M285 262v120"/></g>
-            <path d="M110 250v-40c0-12 20-12 20 0" stroke="#9A7641" stroke-width="3" fill="none"/>
-            <rect y="382" width="400" height="118" fill="url(#g-floor-oak)"/>
-            <rect x="60" y="340" width="280" height="14" fill="#F4F1EA"/>
-            <rect x="72" y="354" width="256" height="100" fill="url(#g-walnut)"/>
-            <g stroke="#3A2616" stroke-opacity=".5"><path d="M72 380h256M72 410h256"/></g>
-            <ellipse cx="200" cy="460" rx="160" ry="10" fill="url(#g-shadow)"/>
-            <path d="M160 340c0-18 12-26 30-26s30 8 30 26z" fill="#E8DECB"/>
-            <g fill="#C66A42"><circle cx="182" cy="320" r="7"/><circle cx="196" cy="316" r="7"/><circle cx="208" cy="322" r="6"/></g>
-            <path d="M280 340v-22h14v22" fill="#EFE7DA"/>
-            <text x="30" y="40" font-family="Pretendard, sans-serif" font-size="10" fill="#4A443C" letter-spacing="2" opacity=".7">K-03 · KITCHEN</text>
-          </svg>
+          <img class="ph" src="img/work-03-kitchen.webp" width="960" height="641" loading="lazy" decoding="async" style="object-position:62% 50%"
+               alt="창가 빛이 드는 화이트 상판 주방, 커피 드리퍼와 작은 화분이 놓인 조리대">
         </div>
         <div class="work__cap">
           <h3>주방과 욕실만, 칠곡 25평</h3>
@@ -732,26 +639,8 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
       <article class="work">
         <span class="work__idx" aria-hidden="true">04</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치형 헤드보드 침대와 리넨 커튼이 있는 침실 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-rose)"/>
-            <rect x="0" y="60" width="96" height="340" fill="url(#g-curtain)"/>
-            <rect x="0" y="54" width="110" height="6" fill="#9A7641"/>
-            <polygon points="96,90 140,90 200,400 96,400" fill="#FFF3DF" opacity=".28"/>
-            <path d="M140 330V210a90 90 0 0 1 180 0v120z" fill="#B97E63"/>
-            <path d="M152 330V212a78 78 0 0 1 156 0v118z" fill="#C98F72"/>
-            <rect y="400" width="400" height="100" fill="url(#p-herring)"/>
-            <ellipse cx="230" cy="440" rx="190" ry="36" fill="#E6D8C4" opacity=".85"/>
-            <rect x="120" y="320" width="220" height="80" rx="10" fill="url(#g-linen)"/>
-            <path d="M120 350c60-12 150-12 220 0v50H120z" fill="#D9C8B0"/>
-            <rect x="150" y="296" width="70" height="34" rx="14" fill="#F4EDE2"/>
-            <rect x="238" y="296" width="70" height="34" rx="14" fill="#F4EDE2"/>
-            <rect x="200" y="310" width="56" height="28" rx="12" fill="url(#g-terra)"/>
-            <rect x="350" y="340" width="44" height="60" fill="url(#g-walnut)"/>
-            <path d="M372 340v-44" stroke="#2A2420" stroke-width="2"/>
-            <path d="M356 300a16 16 0 0 1 32 0z" fill="#F1E6D2"/>
-            <circle cx="372" cy="300" r="70" fill="url(#g-glow)" opacity=".8"/>
-            <g fill="none" stroke="#221F1B" stroke-width=".8" opacity=".45"><path d="M140 180h180M140 174v12M320 174v12"/></g>
-          </svg>
+          <img class="ph" src="img/work-04-bedroom.webp" width="1024" height="576" loading="lazy" decoding="async" style="object-position:62% 50%"
+               alt="월넛 무늬목 헤드월과 간접 조명, 붙박이 협탁이 있는 침실">
         </div>
         <div class="work__cap">
           <h3>세 아이가 자라는 집, 신천동 45평</h3>
@@ -764,61 +653,22 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
       <article class="work">
         <span class="work__idx" aria-hidden="true">05</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="우드 슬랫 벽과 거울, 리포머 기구가 있는 필라테스 스튜디오 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-stone)"/>
-            <rect x="0" y="40" width="120" height="360" fill="url(#p-slat)"/>
-            <rect x="140" y="80" width="110" height="300" fill="url(#g-mirror)"/>
-            <rect x="262" y="80" width="110" height="300" fill="url(#g-mirror)"/>
-            <g stroke="#FFFFFF" stroke-opacity=".7" stroke-width="10"><path d="M170 120l40 -30M292 140l50 -40"/></g>
-            <path d="M140 80h232v300H140z M256 80v300" fill="none" stroke="#B6AB98" stroke-width="2"/>
-            <rect y="400" width="400" height="100" fill="url(#g-floor-oak)"/>
-            <path d="M0 400h400" stroke="#6E4C2C" stroke-width="2"/>
-            <circle cx="60" cy="40" r="90" fill="url(#g-glow)" opacity=".6"/>
-            <g>
-              <ellipse cx="200" cy="462" rx="170" ry="10" fill="url(#g-shadow)"/>
-              <rect x="50" y="420" width="300" height="10" rx="4" fill="#E9E1D2"/>
-              <rect x="120" y="408" width="90" height="14" rx="6" fill="url(#g-terra)"/>
-              <path d="M60 430v26M340 430v26M340 420v-50" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
-              <path d="M320 372h40" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
-              <path d="M130 408c20-40 50-60 80-60" stroke="#221F1B" stroke-width=".8" fill="none" stroke-dasharray="3 4" opacity=".5"/>
-            </g>
-            <text x="150" y="66" font-family="Pretendard, sans-serif" font-size="10" fill="#4A443C" letter-spacing="2" opacity=".7">STUDIO · 2F</text>
-          </svg>
+          <img class="ph" src="img/work-05-office.webp" width="960" height="640" loading="lazy" decoding="async" style="object-position:50% 50%"
+               alt="헤링본 마루와 노출 천장, 큰 창이 있는 사무실 라운지와 회의 테이블">
         </div>
         <div class="work__cap">
-          <h3>필라테스 스튜디오 ‘코어룸’</h3>
+          <h3>디자인 스튜디오 사무실 ‘라인앤코’</h3>
           <span class="work__loc">중구 삼덕동</span>
-          <p>층간 소음 민원 이력이 있던 2층이라 바닥 방진부터 다시 깔았습니다.</p>
-          <dl class="spec"><div><dt>평수</dt><dd>30평</dd></div><div><dt>유형</dt><dd>상가·스튜디오</dd></div><div><dt>기간</dt><dd>4주</dd></div><div><dt>예산</dt><dd>3천만원대</dd></div></dl>
+          <p>노출 천장은 살리고, 헤링본 마루 한 판으로 라운지와 회의 공간을 이었습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>38평</dd></div><div><dt>유형</dt><dd>사무실</dd></div><div><dt>기간</dt><dd>4주</dd></div><div><dt>예산</dt><dd>3천만원대</dd></div></dl>
         </div>
       </article>
 
       <article class="work">
         <span class="work__idx" aria-hidden="true">06</span>
         <div class="work__media" data-reveal>
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="원형 식탁과 벤트우드 의자, 돔 펜던트가 있는 신혼집 다이닝 일러스트">
-            <rect width="400" height="500" fill="url(#g-wall-warm)"/>
-            <rect x="250" y="80" width="110" height="140" fill="#F5EEE3"/>
-            <rect x="262" y="92" width="86" height="116" fill="url(#g-wall-rose)"/>
-            <circle cx="305" cy="140" r="26" fill="url(#g-terra)" opacity=".85"/>
-            <path d="M262 190c20-20 60-24 86-6v24h-86z" fill="#9A7B5E" opacity=".6"/>
-            <path d="M200 0v120" stroke="#2A2420" stroke-width="1.2"/>
-            <path d="M140 170a60 60 0 0 1 120 0z" fill="#F0E8DB"/>
-            <path d="M140 170h120" stroke="#C9B9A0" stroke-width="2"/>
-            <ellipse cx="200" cy="180" rx="110" ry="60" fill="url(#g-glow)" opacity=".9"/>
-            <rect y="410" width="400" height="90" fill="url(#g-floor-oak)"/>
-            <path d="M0 410h400" stroke="#7D5733" stroke-width="2"/>
-            <ellipse cx="200" cy="450" rx="160" ry="12" fill="url(#g-shadow)"/>
-            <ellipse cx="200" cy="330" rx="120" ry="18" fill="url(#g-walnut)"/>
-            <path d="M200 348v96M170 444h60" stroke="#4E3320" stroke-width="8" stroke-linecap="round"/>
-            <g fill="none" stroke="#2A2420" stroke-width="3" stroke-linecap="round">
-              <path d="M58 450V360c0-40 40-40 40 0M58 384h52M68 384v66M104 384v66"/>
-              <path d="M342 450V360c0-40-40-40-40 0M342 384h-52M332 384v66M296 384v66"/>
-            </g>
-            <path d="M176 330c-4-14 0-22 6-26 6 4 10 12 6 26z" fill="#E8DDCA"/>
-            <path d="M182 304c-2-20 8-34 18-40M182 304c-8-16-18-22-28-24" stroke="#5B4A38" stroke-width="1.2" fill="none"/>
-            <circle cx="226" cy="324" r="8" fill="#EFE7DA"/><circle cx="244" cy="326" r="6" fill="#EFE7DA"/>
-          </svg>
+          <img class="ph" src="img/work-06-dining.webp" width="1024" height="683" loading="lazy" decoding="async" style="object-position:28% 50%"
+               alt="리넨 커튼이 드리운 창가의 원목 식탁과 철제 의자, 샹들리에가 있는 다이닝">
         </div>
         <div class="work__cap">
           <h3>둘이 사는 첫 집, 만촌동 24평</h3>
@@ -906,7 +756,7 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
         <li data-fade><h3>천장 간접등</h3><p>형광등 박스를 없애고 천장 가장자리에 2,700K 간접 조명을 숨겼습니다.</p></li>
         <li data-fade><h3>아치 수납 벽</h3><p>TV장이 있던 벽에 아치 니치를 파서 수납과 장식을 겸하게 했습니다.</p></li>
       </ol>
-      <p class="compare__meta"><span>수성구 황금동 · 32평 · 공사 7주</span><span>바닥 헤링본 원목 / 벽 친환경 도장</span></p>
+      <p class="compare__meta"><span>수성구 황금동 · 32평 · 공사 7주</span><span>바닥 헤링본 원목 / 벽 친환경 도장 · 실측 도면 기반 재현 일러스트</span></p>
     </div>
   </div>
 </section>
@@ -1267,22 +1117,22 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
     tl.from("[data-hero-meta]", { opacity: 0, y: -12, duration: .9 })
       .from(".hero h1 .line > span", { yPercent: 110, duration: 1.3, stagger: .12 }, "-=.6")
       .fromTo("[data-hero-frame]", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.6, ease: "expo.inOut" }, "-=1.3")
-      .from("[data-hero-frame] svg", { scale: 1.25, duration: 2, ease: "expo.out" }, "<.3")
+      .from("[data-hero-frame] .ph", { scale: 1.18, duration: 2.2, ease: "expo.out" }, "<.3")
       .from(".hero__caption", { opacity: 0, x: -16, duration: .8 }, "-=1.1")
       .from("[data-hero-fade]", { opacity: 0, y: 24, duration: 1, stagger: .12 }, "-=1.2")
 ;
 
-    gsap.to("[data-parallax]", { yPercent: -8, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+    gsap.to("[data-parallax]", { yPercent: -4, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
 
     // clip-path image reveals
     $$("[data-reveal]").forEach(function(el){
-      var inner = el.querySelector("svg");
+      var inner = el.querySelector(".ph, svg");
       var t = gsap.timeline({ scrollTrigger: { trigger: el, start: "top 86%", once: true } });
       t.fromTo(el, { clipPath: "inset(18% 12% 18% 12%)", opacity: .001 }, { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 1.4, ease: "expo.out" });
-      if (inner) t.from(inner, { scale: 1.2, duration: 1.8, ease: "expo.out" }, 0);
+      if (inner) t.from(inner, { scale: 1.16, duration: 1.8, ease: "expo.out", clearProps: "transform" }, 0);
     });
     $$(".work__idx").forEach(function(el){
-      gsap.fromTo(el, { yPercent: 40 }, { yPercent: -40, ease: "none", scrollTrigger: { trigger: el.parentNode, start: "top bottom", end: "bottom top", scrub: true } });
+      gsap.fromTo(el, { yPercent: 14 }, { yPercent: -14, ease: "none", scrollTrigger: { trigger: el.parentNode, start: "top bottom", end: "bottom top", scrub: true } });
     });
     $$(".work__cap").forEach(function(el){
       gsap.from(el.children, { opacity: 0, y: 22, duration: 1, stagger: .06, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } });
@@ -1333,10 +1183,13 @@ select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-righ
 <!-- kbs-backlink -->
 <a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
 <style>
-.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .kbs-back:hover{transform:translateY(-2px)}
 .kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
 @media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
 </style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
 </body>
 </html>

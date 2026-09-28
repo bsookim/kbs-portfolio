@@ -220,17 +220,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 const SITES=[
-  {slug:'policy-fund',name:'한결경영파트너스',kind:'정책자금 · 경영 컨설팅',tags:['기업','상담 폼','GSAP']},
-  {slug:'interior',name:'무드하우스 인테리어',kind:'인테리어 · 리모델링',tags:['에디토리얼','비포/애프터']},
-  {slug:'clinic',name:'맑은결 피부과',kind:'병원 · 피부과',tags:['예약','3D 배경']},
-  {slug:'cafe',name:'온기 베이커리',kind:'카페 · 베이커리',tags:['메뉴','일러스트']},
+  {slug:'policy-fund',name:'한결경영파트너스',kind:'정책자금 · 경영 컨설팅',tags:['자가진단 퀴즈','실사진','에디토리얼']},
+  {slug:'interior',name:'무드하우스 인테리어',kind:'인테리어 · 리모델링',tags:['실사진','비포/애프터']},
+  {slug:'clinic',name:'맑은결 피부과',kind:'병원 · 피부과',tags:['예약','실사진','3D 배경']},
+  {slug:'cafe',name:'온기 베이커리',kind:'카페 · 베이커리',tags:['메뉴','사진+일러스트']},
   {slug:'academy',name:'브릿지 수학학원',kind:'학원 · 교육',tags:['시간표','인터랙티브']},
-  {slug:'tax',name:'정도 세무회계',kind:'세무 · 회계',tags:['계산기','FAQ']},
-  {slug:'fitness',name:'코어핏 PT 스튜디오',kind:'헬스 · PT',tags:['3D','가격표']},
+  {slug:'tax',name:'정도 세무회계',kind:'세무 · 회계',tags:['계산기','FAQ','아르데코']},
+  {slug:'fitness',name:'코어핏 PT 스튜디오',kind:'헬스 · PT',tags:['3D','실사진','가격표']},
   {slug:'landing-class',name:'스피크업 랩',kind:'온라인 강의 · 얼리버드 모집',tags:['카운트다운','후기'],type:'landing'},
   {slug:'landing-app',name:'모아 가계부 앱',kind:'앱 · 사전예약',tags:['앱 목업','스크롤 스토리'],type:'landing'},
-  {slug:'landing-estate',name:'더 리버라인 레지던스',kind:'분양 · 방문 예약',tags:['평면도','입지 지도'],type:'landing'},
-  {slug:'landing-food',name:'그린밀',kind:'정기배송 · 할인 이벤트',tags:['가격 계산기','이벤트'],type:'landing'}
+  {slug:'landing-estate',name:'더 리버라인 레지던스',kind:'분양 · 방문 예약',tags:['평면도','실사진','입지 지도'],type:'landing'},
+  {slug:'landing-food',name:'그린밀',kind:'정기배송 · 할인 이벤트',tags:['가격 계산기','실사진'],type:'landing'}
 ];
 SITES.forEach(s=>s.type=s.type||'site');
 const list=document.getElementById('list'), prev=document.getElementById('preview');

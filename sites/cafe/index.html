@@ -93,17 +93,24 @@ h2{font-size:clamp(34px,5vw,60px)}
 .hero-meta b{font-family:var(--f-latin);font-weight:800;font-size:30px;line-height:1}
 .hero-meta span{font-size:13px;color:var(--cocoa-soft);margin-top:6px}
 .hero-art{position:relative;aspect-ratio:1/1.02}
-.hero-arch{position:absolute;inset:4% 6% 0 6%;background:var(--terra);border-radius:999px 999px 28px 28px;overflow:hidden}
-.hero-arch::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.06) 22px 24px)}
-.hero-sun{position:absolute;left:50%;top:18%;width:56%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:var(--butter)}
-.hero-illo{position:absolute;inset:0;z-index:2}
+/* photos: one warm grade for every stock shot so they read as one shoot */
+.ph{filter:saturate(1.06) sepia(.14) contrast(1.03) brightness(1.01)}
+.hero-arch{position:absolute;inset:4% 6% 0 6%;background:var(--terra);border-radius:999px 999px 28px 28px;overflow:hidden;border:3px solid var(--cocoa);box-shadow:10px 10px 0 var(--terra);z-index:1}
+.hero-arch img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.04)}
+.hero-arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,35,24,.38) 0%,rgba(58,35,24,0) 38%),radial-gradient(120% 80% at 50% 100%,rgba(194,83,44,.18),transparent 60%);mix-blend-mode:multiply}
+.hero-sun{position:absolute;left:-3%;top:2%;width:30%;aspect-ratio:1;border-radius:50%;background:var(--butter);z-index:0}
+.hero-illo{position:absolute;inset:0;z-index:2;overflow:visible;pointer-events:none}
+.hero-polaroid{position:absolute;left:-7%;bottom:3%;width:29%;margin:0;background:var(--cream);padding:8px 8px 0;border:2px solid var(--cocoa);border-radius:6px;box-shadow:5px 5px 0 var(--cocoa);transform:rotate(-7deg);z-index:3}
+.hero-polaroid img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:3px}
+.hero-polaroid figcaption{font-family:var(--f-hand);font-weight:700;font-size:17px;text-align:center;padding:4px 0 6px;line-height:1.2}
+.hero-polaroid::before{content:"";position:absolute;left:50%;top:-12px;width:64px;height:22px;transform:translateX(-50%) rotate(4deg);background:color-mix(in srgb,var(--butter) 75%,transparent);border-radius:2px}
 .badge{position:absolute;right:-2%;top:-2%;width:clamp(120px,15vw,172px);aspect-ratio:1;z-index:3}
 .badge-ring{width:100%;height:100%;animation:spin 18s linear infinite}
 .badge-core{position:absolute;inset:26%;border-radius:50%;background:var(--cocoa);display:grid;place-items:center}
 .badge-core svg{width:56%}
 @keyframes spin{to{transform:rotate(360deg)}}
 .note{position:absolute;font-family:var(--f-hand);font-weight:700;font-size:22px;line-height:1.1;color:var(--cocoa);z-index:3}
-.note-1{left:-11%;bottom:30%;transform:rotate(-8deg)}
+.note-1{left:-12%;top:36%;transform:rotate(-8deg)}
 .note-1 svg{width:60px;margin:4px 0 0 60px}
 
 /* ---------- marquee ---------- */
@@ -124,7 +131,11 @@ h2{font-size:clamp(34px,5vw,60px)}
 .story-clock .big{font-family:var(--f-latin);font-weight:800;font-size:clamp(90px,15vw,200px);line-height:.85;letter-spacing:-.04em;color:var(--terra)}
 .story-clock .big em{font-style:italic;font-weight:400;color:var(--cocoa)}
 .story-clock .cap{font-family:var(--f-hand);font-size:24px;font-weight:700;margin-top:14px;transform:rotate(-2deg);display:inline-block}
-.story-draw{margin-top:30px;width:100%;max-width:420px}
+.story-photo{position:relative;margin:34px 0 0;max-width:500px;rotate:-1.5deg}
+.story-photo img{width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;border:2px solid var(--cocoa);border-radius:18px;box-shadow:8px 8px 0 var(--crust)}
+.story-photo figcaption{position:absolute;right:-10px;bottom:-18px;background:var(--cream);border:2px solid var(--cocoa);border-radius:12px;padding:6px 14px;font-family:var(--f-hand);font-weight:700;font-size:18px;transform:rotate(3deg);box-shadow:3px 3px 0 var(--cocoa)}
+.story-photo::before{content:"";position:absolute;left:28px;top:-13px;width:84px;height:24px;background:color-mix(in srgb,var(--butter) 78%,transparent);transform:rotate(-6deg);z-index:1;border-radius:2px}
+.story-draw{margin:-40px 0 0 auto;width:100%;max-width:300px}
 .story h2{margin:14px 0 26px}
 .story p{margin:0 0 16px;color:var(--cocoa-2)}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
@@ -150,8 +161,15 @@ h2{font-size:clamp(34px,5vw,60px)}
 .card:nth-child(even){transform:rotate(1deg) translateY(14px)}
 .card:hover{transform:rotate(0) translateY(-6px)}
 .card-plate{border-radius:16px;aspect-ratio:16/11;display:grid;place-items:center;position:relative;overflow:hidden}
-.card-plate svg{width:82%;transition:transform .5s var(--ease-out)}
-.card:hover .card-plate svg{transform:scale(1.06) rotate(-3deg)}
+.card-plate svg.plate-art{width:82%;transition:transform .5s var(--ease-out)}
+.card:hover .card-plate svg.plate-art{transform:scale(1.06) rotate(-3deg)}
+.card-plate.has-photo{border:2px solid var(--cocoa)}
+.card-plate img.plate-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out),filter .4s}
+.card:hover .card-plate img.plate-art{transform:scale(1.05)}
+.card-plate.has-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,35,24,.35),transparent 32%);pointer-events:none}
+.card-plate.has-photo .card-no{color:var(--cream);z-index:2}
+.card-plate .card-tag{z-index:2}
+.card-plate .doodle{position:absolute;right:10px;bottom:8px;z-index:2;font-family:var(--f-hand);font-weight:700;font-size:18px;line-height:1;background:var(--butter);color:var(--cocoa);border:2px solid var(--cocoa);border-radius:999px;padding:5px 11px 6px;transform:rotate(-5deg);box-shadow:2px 2px 0 var(--cocoa)}
 .card-no{position:absolute;left:12px;top:10px;font-family:var(--f-latin);font-style:italic;font-weight:600;font-size:14px}
 .card-tag{position:absolute;right:10px;top:10px;background:var(--cocoa);color:var(--butter);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
 .card h3{font-size:28px;margin:14px 0 2px}
@@ -161,7 +179,7 @@ h2{font-size:clamp(34px,5vw,60px)}
 .price{font-family:var(--f-display);font-size:26px}
 .price small{font-family:var(--f-body);font-size:14px;margin-left:2px}
 .card-foot .time{font-size:13px;display:flex;align-items:center;gap:6px;color:var(--cocoa-soft)}
-.card-foot .time svg{width:16px}
+.card-foot .time svg{width:16px;height:16px}
 .p-butter{background:var(--butter-soft)}.p-terra{background:#EBB79B}.p-sage{background:#CFD3AE}.p-crust{background:#EFCB9E}
 .card.end{background:var(--terra);color:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px}
 .card.end h3{font-size:40px}
@@ -173,6 +191,9 @@ h2{font-size:clamp(34px,5vw,60px)}
 .bake-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
 .bake-side{position:sticky;top:110px;align-self:start}
 .bake-side h2{margin:14px 0 20px}
+.bake-photo{margin:30px 0 0}
+.bake-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:2px solid var(--cocoa);border-radius:var(--radius) var(--radius) 0 0;border-bottom:0}
+.bake-photo + .now-card{margin-top:0;border-radius:0 0 var(--radius) var(--radius)}
 .now-card{margin-top:30px;background:var(--cocoa);color:var(--paper);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden}
 .now-card .k{font-size:13px;opacity:.75}
 .now-card .v{font-family:var(--f-display);font-size:34px;line-height:1.2;margin-top:4px;color:var(--butter)}
@@ -238,7 +259,13 @@ h2{font-size:clamp(34px,5vw,60px)}
 .insta-head a{font-family:var(--f-latin);font-style:italic;font-weight:600;font-size:22px;text-decoration:none;border-bottom:2px solid var(--terra)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .tile{aspect-ratio:1;border-radius:18px;overflow:hidden;position:relative;border:2px solid var(--cocoa);display:grid;place-items:center}
-.tile svg{width:100%;height:100%}
+.tile{background:var(--paper-3)}
+.tile > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.tile:hover > img,.tile:focus-visible > img{transform:scale(1.05)}
+.tile .stamp{position:absolute;left:12px;top:12px;z-index:1;background:var(--cream);color:var(--cocoa);border:2px solid var(--cocoa);border-radius:999px;padding:3px 12px;font-family:var(--f-latin);font-style:italic;font-weight:600;font-size:14px;transform:rotate(-4deg)}
+.tile .stamp.hand{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:18px;background:var(--terra);color:var(--cream);left:auto;right:14px;top:14px;transform:rotate(5deg)}
+.tile .ov{z-index:2}
+.tile .ov svg{width:14px;height:14px}
 .tile.wide{grid-column:span 2;aspect-ratio:auto}
 .tile .ov{position:absolute;inset:0;background:rgba(58,35,24,.72);color:var(--cream);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;opacity:0;transition:opacity .3s}
 .tile:hover .ov,.tile:focus-visible .ov{opacity:1}
@@ -338,7 +365,11 @@ textarea.input{min-height:110px;resize:vertical}
   .hero-meta b{font-size:24px}
   .badge{width:112px;right:0;top:-4%}
   .note{font-size:18px}
-  .note-1{left:0}
+  .note-1{display:none}
+  .story-photo figcaption{right:8px;font-size:16px}
+  .story-draw{margin-top:0}
+  .hero-polaroid{left:0;width:34%}
+  .hero-polaroid figcaption{font-size:14px}
   .marquee-group span{font-size:22px}.marquee-group span.l{font-size:20px}
   .story{padding:90px 0 80px}
   .story-grid{gap:30px}
@@ -357,6 +388,7 @@ textarea.input{min-height:110px;resize:vertical}
   .o-card h3{font-size:30px}
   .o-card .o-illo{width:80px;top:-30px;right:14px}
   .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .tile.wide{aspect-ratio:2/1}
   .form-card{padding:24px 18px;box-shadow:6px 6px 0 var(--terra)}
   .form-grid{grid-template-columns:1fr}
   .info dl > div{grid-template-columns:72px 1fr}
@@ -427,32 +459,30 @@ textarea.input{min-height:110px;resize:vertical}
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <div class="hero-arch"><div class="hero-sun"></div></div>
+      <div class="hero-sun"></div>
+      <div class="hero-arch">
+        <img class="ph" src="img/hero-campagne.webp" width="760" height="949" alt="" fetchpriority="high" decoding="async">
+      </div>
+      <figure class="hero-polaroid">
+        <img class="ph" src="img/hero-latte.webp" width="420" height="420" alt="" decoding="async">
+        <figcaption>오늘의 라떼 ♡</figcaption>
+      </figure>
       <svg class="hero-illo draw-svg" viewBox="0 0 500 510">
-        <!-- steam -->
-        <path class="ln ln-cream" d="M200 170c-14-18 14-30 0-50s12-32 0-48"/>
-        <path class="ln ln-cream" d="M250 160c-14-18 14-30 0-50s12-32 0-48"/>
-        <path class="ln ln-cream" d="M300 170c-14-18 14-30 0-50s12-32 0-48"/>
-        <!-- board -->
-        <path d="M70 392h360c14 0 22 10 18 22l-4 10H56l-4-10c-4-12 4-22 18-22z" fill="#B06C2C" stroke="#3A2318" stroke-width="3.5"/>
-        <path d="M440 400h34c10 0 10 14 0 14h-34" fill="#B06C2C" stroke="#3A2318" stroke-width="3.5"/>
-        <!-- boule -->
-        <path d="M110 390c-6-80 50-140 140-140s150 60 142 140z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
-        <path d="M150 330c30-40 80-58 130-50" class="ln" style="stroke:#F4EBDC;stroke-width:6"/>
-        <path d="M170 360c34-30 90-44 140-30" class="ln" style="stroke:#F4EBDC;stroke-width:6"/>
-        <path class="ln" d="M150 330c30-40 80-58 130-50M170 360c34-30 90-44 140-30"/>
-        <path d="M130 360c-6-20 0-40 10-56" class="ln" style="stroke:#B06C2C;stroke-width:4"/>
-        <!-- flour dots -->
-        <g fill="#FFF8EC"><circle cx="220" cy="290" r="3"/><circle cx="260" cy="275" r="2.5"/><circle cx="300" cy="300" r="3"/><circle cx="200" cy="318" r="2"/><circle cx="330" cy="340" r="2.5"/><circle cx="240" cy="345" r="2"/></g>
-        <!-- croissant -->
-        <path d="M300 396c10-36 44-54 84-50 26 3 44 20 44 38 0 8-6 12-14 12z" fill="#F2C14E" stroke="#3A2318" stroke-width="3.5"/>
-        <path class="ln" d="M330 396c4-24 16-38 32-46M360 396c2-20 8-34 20-44M392 396c0-14 2-26 12-36"/>
+        <!-- steam over the loaf -->
+        <path class="ln ln-cream" d="M196 150c-14-18 14-30 0-50s12-32 0-48"/>
+        <path class="ln ln-cream" d="M246 140c-14-18 14-30 0-50s12-32 0-48"/>
+        <path class="ln ln-cream" d="M296 150c-14-18 14-30 0-50s12-32 0-48"/>
+        <!-- croissant sticker -->
+        <g class="sticker">
+          <path d="M338 486c10-36 44-54 84-50 26 3 44 20 44 38 0 8-6 12-14 12z" fill="#F2C14E" stroke="#3A2318" stroke-width="3.5"/>
+          <path class="ln" d="M368 486c4-24 16-38 32-46M398 486c2-20 8-34 20-44M430 486c0-14 2-26 12-36"/>
+        </g>
         <!-- wheat -->
         <g class="ln" style="stroke-width:3">
-          <path d="M80 390c-6-60-2-110 18-150"/>
-          <path d="M92 270c-14-4-20-16-18-26 12 2 18 12 18 26zM92 270c10-8 22-8 28 0-10 8-20 6-28 0z"/>
-          <path d="M86 310c-14-4-20-16-18-26 12 2 18 12 18 26zM86 310c10-8 22-8 28 0-10 8-20 6-28 0z"/>
-          <path d="M98 240c-4-12 0-24 8-28 4 10 2 22-8 28z"/>
+          <path d="M24 400c-6-60-2-110 18-150"/>
+          <path d="M36 280c-14-4-20-16-18-26 12 2 18 12 18 26zM36 280c10-8 22-8 28 0-10 8-20 6-28 0z"/>
+          <path d="M30 320c-14-4-20-16-18-26 12 2 18 12 18 26zM30 320c10-8 22-8 28 0-10 8-20 6-28 0z"/>
+          <path d="M42 250c-4-12 0-24 8-28 4 10 2 22-8 28z"/>
         </g>
       </svg>
       <div class="badge">
@@ -495,23 +525,10 @@ textarea.input{min-height:110px;resize:vertical}
     <div class="story-clock">
       <div class="big reveal" aria-hidden="true">05<em>:</em>00</div>
       <span class="cap reveal">— 오븐에 불 들어가는 시간</span>
-      <svg class="story-draw draw-svg" viewBox="0 0 420 220" aria-hidden="true">
-        <!-- levain jar -->
-        <path class="ln" d="M40 70h90M48 70v-18h74v18"/>
-        <path class="ln" d="M44 74c-8 10-10 24-10 40v70c0 14 8 22 22 22h58c14 0 22-8 22-22v-70c0-16-2-30-10-40"/>
-        <path class="ln" d="M36 130c20 8 40-6 58 2s38 6 54-2"/>
-        <circle class="ln" cx="64" cy="160" r="5"/><circle class="ln" cx="100" cy="176" r="4"/><circle class="ln" cx="112" cy="150" r="6"/>
-        <path class="ln" style="stroke-width:2.2" d="M54 96h16"/>
-        <!-- wheat stalks -->
-        <path class="ln" d="M200 206c10-60 30-120 70-176"/>
-        <path class="ln" d="M232 110c-18-2-26-16-24-30 16 4 24 14 24 30zM232 110c14-10 30-10 38 0-12 10-26 10-38 0z"/>
-        <path class="ln" d="M216 150c-18-2-26-16-24-30 16 4 24 14 24 30zM216 150c14-10 30-10 38 0-12 10-26 10-38 0z"/>
-        <path class="ln" d="M250 70c-16-2-22-14-20-26 14 4 20 12 20 26zM250 70c12-8 26-8 32 0-10 8-22 8-32 0z"/>
-        <path class="ln" d="M300 206c0-50 16-100 50-150"/>
-        <path class="ln" d="M322 130c-16-2-22-14-20-26 14 4 20 12 20 26zM322 130c12-8 26-8 32 0-10 8-22 8-32 0z"/>
-        <path class="ln" d="M340 90c-14-2-20-12-18-24 12 4 18 12 18 24z"/>
-        <path class="ln" d="M180 208h220"/>
-      </svg>
+      <figure class="story-photo reveal">
+        <img class="ph" src="img/story-knead.webp" width="853" height="683" alt="밀가루를 뿌린 나무 작업대에서 두 손으로 반죽을 치대는 모습" loading="lazy" decoding="async">
+        <figcaption>전날 오후 네 시, 내일 캄파뉴 반죽</figcaption>
+      </figure>
     </div>
     <div>
       <span class="eyebrow reveal">우리 이야기</span>
@@ -524,6 +541,23 @@ textarea.input{min-height:110px;resize:vertical}
         <div class="fact reveal"><b>2<small>명</small></b><span>새벽을 여는<br>부부 제빵사</span></div>
       </div>
       <div class="signature reveal"><span>— 온기 제빵사 김온유 · 박기현</span></div>
+    <svg class="story-draw draw-svg" viewBox="0 0 420 220" aria-hidden="true">
+      <!-- levain jar -->
+      <path class="ln" d="M40 70h90M48 70v-18h74v18"/>
+      <path class="ln" d="M44 74c-8 10-10 24-10 40v70c0 14 8 22 22 22h58c14 0 22-8 22-22v-70c0-16-2-30-10-40"/>
+      <path class="ln" d="M36 130c20 8 40-6 58 2s38 6 54-2"/>
+      <circle class="ln" cx="64" cy="160" r="5"/><circle class="ln" cx="100" cy="176" r="4"/><circle class="ln" cx="112" cy="150" r="6"/>
+      <path class="ln" style="stroke-width:2.2" d="M54 96h16"/>
+      <!-- wheat stalks -->
+      <path class="ln" d="M200 206c10-60 30-120 70-176"/>
+      <path class="ln" d="M232 110c-18-2-26-16-24-30 16 4 24 14 24 30zM232 110c14-10 30-10 38 0-12 10-26 10-38 0z"/>
+      <path class="ln" d="M216 150c-18-2-26-16-24-30 16 4 24 14 24 30zM216 150c14-10 30-10 38 0-12 10-26 10-38 0z"/>
+      <path class="ln" d="M250 70c-16-2-22-14-20-26 14 4 20 12 20 26zM250 70c12-8 26-8 32 0-10 8-22 8-32 0z"/>
+      <path class="ln" d="M300 206c0-50 16-100 50-150"/>
+      <path class="ln" d="M322 130c-16-2-22-14-20-26 14 4 20 12 20 26zM322 130c12-8 26-8 32 0-10 8-22 8-32 0z"/>
+      <path class="ln" d="M340 90c-14-2-20-12-18-24 12 4 18 12 18 24z"/>
+      <path class="ln" d="M180 208h220"/>
+    </svg>
     </div>
   </div>
 </section>
@@ -543,16 +577,9 @@ textarea.input{min-height:110px;resize:vertical}
       <ul class="menu-track" role="list" style="list-style:none;margin:0">
         <!-- 1 소금빵 -->
         <li class="card">
-          <div class="card-plate p-butter">
+          <div class="card-plate p-butter has-photo">
             <span class="card-no">No.01</span><span class="card-tag">BEST</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="120" rx="80" ry="10" fill="#3A2318" opacity=".12"/>
-              <path d="M28 98c0-30 34-54 72-54s72 24 72 54c0 14-12 20-26 20H54c-14 0-26-6-26-20z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
-              <path d="M40 94c10-26 36-40 60-40" class="ln" style="stroke:#F8DD93;stroke-width:5"/>
-              <path class="ln" d="M60 116c-4-26 6-48 22-62M100 118c-2-28 4-50 14-66M140 116c2-24-2-44-12-60"/>
-              <g fill="#FFF8EC" stroke="#3A2318" stroke-width="1"><rect x="72" y="62" width="5" height="5" rx="1" transform="rotate(20 74 64)"/><rect x="108" y="58" width="5" height="5" rx="1"/><rect x="124" y="74" width="4.5" height="4.5" rx="1" transform="rotate(35 126 76)"/><rect x="88" y="80" width="4" height="4" rx="1"/><rect x="146" y="90" width="4.5" height="4.5" rx="1" transform="rotate(10 148 92)"/></g>
-              <path d="M76 116c8 4 40 4 48 0" class="ln" style="stroke:#F2C14E;stroke-width:4"/>
-            </svg>
+            <img class="ph plate-art" src="img/menu-shiopan.webp" width="640" height="440" alt="버터를 넣어 동그랗게 구운 소금빵" loading="lazy" decoding="async"><span class="doodle" aria-hidden="true">하루 400개</span>
           </div>
           <h3>소금빵</h3><span class="en">Shio pan</span>
           <p>발효 버터를 돌돌 말아 넣고 게랑드 소금을 톡톡. 바닥은 버터에 튀기듯 바삭해요.</p>
@@ -560,14 +587,9 @@ textarea.input{min-height:110px;resize:vertical}
         </li>
         <!-- 2 크루아상 -->
         <li class="card">
-          <div class="card-plate p-terra">
+          <div class="card-plate p-terra has-photo">
             <span class="card-no">No.02</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="124" rx="82" ry="9" fill="#3A2318" opacity=".12"/>
-              <path d="M18 104c6-10 20-14 30-12 8-30 30-50 52-50s44 20 52 50c10-2 24 2 30 12-4 12-22 18-40 14-10 6-28 8-42 8s-32-2-42-8c-18 4-36-2-40-14z" fill="#F2C14E" stroke="#3A2318" stroke-width="3.5"/>
-              <path class="ln" d="M62 116c0-28 6-50 18-68M100 124c0-34 0-58 0-80M138 116c0-28-6-50-18-68M44 110c4-8 8-14 12-16M156 110c-4-8-8-14-12-16"/>
-              <path d="M70 60c10-8 20-12 30-12" class="ln" style="stroke:#FFF8EC;stroke-width:4"/>
-            </svg>
+            <img class="ph plate-art" src="img/menu-croissant.webp" width="640" height="440" alt="접시에 담긴 버터 크루아상 두 개와 잼" loading="lazy" decoding="async">
           </div>
           <h3>버터 크루아상</h3><span class="en">Croissant au beurre</span>
           <p>프랑스산 AOP 버터로 27겹. 한 입 물면 부스러기가 쏟아지니 접시 꼭 챙기세요.</p>
@@ -575,15 +597,9 @@ textarea.input{min-height:110px;resize:vertical}
         </li>
         <!-- 3 캄파뉴 -->
         <li class="card">
-          <div class="card-plate p-crust">
+          <div class="card-plate p-crust has-photo">
             <span class="card-no">No.03</span><span class="card-tag">발효종</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="128" rx="74" ry="9" fill="#3A2318" opacity=".14"/>
-              <path d="M30 108c-4-46 28-84 70-84s74 38 70 84c-1 12-10 18-22 18H52c-12 0-21-6-22-18z" fill="#B06C2C" stroke="#3A2318" stroke-width="3.5"/>
-              <path d="M58 60c26-12 58-12 84 0M52 86c30-12 66-12 96 0" class="ln" style="stroke:#F4EBDC;stroke-width:7"/>
-              <path class="ln" d="M58 60c26-12 58-12 84 0M52 86c30-12 66-12 96 0"/>
-              <g fill="#FFF8EC" opacity=".85"><circle cx="80" cy="40" r="2.5"/><circle cx="120" cy="44" r="2"/><circle cx="100" cy="34" r="2.5"/><circle cx="70" cy="104" r="2"/><circle cx="134" cy="104" r="2.5"/></g>
-            </svg>
+            <img class="ph plate-art" src="img/menu-campagne.webp" width="640" height="440" alt="밀가루를 뿌려 구운 둥근 호밀 캄파뉴" loading="lazy" decoding="async"><span class="doodle" aria-hidden="true">72시간 발효</span>
           </div>
           <h3>호밀 캄파뉴</h3><span class="en">Pain de campagne</span>
           <p>온순이로 72시간 발효한 대표 빵. 겉은 단단하고 속은 쫀득, 은은한 산미가 있어요.</p>
@@ -591,15 +607,9 @@ textarea.input{min-height:110px;resize:vertical}
         </li>
         <!-- 4 우유식빵 -->
         <li class="card">
-          <div class="card-plate p-sage">
+          <div class="card-plate p-sage has-photo">
             <span class="card-no">No.04</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="130" rx="76" ry="8" fill="#3A2318" opacity=".14"/>
-              <path d="M36 126V74c-12-4-14-22-2-30 10-6 22-2 26 6 4-10 16-16 28-12 6-10 20-12 30-6 12-6 26 0 30 10 12-4 24 4 24 16 0 10-6 16-14 18v50z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
-              <path d="M44 126V78h114v48z" fill="#FFF8EC" stroke="#3A2318" stroke-width="3" opacity=".0"/>
-              <path class="ln" d="M60 50c2 10 0 20-4 28M92 40c4 12 4 26 0 38M122 40c4 12 4 26 0 38M152 52c0 10-2 18-6 26"/>
-              <path d="M48 58c6-8 12-10 18-8" class="ln" style="stroke:#F8DD93;stroke-width:4"/>
-            </svg>
+            <img class="ph plate-art" src="img/menu-milkloaf.webp" width="640" height="440" alt="식힘망 위의 우유 식빵 두 덩이" loading="lazy" decoding="async">
           </div>
           <h3>우유 식빵</h3><span class="en">Milk loaf</span>
           <p>임실 목장 우유만 넣어 결대로 쭉쭉 찢어져요. 아이들 아침 빵으로 제일 많이 나가요.</p>
@@ -609,7 +619,7 @@ textarea.input{min-height:110px;resize:vertical}
         <li class="card">
           <div class="card-plate p-butter">
             <span class="card-no">No.05</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
+            <svg class="plate-art" viewBox="0 0 200 150" aria-hidden="true">
               <ellipse cx="100" cy="124" rx="84" ry="9" fill="#3A2318" opacity=".12"/>
               <path d="M18 96c0-18 16-30 34-30h96c18 0 34 12 34 30s-16 26-34 26H52c-18 0-34-8-34-26z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
               <path d="M40 86h120v8H40z" fill="#6B2E2A" stroke="#3A2318" stroke-width="3"/>
@@ -624,15 +634,9 @@ textarea.input{min-height:110px;resize:vertical}
         </li>
         <!-- 6 에그타르트 -->
         <li class="card">
-          <div class="card-plate p-terra">
+          <div class="card-plate p-terra has-photo">
             <span class="card-no">No.06</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="122" rx="70" ry="10" fill="#3A2318" opacity=".14"/>
-              <path d="M34 80c0-6 4-10 10-10h112c6 0 10 4 10 10l-10 36c-2 6-6 8-12 8H56c-6 0-10-2-12-8z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
-              <path class="ln" d="M56 124l-6-44M78 124l-4-44M100 124V80M122 124l4-44M144 124l6-44"/>
-              <ellipse cx="100" cy="74" rx="62" ry="16" fill="#F2C14E" stroke="#3A2318" stroke-width="3.5"/>
-              <g fill="#9E3F1F" opacity=".75"><ellipse cx="80" cy="72" rx="9" ry="4"/><ellipse cx="116" cy="78" rx="7" ry="3"/><ellipse cx="104" cy="66" rx="5" ry="2.5"/></g>
-            </svg>
+            <img class="ph plate-art" src="img/menu-eggtart.webp" width="640" height="440" alt="윗면을 그을린 에그타르트" loading="lazy" decoding="async"><span class="doodle" aria-hidden="true">따끈할 때!</span>
           </div>
           <h3>에그타르트</h3><span class="en">Pastel de nata</span>
           <p>겹겹이 접은 페이스트리에 커스터드를 채우고 윗면을 살짝 태웠어요. 따뜻할 때 드세요.</p>
@@ -640,15 +644,9 @@ textarea.input{min-height:110px;resize:vertical}
         </li>
         <!-- 7 쑥 스콘 -->
         <li class="card">
-          <div class="card-plate p-sage">
+          <div class="card-plate p-sage has-photo">
             <span class="card-no">No.07</span><span class="card-tag">계절</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
-              <ellipse cx="100" cy="126" rx="70" ry="9" fill="#3A2318" opacity=".14"/>
-              <path d="M40 120l54-86c4-6 10-6 14 0l54 86c2 4 0 6-4 6H44c-4 0-6-2-4-6z" fill="#A3A767" stroke="#3A2318" stroke-width="3.5"/>
-              <path d="M56 100h90" class="ln" style="stroke-width:2.4"/>
-              <g fill="#FFF8EC" stroke="#3A2318" stroke-width="2"><path d="M86 72c4-4 10-4 12 0s-2 8-6 8-8-4-6-8z"/><path d="M110 88c4-4 10-4 12 0s-2 8-6 8-8-4-6-8z"/><path d="M76 110c4-4 10-4 12 0s-2 8-6 8-8-4-6-8z"/><path d="M118 112c4-4 10-4 12 0s-2 8-6 8-8-4-6-8z"/></g>
-              <path d="M84 56c6-8 12-12 16-12" class="ln" style="stroke:#E8E9C8;stroke-width:4"/>
-            </svg>
+            <img class="ph plate-art" src="img/menu-scone.webp" width="640" height="440" alt="크림과 잼을 곁들인 스콘" loading="lazy" decoding="async">
           </div>
           <h3>쑥 크림치즈 스콘</h3><span class="en">Mugwort scone</span>
           <p>봄에 캔 강화 쑥을 갈아 넣고 크림치즈를 콕콕. 쌉쌀하고 고소한 어른의 스콘.</p>
@@ -658,7 +656,7 @@ textarea.input{min-height:110px;resize:vertical}
         <li class="card">
           <div class="card-plate p-crust">
             <span class="card-no">No.08</span>
-            <svg viewBox="0 0 200 150" aria-hidden="true">
+            <svg class="plate-art" viewBox="0 0 200 150" aria-hidden="true">
               <ellipse cx="100" cy="130" rx="76" ry="8" fill="#3A2318" opacity=".14"/>
               <path d="M30 124V70c0-18 14-30 30-30h80c16 0 30 12 30 30v54z" fill="#D48E45" stroke="#3A2318" stroke-width="3.5"/>
               <path d="M40 124c10-30 0-60 20-80M70 124c10-30 0-60 20-82M100 124c10-30 0-60 20-82M130 124c10-30 4-58 22-76" style="fill:none;stroke:#4A2418;stroke-width:9;stroke-linecap:round"/>
@@ -689,6 +687,9 @@ textarea.input{min-height:110px;resize:vertical}
       <span class="eyebrow reveal">굽는 시간표</span>
       <h2 id="bake-title" class="reveal">시간 맞춰 오시면<br>따끈한 걸로 드려요</h2>
       <p class="lead reveal">오븐이 하나라 빵마다 나오는 시간이 정해져 있어요. 인기 빵은 한 시간 안에 동나는 날도 많습니다.</p>
+      <figure class="bake-photo reveal">
+        <img class="ph" src="img/bake-oven.webp" width="800" height="533" alt="제빵사가 갓 구운 둥근 빵이 가득한 오븐 선반을 정리하는 모습" loading="lazy" decoding="async">
+      </figure>
       <div class="now-card reveal" aria-live="polite">
         <div class="k" id="nowLabel">다음에 나오는 빵</div>
         <div class="v" id="nowName">소금빵 2차</div>
@@ -817,32 +818,28 @@ textarea.input{min-height:110px;resize:vertical}
       <a href="#insta-title">@ongi.bakery</a>
     </div>
     <div class="grid">
-      <a class="tile reveal" href="#insta-title" style="background:#C2532C" aria-label="새벽 오븐 사진, 좋아요 312">
-        <svg viewBox="0 0 200 200" aria-hidden="true"><rect x="40" y="50" width="120" height="110" rx="12" fill="#3A2318"/><rect x="54" y="70" width="92" height="60" rx="8" fill="#F2C14E"/><path d="M62 118c10-12 20-12 30 0s20 12 30 0 16-8 20-4" fill="none" stroke="#C2532C" stroke-width="4" stroke-linecap="round"/><circle cx="66" cy="146" r="5" fill="#F4EBDC"/><circle cx="84" cy="146" r="5" fill="#F4EBDC"/><text x="100" y="36" text-anchor="middle" font-family="Fraunces" font-style="italic" font-weight="600" font-size="16" fill="#F4EBDC">05:12 am</text></svg>
+      <a class="tile reveal" href="#insta-title" aria-label="새벽 오븐 사진, 좋아요 312">
+        <img class="ph" src="img/insta-oven.webp" width="520" height="520" alt="벽돌 오븐 안에서 바게트가 나란히 구워지는 모습" loading="lazy" decoding="async"><span class="stamp" aria-hidden="true">05:12 am</span>
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>312</b><span>오늘도 온순이 컨디션 최고</span></span>
       </a>
-      <a class="tile reveal" href="#insta-title" style="background:#F8DD93" aria-label="소금빵 트레이 사진, 좋아요 528">
-        <svg viewBox="0 0 200 200" aria-hidden="true"><rect x="24" y="30" width="152" height="140" rx="6" fill="#9A9A96" stroke="#3A2318" stroke-width="3"/><g fill="#D48E45" stroke="#3A2318" stroke-width="2.5"><ellipse cx="62" cy="68" rx="24" ry="16"/><ellipse cx="138" cy="68" rx="24" ry="16"/><ellipse cx="62" cy="132" rx="24" ry="16"/><ellipse cx="138" cy="132" rx="24" ry="16"/><ellipse cx="100" cy="100" rx="24" ry="16"/></g><g fill="#FFF8EC"><circle cx="58" cy="64" r="2"/><circle cx="136" cy="64" r="2"/><circle cx="98" cy="96" r="2"/><circle cx="64" cy="128" r="2"/><circle cx="140" cy="128" r="2"/></g></svg>
+      <a class="tile reveal" href="#insta-title" aria-label="소금빵 트레이 사진, 좋아요 528">
+        <img class="ph" src="img/insta-tray.webp" width="520" height="520" alt="철판 위에 줄지어 놓인 갓 구운 빵" loading="lazy" decoding="async">
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>528</b><span>11시 소금빵 나왔습니다</span></span>
       </a>
-      <a class="tile wide reveal" href="#insta-title" style="background:#3A2318" aria-label="매장 창가 사진, 좋아요 1,204">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M60 200V70a80 80 0 0 1 160 0v130" fill="#F2C14E"/><path d="M140 0v200M60 110h160" stroke="#3A2318" stroke-width="6"/><circle cx="110" cy="60" r="18" fill="#FFF8EC" opacity=".6"/><rect x="250" y="120" width="130" height="10" rx="3" fill="#B06C2C"/><path d="M270 120v-24h28v24" fill="#F4EBDC"/><path d="M276 96c-4-8 4-12 0-20M290 96c-4-8 4-12 0-20" fill="none" stroke="#F4EBDC" stroke-width="2.5" stroke-linecap="round"/><path d="M320 120c0-22 14-34 30-34s30 12 30 34" fill="#D48E45"/><text x="260" y="170" font-family="Do Hyeon" font-size="22" fill="#F4EBDC">창가 자리 두 개</text></svg>
+      <a class="tile wide reveal" href="#insta-title" aria-label="매장 창가 사진, 좋아요 1,204">
+        <img class="ph" src="img/insta-window.webp" width="900" height="450" alt="오후 햇살이 드는 창가 테이블" loading="lazy" decoding="async">
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>1,204</b><span>오후 네 시쯤 햇빛이 제일 예뻐요</span></span>
       </a>
-      <a class="tile wide reveal" href="#insta-title" style="background:#CFD3AE" aria-label="케이크 사진, 좋아요 876">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><ellipse cx="200" cy="170" rx="120" ry="16" fill="#3A2318" opacity=".15"/><rect x="120" y="80" width="160" height="84" rx="10" fill="#FFF8EC" stroke="#3A2318" stroke-width="3"/><path d="M120 104c20 12 30-8 50 4s30-8 50 4 30-8 60 0" fill="none" stroke="#C2532C" stroke-width="4"/><g fill="#C2532C" stroke="#3A2318" stroke-width="2"><path d="M150 80c0-10 8-14 14-10 6-4 14 0 14 10-4 8-24 8-28 0z"/><path d="M192 78c0-10 8-14 14-10 6-4 14 0 14 10-4 8-24 8-28 0z"/><path d="M234 80c0-10 8-14 14-10 6-4 14 0 14 10-4 8-24 8-28 0z"/></g><text x="200" y="142" text-anchor="middle" font-family="Gaegu" font-weight="700" font-size="22" fill="#3A2318">생일 축하해 지우야</text></svg>
+      <a class="tile wide reveal" href="#insta-title" aria-label="케이크 사진, 좋아요 876">
+        <img class="ph" src="img/insta-cake.webp" width="900" height="450" alt="딸기와 생크림을 넣은 롤케이크" loading="lazy" decoding="async"><span class="stamp hand" aria-hidden="true">예약 마감!</span>
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>876</b><span>이번 주 딸기 케이크 예약 마감!</span></span>
       </a>
-      <a class="tile reveal" href="#insta-title" style="background:#EFCB9E" aria-label="라떼 사진, 좋아요 441">
-        <svg viewBox="0 0 200 200" aria-hidden="true"><ellipse cx="100" cy="150" rx="70" ry="14" fill="#FFF8EC" stroke="#3A2318" stroke-width="3"/><path d="M50 70h100l-10 74H60z" fill="#FFF8EC" stroke="#3A2318" stroke-width="3"/><path d="M150 86c20 0 20 30 0 30" fill="none" stroke="#3A2318" stroke-width="3"/><ellipse cx="100" cy="72" rx="48" ry="10" fill="#B06C2C"/><path d="M100 66c-8 0-12 6-6 8 4 2 12 2 12 2s8 0 12-2c6-2 2-8-6-8" fill="#FFF8EC"/></svg>
+      <a class="tile reveal" href="#insta-title" aria-label="라떼 사진, 좋아요 441">
+        <img class="ph" src="img/insta-latte.webp" width="520" height="520" alt="라떼 아트를 그리며 우유를 붓는 모습" loading="lazy" decoding="async">
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>441</b><span>원두는 전주 로스터리와 함께</span></span>
       </a>
-      <a class="tile reveal" href="#insta-title" style="background:#F4EBDC" aria-label="밀가루 반죽 사진, 좋아요 297">
-        <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="104" r="62" fill="#FFF8EC" stroke="#3A2318" stroke-width="3"/><path d="M60 110c14-20 30-22 40-8s30 12 40-6" fill="none" stroke="#D48E45" stroke-width="4" stroke-linecap="round"/><g fill="#3A2318" opacity=".25"><circle cx="80" cy="80" r="3"/><circle cx="124" cy="130" r="3"/><circle cx="110" cy="76" r="2"/></g><path d="M150 40l20-20M160 50l20-20" stroke="#C2532C" stroke-width="5" stroke-linecap="round"/></svg>
-        <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>297</b><span>내일 캄파뉴 반죽 끝</span></span>
-      </a>
-      <a class="tile reveal" href="#insta-title" style="background:#9E3F1F" aria-label="포장 봉투 사진, 좋아요 358">
-        <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M56 60h88l10 110H46z" fill="#E3D1B3" stroke="#3A2318" stroke-width="3"/><path d="M78 60c0-26 44-26 44 0" fill="none" stroke="#3A2318" stroke-width="3"/><circle cx="100" cy="116" r="24" fill="#C2532C" stroke="#3A2318" stroke-width="2.5"/><text x="100" y="123" text-anchor="middle" font-family="Do Hyeon" font-size="20" fill="#F2C14E">온기</text></svg>
+      <a class="tile reveal" href="#insta-title" aria-label="포장 봉투 사진, 좋아요 358">
+        <img class="ph" src="img/insta-bag.webp" width="520" height="520" alt="종이봉투와 함께 놓인 갓 구운 빵들" loading="lazy" decoding="async">
         <span class="ov"><b><svg width="14" height="14"><use href="#i-heart"/></svg>358</b><span>종이봉투 새로 찍었어요</span></span>
       </a>
     </div>
@@ -1196,10 +1193,13 @@ textarea.input{min-height:110px;resize:vertical}
 <!-- kbs-backlink -->
 <a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
 <style>
-.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .kbs-back:hover{transform:translateY(-2px)}
 .kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
 @media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
 </style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
 </body>
 </html>

@@ -1,0 +1,41 @@
+{
+  "space-hall.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/3286668/free-photo-image-clinic-architecture-interior",
+    "title": "Toni-Areal, Zürich"
+  },
+  "serum-dropper.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "dr-4"
+  },
+  "water-bubbles.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "wat-5"
+  },
+  "room-devices.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5948175/free-public-domain-cc0-photo",
+    "title": null
+  },
+  "room-beds.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5922015/photo-image-public-domain-medicine-free",
+    "title": "Free hospital room image"
+  },
+  "towels.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5921967/bath-towels-free-public-domain-cc0-photo",
+    "title": "Bath towels"
+  },
+  "stones-towel.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "sp-4"
+  }
+}

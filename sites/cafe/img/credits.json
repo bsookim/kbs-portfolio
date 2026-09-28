@@ -1,0 +1,74 @@
+{
+ "hero-campagne.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5927732/photo-image-public-domain-hands-wood",
+  "title": "Free homemade artisan sourdough bread"
+ },
+ "hero-latte.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "menu-shiopan.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "menu-croissant.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "menu-campagne.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/6024633/sourdough-free-public-domain-cc0-photo",
+  "title": "Sourdough. Free public domain CC0"
+ },
+ "menu-milkloaf.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "menu-eggtart.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "menu-scone.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "story-knead.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "bake-oven.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5904163/photo-image-public-domain-person-food",
+  "title": "Free fresh artisan bread oven"
+ },
+ "insta-oven.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5969522/bread-oven",
+  "title": "Bread in Oven"
+ },
+ "insta-tray.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "insta-window.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "insta-cake.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "insta-latte.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ },
+ "insta-bag.webp": {
+  "source": "stocksnap/rawpixel via Openverse",
+  "license": "cc0/pdm"
+ }
+}

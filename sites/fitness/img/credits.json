@@ -1,0 +1,83 @@
+{
+  "prog-diet.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/girl-woman-ZFIQC5CZRP",
+    "title": "Girl Woman"
+  },
+  "prog-profile.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/girl-woman-XBU0JECP7E",
+    "title": "Girl Woman"
+  },
+  "prog-posture.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "st-5"
+  },
+  "prog-rehab.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/men-fitness-Q9DNPMZNQT",
+    "title": "Men Fitness"
+  },
+  "prog-senior.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "rb-2"
+  },
+  "zone-free.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5904966/photo-image-public-domain-free-workout",
+    "title": "Free weight training rack black"
+  },
+  "zone-machine.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/gym-interior-LNCLN1NE6K",
+    "title": "Gym Interior"
+  },
+  "zone-stretch.webp": {
+    "source": "openverse (stocksnap/rawpixel)",
+    "license": "cc0/pdm",
+    "orig": "st-7"
+  },
+  "zone-locker.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/3303403/free-photo-image-locker-room-furniture-cabinet",
+    "title": "Small locker units change room"
+  },
+  "break-chalk.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/6031193/photo-image-public-domain-hands-person",
+    "title": "Man lifting barbell gym"
+  },
+  "coach-bar.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5911898/image-background-public-domain-free",
+    "title": "Free barbell weight plate image"
+  },
+  "coach-dumbbell.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/fitness-weights-FVUO0YIMKH",
+    "title": "Fitness Weights"
+  },
+  "coach-kb1.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/6038288/photo-image-public-domain-free-sport",
+    "title": "Kettlebells gym floor"
+  },
+  "coach-kb2.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/6016552/photo-image-public-domain-free-sport",
+    "title": "Closeup gym kettlebell gym floor"
+  }
+}

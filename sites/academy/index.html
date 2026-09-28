@@ -73,6 +73,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero-grid{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line-inv) 1px,transparent 1px),linear-gradient(90deg,var(--line-inv) 1px,transparent 1px);background-size:88px 88px;mask-image:radial-gradient(ellipse at 70% 40%,#000 20%,transparent 75%);opacity:.45}
 .hero-inner{position:relative;z-index:2;pointer-events:none;min-height:100svh;display:grid;grid-template-columns:repeat(12,1fr);align-content:center;gap:0 24px;padding-top:110px;padding-bottom:80px}
 .hero-inner a,.hero-inner button{pointer-events:auto}
+.hero-inner::before{content:"";position:absolute;z-index:-1;left:calc(var(--gut)*-1);top:18%;width:min(62vw,860px);height:70%;background:radial-gradient(ellipse at 35% 50%,rgba(10,18,51,.82) 0%,rgba(10,18,51,.55) 45%,transparent 72%);pointer-events:none}
 .eyebrow{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--volt);text-transform:uppercase;margin-bottom:28px}
 .eyebrow::before{content:"";width:40px;height:2px;background:var(--volt)}
 .hero h1{grid-column:1/9;margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,7vw,108px);text-shadow:0 0 30px rgba(10,18,51,.6);line-height:.98;letter-spacing:-.02em}
@@ -173,6 +174,28 @@ section{position:relative}
 .bar i::after{content:"";position:absolute;right:0;top:0;bottom:0;width:30%;background:var(--volt)}
 
 /* ---------- teachers ---------- */
+/* ---------- note band (duotone photos) ---------- */
+.note-band{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(72px,9vw,128px);align-items:end}
+.duo{position:relative;margin:0;overflow:hidden;isolation:isolate}
+.duo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(1.3) contrast(1.45);mix-blend-mode:multiply}
+.duo::after{content:"";position:absolute;inset:0;background:var(--ink);mix-blend-mode:lighten;pointer-events:none}
+.duo-volt{background:var(--volt)}
+.duo-paper{background:var(--paper)}
+.note-main{grid-column:1/8;aspect-ratio:4/3;box-shadow:14px 14px 0 var(--ink)}
+.note-main figcaption{position:absolute;z-index:2;left:0;bottom:0;background:var(--ink);color:var(--paper);font-size:14px;font-weight:700;padding:12px 18px;display:flex;gap:12px;align-items:center}
+.note-main figcaption span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--volt)}
+.note-copy{grid-column:9/13;display:flex;flex-direction:column;gap:22px}
+.note-kicker{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.note-quote{margin:0;font-family:var(--display);font-size:clamp(24px,2.3vw,34px);line-height:1.25;letter-spacing:-.01em}
+.note-quote em{font-style:normal;background:linear-gradient(transparent 60%,var(--volt) 60%,var(--volt) 92%,transparent 92%)}
+.note-side{aspect-ratio:3/2;border:2px solid var(--ink)}
+.note-meta{margin:0;font-size:14px;color:var(--muted);border-top:2px solid var(--ink);padding-top:14px}
+.note-meta b{color:var(--ink)}
+@media (max-width:860px){
+  .note-main{grid-column:1/-1;box-shadow:8px 8px 0 var(--ink)}
+  .note-copy{grid-column:1/-1;margin-top:20px}
+  .note-side{display:none}
+}
 .teachers{background:var(--paper-2);clip-path:polygon(0 4vw,100% 0,100% 100%,0 100%);padding-top:calc(clamp(88px,11vw,160px) + 4vw)}
 .t-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .t{background:var(--paper);padding:0 0 26px;position:relative;transition:transform .3s}
@@ -334,6 +357,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--volt
   .logo-txt small{display:none}
   .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),0 100%);padding-bottom:44px}
   .hero-inner{padding-top:96px;padding-bottom:64px;align-content:end}
+  .hero-inner::before{top:38%;height:64%;width:100%;left:0}
   .hero h1{font-size:clamp(42px,12.6vw,60px)}
   .hero-lede{margin-top:24px;font-size:15.5px}
   .hero-cta{margin-top:28px}
@@ -542,6 +566,21 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--volt
           <div class="bar" aria-hidden="true"><i style="--p:1"></i></div>
         </li>
       </ol>
+
+      <div class="note-band reveal">
+        <figure class="duo duo-volt note-main">
+          <img src="img/math-2.webp" alt="모눈 노트에 손으로 적어 내려간 수식 풀이" width="1024" height="768" loading="lazy" decoding="async">
+          <figcaption><span>ERROR NOTE</span> 틀린 풀이까지 지우지 않고 남깁니다</figcaption>
+        </figure>
+        <div class="note-copy">
+          <p class="note-kicker">수업이 끝나도 남는 것</p>
+          <p class="note-quote">한 학기 동안 쌓인 <em>오답 노트 한 권</em>이, 성적표보다 먼저 아이의 약점을 알려줍니다.</p>
+          <figure class="duo duo-paper note-side">
+            <img src="img/math-1.webp" alt="펼쳐진 수학 교재와 모눈 노트 위의 펜" width="960" height="640" loading="lazy" decoding="async">
+          </figure>
+          <p class="note-meta"><b>주 1회</b> 오답 원인 리포트 발송 <span aria-hidden="true">·</span> <b>4유형</b> 원인 분류</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -773,8 +812,15 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--volt
         t.alpha = isVolt ? .85 : (big ? .13 : .22 + Math.random()*.3);
         var hx = Math.random(), hy = Math.random();
         // keep the headline zone calm: few, faint glyphs behind the copy
-        if (!mobile && hx < .52 && hy > .15 && hy < .9){ if (isVolt || big) hx = .55 + Math.random()*.43; else t.alpha *= .5; }
-        if (mobile && hy > .45){ t.alpha *= .55; if (isVolt) hy = Math.random()*.4; }
+        // headline zone: move loud glyphs out entirely, leave only a whisper of small ones
+        if (!mobile && hx < .56 && hy > .08 && hy < .92){
+          if (isVolt || big) { hx = .6 + Math.random()*.38; if (hy > .15 && hy < .8) t.alpha = Math.min(t.alpha, .35); }
+          else { t.alpha = .045 + Math.random()*.035; t.style.fontSize = 14 + Math.random()*8; }
+        }
+        if (mobile && hy > .4){
+          if (isVolt || big) hy = Math.random()*.36;
+          else { t.alpha = .05 + Math.random()*.04; t.style.fontSize = 13 + Math.random()*8; }
+        }
         t.x = hx * W(); t.y = hy * H();
         t.rotation = (Math.random()-.5)*.4;
         layer.addChild(t);
@@ -1053,10 +1099,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--volt
 <!-- kbs-backlink -->
 <a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
 <style>
-.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .kbs-back:hover{transform:translateY(-2px)}
 .kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
 @media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
 </style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
 </body>
 </html>

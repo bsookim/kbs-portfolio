@@ -1,0 +1,56 @@
+{
+ "dish-salmon.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/8752623/photo-image-plant-public-domain-green",
+  "title": "Starter salad, grilled salmon"
+ },
+ "dish-chicken.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5940088/free-public-domain-cc0-photo",
+  "title": null
+ },
+ "dish-quinoa.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5921341/photo-image-flower-public-domain-plant",
+  "title": "Free quiona salad, vegetable meal"
+ },
+ "dish-bulgogi.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5946304/free-public-domain-cc0-photo",
+  "title": null
+ },
+ "dish-shrimp.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5902425/photo-image-public-domain-food-free",
+  "title": "Free shrimp salad image"
+ },
+ "dish-falafel.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5911006/image-public-domain-food-branch",
+  "title": "Free falafel mash potato image"
+ },
+ "hero-salad.webp": {
+  "source": "stocksnap",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/vegetable-salad-LPN1B8AHLA",
+  "title": "Vegetable Salad"
+ },
+ "fresh-flatlay.webp": {
+  "source": "stocksnap",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/healthy-food-7NGJXUAFPT",
+  "title": "Healthy Food"
+ },
+ "fresh-veg.webp": {
+  "source": "rawpixel",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5927565/photo-image-public-domain-green-food",
+  "title": "Free healthy vegetable salad platter"
+ }
+}

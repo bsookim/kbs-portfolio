@@ -226,6 +226,61 @@ section{position:relative}
 .fac h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:auto 0 8px;padding-top:36px}
 .fac p{margin:0;color:var(--text-2);font-size:14.5px}
 
+
+/* ---------- photography (illustrative cuts) ---------- */
+.ph{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.06) brightness(.9);transition:transform 1.6s var(--ease),filter .8s var(--ease)}
+.cut{position:absolute;z-index:3;font-size:10.5px;letter-spacing:.08em;color:rgba(237,232,223,.72);background:rgba(4,7,13,.55);padding:3px 8px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);pointer-events:none}
+
+/* community photo cards */
+.fac{min-height:clamp(340px,30vw,420px);justify-content:flex-end;isolation:isolate}
+.fac .fac-ph{position:absolute;inset:0;z-index:-2;filter:saturate(.62) contrast(1.08) brightness(.58)}
+.fac::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,10,18,.55) 0%,rgba(6,10,18,.05) 34%,rgba(6,10,18,.35) 60%,rgba(6,10,18,.94) 100%),linear-gradient(0deg,rgba(17,27,46,.35),rgba(17,27,46,.35))}
+.fac::before{z-index:0}
+.fac h3,.fac p{position:relative;z-index:1}
+.fac .fl{z-index:1}
+.fac .idx{position:absolute;z-index:1;left:clamp(28px,3vw,44px);top:clamp(22px,2.6vw,38px);color:var(--text-2)}
+.fac h3{margin-top:0;padding-top:0}
+.fac:hover .fac-ph{transform:scale(1.05);filter:saturate(.8) contrast(1.06) brightness(.7)}
+.fac .cut{right:clamp(20px,2.4vw,36px);top:clamp(48px,4.6vw,64px);background:none;padding:0;backdrop-filter:none;-webkit-backdrop-filter:none;color:rgba(237,232,223,.5)}
+
+/* unit interior gallery */
+.unit{background:linear-gradient(180deg,var(--ink-1),var(--ink-2))}
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.shot{position:relative;margin:0;overflow:hidden;background:var(--ink-3)}
+.shot::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,10,18,0) 55%,rgba(6,10,18,.82) 100%),linear-gradient(0deg,rgba(17,27,46,.22),rgba(17,27,46,.22))}
+.shot:hover .ph{transform:scale(1.04);filter:saturate(.9) contrast(1.05) brightness(.96)}
+.shot figcaption{position:absolute;left:clamp(16px,2vw,28px);right:clamp(16px,2vw,28px);bottom:clamp(14px,1.8vw,24px);z-index:2}
+.shot figcaption b{display:block;font-family:var(--latin);font-weight:400;font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.shot figcaption span{font-family:var(--serif);font-size:clamp(16px,1.4vw,20px);font-weight:400;color:var(--text)}
+.shot .cut{left:12px;top:12px}
+.shot--a{grid-column:1/8;grid-row:1/3;min-height:520px}
+.shot--a .ph{object-position:42% 78%;filter:saturate(.7) contrast(1.1) brightness(.74)}
+.shot--a:hover .ph{filter:saturate(.8) contrast(1.08) brightness(.84)}
+.shot--b{grid-column:8/13;aspect-ratio:4/3}
+.shot--c{grid-column:8/13;aspect-ratio:4/3}
+.shot--d{grid-column:1/6;aspect-ratio:4/5}
+.finish{grid-column:6/13;align-self:end;padding:clamp(8px,2vw,24px) 0 0 clamp(0px,2vw,24px)}
+.finish h3{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.3vw,32px);line-height:1.35;margin:0 0 10px}
+.finish h3 b{font-weight:600;color:var(--gold-hi)}
+.finish>p{color:var(--text-2);margin:0 0 26px;max-width:460px}
+.finish dl{margin:0;display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--line)}
+.finish dt,.finish dd{margin:0;padding:15px 0;border-bottom:1px solid var(--line-soft)}
+.finish dt{font-family:var(--latin);font-size:12px;letter-spacing:.28em;color:var(--gold);padding-right:28px;padding-top:18px}
+.finish dd{color:var(--text);font-size:15px}
+.finish dd small{display:block;color:var(--text-3);font-size:13px;margin-top:2px}
+.finish p.note{margin:14px 0 0}
+
+/* lifestyle band */
+.life{position:relative;min-height:clamp(460px,78vh,760px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:var(--ink-0)}
+.life-bg{position:absolute;inset:-8% 0;z-index:-2}
+.life-bg .ph{filter:saturate(.85) contrast(1.08) brightness(.82)}
+.life::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--ink-1) 0%,rgba(6,10,18,.2) 22%,rgba(6,10,18,.1) 50%,rgba(6,10,18,.88) 88%,var(--ink-1) 100%),linear-gradient(90deg,rgba(4,7,13,.7),rgba(4,7,13,0) 60%)}
+.life-copy{padding-bottom:clamp(56px,8vw,110px);width:100%}
+.life h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.2vw,60px);line-height:1.25;letter-spacing:-.02em;margin:18px 0 0}
+.life h2 b{font-weight:600;color:var(--gold-hi)}
+.life p.lede{max-width:440px;color:var(--text-2);margin:22px 0 0}
+.life .cut{right:var(--gutter);bottom:20px}
+
 /* schedule */
 .sch{background:linear-gradient(180deg,var(--ink-1),var(--ink-2))}
 .tl-wrap{position:relative}
@@ -340,6 +395,10 @@ fieldset.field legend{padding:0;margin-bottom:8px}
   .tl-fill{transform-origin:top}
   .tl li{padding:0 0 40px 48px}
   .tl .dot{top:4px}
+  .shot--a{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:16/11}
+  .shot--b,.shot--c{grid-column:span 6}
+  .shot--d{grid-column:1/6}
+  .finish{grid-column:6/13}
 }
 @media (max-width:720px){
   .hdr .wrap{height:64px}
@@ -354,7 +413,12 @@ fieldset.field legend{padding:0;margin-bottom:8px}
   .hero-cta .btn{flex:1 1 auto}
   .com-list{grid-template-columns:1fr}
   .fac{min-height:0}
-  .fac svg.ic{margin:22px 0 0}
+  .fac{min-height:300px}
+  .gal{grid-template-columns:1fr}
+  .shot--a,.shot--b,.shot--c,.shot--d,.finish{grid-column:1/-1}
+  .shot--a,.shot--b,.shot--c,.shot--d{aspect-ratio:4/3}
+  .finish{padding:12px 0 0}
+  .life{min-height:560px}
   .fg{grid-template-columns:1fr}
   .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ov-big>div{padding:22px 18px}
@@ -389,7 +453,7 @@ fieldset.field legend{padding:0;margin-bottom:8px}
       <span><b>THE RIVERLINE</b><small>RESIDENCE</small></span>
     </a>
     <nav class="nav" aria-label="주요 메뉴">
-      <a href="#location">입지</a><a href="#overview">단지 개요</a><a href="#plans">평면</a><a href="#community">커뮤니티</a><a href="#schedule">분양 일정</a>
+      <a href="#location">입지</a><a href="#overview">단지 개요</a><a href="#plans">평면</a><a href="#interior">인테리어</a><a href="#community">커뮤니티</a><a href="#schedule">분양 일정</a>
     </nav>
     <a class="btn btn-gold btn-sm" href="#reserve">방문 예약</a>
   </div>
@@ -579,37 +643,94 @@ fieldset.field legend{padding:0;margin-bottom:8px}
   </div>
 </section>
 
+<!-- UNIT INTERIOR -->
+<section class="sec unit" id="interior" aria-labelledby="ui-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">04 &nbsp;INTERIOR</p>
+        <h2 id="ui-title" class="rv">강을 들이는 방식,<br><b>유니트 인테리어</b></h2>
+      </div>
+      <p class="sec-desc rv">모든 타입의 거실과 안방은 강 쪽 2.6m 광폭 창을 향합니다. 아래 사진은 마감 방향을 보여 드리기 위한 이미지 컷이며, 실제 마감재는 홍보관 샘플로 확인하실 수 있습니다.</p>
+    </div>
+    <div class="gal">
+      <figure class="shot shot--a rv">
+        <img class="ph" src="img/unit-living.webp" width="1024" height="694" loading="lazy" decoding="async" alt="높은 층 통창으로 빛이 드는 화이트 톤 거실, 패브릭 소파와 펜던트 조명">
+        <span class="cut" aria-hidden="true">이미지 컷(예시)</span>
+        <figcaption><span><b>LIVING</b>광폭 창을 향한 그레이트 룸</span></figcaption>
+      </figure>
+      <figure class="shot shot--b rv">
+        <img class="ph" src="img/unit-bedroom.webp" width="1024" height="768" loading="lazy" decoding="async" alt="바닥까지 내려오는 통창 너머로 도시가 내려다보이는 침실">
+        <span class="cut" aria-hidden="true">이미지 컷(예시)</span>
+        <figcaption><span><b>MASTER</b>침대 머리맡까지 이어지는 조망</span></figcaption>
+      </figure>
+      <figure class="shot shot--c rv">
+        <img class="ph" src="img/unit-kitchen.webp" width="1024" height="683" loading="lazy" decoding="async" alt="우드 패널 키 큰 수납장과 화이트 아일랜드가 있는 주방">
+        <span class="cut" aria-hidden="true">이미지 컷(예시)</span>
+        <figcaption><span><b>KITCHEN</b>빌트인 가전과 아일랜드 키친</span></figcaption>
+      </figure>
+      <figure class="shot shot--d rv">
+        <img class="ph" src="img/unit-bath.webp" width="1024" height="681" loading="lazy" decoding="async" style="object-position:30% 50%" alt="고층 창가에 독립 욕조를 둔 차콜 톤 욕실">
+        <span class="cut" aria-hidden="true">이미지 컷(예시)</span>
+        <figcaption><span><b>BATH</b>창가에 둔 독립 욕조</span></figcaption>
+      </figure>
+      <div class="finish rv">
+        <h3>호텔의 마감을<br><b>매일 쓰는 집으로</b></h3>
+        <p>눈에 보이는 면은 줄이고, 손이 닿는 곳은 무게감 있는 소재로 채웠습니다.</p>
+        <dl>
+          <dt>FLOOR</dt><dd>원목 헤링본 마루<small>거실·침실 (예시)</small></dd>
+          <dt>KITCHEN</dt><dd>세라믹 상판 · 빌트인 인덕션<small>84B·124P 아일랜드 기본 (예시)</small></dd>
+          <dt>BATH</dt><dd>대형 포셀린 타일 · 독립 욕조<small>124P 마스터 욕실 (예시)</small></dd>
+          <dt>WINDOW</dt><dd>로이 삼중유리 2.6m 광폭 창호<small>전 타입 리버 사이드 (예시)</small></dd>
+        </dl>
+        <p class="note">※ 마감 사양은 포트폴리오용 예시입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- COMMUNITY -->
 <section class="sec com" id="community" aria-labelledby="cm-title">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <p class="sec-no rv">04 &nbsp;COMMUNITY</p>
+        <p class="sec-no rv">05 &nbsp;COMMUNITY</p>
         <h2 id="cm-title" class="rv">호텔의 하루를<br><b>집 안으로</b></h2>
       </div>
       <p class="sec-desc rv">입주민 전용 커뮤니티는 저층 포디움과 47층 스카이 레벨에 나누어 배치됩니다.</p>
     </div>
     <div class="com-list">
       <article class="fac rv"><span class="idx">01</span><span class="fl">47F</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 34c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3"/><path d="M4 41c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3"/><path d="M14 27V9a4 4 0 0 1 8 0m4 18V9a4 4 0 0 1 8 0M14 15h12M14 21h12"/></svg>
-        <h3>스카이 인피니티 풀</h3><p>강을 수평선처럼 마주하는 47층 실내 수영장.</p></article>
+        <img class="ph fac-ph" src="img/com-pool.webp" width="1024" height="768" loading="lazy" decoding="async" alt="해 질 녘 하늘을 비추는 루프탑 인피니티 풀과 유리 라운지"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
+        <h3>스카이 인피니티 풀</h3><p>강을 수평선처럼 마주하는 47층 인피니티 풀.</p></article>
       <article class="fac rv"><span class="idx">02</span><span class="fl">47F</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 38h32M12 38V24h24v14M18 24V14h12v10"/><path d="M24 8v6M14 30h4m12 0h4"/><circle cx="24" cy="30" r="2"/></svg>
+        <img class="ph fac-ph" src="img/com-lounge.webp" width="1024" height="683" loading="lazy" decoding="async" alt="우드 월과 간접 조명이 감싸는 라운지, 통창 너머 물가 풍경"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
         <h3>리버뷰 라운지 &amp; 바</h3><p>입주민 초청 모임을 위한 프라이빗 라운지.</p></article>
       <article class="fac rv"><span class="idx">03</span><span class="fl">B1</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 24h4m28 0h4M10 18v12m28-12v12M14 14v20m20-20v20M14 24h20"/></svg>
+        <img class="ph fac-ph" src="img/com-fitness.webp" width="1024" height="683" loading="lazy" decoding="async" alt="고무 바닥 위 케틀벨과 바벨이 놓인 피트니스 존"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
         <h3>피트니스 &amp; 필라테스</h3><p>퍼스널 트레이닝 존과 GX룸을 갖춘 웰니스 센터.</p></article>
       <article class="fac rv"><span class="idx">04</span><span class="fl">3F</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 10h12a4 4 0 0 1 4 4v26a3 3 0 0 0-3-3H8zM40 10H28a4 4 0 0 0-4 4v26a3 3 0 0 1 3-3h13z"/></svg>
+        <img class="ph fac-ph" src="img/com-library.webp" width="960" height="640" loading="lazy" decoding="async" alt="아치형 천창 아래 서가가 층층이 이어진 라이브러리"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
         <h3>라이브러리 &amp; 워크 라운지</h3><p>조용한 몰입을 위한 1인 부스와 미팅룸.</p></article>
       <article class="fac rv"><span class="idx">05</span><span class="fl">1F</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 40V20L24 8l16 12v20z"/><path d="M19 40V28h10v12M8 40h32"/></svg>
+        <img class="ph fac-ph" src="img/com-lobby.webp" width="1024" height="683" loading="lazy" decoding="async" alt="대리석 바닥과 따뜻한 조명의 호텔식 로비 라운지"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
         <h3>컨시어지 로비</h3><p>택배·세탁·차량 호출을 돕는 상주 데스크 운영(예정).</p></article>
       <article class="fac rv"><span class="idx">06</span><span class="fl">RF</span>
-        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M24 40V22"/><path d="M24 22c0-8 6-12 14-12 0 8-6 12-14 12zM24 28c0-6-5-9-12-9 0 6 5 9 12 9z"/><path d="M10 40h28"/></svg>
+        <img class="ph fac-ph" src="img/com-rooftop.webp" width="1024" height="683" loading="lazy" decoding="async" alt="도시 스카이라인과 노을이 보이는 루프탑 데크 라운지"><span class="cut" aria-hidden="true">이미지 컷(예시)</span>
         <h3>루프탑 가든</h3><p>계절 식재와 선셋 데크가 있는 옥상 정원.</p></article>
     </div>
   </div>
+</section>
+
+<!-- LIFESTYLE -->
+<section class="life" aria-labelledby="lf-title">
+  <div class="life-bg" aria-hidden="true"><img class="ph" src="img/life-river-night.webp" width="1024" height="683" loading="lazy" decoding="async" alt=""></div>
+  <div class="wrap life-copy">
+    <p class="eyebrow rv">Lifestyle</p>
+    <h2 id="lf-title" class="rv">하루의 끝,<br><b>강 위의 불빛</b>이 거실까지</h2>
+    <p class="lede rv">해가 지면 강 건너 스카이라인이 켜집니다. 불을 끄고 앉아도 창 하나로 충분한 저녁을 설계했습니다.</p>
+  </div>
+  <span class="cut" aria-hidden="true">이미지 컷(예시) · 야경 연출 사진</span>
 </section>
 
 <!-- SCHEDULE -->
@@ -617,7 +738,7 @@ fieldset.field legend{padding:0;margin-bottom:8px}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <p class="sec-no rv">05 &nbsp;SCHEDULE</p>
+        <p class="sec-no rv">06 &nbsp;SCHEDULE</p>
         <h2 id="sc-title" class="rv">분양 일정</h2>
       </div>
       <p class="sec-desc rv">일정은 사정에 따라 변경될 수 있으며, 확정 일정은 상담을 통해 안내드립니다.</p>
@@ -637,7 +758,7 @@ fieldset.field legend{padding:0;margin-bottom:8px}
 <section class="sec rsv" id="reserve" aria-labelledby="rs-title">
   <div class="wrap rsv-grid">
     <div class="rsv-aside">
-      <p class="sec-no rv">06 &nbsp;VISIT</p>
+      <p class="sec-no rv">07 &nbsp;VISIT</p>
       <h2 id="rs-title" class="rv">홍보관 방문,<br><b>예약하신 시간은</b><br>온전히 한 분께</h2>
       <p class="rv">예약제로 운영되어 대기 없이 전담 상담사와 1:1로 유니트와 평면을 둘러보실 수 있습니다.</p>
       <ul class="perks rv">
@@ -1097,6 +1218,13 @@ fieldset.field legend{padding:0;margin-bottom:8px}
     gsap.to(o,{v:to,duration:2,ease:"power2.out",scrollTrigger:{trigger:c,start:"top 85%",once:true},onUpdate:function(){ c.textContent = dec ? o.v.toFixed(dec) : Math.round(o.v).toLocaleString("ko-KR"); }});
   });
 
+  // photo reveals
+  gsap.utils.toArray(".shot").forEach(function(f){
+    var im = f.querySelector(".ph");
+    gsap.fromTo(im,{scale:1.14},{scale:1,duration:1.8,ease:"expo.out",clearProps:"transform",scrollTrigger:{trigger:f,start:"top 85%",once:true}});
+  });
+  gsap.fromTo(".life-bg",{yPercent:-6},{yPercent:6,ease:"none",scrollTrigger:{trigger:".life",start:"top bottom",end:"bottom top",scrub:true}});
+
   // timeline progress
   var mq = window.matchMedia("(max-width:1024px)");
   gsap.fromTo(".tl-fill",{scaleX: mq.matches?1:0, scaleY: mq.matches?0:1},{scaleX:1,scaleY:1,ease:"none",scrollTrigger:{trigger:"#tl",start:"top 80%",end:"bottom 60%",scrub:.6}});
@@ -1105,10 +1233,13 @@ fieldset.field legend{padding:0;margin-bottom:8px}
 <!-- kbs-backlink -->
 <a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
 <style>
-.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
 .kbs-back:hover{transform:translateY(-2px)}
 .kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
 @media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
 </style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
 </body>
 </html>
