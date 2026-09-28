@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KBS 포트폴리오 | 웹사이트 제작</title>
+<meta name="description" content="업종별 웹사이트 제작 포트폴리오. 홈페이지, 랜딩페이지, 웹 개발.">
+<meta property="og:title" content="KBS 포트폴리오">
+<meta property="og:description" content="업종별 웹사이트 제작 포트폴리오">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--bg2:#131315;--ink:#EDEAE3;--mute:#8C887F;--line:rgba(237,234,227,.12);--acc:#E8FF5A;--acc2:#FF6A3D}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{font-family:Pretendard,sans-serif;color:var(--ink);background:var(--bg);word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Instrument Serif",serif;font-weight:400}
+.mono{font-family:"JetBrains Mono",monospace}
+.wrap{max-width:1320px;margin:0 auto;padding:0 28px}
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:90;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-5%,4%)}40%{transform:translate(4%,-6%)}60%{transform:translate(-3%,-2%)}80%{transform:translate(6%,5%)}}
+
+.hd{position:fixed;inset:0 0 auto;z-index:60;padding:22px 0;mix-blend-mode:difference}
+.hd .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{width:10px;height:10px;border-radius:50%;background:#fff;display:block}
+.nav{display:flex;gap:28px;font-size:14px}
+.nav a{opacity:.85}
+.nav a:hover{opacity:1}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 64px;position:relative;overflow:hidden}
+.hero .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:18px;margin-top:40px;flex-wrap:wrap;gap:10px}
+.hero h1{font-size:clamp(56px,11.5vw,188px);line-height:.9;letter-spacing:-.04em;font-weight:800}
+.hero .wrap{width:100%}
+.hero h1 .row{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .row span{display:inline-block}
+.hero h1 em{font-style:italic;font-family:"Instrument Serif",serif;font-weight:400;color:var(--acc);letter-spacing:-.02em}
+.hero .lead{font-size:clamp(17px,1.6vw,21px);color:var(--mute);max-width:560px;line-height:1.7;margin-top:36px}
+.hero .lead b{color:var(--ink);font-weight:600}
+.blob{position:absolute;right:-8vw;top:8vh;width:46vw;max-width:680px;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 180deg,#E8FF5A,#FF6A3D,#6A5BFF,#27E0C5,#E8FF5A);filter:blur(90px);opacity:.28;pointer-events:none}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13px;color:var(--ink);margin-bottom:34px}
+.status b{width:8px;height:8px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 10px rgba(61,220,132,0)}}
+
+section{padding:130px 0;position:relative}
+.label{font-size:12px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase;display:flex;gap:14px;align-items:center;margin-bottom:28px}
+.label::before{content:"";width:28px;height:1px;background:var(--mute)}
+.h2{font-size:clamp(34px,5vw,72px);line-height:1.02;letter-spacing:-.03em;font-weight:800}
+.h2 em{font-style:italic;font-family:"Instrument Serif",serif;font-weight:400;color:var(--acc)}
+
+/* work list */
+.work .top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.work .top p{color:var(--mute);max-width:420px;line-height:1.7}
+.list{border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:70px 1.3fr 1fr 150px 44px;align-items:center;gap:20px;padding:30px 0;border-bottom:1px solid var(--line);position:relative;transition:padding .45s cubic-bezier(.2,.8,.2,1),color .3s}
+.item .no{color:var(--mute);font-size:14px}
+.item .name{font-size:clamp(24px,3vw,42px);font-weight:700;letter-spacing:-.02em}
+.item .kind{color:var(--mute);font-size:15px}
+.item .tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.item .tags span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:var(--mute)}
+.item .arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .3s,color .3s,transform .4s}
+.item::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.item:hover{padding-left:18px}
+.item:hover::after{transform:scaleX(1)}
+.item:hover .arrow{background:var(--acc);color:#0B0B0C;transform:rotate(-45deg);border-color:var(--acc)}
+.item .thumb-m{display:none}
+.filters{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:15px;color:var(--mute);background:none;border:1px solid var(--line);border-radius:999px;padding:11px 20px;cursor:pointer;min-height:44px;transition:all .3s}
+.filters button sup{font-size:11px;margin-left:3px}
+.filters button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.item.hide{display:none}
+.preview{position:fixed;left:0;top:0;width:420px;aspect-ratio:16/10;border-radius:14px;overflow:hidden;pointer-events:none;z-index:50;opacity:0;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.preview img{width:100%;height:100%;object-fit:cover;object-position:top;position:absolute;inset:0;opacity:0;transition:opacity .25s}
+.preview img.on{opacity:1}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:60px}
+.svc{background:var(--bg);padding:38px 30px 34px;min-height:280px;display:flex;flex-direction:column;transition:background .4s}
+.svc:hover{background:var(--bg2)}
+.svc .n{font-size:13px;color:var(--mute)}
+.svc h3{font-size:24px;font-weight:700;margin:auto 0 12px;letter-spacing:-.02em}
+.svc p{color:var(--mute);font-size:15px;line-height:1.65}
+.svc .price{margin-top:22px;font-size:13px;color:var(--acc)}
+
+/* live */
+.live-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.live{border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:end;gap:20px;min-height:220px;position:relative;overflow:hidden;transition:border-color .4s}
+.live::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(232,255,90,.09),transparent 40%);opacity:0;transition:opacity .3s}
+.live:hover{border-color:rgba(232,255,90,.4)}
+.live:hover::before{opacity:1}
+.live h3{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.live p{color:var(--mute);margin-top:10px;line-height:1.6}
+.live .url{font-size:13px;color:var(--acc)}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);padding:30px 0;overflow:hidden;white-space:nowrap}
+.marq .row{display:inline-flex;gap:60px;font-size:clamp(40px,6vw,88px);font-weight:800;letter-spacing:-.03em}
+.marq .row span{display:inline-flex;align-items:center;gap:60px}
+.marq .row span:nth-child(even){font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--acc)}
+.marq .row span::after{content:"✦";font-size:.4em;color:var(--mute);font-style:normal}
+
+/* contact */
+.contact{text-align:center;padding:160px 0 120px}
+.contact .h2{font-size:clamp(44px,8vw,128px)}
+.contact p{color:var(--mute);margin:28px auto 0;max-width:520px;line-height:1.7}
+.cta{display:inline-flex;align-items:center;gap:12px;margin-top:44px;background:var(--acc);color:#0B0B0C;font-weight:800;font-size:18px;padding:20px 34px;border-radius:999px;transition:transform .3s}
+.cta:active{transform:scale(.96)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.cursor{position:fixed;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--acc);pointer-events:none;z-index:100;mix-blend-mode:difference;opacity:0}
+:focus-visible{outline:2px solid var(--acc);outline-offset:4px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-60px;background:var(--acc);color:#000;padding:10px 16px;border-radius:8px;z-index:200;font-weight:700}
+.skip:focus{top:16px}
+.reveal{opacity:0;transform:translateY(40px)}
+
+@media (max-width:900px){
+  .nav{display:none}
+  .item{grid-template-columns:1fr 44px;gap:10px;padding:26px 0}
+  .item .no,.item .tags{display:none}
+  .item .kind{grid-column:1;order:3}
+  .item .thumb-m{display:block;grid-column:1 / -1;order:4;border-radius:12px;overflow:hidden;aspect-ratio:16/10;margin-top:10px;border:1px solid var(--line)}
+  .item .thumb-m img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .item:hover{padding-left:0}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .live-grid{grid-template-columns:1fr}
+  section{padding:96px 0}
+  .preview,.cursor{display:none}
+}
+@media (max-width:520px){.svc-grid{grid-template-columns:1fr}.wrap{padding:0 20px}}
+@media (hover:none){.preview,.cursor{display:none}}
+@media (prefers-reduced-motion:reduce){.grain{animation:none}.reveal{opacity:1;transform:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">작업물로 바로가기</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="preview" aria-hidden="true" id="preview"></div>
+
+<header class="hd">
+  <div class="wrap">
+    <a href="#top" class="logo"><i></i>KBS</a>
+    <nav class="nav"><a href="#work">작업물</a><a href="#service">서비스</a><a href="#live">운영 중</a><a href="#contact">문의</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="blob" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="status"><b></b>지금 새 프로젝트 받는 중</span>
+    <h1>
+      <span class="row"><span>Websites</span></span>
+      <span class="row"><span>that <em>actually</em></span></span>
+      <span class="row"><span>work.</span></span>
+    </h1>
+    <p class="lead">업종에 맞는 <b>홈페이지 · 랜딩페이지 · 웹 개발</b>을 직접 기획하고 만듭니다. 아래는 업종별로 만든 예시 사이트예요. 눌러서 실제로 둘러보세요.</p>
+    <div class="meta mono"><span>KBS PORTFOLIO — 2026</span><span id="count">7 SITES</span><span>SCROLL ↓</span></div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="top">
+      <div><div class="label mono">Selected work</div><h2 class="h2">업종별 <em>예시</em> 사이트</h2></div>
+      <p>디자인 방향과 기능을 업종마다 다르게 잡았습니다. 모든 사이트는 PC와 모바일에서 바로 확인할 수 있어요.</p>
+    </div>
+    <div class="filters" role="tablist" aria-label="작업물 종류">
+      <button role="tab" aria-selected="true" data-f="all">전체 <sup id="c-all"></sup></button>
+      <button role="tab" aria-selected="false" data-f="site">홈페이지 <sup id="c-site"></sup></button>
+      <button role="tab" aria-selected="false" data-f="landing">랜딩페이지 <sup id="c-landing"></sup></button>
+    </div>
+    <div class="list" id="list"></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="row" id="marq"></div></div>
+
+<section id="service">
+  <div class="wrap">
+    <div class="label mono">Service</div>
+    <h2 class="h2 reveal">이런 작업을 <em>합니다</em></h2>
+    <div class="svc-grid">
+      <div class="svc"><span class="n mono">01</span><h3>홈페이지 제작</h3><p>회사 · 매장 소개부터 문의 폼까지. 아임웹, 워드프레스, 코딩 모두 가능합니다.</p><span class="price mono">시간당 15,000원</span></div>
+      <div class="svc"><span class="n mono">02</span><h3>랜딩페이지</h3><p>광고 · 이벤트용 한 페이지. 상담 신청이 들어오는 구성으로 만듭니다.</p><span class="price mono">약 10시간 · 15만 원</span></div>
+      <div class="svc"><span class="n mono">03</span><h3>웹 개발</h3><p>회원, 게시판, 예약처럼 기능이 필요한 사이트를 직접 코드로 개발합니다.</p><span class="price mono">시간당 15,000원</span></div>
+      <div class="svc"><span class="n mono">04</span><h3>사이트 수정</h3><p>깨진 화면, 느린 속도, 오류 수정. 간단한 건 1~2시간 안에 끝납니다.</p><span class="price mono">시간당 15,000원</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="live">
+  <div class="wrap">
+    <div class="label mono">In production</div>
+    <h2 class="h2 reveal">직접 개발하고 <em>운영 중인</em> 서비스</h2>
+    <div class="live-grid">
+      <a class="live reveal" href="https://costpick.co.kr" target="_blank" rel="noopener"><div><h3>코스트픽</h3><p>코스트코 상품 가격을 매일 모아 비교해 주는 서비스</p></div><span class="url mono">costpick.co.kr ↗</span></a>
+      <a class="live reveal" href="https://mmablack.co.kr" target="_blank" rel="noopener"><div><h3>MMA BLACK</h3><p>선수 3만 5천 명 이상을 담은 격투기 전적 데이터베이스</p></div><span class="url mono">mmablack.co.kr ↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="label mono" style="justify-content:center">Contact</div>
+    <h2 class="h2 reveal">다음 사이트는<br><em>당신 거</em>예요.</h2>
+    <p class="reveal">숨고 · 크몽 메시지로 편하게 문의해 주세요. 원하시면 계약 전에 메인 화면 샘플부터 만들어 보여드립니다.</p>
+    <a class="cta reveal" href="#work">예시 사이트 다시 보기 ↑</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap mono"><span>© 2026 KBS</span><span>예시 사이트의 회사명 · 수치는 모두 가상입니다</span></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const SITES=[
+  {slug:'policy-fund',name:'한결경영파트너스',kind:'정책자금 · 경영 컨설팅',tags:['기업','상담 폼','GSAP']},
+  {slug:'interior',name:'무드하우스 인테리어',kind:'인테리어 · 리모델링',tags:['에디토리얼','비포/애프터']},
+  {slug:'clinic',name:'맑은결 피부과',kind:'병원 · 피부과',tags:['예약','3D 배경']},
+  {slug:'cafe',name:'온기 베이커리',kind:'카페 · 베이커리',tags:['메뉴','일러스트']},
+  {slug:'academy',name:'브릿지 수학학원',kind:'학원 · 교육',tags:['시간표','인터랙티브']},
+  {slug:'tax',name:'정도 세무회계',kind:'세무 · 회계',tags:['계산기','FAQ']},
+  {slug:'fitness',name:'코어핏 PT 스튜디오',kind:'헬스 · PT',tags:['3D','가격표']},
+  {slug:'landing-class',name:'스피크업 랩',kind:'온라인 강의 · 얼리버드 모집',tags:['카운트다운','후기'],type:'landing'},
+  {slug:'landing-app',name:'모아 가계부 앱',kind:'앱 · 사전예약',tags:['앱 목업','스크롤 스토리'],type:'landing'},
+  {slug:'landing-estate',name:'더 리버라인 레지던스',kind:'분양 · 방문 예약',tags:['평면도','입지 지도'],type:'landing'},
+  {slug:'landing-food',name:'그린밀',kind:'정기배송 · 할인 이벤트',tags:['가격 계산기','이벤트'],type:'landing'}
+];
+SITES.forEach(s=>s.type=s.type||'site');
+const list=document.getElementById('list'), prev=document.getElementById('preview');
+SITES.forEach((s,i)=>{
+  const a=document.createElement('a');
+  a.className='item reveal'; a.href='sites/'+s.slug+'/'; a.dataset.i=i; a.dataset.type=s.type;
+  a.innerHTML=`<span class="no mono">${String(i+1).padStart(2,'0')}</span><span class="name">${s.name}</span><span class="kind">${s.kind}</span><span class="tags">${s.tags.map(t=>`<span>${t}</span>`).join('')}</span><span class="arrow" aria-hidden="true">→</span><span class="thumb-m"><img src="thumbs/${s.slug}.jpg" alt="${s.name} 화면" loading="lazy"></span>`;
+  list.appendChild(a);
+  const img=document.createElement('img'); img.src='thumbs/'+s.slug+'.jpg'; img.alt=''; prev.appendChild(img);
+});
+document.getElementById('count').textContent=SITES.length+' SITES';
+['all','site','landing'].forEach(f=>document.getElementById('c-'+f).textContent=f==='all'?SITES.length:SITES.filter(s=>s.type===f).length);
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  const f=b.dataset.f; let n=0;
+  list.querySelectorAll('.item').forEach(it=>{const show=f==='all'||it.dataset.type===f; it.classList.toggle('hide',!show); if(show){n++; it.querySelector('.no').textContent=String(n).padStart(2,'0'); if(window.gsap&&!matchMedia('(prefers-reduced-motion: reduce)').matches) gsap.fromTo(it,{opacity:0,y:20},{opacity:1,y:0,duration:.5,delay:n*.04})}});
+  window.ScrollTrigger&&ScrollTrigger.refresh();
+}));
+const mq=document.getElementById('marq');
+const words=['홈페이지','Landing','랜딩페이지','Web','웹 개발','Fast','반응형','Clean'];
+mq.innerHTML=[...words,...words].map(w=>`<span>${w}</span>`).join('');
+
+gsap.registerPlugin(ScrollTrigger);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){
+  gsap.from('.hero h1 .row span',{yPercent:110,duration:1.2,ease:'power4.out',stagger:.12});
+  gsap.from(['.status','.hero .lead','.hero .meta'],{y:24,opacity:0,duration:1,ease:'power3.out',stagger:.1,delay:.5});
+  gsap.to('.blob',{rotate:360,duration:40,repeat:-1,ease:'none'});
+  gsap.to('.hero h1',{yPercent:-18,opacity:.25,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.utils.toArray('.reveal').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+  gsap.from('.svc',{y:50,opacity:0,stagger:.1,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.svc-grid',start:'top 80%'}});
+  const loop=gsap.to(mq,{xPercent:-50,duration:30,ease:'none',repeat:-1});
+  ScrollTrigger.create({onUpdate:s=>gsap.to(loop,{timeScale:s.direction*(1+Math.min(Math.abs(s.getVelocity())/500,4)),duration:.3,overwrite:true,onComplete:()=>gsap.to(loop,{timeScale:s.direction,duration:.8})})});
+}else{document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none'})}
+
+if(matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce){
+  const cur=document.querySelector('.cursor');
+  gsap.set(prev,{xPercent:6,yPercent:-50,scale:.6,transformOrigin:'left center'});
+  const px=gsap.quickTo(prev,'x',{duration:.6,ease:'power3'}), py=gsap.quickTo(prev,'y',{duration:.6,ease:'power3'});
+  const cx=gsap.quickTo(cur,'x',{duration:.15}), cy=gsap.quickTo(cur,'y',{duration:.15});
+  addEventListener('mousemove',e=>{cur.style.opacity=1;cx(e.clientX);cy(e.clientY);px(e.clientX);py(e.clientY)});
+  const imgs=[...prev.querySelectorAll('img')];
+  list.querySelectorAll('.item').forEach(it=>{
+    it.addEventListener('mouseenter',()=>{imgs.forEach((im,k)=>im.classList.toggle('on',k==it.dataset.i));gsap.to(prev,{opacity:1,scale:1,duration:.4,ease:'power3.out'});gsap.to(cur,{scale:4,duration:.3})});
+    it.addEventListener('mouseleave',()=>{gsap.to(prev,{opacity:0,scale:.6,duration:.3});gsap.to(cur,{scale:1,duration:.3})});
+  });
+  document.querySelectorAll('.live').forEach(el=>el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+  document.querySelectorAll('.cta').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.3,y:(e.clientY-r.top-r.height/2)*.4,duration:.4})});b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'}))});
+}
+</script>
+</body>
+</html>

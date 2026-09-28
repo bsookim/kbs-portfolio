@@ -1,0 +1,1342 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>무드하우스 인테리어 | 대구 아파트·상가 리모델링</title>
+<meta name="description" content="대구 아파트·상가 리모델링 인테리어 스튜디오 무드하우스. 생활 동선부터 설계하고, 자재는 품번까지 공개합니다.">
+<meta name="theme-color" content="#EFE8DC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --ivory:#F6F1E8;
+  --lime:#EFE8DC;
+  --lime-2:#E4DACA;
+  --stone:#8C8273;
+  --rule:#CBBFAC;
+  --ink:#221F1B;
+  --ink-2:#4A443C;
+  --terra:#B0512B;
+  --terra-deep:#8E3E1F;
+  --char:#1E1B18;
+  --serif:"Nanum Myeongjo", "Gowun Batang", serif;
+  --latin:"Cormorant Garamond", "Nanum Myeongjo", serif;
+  --sans:"Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  --gut:clamp(20px, 5vw, 72px);
+  --max:1440px;
+  --ease:cubic-bezier(.22,.8,.18,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  margin:0;background:var(--lime);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.75;letter-spacing:-.01em;
+  word-break:keep-all;overflow-wrap:break-word;overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.32;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .16 0 0 0 0 .13 0 0 0 0 .1 0 0 0 .5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--terra);outline-offset:4px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--ink);color:var(--ivory);padding:10px 16px;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);font-weight:500}
+.eyebrow b{font-family:var(--latin);font-style:italic;font-weight:400;font-size:20px;letter-spacing:0;color:var(--terra);text-transform:none}
+.eyebrow::after{content:"";flex:0 0 56px;height:1px;background:currentColor;opacity:.6}
+.it{font-family:var(--latin);font-style:italic;font-weight:300}
+
+/* ---------- header ---------- */
+.hd{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .4s var(--ease),box-shadow .4s}
+.hd.is-scrolled{background:rgba(239,232,220,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--rule)}
+.hd__in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;min-height:44px;align-items:center}
+.logo__mark{font-family:var(--latin);font-size:26px;letter-spacing:.14em;font-weight:400}
+.logo__ko{font-size:12px;color:var(--stone);letter-spacing:.08em;padding-left:10px;border-left:1px solid var(--rule)}
+.nav ul{display:flex;gap:36px;list-style:none;margin:0;padding:0}
+.nav a{text-decoration:none;font-size:14px;letter-spacing:.04em;position:relative;padding:10px 0;display:inline-block}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hd__cta{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid var(--ink);text-decoration:none;font-size:14px;transition:background .3s,color .3s}
+.hd__cta:hover{background:var(--ink);color:var(--ivory)}
+.menu-btn{display:none;width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:10px;right:10px;height:1px;background:var(--ink);transition:transform .4s var(--ease)}
+.menu-btn span:first-child{top:18px}.menu-btn span:last-child{top:26px}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:55;background:var(--ivory);padding:110px var(--gut) 40px;display:flex;flex-direction:column;justify-content:space-between;visibility:hidden;opacity:0;transition:opacity .4s,visibility .4s}
+.mnav.is-open{visibility:visible;opacity:1}
+.mnav ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.mnav li{counter-increment:m;border-bottom:1px solid var(--rule)}
+.mnav a{display:flex;align-items:baseline;gap:16px;text-decoration:none;font-family:var(--serif);font-size:30px;font-weight:700;padding:16px 0}
+.mnav a::before{content:"0" counter(m);font-family:var(--latin);font-style:italic;font-size:16px;color:var(--terra);font-weight:400}
+.mnav p{font-size:13px;color:var(--stone);margin:0}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;padding-top:100px;padding-bottom:64px;overflow:clip}
+.hero__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;position:relative}
+.hero__meta{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:10px 0;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:clamp(28px,3.4vw,48px)}
+.hero__meta span:nth-child(2){font-family:var(--latin);font-style:italic;text-transform:none;letter-spacing:.02em;font-size:16px}
+.hero__text{grid-column:1/9;grid-row:2;position:relative;z-index:3;padding-bottom:clamp(8px,4vw,64px)}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,6.3vw,104px);line-height:1.08;letter-spacing:-.045em;margin:0 0 36px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line>span{display:inline-block}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero h1 .indent{padding-left:1.1em}
+.hero__lede{max-width:430px;font-size:16px;color:var(--ink-2);margin:0 0 36px;padding-left:20px;border-left:1px solid var(--terra)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:56px;padding:0 30px;background:var(--ink);color:var(--ivory);text-decoration:none;border:0;cursor:pointer;font-size:15px;letter-spacing:.04em;position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--terra);transform:translateY(101%);transition:transform .55s var(--ease);z-index:-1}
+.btn:hover::before{transform:none}
+.btn svg{transition:transform .45s var(--ease)}
+.btn:hover svg{transform:translateX(5px)}
+.link-line{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:15px;border-bottom:1px solid var(--ink);padding-top:4px}
+.hero__art{grid-column:7/13;grid-row:2;position:relative;z-index:1}
+.hero__frame{position:relative;aspect-ratio:600/700;overflow:hidden;background:var(--lime-2)}
+.hero__frame svg{width:100%;height:100%;will-change:transform}
+.hero__caption{position:absolute;left:-1px;bottom:-1px;background:var(--lime);padding:14px 20px 0 0;font-size:12px;color:var(--stone);letter-spacing:.06em}
+.hero__caption b{display:block;font-family:var(--serif);color:var(--ink);font-size:15px;letter-spacing:-.01em}
+.hero__badge{position:absolute;right:clamp(-20px,-1.5vw,0px);top:-44px;z-index:4;width:118px;height:118px;border-radius:50%;background:var(--terra);color:var(--ivory);display:grid;place-items:center;text-align:center;line-height:1.1}
+.hero__badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 26s linear infinite}
+.hero__badge strong{font-family:var(--serif);font-size:32px;font-weight:800;display:block}
+.hero__badge small{font-size:11px;letter-spacing:.1em}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero__num{position:absolute;left:calc(var(--gut) * -.2);bottom:-.24em;font-family:var(--latin);font-size:clamp(160px,26vw,420px);line-height:1;color:transparent;-webkit-text-stroke:1px var(--rule);z-index:0;pointer-events:none;user-select:none;font-weight:400}
+.scroll-cue{position:absolute;right:var(--gut);bottom:28px;display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.24em;color:var(--stone);writing-mode:vertical-rl;z-index:3}
+.scroll-cue::after{content:"";width:1px;height:56px;background:linear-gradient(var(--stone),transparent);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquee ---------- */
+.ticker{border-block:1px solid var(--ink);overflow:hidden;background:var(--ivory)}
+.ticker__track{display:flex;width:max-content;animation:tick 40s linear infinite}
+.ticker__track span{display:flex;align-items:center;gap:36px;padding:18px 18px;font-family:var(--serif);font-size:clamp(18px,2vw,24px);white-space:nowrap}
+.ticker__track span::after{content:"";width:8px;height:8px;background:var(--terra);transform:rotate(45deg)}
+.ticker__track i{font-family:var(--latin);font-style:italic;color:var(--stone)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding-block:clamp(96px,14vw,200px)}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;margin-bottom:clamp(48px,7vw,100px);align-items:end}
+.sec-head .eyebrow{grid-column:1/-1;margin-bottom:24px}
+.sec-head h2{grid-column:1/8;font-family:var(--serif);font-weight:800;font-size:clamp(34px,4.8vw,72px);line-height:1.14;letter-spacing:-.04em;margin:0}
+.sec-head p{grid-column:9/13;margin:0;color:var(--ink-2);font-size:15px}
+
+/* studio */
+.studio__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:56px}
+.studio__quote{grid-column:1/8;font-family:var(--serif);font-size:clamp(26px,3.3vw,48px);line-height:1.45;letter-spacing:-.03em;font-weight:700;margin:0;position:relative}
+.studio__quote::before{content:"“";position:absolute;left:-.1em;top:-.55em;font-size:3.4em;color:var(--terra);opacity:.2;font-family:var(--latin);line-height:1}
+.studio__quote mark{background:linear-gradient(transparent 62%,rgba(176,81,43,.22) 62%);color:inherit;padding:0 .05em}
+.studio__plan{grid-column:9/13;grid-row:1/3;align-self:start;position:relative;margin-top:12px}
+.studio__plan figure{margin:0;background:var(--ivory);padding:22px;border:1px solid var(--rule);transform:rotate(1.2deg);box-shadow:0 30px 60px -30px rgba(34,31,27,.35)}
+.studio__plan figcaption{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;color:var(--stone);text-transform:uppercase;margin-top:14px;border-top:1px solid var(--rule);padding-top:10px}
+.studio__plan .swatches{display:flex;gap:10px;margin-top:-26px;margin-left:24px;position:relative;z-index:2}
+.swatch{width:62px;height:82px;box-shadow:0 12px 24px -12px rgba(0,0,0,.4);display:flex;align-items:flex-end;padding:6px;font-size:9px;letter-spacing:.08em;color:rgba(255,255,255,.9)}
+.studio__body{grid-column:2/8;display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:15px;color:var(--ink-2)}
+.studio__body p{margin:0}
+.studio__body p:first-child::first-letter{font-family:var(--serif);font-weight:800;float:left;font-size:58px;line-height:.9;margin:6px 10px 0 0;color:var(--ink)}
+.principles{grid-column:1/-1;list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.principles li{padding:26px 28px 0 0;border-right:1px solid var(--rule);margin-right:28px}
+.principles li:last-child{border-right:0;margin-right:0}
+.principles b{display:block;font-family:var(--latin);font-style:italic;font-weight:400;color:var(--terra);font-size:18px}
+.principles h3{font-family:var(--serif);font-size:22px;margin:6px 0 8px;letter-spacing:-.03em}
+.principles p{margin:0;font-size:14px;color:var(--ink-2)}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid var(--rule)}
+.stat{padding:28px 20px 0 0}
+.stat__n{margin:0;font-family:var(--latin);font-weight:400;font-size:clamp(64px,8.5vw,136px);line-height:.9;letter-spacing:-.03em;display:flex;align-items:baseline;gap:6px}
+.stat__n small{font-family:var(--serif);font-size:18px;font-weight:700;letter-spacing:0;color:var(--terra)}
+.stat p:not(.stat__n){margin:12px 0 0;font-size:13px;color:var(--stone);letter-spacing:.04em}
+
+/* works */
+.works{background:var(--ivory);border-top:1px solid var(--rule)}
+.works__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:clamp(72px,9vw,140px)}
+.work{position:relative;margin:0}
+.work:nth-child(1){grid-column:1/8}
+.work:nth-child(2){grid-column:9/13;margin-top:22vh}
+.work:nth-child(3){grid-column:2/6}
+.work:nth-child(4){grid-column:7/13;margin-top:12vh}
+.work:nth-child(5){grid-column:1/7}
+.work:nth-child(6){grid-column:8/12;margin-top:-6vh}
+.work__media{position:relative;overflow:hidden;background:var(--lime-2)}
+.work:nth-child(1) .work__media{aspect-ratio:16/11}
+.work:nth-child(2) .work__media{aspect-ratio:3/4}
+.work:nth-child(3) .work__media{aspect-ratio:4/5}
+.work:nth-child(4) .work__media{aspect-ratio:16/10}
+.work:nth-child(5) .work__media{aspect-ratio:5/4}
+.work:nth-child(6) .work__media{aspect-ratio:3/4}
+.work__media svg{width:100%;height:100%;transition:transform 1.2s var(--ease)}
+.work:hover .work__media svg{transform:scale(1.04)}
+.work__idx{position:absolute;top:-.52em;right:-.06em;z-index:2;font-family:var(--latin);font-size:clamp(72px,8vw,128px);line-height:1;font-style:italic;font-weight:300;color:var(--ink);mix-blend-mode:multiply;pointer-events:none}
+.work__cap{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-top:20px;align-items:baseline}
+.work__cap h3{font-family:var(--serif);font-size:clamp(20px,1.9vw,28px);letter-spacing:-.035em;margin:0;line-height:1.3}
+.work__loc{font-size:12px;color:var(--stone);letter-spacing:.08em;white-space:nowrap}
+.work__cap p{grid-column:1/-1;margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.spec{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,auto);justify-content:start;margin:16px 0 0;border-top:1px solid var(--ink)}
+.spec div{padding:10px 18px 0 0;margin-right:18px;border-right:1px solid var(--rule)}
+.spec div:last-child{border-right:0;margin-right:0}
+.spec dt{font-size:10px;letter-spacing:.18em;color:var(--stone);text-transform:uppercase}
+.spec dd{margin:0;font-size:14px;font-weight:600;white-space:nowrap}
+
+/* compare */
+.compare{background:var(--char);color:var(--ivory)}
+.compare .eyebrow{color:#A89E8E}
+.compare .sec-head p{color:#BDB3A3}
+.compare__layout{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:32px;align-items:start}
+.compare__frame{grid-column:1/10;position:relative;aspect-ratio:12/7;overflow:hidden;cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;--pos:50%}
+.compare__frame svg{position:absolute;inset:0;width:100%;height:100%}
+.compare__after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--pos))}
+.compare__tag{position:absolute;top:18px;z-index:3;font-size:11px;letter-spacing:.2em;padding:8px 12px;background:rgba(30,27,24,.72);color:var(--ivory);pointer-events:none}
+.compare__tag--b{left:18px}.compare__tag--a{right:18px;background:var(--terra)}
+.compare__handle{position:absolute;top:0;bottom:0;left:var(--pos);width:44px;margin-left:-22px;z-index:4;display:flex;justify-content:center;background:none;border:0;padding:0;cursor:ew-resize}
+.compare__handle::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--ivory)}
+.compare__knob{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--ivory);color:var(--ink);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .3s var(--ease)}
+.compare__frame:active .compare__knob{transform:scale(.92)}
+.compare__handle:focus-visible{outline:none}
+.compare__handle:focus-visible .compare__knob{outline:2px solid var(--terra);outline-offset:4px}
+.compare__notes{grid-column:10/13;list-style:none;margin:0;padding:0;counter-reset:c}
+.compare__notes li{counter-increment:c;border-top:1px solid #4A443C;padding:18px 0 22px}
+.compare__notes li::before{content:"0" counter(c);font-family:var(--latin);font-style:italic;color:#D98A63;font-size:18px}
+.compare__notes h3{font-family:var(--serif);font-size:19px;margin:2px 0 6px;letter-spacing:-.02em}
+.compare__notes p{margin:0;font-size:14px;color:#BDB3A3}
+.compare__meta{grid-column:1/10;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;font-size:12px;letter-spacing:.1em;color:#A89E8E}
+
+/* process */
+.process{overflow:clip}
+.process__pin{padding-block:clamp(96px,12vw,160px)}
+.process__track{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--ink)}
+.step{padding:28px 28px 0 0;border-right:1px solid var(--rule);margin-right:28px;position:relative}
+.step:last-child{border-right:0;margin-right:0}
+.step__n{font-family:var(--latin);font-weight:400;font-size:clamp(88px,9vw,168px);line-height:.85;color:transparent;-webkit-text-stroke:1px var(--terra);letter-spacing:-.04em;display:block}
+.step h3{font-family:var(--serif);font-size:26px;margin:22px 0 2px;letter-spacing:-.03em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.step h3 .it{font-size:18px;color:var(--stone)}
+.step__time{display:inline-block;font-size:12px;letter-spacing:.1em;border:1px solid var(--ink);padding:2px 10px;margin:8px 0 14px}
+.step p{margin:0;font-size:14px;color:var(--ink-2)}
+.process.is-horizontal .process__pin{height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:96px 48px}
+.process.is-horizontal .process__track{display:flex;width:max-content;border-top:0;gap:0;will-change:transform}
+.process.is-horizontal .step{width:clamp(320px,34vw,520px);flex:none;border-top:1px solid var(--ink)}
+.process__bar{height:2px;background:var(--rule);margin-top:48px;position:relative;display:none}
+.process__bar i{position:absolute;inset:0;background:var(--terra);transform-origin:left;transform:scaleX(0)}
+.process.is-horizontal .process__bar{display:block}
+
+/* reviews */
+.reviews{background:var(--lime-2)}
+.reviews__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:64px}
+.review{margin:0;position:relative}
+.review:nth-child(1){grid-column:1/8}
+.review:nth-child(2){grid-column:9/13;margin-top:120px}
+.review:nth-child(3){grid-column:3/10}
+.review blockquote{margin:0;font-family:var(--serif);letter-spacing:-.03em;line-height:1.6}
+.review:nth-child(1) blockquote{font-size:clamp(22px,2.4vw,34px);font-weight:700}
+.review:nth-child(2) blockquote,.review:nth-child(3) blockquote{font-size:clamp(18px,1.6vw,22px);font-weight:700}
+.review__q{font-family:var(--latin);font-size:120px;line-height:.6;color:var(--terra);display:block;height:48px}
+.review figcaption{display:flex;align-items:center;gap:14px;margin-top:24px;font-size:13px;color:var(--ink-2)}
+.review figcaption::before{content:"";width:40px;height:1px;background:var(--ink)}
+.review figcaption b{color:var(--ink);font-weight:600}
+.stars{color:var(--terra);letter-spacing:2px;font-size:12px}
+
+/* contact */
+.contact{background:var(--ivory)}
+.contact__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:stretch}
+.contact__side{grid-column:1/6;background:var(--char);color:var(--ivory);padding:clamp(32px,4vw,56px);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:48px}
+.contact__side h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,3.6vw,54px);line-height:1.2;letter-spacing:-.04em;margin:18px 0 20px}
+.contact__side .eyebrow{color:#A89E8E}
+.contact__side p{color:#BDB3A3;margin:0;font-size:15px}
+.contact__side dl{margin:0;display:grid;gap:14px}
+.contact__side dl div{display:grid;grid-template-columns:88px 1fr;border-top:1px solid #3F3A33;padding-top:12px;font-size:14px}
+.contact__side dt{color:#8F8677;letter-spacing:.08em;font-size:12px}
+.contact__side dd{margin:0}
+.contact__side dd a{text-decoration:none;border-bottom:1px solid #6D655A}
+.contact__arch{position:absolute;right:-60px;bottom:-40px;width:260px;opacity:.14;pointer-events:none}
+.form-wrap{grid-column:7/13;padding-top:8px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:34px 28px}
+.field{display:flex;flex-direction:column;position:relative}
+.field--full{grid-column:1/-1}
+.field label,.field .lbl{font-size:12px;letter-spacing:.14em;color:var(--ink-2);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
+.field label em{font-style:normal;color:var(--terra)}
+.input{width:100%;min-height:50px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:10px 0;font-size:17px;border-radius:0;transition:border-color .3s,background .3s}
+.input::placeholder{color:#A99F90}
+.input:hover{background:rgba(203,191,172,.14)}
+.input:focus{outline:none;border-bottom-color:var(--terra);box-shadow:0 1px 0 var(--terra)}
+.input:focus-visible{outline:none}
+textarea.input{min-height:120px;resize:vertical;line-height:1.6}
+select.input{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:30px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'><path d='M1 1l6 6 6-6' fill='none' stroke='%23221F1B' stroke-width='1.2'/></svg>");background-repeat:no-repeat;background-position:right 4px center}
+.suffix{position:absolute;right:0;bottom:12px;font-size:14px;color:var(--stone);pointer-events:none}
+.field.has-error .input{border-bottom-color:#B3261E}
+.err{min-height:0;margin:6px 0 0;font-size:13px;color:#B3261E;display:flex;gap:6px;align-items:center}
+.err:empty{display:none}
+.err::before{content:"";width:5px;height:5px;background:currentColor;transform:rotate(45deg);flex:none}
+.budget-out{font-family:var(--serif);font-size:30px;font-weight:800;letter-spacing:-.03em;margin:2px 0 10px;color:var(--ink)}
+.range{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;cursor:pointer;--p:17%}
+.range::-webkit-slider-runnable-track{height:2px;background:linear-gradient(90deg,var(--terra) var(--p),var(--rule) var(--p))}
+.range::-moz-range-track{height:2px;background:var(--rule)}
+.range::-moz-range-progress{height:2px;background:var(--terra)}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--ivory);border:2px solid var(--terra);margin-top:-11px;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.range::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--ivory);border:2px solid var(--terra)}
+.range:focus-visible{outline:none}
+.range:focus-visible::-webkit-slider-thumb{outline:2px solid var(--terra);outline-offset:3px}
+.range:focus-visible::-moz-range-thumb{outline:2px solid var(--terra);outline-offset:3px}
+.range-scale{display:flex;justify-content:space-between;font-size:11px;color:var(--stone);letter-spacing:.06em}
+.agree{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:22px}
+.check{display:flex;gap:14px;align-items:flex-start;cursor:pointer;min-height:44px;font-size:14px}
+.check input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1px solid var(--ink);margin:2px 0 0;flex:none;display:grid;place-items:center;cursor:pointer;background:transparent}
+.check input::after{content:"";width:10px;height:6px;border-left:2px solid var(--ivory);border-bottom:2px solid var(--ivory);transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.check input:checked{background:var(--terra);border-color:var(--terra)}
+.check input:checked::after{opacity:1}
+.agree details{margin:6px 0 0 36px;font-size:13px;color:var(--ink-2)}
+.agree summary{cursor:pointer;color:var(--stone);min-height:32px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:3px}
+.agree table{border-collapse:collapse;margin-top:8px;width:100%;font-size:12px}
+.agree th,.agree td{border-top:1px solid var(--rule);padding:8px 8px 8px 0;text-align:left;vertical-align:top;font-weight:400}
+.agree th{color:var(--stone);width:88px}
+.form__foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.form__foot small{color:var(--stone);font-size:12px}
+.btn[aria-busy="true"]{pointer-events:none;opacity:.8}
+.btn .spin{display:none;width:16px;height:16px;border:2px solid rgba(246,241,232,.35);border-top-color:var(--ivory);border-radius:50%;animation:spin .8s linear infinite}
+.btn[aria-busy="true"] .spin{display:block}
+.btn[aria-busy="true"] svg{display:none}
+.success{display:none;border-top:1px solid var(--ink);padding-top:36px}
+.success.is-on{display:block}
+.success:focus{outline:none}
+.success__mark{width:72px;height:72px;border-radius:50%;border:1px solid var(--terra);display:grid;place-items:center;color:var(--terra);margin-bottom:28px}
+.success h3{font-family:var(--serif);font-size:clamp(28px,3vw,40px);letter-spacing:-.04em;margin:0 0 14px;line-height:1.3}
+.success p{color:var(--ink-2);margin:0 0 8px}
+.success dl{display:grid;grid-template-columns:100px 1fr;gap:10px 0;margin:28px 0 32px;font-size:14px;border-top:1px solid var(--rule);padding-top:18px}
+.success dt{color:var(--stone)}
+.success dd{margin:0;font-weight:600}
+.ghost{min-height:48px;padding:0 22px;border:1px solid var(--ink);background:none;cursor:pointer;font-size:14px}
+.ghost:hover{background:var(--ink);color:var(--ivory)}
+
+/* footer */
+.ft{background:var(--char);color:#BDB3A3;padding:clamp(64px,8vw,110px) 0 36px;overflow:hidden}
+.ft__word{font-family:var(--latin);font-size:clamp(60px,15.5vw,236px);line-height:.85;letter-spacing:.02em;color:var(--ivory);margin:0 0 56px;font-weight:400;white-space:nowrap}
+.ft__word i{color:var(--terra)}
+.ft__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:32px;border-top:1px solid #3F3A33;padding-top:32px;font-size:13px}
+.ft__col{grid-column:span 3}
+.ft__col--wide{grid-column:span 6}
+.ft h2{font-size:11px;letter-spacing:.2em;color:#8F8677;margin:0 0 10px;font-weight:500;text-transform:uppercase}
+.ft p{margin:0;line-height:1.9}
+.ft a{text-decoration:none}
+.ft a:hover{color:var(--ivory)}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft li a{display:inline-flex;min-height:32px;align-items:center}
+.ft__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:48px;font-size:12px;color:#7D7466}
+.ft__note{color:#D98A63}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav,.hd__cta{display:none}
+  .menu-btn{display:block}
+  .hero__text{grid-column:1/-1;grid-row:2}
+  .hero__art{grid-column:4/-1;grid-row:3;margin-top:40px}
+  .scroll-cue{display:none}
+  .sec-head h2{grid-column:1/-1}
+  .sec-head p{grid-column:1/-1;margin-top:20px;max-width:560px}
+  .studio__quote{grid-column:1/-1}
+  .studio__plan{grid-column:1/-1;grid-row:auto;max-width:440px}
+  .studio__body{grid-column:1/-1}
+  .compare__frame,.compare__meta{grid-column:1/-1}
+  .compare__notes{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px}
+  .contact__side{grid-column:1/-1}
+  .form-wrap{grid-column:1/-1;padding-top:56px}
+  .process__track{grid-template-columns:1fr 1fr;row-gap:48px}
+  .step{margin-right:0;padding-right:0;border-right:0;padding-left:0}
+  .step:nth-child(odd){padding-right:24px;border-right:1px solid var(--rule);margin-right:24px}
+}
+@media (max-width:760px){
+  body{font-size:15px}
+  .hd__in{height:64px}
+  .logo__mark{font-size:22px}
+  .logo__ko{display:none}
+  .hero{padding-top:92px;min-height:auto}
+  .hero__meta span:nth-child(2){display:none}
+  .hero__meta{font-size:10px;letter-spacing:.12em}
+  .hero h1{margin-bottom:28px}
+  .hero h1 .indent{padding-left:0}
+  .hero__art{grid-column:2/-1;margin-top:48px}
+  .hero__badge{width:96px;height:96px;top:-40px;right:auto;left:-32px}
+  .hero__badge strong{font-size:26px}
+  .hero__num{font-size:180px;bottom:auto;top:52%}
+  .studio__body{grid-template-columns:1fr;gap:18px}
+  .principles{grid-template-columns:1fr}
+  .principles li{border-right:0;margin-right:0;padding:22px 0;border-bottom:1px solid var(--rule)}
+  .stats{grid-template-columns:1fr 1fr;row-gap:12px}
+  .works__grid{row-gap:72px}
+  .work:nth-child(n){grid-column:1/-1;margin-top:0}
+  .work:nth-child(even){grid-column:3/-1}
+  .work:nth-child(n) .work__media{aspect-ratio:4/5}
+  .work:nth-child(1) .work__media,.work:nth-child(4) .work__media{aspect-ratio:1/1}
+  .spec{grid-template-columns:1fr 1fr;row-gap:6px}
+  .spec div:nth-child(2){border-right:0;margin-right:0}
+  .work:nth-child(even) .spec{grid-template-columns:1fr 1fr}
+  .compare__frame{aspect-ratio:4/5}
+  .compare__notes{grid-template-columns:1fr}
+  .compare__knob{width:52px;height:52px;margin:-26px 0 0 -26px}
+  .process__track{grid-template-columns:1fr}
+  .step:nth-child(n){padding-right:0;border-right:0;margin-right:0;border-bottom:1px solid var(--rule);padding-bottom:28px}
+  .step__n{font-size:96px}
+  .review:nth-child(n){grid-column:1/-1;margin-top:0}
+  .review:nth-child(2){grid-column:2/-1}
+  .form{grid-template-columns:1fr;gap:28px}
+  .form__foot .btn{width:100%}
+  .ft__col,.ft__col--wide{grid-column:1/-1}
+  .contact__side dl div{grid-template-columns:76px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .ticker__track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-wall-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECE0CD"/><stop offset="1" stop-color="#D6C0A1"/></linearGradient>
+    <linearGradient id="g-wall-rose" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9D3C4"/><stop offset="1" stop-color="#C99F87"/></linearGradient>
+    <linearGradient id="g-wall-sage" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DEDFCF"/><stop offset="1" stop-color="#AFB39A"/></linearGradient>
+    <linearGradient id="g-wall-dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D352D"/><stop offset="1" stop-color="#1D1915"/></linearGradient>
+    <linearGradient id="g-wall-stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7E0D4"/><stop offset="1" stop-color="#C6BBA9"/></linearGradient>
+    <linearGradient id="g-floor-oak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C39A6B"/><stop offset="1" stop-color="#8E643D"/></linearGradient>
+    <linearGradient id="g-floor-stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3CABB"/><stop offset="1" stop-color="#A89C88"/></linearGradient>
+    <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAF0DF"/><stop offset=".7" stop-color="#F0D3AA"/><stop offset="1" stop-color="#E2B888"/></linearGradient>
+    <linearGradient id="g-terra" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CB7249"/><stop offset="1" stop-color="#8B3C1E"/></linearGradient>
+    <linearGradient id="g-linen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4EDE2"/><stop offset="1" stop-color="#D9CCB8"/></linearGradient>
+    <linearGradient id="g-brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDBB82"/><stop offset="1" stop-color="#9A7641"/></linearGradient>
+    <linearGradient id="g-mirror" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1EFEA"/><stop offset=".5" stop-color="#D8D3C9"/><stop offset="1" stop-color="#EAE6DE"/></linearGradient>
+    <linearGradient id="g-walnut" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A5536"/><stop offset="1" stop-color="#4E3320"/></linearGradient>
+    <linearGradient id="g-curtain" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3ECE0"/><stop offset=".25" stop-color="#E2D7C5"/><stop offset=".5" stop-color="#F3ECE0"/><stop offset=".75" stop-color="#E2D7C5"/><stop offset="1" stop-color="#F3ECE0"/></linearGradient>
+    <radialGradient id="g-glow"><stop offset="0" stop-color="#FFF1D2" stop-opacity=".95"/><stop offset="1" stop-color="#FFF1D2" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g-shadow"><stop offset="0" stop-color="#1D1915" stop-opacity=".35"/><stop offset="1" stop-color="#1D1915" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-dim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3326" stop-opacity=".15"/><stop offset="1" stop-color="#1A1E17" stop-opacity=".45"/></linearGradient>
+    <pattern id="p-wallpaper" width="44" height="44" patternUnits="userSpaceOnUse">
+      <rect width="44" height="44" fill="#C9BD92"/>
+      <path d="M22 4l8 18-8 18-8-18z" fill="none" stroke="#A8996A" stroke-width="1.2"/>
+      <circle cx="22" cy="22" r="3" fill="#9D8E5C"/><circle cx="0" cy="0" r="2.5" fill="#B3A576"/><circle cx="44" cy="0" r="2.5" fill="#B3A576"/><circle cx="0" cy="44" r="2.5" fill="#B3A576"/><circle cx="44" cy="44" r="2.5" fill="#B3A576"/>
+    </pattern>
+    <pattern id="p-lino" width="70" height="70" patternUnits="userSpaceOnUse">
+      <rect width="70" height="70" fill="#9B917A"/><rect width="35" height="35" fill="#877D66"/><rect x="35" y="35" width="35" height="35" fill="#877D66"/>
+    </pattern>
+    <pattern id="p-slat" width="14" height="10" patternUnits="userSpaceOnUse">
+      <rect width="14" height="10" fill="#B88B5E"/><rect width="3" height="10" fill="#8C6440"/>
+    </pattern>
+    <pattern id="p-flute" width="12" height="10" patternUnits="userSpaceOnUse">
+      <rect width="12" height="10" fill="url(#g-terra)"/><rect width="12" height="10" fill="#B8603A"/><rect x="9" width="3" height="10" fill="#8E3E1F"/>
+    </pattern>
+    <pattern id="p-herring" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect width="40" height="20" fill="#C39A6B"/><path d="M0 20L20 0M20 20L40 0" stroke="#9E7449" stroke-width="1.2"/><path d="M0 0l10 10M20 0l10 10" stroke="#A97F52" stroke-width=".8"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="hd" id="top">
+  <div class="wrap hd__in">
+    <a class="logo" href="#main" aria-label="무드하우스 인테리어 홈">
+      <span class="logo__mark">MOODHOUSE</span><span class="logo__ko">무드하우스 인테리어</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <ul>
+        <li><a href="#studio">스튜디오</a></li>
+        <li><a href="#works">포트폴리오</a></li>
+        <li><a href="#compare">비포·애프터</a></li>
+        <li><a href="#process">진행 과정</a></li>
+        <li><a href="#reviews">후기</a></li>
+      </ul>
+    </nav>
+    <a class="hd__cta" href="#contact">견적 문의 <svg width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h15M11 1l4 4-4 4" fill="none" stroke="currentColor"/></svg></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span class="sr-only">메뉴 열기</span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-label="모바일 메뉴">
+  <ol>
+    <li><a href="#studio">스튜디오</a></li>
+    <li><a href="#works">포트폴리오</a></li>
+    <li><a href="#compare">비포·애프터</a></li>
+    <li><a href="#process">진행 과정</a></li>
+    <li><a href="#reviews">후기</a></li>
+    <li><a href="#contact">견적 문의</a></li>
+  </ol>
+  <p>053-000-0000 · 평일 10:00 – 19:00<br>대구광역시 수성구 000로 00</p>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__meta" data-hero-meta>
+        <span>Daegu · Residential &amp; Retail</span>
+        <span>Interior Studio, est. 2014</span>
+        <span>Issue No. 12 — Autumn</span>
+      </div>
+      <div class="hero__text">
+        <h1 id="hero-title">
+          <span class="line"><span>오래 머물고 싶은</span></span>
+          <span class="line indent"><span>집의 <em>온도</em>를</span></span>
+          <span class="line"><span>설계합니다.</span></span>
+        </h1>
+        <p class="hero__lede" data-hero-fade>대구에서 12년, 아파트와 상가 312곳을 고쳤습니다. 무드하우스는 평면도보다 생활을 먼저 봅니다. 아침 빛이 드는 방향, 퇴근하고 제일 먼저 앉는 자리, 아이가 자라는 속도까지요.</p>
+        <div class="hero__actions" data-hero-fade>
+          <a class="btn" href="#contact">무료 실측 상담 신청 <svg width="18" height="10" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4" fill="none" stroke="currentColor"/></svg></a>
+          <a class="link-line" href="#works">시공 사례 먼저 보기</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <div class="hero__badge" data-hero-fade aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text font-size="9.5" letter-spacing="3.2" fill="#F6F1E8"><textPath href="#circ">MOODHOUSE · SINCE 2014 · DAEGU · </textPath></text></svg>
+          <div><strong>312</strong><small>완공 현장</small></div>
+        </div>
+        <div class="hero__frame" data-hero-frame>
+          <svg viewBox="0 0 600 760" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치형 문 너머로 햇살이 드는 거실과 라운지 체어를 그린 일러스트">
+            <g data-parallax>
+            <rect width="600" height="800" fill="url(#g-wall-stone)"/>
+            <path d="M0 0h600v70H0z" fill="#DCD3C4"/>
+            <path d="M0 70h600" stroke="#BFB3A0" stroke-width="2"/>
+            <!-- plant shadow on wall -->
+            <g fill="#8C8273" opacity=".13">
+              <path d="M40 180c60-10 90 40 100 90-40-10-80-40-100-90z"/><path d="M70 300c50-30 100 0 120 40-50 10-90 0-120-40z"/><path d="M20 260c30 20 40 60 30 100-30-20-40-60-30-100z"/><path d="M110 150c30 30 30 80 10 110-20-30-30-70-10-110z"/>
+            </g>
+            <!-- arch opening -->
+            <path d="M210 640V300a150 150 0 0 1 300 0v340z" fill="#CFC3AF"/>
+            <path d="M226 640V304a134 134 0 0 1 268 0v336z" fill="url(#g-sky)"/>
+            <!-- window in back room -->
+            <g stroke="#FFFFFF" stroke-opacity=".75" fill="none" stroke-width="2">
+              <rect x="300" y="300" width="120" height="200"/><path d="M360 300v200M300 400h120"/>
+            </g>
+            <polygon points="300,500 420,500 470,640 330,640" fill="#FFF7E7" opacity=".55"/>
+            <path d="M226 560h268v80H226z" fill="#E9D2AE" opacity=".6"/>
+            <!-- sunlight beam on wall -->
+            <polygon points="520,120 600,120 600,420 560,420" fill="#FFF3DC" opacity=".35"/>
+            <!-- floor -->
+            <rect y="640" width="600" height="160" fill="url(#g-floor-stone)"/>
+            <path d="M0 640h600" stroke="#9D917E" stroke-width="2"/>
+            <g stroke="#998C78" stroke-opacity=".35"><path d="M0 700h600M0 760h600M150 640l-40 160M330 640l10 160M500 640l60 160"/></g>
+            <polygon points="226,640 494,640 560,800 170,800" fill="#FFF5E2" opacity=".28"/>
+            <!-- lounge chair -->
+            <ellipse cx="170" cy="705" rx="130" ry="16" fill="url(#g-shadow)"/>
+            <path d="M70 690c-4-70 10-120 60-140 40-14 90-6 120 20 20 20 22 70 16 120z" fill="url(#g-terra)"/>
+            <path d="M92 690c0-40 20-70 70-72 50-2 80 20 90 72z" fill="#D77E55"/>
+            <path d="M84 690l-12 26M250 690l14 26" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
+            <!-- side table + vase -->
+            <rect x="330" y="640" width="70" height="4" fill="#2A2420"/>
+            <path d="M338 644l-6 60M392 644l6 60" stroke="#2A2420" stroke-width="3"/>
+            <path d="M352 640c-6-24 0-40 13-46 13 6 19 22 13 46z" fill="#EDE4D5"/>
+            <path d="M365 596c-6-40-30-60-50-76M365 596c10-44 36-62 56-70M365 596c0-40 4-70 0-96" stroke="#5B4A38" stroke-width="1.4" fill="none"/>
+            <g fill="#7C6B4E"><ellipse cx="318" cy="522" rx="7" ry="3" transform="rotate(-30 318 522)"/><ellipse cx="418" cy="530" rx="7" ry="3" transform="rotate(20 418 530)"/><ellipse cx="366" cy="504" rx="3" ry="7"/><ellipse cx="336" cy="546" rx="6" ry="2.5" transform="rotate(-40 336 546)"/><ellipse cx="398" cy="548" rx="6" ry="2.5" transform="rotate(30 398 548)"/></g>
+            <!-- pendant -->
+            <path d="M120 70v150" stroke="#2A2420" stroke-width="1.2"/>
+            <path d="M84 250a36 36 0 0 1 72 0z" fill="url(#g-brass)"/>
+            <circle cx="120" cy="262" r="120" fill="url(#g-glow)" opacity=".7"/>
+            </g>
+            <!-- drafting overlay -->
+            <g fill="none" stroke="#221F1B" stroke-width=".9" opacity=".55">
+              <path d="M210 250h300M210 244v12M510 244v12"/>
+              <path d="M540 300v340M534 300h12M534 640h12"/>
+              <path d="M226 640V304a134 134 0 0 1 268 0v336" stroke-dasharray="3 5"/>
+            </g>
+            <g font-family="Pretendard, sans-serif" font-size="11" fill="#221F1B" opacity=".75" letter-spacing="1.5">
+              <text x="340" y="242">2,400</text>
+              <text x="552" y="476" transform="rotate(90 552 476)">2,100</text>
+              <text x="28" y="44">A-01 · LIVING / 1:50</text>
+            </g>
+          </svg>
+        </div>
+        <p class="hero__caption"><b>범어동 34평, 거실 아치 게이트</b>Project 01 · 2026</p>
+      </div>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true">SCROLL</span>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>아파트 전체 리모델링</span><span><i>Residential</i></span><span>상가·매장 인테리어</span><span><i>Retail &amp; Café</i></span><span>주방·욕실 부분 시공</span><span><i>Bespoke Furniture</i></span><span>조명 설계</span><span><i>2-Year Care</i></span>
+    <span>아파트 전체 리모델링</span><span><i>Residential</i></span><span>상가·매장 인테리어</span><span><i>Retail &amp; Café</i></span><span>주방·욕실 부분 시공</span><span><i>Bespoke Furniture</i></span><span>조명 설계</span><span><i>2-Year Care</i></span>
+  </div>
+</div>
+
+<!-- ================= STUDIO ================= -->
+<section class="sec studio" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-fade><b>01</b> The Studio</p>
+      <h2 id="studio-title" data-fade>작게 일하고,<br>끝까지 책임집니다.</h2>
+    </div>
+    <div class="studio__grid">
+      <p class="studio__quote" data-fade>예쁜 집보다 <mark>매일 쓰기 편한 집</mark>이 결국 오래 예쁩니다. 그래서 저희는 도면을 그리기 전에 가족의 하루를 먼저 받아 적습니다.</p>
+      <aside class="studio__plan" aria-label="자재 샘플 보드">
+        <figure data-reveal>
+          <svg viewBox="0 0 300 220" role="img" aria-label="34평 아파트 평면 스케치">
+            <rect width="300" height="220" fill="#FBF8F2"/>
+            <g fill="none" stroke="#221F1B" stroke-width="3"><path d="M10 10h280v200H10z"/></g>
+            <g fill="none" stroke="#221F1B" stroke-width="1.6"><path d="M120 10v80M10 90h70M100 90h20M120 90h60M200 90h90M180 90v120M180 150h110M60 130v80"/></g>
+            <g fill="none" stroke="#B0512B" stroke-width="1"><path d="M80 90a20 20 0 0 1 20 -20M180 110a20 20 0 0 1-20 20" /></g>
+            <rect x="200" y="160" width="74" height="40" fill="#E8DCC8"/>
+            <rect x="24" y="24" width="60" height="44" fill="none" stroke="#8C8273" stroke-dasharray="3 3"/>
+            <circle cx="235" cy="45" r="16" fill="none" stroke="#8C8273"/>
+            <g font-family="Pretendard, sans-serif" font-size="9" fill="#4A443C" letter-spacing="1"><text x="30" y="50">침실 1</text><text x="140" y="50">드레스룸</text><text x="215" y="80">주방</text><text x="90" y="160">거실</text><text x="205" y="140">욕실</text><text x="20" y="175">현관</text></g>
+            <path d="M120 110c30 20 60 30 100 10" fill="none" stroke="#B0512B" stroke-width="1.2" stroke-dasharray="4 4"/>
+          </svg>
+          <figcaption><span>Plan 34-B</span><span>동선 스케치</span></figcaption>
+        </figure>
+        <div class="swatches" aria-hidden="true">
+          <div class="swatch" style="background:linear-gradient(160deg,#C9A57A,#8E643D)">OAK</div>
+          <div class="swatch" style="background:linear-gradient(160deg,#E7DECF,#BDB19D);color:#4A443C">LIME</div>
+          <div class="swatch" style="background:linear-gradient(160deg,#C66A42,#8B3C1E)">TERRA</div>
+        </div>
+      </aside>
+      <div class="studio__body" data-fade>
+        <p>무드하우스는 디자이너 세 명과 현장 팀장 두 명이 함께 일하는 작은 스튜디오입니다. 한 달에 맡는 현장은 네 곳을 넘기지 않습니다. 대표 디자이너가 첫 상담부터 준공 검수까지 직접 챙기려면 그 이상은 무리라고 판단했습니다.</p>
+        <p>견적서에는 자재 브랜드와 품번까지 적어 드립니다. 공사 중에 바꿔야 할 부분이 생기면 시공 전에 먼저 말씀드리고, 동의하지 않으신 비용은 청구하지 않습니다. 그 원칙 덕분에 지금까지 추가금으로 얼굴 붉힌 일이 없습니다.</p>
+      </div>
+      <ul class="principles">
+        <li data-fade><b>i.</b><h3>동선이 먼저입니다</h3><p>가구 배치보다 먼저, 식구들이 하루에 몇 번 어디를 오가는지 그려 봅니다.</p></li>
+        <li data-fade><b>ii.</b><h3>자재는 품번까지</h3><p>타일 한 장, 수전 하나까지 견적서에 모델명을 적습니다. 비교는 자유롭게 하셔도 됩니다.</p></li>
+        <li data-fade><b>iii.</b><h3>한 달에 네 현장</h3><p>현장이 늘면 꼼꼼함이 줄어듭니다. 일정이 밀려도 이 숫자는 지킵니다.</p></li>
+      </ul>
+      <div class="stats">
+        <div class="stat"><p class="stat__n"><span data-count="312">312</span><small>곳</small></p><p>대구·경북 완공 현장</p></div>
+        <div class="stat"><p class="stat__n"><span data-count="12">12</span><small>년</small></p><p>2014년 수성구에서 시작</p></div>
+        <div class="stat"><p class="stat__n"><span data-count="2">2</span><small>년</small></p><p>준공 후 무상 AS 기간</p></div>
+        <div class="stat"><p class="stat__n"><span data-count="0">0</span><small>건</small></p><p>추가금 분쟁</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKS ================= -->
+<section class="sec works" id="works" aria-labelledby="works-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-fade><b>02</b> Selected Works</p>
+      <h2 id="works-title" data-fade>최근에 마친<br>여섯 개의 현장</h2>
+      <p data-fade>평수와 예산은 실제 계약 기준으로 적었습니다. 비슷한 조건의 집이라면 상담할 때 해당 현장의 공정표와 자재 목록을 그대로 보여 드립니다.</p>
+    </div>
+    <div class="works__grid">
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">01</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치 게이트와 리넨 소파가 있는 거실 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-warm)"/>
+            <polygon points="40,110 120,110 60,400 -40,400" fill="#FFF4DE" opacity=".35"/>
+            <path d="M150 400V210a70 70 0 0 1 140 0v190z" fill="url(#g-sky)"/>
+            <path d="M150 400V210a70 70 0 0 1 140 0v190" fill="none" stroke="#B89A76" stroke-width="6" opacity=".45"/>
+            <path d="M192 400V262h56v138" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
+            <rect y="400" width="400" height="100" fill="url(#g-floor-oak)"/>
+            <path d="M0 400h400" stroke="#7D5733" stroke-width="2"/>
+            <g stroke="#6E4C2C" stroke-opacity=".25"><path d="M0 428h400M0 458h400M0 488h400"/></g>
+            <polygon points="-40,400 60,400 10,500 -90,500" fill="#FFF4DE" opacity=".22"/>
+            <ellipse cx="150" cy="404" rx="130" ry="10" fill="url(#g-shadow)"/>
+            <rect x="30" y="330" width="235" height="70" rx="22" fill="url(#g-linen)"/>
+            <rect x="46" y="302" width="100" height="52" rx="18" fill="#EFE6D8"/>
+            <rect x="150" y="302" width="100" height="52" rx="18" fill="#E6DAC7"/>
+            <rect x="196" y="312" width="42" height="38" rx="10" fill="url(#g-terra)" transform="rotate(-9 217 331)"/>
+            <path d="M44 398l-4 12M250 398l4 12" stroke="#4E3320" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="322" cy="368" rx="38" ry="8" fill="url(#g-walnut)"/>
+            <rect x="318" y="370" width="8" height="32" fill="#4E3320"/>
+            <path d="M312 366c-4-18 0-30 8-34 8 4 12 16 8 34z" fill="#E0D5C2"/>
+            <path d="M320 334c-4-26-18-38-30-46M320 334c6-28 20-38 34-42" stroke="#5B4A38" stroke-width="1.2" fill="none"/>
+            <path d="M366 400V190" stroke="#2A2622" stroke-width="2"/>
+            <path d="M341 200h50l-10-30h-30z" fill="url(#g-brass)"/>
+            <circle cx="366" cy="214" r="80" fill="url(#g-glow)"/>
+            <g fill="none" stroke="#221F1B" stroke-width=".8" opacity=".5"><path d="M150 170h140M150 164v12M290 164v12"/></g>
+            <text x="204" y="162" font-family="Pretendard, sans-serif" font-size="9" fill="#221F1B" opacity=".6" letter-spacing="1">1,400</text>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>빛이 머무는 거실, 범어동 34평</h3>
+          <span class="work__loc">수성구 범어동</span>
+          <p>남향 거실 창을 살리려고 주방 벽을 헐고 아치 게이트로 공간을 나눴습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>34평</dd></div><div><dt>유형</dt><dd>아파트 전체</dd></div><div><dt>기간</dt><dd>6주</dd></div><div><dt>예산</dt><dd>5~6천만원</dd></div></dl>
+        </div>
+      </article>
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">02</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="테라코타 플루팅 카운터와 펜던트 조명이 있는 카페 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-dark)"/>
+            <g stroke="#C9A36B" stroke-opacity=".5"><path d="M40 160h320M40 230h320"/></g>
+            <g fill="#E9DFCD"><rect x="60" y="140" width="14" height="20" rx="2"/><rect x="84" y="146" width="12" height="14" rx="2"/><rect x="120" y="136" width="10" height="24" rx="1"/><rect x="250" y="142" width="18" height="18" rx="9"/><rect x="290" y="138" width="12" height="22" rx="2"/><rect x="316" y="146" width="14" height="14" rx="2"/></g>
+            <g fill="#C98C5A"><rect x="70" y="208" width="22" height="22" rx="3"/><rect x="160" y="212" width="30" height="18" rx="2"/><rect x="300" y="206" width="16" height="24" rx="2"/></g>
+            <g stroke="#8C7B63" stroke-width="1"><path d="M110 0v120M200 0v90M290 0v120"/></g>
+            <g fill="url(#g-brass)"><path d="M92 120a18 18 0 0 1 36 0z"/><path d="M182 90a18 18 0 0 1 36 0z"/><path d="M272 120a18 18 0 0 1 36 0z"/></g>
+            <circle cx="110" cy="128" r="70" fill="url(#g-glow)" opacity=".75"/><circle cx="200" cy="98" r="70" fill="url(#g-glow)" opacity=".75"/><circle cx="290" cy="128" r="70" fill="url(#g-glow)" opacity=".75"/>
+            <rect y="420" width="400" height="80" fill="#2A241F"/>
+            <rect x="30" y="300" width="340" height="120" fill="url(#p-flute)"/>
+            <rect x="22" y="290" width="356" height="12" fill="#E8E0D2"/>
+            <rect x="22" y="302" width="356" height="4" fill="#000" opacity=".2"/>
+            <path d="M300 290v-30h8v12" stroke="#C9A36B" stroke-width="3" fill="none"/>
+            <rect x="90" y="270" width="30" height="20" rx="3" fill="#EFE7DA"/><rect x="130" y="276" width="18" height="14" rx="2" fill="#EFE7DA"/>
+            <g stroke="#C9A36B" stroke-width="3" fill="none"><path d="M80 500v-60M110 500v-60M70 440h50"/><path d="M270 500v-60M300 500v-60M260 440h50"/></g>
+            <ellipse cx="95" cy="436" rx="26" ry="6" fill="#D7B37C"/><ellipse cx="285" cy="436" rx="26" ry="6" fill="#D7B37C"/>
+            <text x="30" y="56" font-family="Cormorant Garamond, serif" font-style="italic" font-size="30" fill="#E9DFCD" opacity=".9">ohusesi</text>
+            <text x="30" y="76" font-family="Pretendard, sans-serif" font-size="9" letter-spacing="3" fill="#C9A36B">BAKERY &amp; COFFEE</text>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>빵 굽는 카페 ‘오후세시’</h3>
+          <span class="work__loc">달서구 상인동</span>
+          <p>테라코타 플루팅 카운터 하나로 가게 인상을 정했습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>22평</dd></div><div><dt>유형</dt><dd>상가·카페</dd></div><div><dt>기간</dt><dd>5주</dd></div><div><dt>예산</dt><dd>4천만원대</dd></div></dl>
+        </div>
+      </article>
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">03</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="세이지색 벽과 아일랜드 식탁이 있는 주방 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-sage)"/>
+            <rect x="230" y="70" width="130" height="170" fill="url(#g-sky)"/>
+            <g stroke="#F6F1E8" stroke-width="5" fill="none"><rect x="230" y="70" width="130" height="170"/><path d="M295 70v170M230 155h130"/></g>
+            <polygon points="230,240 360,240 330,420 170,420" fill="#FFF6E4" opacity=".3"/>
+            <rect x="30" y="60" width="170" height="110" fill="#E9E4D6"/>
+            <g stroke="#B5B09E"><path d="M87 60v110M143 60v110"/></g>
+            <g stroke="#9A7641" stroke-width="3" stroke-linecap="round"><path d="M76 150v12M98 150v12M132 150v12M154 150v12"/></g>
+            <rect x="30" y="250" width="340" height="12" fill="#F2EEE6"/>
+            <rect x="30" y="262" width="340" height="120" fill="#D9D3C3"/>
+            <g stroke="#B5AE9A"><path d="M115 262v120M200 262v120M285 262v120"/></g>
+            <path d="M110 250v-40c0-12 20-12 20 0" stroke="#9A7641" stroke-width="3" fill="none"/>
+            <rect y="382" width="400" height="118" fill="url(#g-floor-oak)"/>
+            <rect x="60" y="340" width="280" height="14" fill="#F4F1EA"/>
+            <rect x="72" y="354" width="256" height="100" fill="url(#g-walnut)"/>
+            <g stroke="#3A2616" stroke-opacity=".5"><path d="M72 380h256M72 410h256"/></g>
+            <ellipse cx="200" cy="460" rx="160" ry="10" fill="url(#g-shadow)"/>
+            <path d="M160 340c0-18 12-26 30-26s30 8 30 26z" fill="#E8DECB"/>
+            <g fill="#C66A42"><circle cx="182" cy="320" r="7"/><circle cx="196" cy="316" r="7"/><circle cx="208" cy="322" r="6"/></g>
+            <path d="M280 340v-22h14v22" fill="#EFE7DA"/>
+            <text x="30" y="40" font-family="Pretendard, sans-serif" font-size="10" fill="#4A443C" letter-spacing="2" opacity=".7">K-03 · KITCHEN</text>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>주방과 욕실만, 칠곡 25평</h3>
+          <span class="work__loc">북구 칠곡</span>
+          <p>살면서 공사해야 해서 구역을 나눠 3주 안에 끝냈습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>25평</dd></div><div><dt>유형</dt><dd>부분 시공</dd></div><div><dt>기간</dt><dd>3주</dd></div><div><dt>예산</dt><dd>1,800만원대</dd></div></dl>
+        </div>
+      </article>
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">04</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="아치형 헤드보드 침대와 리넨 커튼이 있는 침실 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-rose)"/>
+            <rect x="0" y="60" width="96" height="340" fill="url(#g-curtain)"/>
+            <rect x="0" y="54" width="110" height="6" fill="#9A7641"/>
+            <polygon points="96,90 140,90 200,400 96,400" fill="#FFF3DF" opacity=".28"/>
+            <path d="M140 330V210a90 90 0 0 1 180 0v120z" fill="#B97E63"/>
+            <path d="M152 330V212a78 78 0 0 1 156 0v118z" fill="#C98F72"/>
+            <rect y="400" width="400" height="100" fill="url(#p-herring)"/>
+            <ellipse cx="230" cy="440" rx="190" ry="36" fill="#E6D8C4" opacity=".85"/>
+            <rect x="120" y="320" width="220" height="80" rx="10" fill="url(#g-linen)"/>
+            <path d="M120 350c60-12 150-12 220 0v50H120z" fill="#D9C8B0"/>
+            <rect x="150" y="296" width="70" height="34" rx="14" fill="#F4EDE2"/>
+            <rect x="238" y="296" width="70" height="34" rx="14" fill="#F4EDE2"/>
+            <rect x="200" y="310" width="56" height="28" rx="12" fill="url(#g-terra)"/>
+            <rect x="350" y="340" width="44" height="60" fill="url(#g-walnut)"/>
+            <path d="M372 340v-44" stroke="#2A2420" stroke-width="2"/>
+            <path d="M356 300a16 16 0 0 1 32 0z" fill="#F1E6D2"/>
+            <circle cx="372" cy="300" r="70" fill="url(#g-glow)" opacity=".8"/>
+            <g fill="none" stroke="#221F1B" stroke-width=".8" opacity=".45"><path d="M140 180h180M140 174v12M320 174v12"/></g>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>세 아이가 자라는 집, 신천동 45평</h3>
+          <span class="work__loc">동구 신천동</span>
+          <p>안방은 호텔처럼 비우고, 아이 방 세 개는 나중에 벽을 옮길 수 있게 가벽으로 짰습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>45평</dd></div><div><dt>유형</dt><dd>아파트 전체</dd></div><div><dt>기간</dt><dd>8주</dd></div><div><dt>예산</dt><dd>8천만원대</dd></div></dl>
+        </div>
+      </article>
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">05</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="우드 슬랫 벽과 거울, 리포머 기구가 있는 필라테스 스튜디오 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-stone)"/>
+            <rect x="0" y="40" width="120" height="360" fill="url(#p-slat)"/>
+            <rect x="140" y="80" width="110" height="300" fill="url(#g-mirror)"/>
+            <rect x="262" y="80" width="110" height="300" fill="url(#g-mirror)"/>
+            <g stroke="#FFFFFF" stroke-opacity=".7" stroke-width="10"><path d="M170 120l40 -30M292 140l50 -40"/></g>
+            <path d="M140 80h232v300H140z M256 80v300" fill="none" stroke="#B6AB98" stroke-width="2"/>
+            <rect y="400" width="400" height="100" fill="url(#g-floor-oak)"/>
+            <path d="M0 400h400" stroke="#6E4C2C" stroke-width="2"/>
+            <circle cx="60" cy="40" r="90" fill="url(#g-glow)" opacity=".6"/>
+            <g>
+              <ellipse cx="200" cy="462" rx="170" ry="10" fill="url(#g-shadow)"/>
+              <rect x="50" y="420" width="300" height="10" rx="4" fill="#E9E1D2"/>
+              <rect x="120" y="408" width="90" height="14" rx="6" fill="url(#g-terra)"/>
+              <path d="M60 430v26M340 430v26M340 420v-50" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
+              <path d="M320 372h40" stroke="#2A2420" stroke-width="4" stroke-linecap="round"/>
+              <path d="M130 408c20-40 50-60 80-60" stroke="#221F1B" stroke-width=".8" fill="none" stroke-dasharray="3 4" opacity=".5"/>
+            </g>
+            <text x="150" y="66" font-family="Pretendard, sans-serif" font-size="10" fill="#4A443C" letter-spacing="2" opacity=".7">STUDIO · 2F</text>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>필라테스 스튜디오 ‘코어룸’</h3>
+          <span class="work__loc">중구 삼덕동</span>
+          <p>층간 소음 민원 이력이 있던 2층이라 바닥 방진부터 다시 깔았습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>30평</dd></div><div><dt>유형</dt><dd>상가·스튜디오</dd></div><div><dt>기간</dt><dd>4주</dd></div><div><dt>예산</dt><dd>3천만원대</dd></div></dl>
+        </div>
+      </article>
+
+      <article class="work">
+        <span class="work__idx" aria-hidden="true">06</span>
+        <div class="work__media" data-reveal>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="원형 식탁과 벤트우드 의자, 돔 펜던트가 있는 신혼집 다이닝 일러스트">
+            <rect width="400" height="500" fill="url(#g-wall-warm)"/>
+            <rect x="250" y="80" width="110" height="140" fill="#F5EEE3"/>
+            <rect x="262" y="92" width="86" height="116" fill="url(#g-wall-rose)"/>
+            <circle cx="305" cy="140" r="26" fill="url(#g-terra)" opacity=".85"/>
+            <path d="M262 190c20-20 60-24 86-6v24h-86z" fill="#9A7B5E" opacity=".6"/>
+            <path d="M200 0v120" stroke="#2A2420" stroke-width="1.2"/>
+            <path d="M140 170a60 60 0 0 1 120 0z" fill="#F0E8DB"/>
+            <path d="M140 170h120" stroke="#C9B9A0" stroke-width="2"/>
+            <ellipse cx="200" cy="180" rx="110" ry="60" fill="url(#g-glow)" opacity=".9"/>
+            <rect y="410" width="400" height="90" fill="url(#g-floor-oak)"/>
+            <path d="M0 410h400" stroke="#7D5733" stroke-width="2"/>
+            <ellipse cx="200" cy="450" rx="160" ry="12" fill="url(#g-shadow)"/>
+            <ellipse cx="200" cy="330" rx="120" ry="18" fill="url(#g-walnut)"/>
+            <path d="M200 348v96M170 444h60" stroke="#4E3320" stroke-width="8" stroke-linecap="round"/>
+            <g fill="none" stroke="#2A2420" stroke-width="3" stroke-linecap="round">
+              <path d="M58 450V360c0-40 40-40 40 0M58 384h52M68 384v66M104 384v66"/>
+              <path d="M342 450V360c0-40-40-40-40 0M342 384h-52M332 384v66M296 384v66"/>
+            </g>
+            <path d="M176 330c-4-14 0-22 6-26 6 4 10 12 6 26z" fill="#E8DDCA"/>
+            <path d="M182 304c-2-20 8-34 18-40M182 304c-8-16-18-22-28-24" stroke="#5B4A38" stroke-width="1.2" fill="none"/>
+            <circle cx="226" cy="324" r="8" fill="#EFE7DA"/><circle cx="244" cy="326" r="6" fill="#EFE7DA"/>
+          </svg>
+        </div>
+        <div class="work__cap">
+          <h3>둘이 사는 첫 집, 만촌동 24평</h3>
+          <span class="work__loc">수성구 만촌동</span>
+          <p>작은 거실 대신 식탁을 집의 중심에 두었습니다.</p>
+          <dl class="spec"><div><dt>평수</dt><dd>24평</dd></div><div><dt>유형</dt><dd>아파트 전체</dd></div><div><dt>기간</dt><dd>4주</dd></div><div><dt>예산</dt><dd>2,500만원대</dd></div></dl>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="sec compare" id="compare" aria-labelledby="compare-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-fade><b>03</b> Before / After</p>
+      <h2 id="compare-title" data-fade>28년 된 거실이<br>이렇게 바뀌었습니다</h2>
+      <p data-fade>가운데 손잡이를 좌우로 끌어 보세요. 1998년 준공된 황금동 32평 아파트의 거실입니다. 창 위치와 천장 높이는 그대로 두고 바꿨습니다.</p>
+    </div>
+    <div class="compare__layout">
+      <div class="compare__frame" data-compare>
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <!-- BEFORE -->
+          <rect width="1200" height="700" fill="url(#p-wallpaper)"/>
+          <rect width="1200" height="46" fill="#E6E2D6"/>
+          <rect y="46" width="1200" height="18" fill="#5A3C24"/>
+          <rect x="420" y="18" width="300" height="20" fill="#F4F6F0"/><rect x="420" y="38" width="300" height="4" fill="#B9BDB2"/>
+          <rect x="690" y="120" width="380" height="330" fill="#9FB3B8"/>
+          <g stroke="#C9CCC6" stroke-width="10" fill="none"><rect x="690" y="120" width="380" height="330"/><path d="M880 120v330M690 285h380"/></g>
+          <rect x="680" y="100" width="400" height="18" fill="#6A4A30"/>
+          <rect x="690" y="130" width="60" height="320" fill="#C8B98A" opacity=".85"/><rect x="1010" y="130" width="60" height="320" fill="#C8B98A" opacity=".85"/>
+          <rect y="540" width="1200" height="160" fill="url(#p-lino)"/>
+          <rect y="520" width="1200" height="22" fill="#5A3C24"/>
+          <rect x="80" y="380" width="420" height="140" fill="#6B4A2F"/>
+          <g stroke="#4A3220" stroke-width="3"><path d="M220 380v140M360 380v140"/></g>
+          <rect x="190" y="250" width="200" height="130" rx="10" fill="#3B3B3A"/><rect x="206" y="264" width="130" height="100" rx="14" fill="#5E6664"/><circle cx="360" cy="290" r="8" fill="#222"/><circle cx="360" cy="320" r="8" fill="#222"/>
+          <rect x="560" y="410" width="360" height="110" rx="8" fill="#6F4F3B"/><rect x="580" y="380" width="320" height="60" rx="10" fill="#8A5F46"/>
+          <rect width="1200" height="700" fill="url(#g-dim)"/>
+        </svg>
+        <div class="compare__after">
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g>
+            <rect width="1200" height="700" fill="#EFE7DA"/>
+            <rect width="1200" height="64" fill="#F6F1E8"/>
+            <rect y="62" width="1200" height="6" fill="#FFF2D6"/>
+            <ellipse cx="600" cy="70" rx="640" ry="60" fill="url(#g-glow)" opacity=".85"/>
+            <path d="M120 520V250a110 110 0 0 1 220 0v270z" fill="#E2D5C0"/>
+            <path d="M136 520V254a94 94 0 0 1 188 0v266z" fill="#D8C7AC"/>
+            <circle cx="230" cy="300" r="46" fill="url(#g-mirror)" stroke="#B89A6A" stroke-width="3"/>
+            <rect x="160" y="440" width="140" height="80" fill="url(#g-walnut)"/>
+            <path d="M184 440c-4-26 2-40 16-48 14 8 20 22 16 48z" fill="#F2EADC"/>
+            <rect x="690" y="120" width="380" height="330" fill="url(#g-sky)"/>
+            <g stroke="#F6F1E8" stroke-width="6" fill="none"><rect x="690" y="120" width="380" height="330"/><path d="M880 120v330"/></g>
+            <rect x="660" y="80" width="120" height="440" fill="url(#g-curtain)"/><rect x="990" y="80" width="120" height="440" fill="url(#g-curtain)"/>
+            <path d="M650 78h470" stroke="#9A7641" stroke-width="4"/>
+            <rect y="520" width="1200" height="180" fill="url(#p-herring)"/>
+            <rect y="518" width="1200" height="4" fill="#DCCFBA"/>
+            <polygon points="690,520 1070,520 1140,700 620,700" fill="#FFF5E0" opacity=".3"/>
+            <ellipse cx="760" cy="600" rx="340" ry="46" fill="#E6D9C5" opacity=".9"/>
+            <ellipse cx="740" cy="535" rx="260" ry="14" fill="url(#g-shadow)"/>
+            <rect x="500" y="420" width="470" height="110" rx="34" fill="url(#g-linen)"/>
+            <rect x="520" y="378" width="210" height="72" rx="26" fill="#EEE5D6"/>
+            <rect x="740" y="378" width="210" height="72" rx="26" fill="#E6DAC7"/>
+            <rect x="860" y="392" width="64" height="54" rx="14" fill="url(#g-terra)" transform="rotate(-8 892 419)"/>
+            <ellipse cx="760" cy="580" rx="90" ry="16" fill="url(#g-walnut)"/>
+            <path d="M760 596v34" stroke="#4E3320" stroke-width="8"/>
+            <path d="M1140 520V260" stroke="#2A2420" stroke-width="3"/>
+            <path d="M1106 270h68l-14-40h-40z" fill="url(#g-brass)"/>
+            <circle cx="1140" cy="290" r="140" fill="url(#g-glow)"/>
+            <g fill="#6F7E58"><ellipse cx="420" cy="400" rx="14" ry="40" transform="rotate(-20 420 400)"/><ellipse cx="450" cy="380" rx="14" ry="44" transform="rotate(15 450 380)"/><ellipse cx="400" cy="440" rx="12" ry="34" transform="rotate(-50 400 440)"/></g>
+            <path d="M410 520c-6-40 0-60 25-70 25 10 31 30 25 70z" fill="#C8B79C"/>
+          </g>
+        </svg>
+        </div>
+        <span class="compare__tag compare__tag--b">BEFORE</span>
+        <span class="compare__tag compare__tag--a">AFTER</span>
+        <button class="compare__handle" type="button" role="slider" aria-label="비포·애프터 비교 위치" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="가운데">
+          <span class="compare__knob" aria-hidden="true"><svg width="26" height="12" viewBox="0 0 26 12"><path d="M6 1L1 6l5 5M20 1l5 5-5 5M1 6h24" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </button>
+      </div>
+      <ol class="compare__notes">
+        <li data-fade><h3>몰딩과 벽지 철거</h3><p>짙은 걸레받이와 무늬 벽지를 걷어 내고 도장 마감으로 바꿨습니다.</p></li>
+        <li data-fade><h3>천장 간접등</h3><p>형광등 박스를 없애고 천장 가장자리에 2,700K 간접 조명을 숨겼습니다.</p></li>
+        <li data-fade><h3>아치 수납 벽</h3><p>TV장이 있던 벽에 아치 니치를 파서 수납과 장식을 겸하게 했습니다.</p></li>
+      </ol>
+      <p class="compare__meta"><span>수성구 황금동 · 32평 · 공사 7주</span><span>바닥 헤링본 원목 / 벽 친환경 도장</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="process" id="process" aria-labelledby="process-title">
+  <div class="process__pin">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><b>04</b> Process</p>
+        <h2 id="process-title">첫 통화부터 2년 뒤 점검까지</h2>
+        <p>다섯 단계로 진행합니다. 단계가 넘어갈 때마다 서면으로 정리해 드리고, 확인 서명을 받은 뒤에 다음으로 넘어갑니다.</p>
+      </div>
+    </div>
+    <div class="wrap process__viewport">
+      <ol class="process__track">
+        <li class="step"><span class="step__n" aria-hidden="true">01</span><h3>상담 <span class="it">Consult</span></h3><span class="step__time">약 1시간</span><p>전화나 방문으로 이야기를 나눕니다. 가족 구성, 생활 습관, 예산 범위를 먼저 듣고 가능한 방향을 솔직하게 말씀드립니다.</p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">02</span><h3>실측 <span class="it">Measure</span></h3><span class="step__time">1~2일</span><p>현장에 가서 벽체, 설비 위치, 누수 흔적까지 확인합니다. 실측 도면은 계약 여부와 상관없이 무료로 드립니다.</p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">03</span><h3>디자인 <span class="it">Design</span></h3><span class="step__time">2~3주</span><p>평면 계획과 3D 시안, 실물 자재 샘플 보드를 함께 봅니다. 수정은 두 번까지 비용에 포함되어 있습니다.</p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">04</span><h3>시공 <span class="it">Build</span></h3><span class="step__time">3~8주</span><p>공정표대로 진행하고 매일 저녁 현장 사진을 보내 드립니다. 관리사무소 신고와 이웃 동의서도 저희가 챙깁니다.</p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">05</span><h3>AS <span class="it">Care</span></h3><span class="step__time">준공 후 2년</span><p>입주하고 2년 동안 무상으로 봐 드립니다. 1개월, 6개월 차에는 저희가 먼저 연락드려 점검 날짜를 잡습니다.</p></li>
+      </ol>
+      <div class="process__bar" aria-hidden="true"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="sec reviews" id="reviews" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-fade><b>05</b> Letters</p>
+      <h2 id="reviews-title" data-fade>먼저 살아 본 분들의 이야기</h2>
+    </div>
+    <div class="reviews__grid">
+      <figure class="review" data-fade>
+        <span class="review__q" aria-hidden="true">“</span>
+        <blockquote><p>공사 기간 내내 매일 저녁 사진이 왔어요. 회사에 있어도 현장이 어떻게 돌아가는지 다 보이니까 불안할 일이 없었습니다. 처음 받은 견적에서 한 푼도 안 늘었고요.</p></blockquote>
+        <figcaption><span><b>박○○ 님</b> · 범어동 34평 전체 리모델링</span><span class="stars" aria-label="별점 5점 만점에 5점">★★★★★</span></figcaption>
+      </figure>
+      <figure class="review" data-fade>
+        <span class="review__q" aria-hidden="true">“</span>
+        <blockquote><p>오픈 날짜가 박혀 있어서 걱정이 많았는데 이틀 먼저 끝났어요. 조명 색온도를 밤에 몇 번이나 같이 맞춰 주신 게 기억에 남아요.</p></blockquote>
+        <figcaption><span><b>이○○ 님</b> · 상인동 카페</span><span class="stars" aria-label="별점 5점 만점에 5점">★★★★★</span></figcaption>
+      </figure>
+      <figure class="review" data-fade>
+        <span class="review__q" aria-hidden="true">“</span>
+        <blockquote><p>주방이랑 욕실만 고쳤는데 집 전체가 달라진 느낌이에요. 예산이 넉넉하지 않다고 했더니 돈 쓸 곳과 아낄 곳부터 같이 나눠 주셨어요.</p></blockquote>
+        <figcaption><span><b>정○○ 님</b> · 칠곡 25평 부분 시공</span><span class="stars" aria-label="별점 5점 만점에 5점">★★★★★</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact__grid">
+      <div class="contact__side">
+        <div>
+          <p class="eyebrow"><b>06</b> Inquiry</p>
+          <h2 id="contact-title">어떤 공간을<br>바꾸고 싶으세요?</h2>
+          <p>남겨 주신 내용을 대표 디자이너가 직접 읽고, 영업일 기준 하루 안에 전화드립니다. 실측 방문과 실측 도면은 무료입니다.</p>
+        </div>
+        <dl>
+          <div><dt>전화</dt><dd><a href="tel:053-000-0000">053-000-0000</a></dd></div>
+          <div><dt>상담 시간</dt><dd>평일 10:00 – 19:00 · 토 예약제</dd></div>
+          <div><dt>쇼룸</dt><dd>대구광역시 수성구 000로 00, 2층</dd></div>
+        </dl>
+        <svg class="contact__arch" viewBox="0 0 200 260" aria-hidden="true"><path d="M10 260V100a90 90 0 0 1 180 0v160" fill="none" stroke="#F6F1E8" stroke-width="2"/><path d="M40 260V104a60 60 0 0 1 120 0v156" fill="none" stroke="#F6F1E8" stroke-width="1"/></svg>
+      </div>
+
+      <div class="form-wrap">
+        <form class="form" id="quote-form" novalidate>
+          <div class="field">
+            <label for="f-name">이름 <em aria-hidden="true">필수</em></label>
+            <input class="input" id="f-name" name="name" type="text" autocomplete="name" placeholder="홍길동" required aria-describedby="e-name">
+            <p class="err" id="e-name" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">연락처 <em aria-hidden="true">필수</em></label>
+            <input class="input" id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" required aria-describedby="e-phone">
+            <p class="err" id="e-phone" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-size">평수 <em aria-hidden="true">필수</em></label>
+            <input class="input" id="f-size" name="size" type="text" inputmode="decimal" placeholder="예) 34" required aria-describedby="e-size">
+            <span class="suffix" aria-hidden="true">평</span>
+            <p class="err" id="e-size" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-type">공사 유형 <em aria-hidden="true">필수</em></label>
+            <select class="input" id="f-type" name="type" required aria-describedby="e-type">
+              <option value="">선택해 주세요</option>
+              <option>아파트 전체 리모델링</option>
+              <option>아파트 부분 시공 (주방·욕실 등)</option>
+              <option>상가·카페·매장</option>
+              <option>사무실·스튜디오</option>
+              <option>기타 / 아직 모르겠어요</option>
+            </select>
+            <p class="err" id="e-type" aria-live="polite"></p>
+          </div>
+          <div class="field field--full">
+            <span class="lbl" id="l-budget"><label for="f-budget">예상 예산</label><span>드래그해서 선택</span></span>
+            <output class="budget-out" id="budget-out" for="f-budget" aria-live="off">3,000만원</output>
+            <input class="range" id="f-budget" name="budget" type="range" min="500" max="15000" step="500" value="3000" aria-valuetext="3,000만원">
+            <div class="range-scale" aria-hidden="true"><span>500만원</span><span>7,500만원</span><span>1억 5천 이상</span></div>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">문의 내용 <em aria-hidden="true">필수</em></label>
+            <textarea class="input" id="f-msg" name="message" rows="4" placeholder="예) 입주 20년 된 아파트인데 주방 벽을 트고 싶어요. 12월 이사 전까지 끝났으면 합니다." required aria-describedby="e-msg"></textarea>
+            <p class="err" id="e-msg" aria-live="polite"></p>
+          </div>
+          <div class="agree field">
+            <label class="check" for="f-agree"><input id="f-agree" name="agree" type="checkbox" required aria-describedby="e-agree"><span>개인정보 수집·이용에 동의합니다. <em aria-hidden="true" style="font-style:normal;color:var(--terra)">(필수)</em></span></label>
+            <details>
+              <summary>수집 항목 자세히 보기</summary>
+              <table>
+                <tr><th scope="row">수집 항목</th><td>이름, 연락처, 평수, 공사 유형, 예산, 문의 내용</td></tr>
+                <tr><th scope="row">이용 목적</th><td>견적 상담 및 실측 일정 안내</td></tr>
+                <tr><th scope="row">보관 기간</th><td>상담 종료 후 1년, 이후 즉시 파기</td></tr>
+              </table>
+            </details>
+            <p class="err" id="e-agree" aria-live="polite"></p>
+          </div>
+          <div class="form__foot">
+            <small>보내 주신 정보는 상담 외 용도로 쓰지 않습니다.</small>
+            <button class="btn" type="submit">견적 문의 보내기 <span class="spin" aria-hidden="true"></span><svg width="18" height="10" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4" fill="none" stroke="currentColor"/></svg></button>
+          </div>
+        </form>
+
+        <div class="success" id="success" tabindex="-1" role="status">
+          <div class="success__mark" aria-hidden="true"><svg width="28" height="20" viewBox="0 0 28 20"><path d="M1 10l8 8L27 1" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3><span id="s-name">고객</span> 님, 문의가 잘 접수되었습니다.</h3>
+          <p>대표 디자이너가 내용을 확인하고 영업일 기준 하루 안에 연락드릴게요.</p>
+          <dl>
+            <dt>접수 번호</dt><dd id="s-no">MH-0000</dd>
+            <dt>연락처</dt><dd id="s-phone">-</dd>
+            <dt>공사 유형</dt><dd id="s-type">-</dd>
+            <dt>예상 예산</dt><dd id="s-budget">-</dd>
+          </dl>
+          <button class="ghost" type="button" id="reset-form">새로 작성하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft__word" aria-hidden="true">Mood<i>/</i>house</p>
+    <div class="ft__grid">
+      <div class="ft__col--wide ft__col">
+        <h2>사업자 정보</h2>
+        <p>상호 무드하우스 인테리어 · 대표 000<br>사업자등록번호 000-00-00000 · 실내건축공사업 면허 제0000-000호<br>대구광역시 수성구 000로 00, 2층 · 053-000-0000 · hello@moodhouse.example</p>
+      </div>
+      <div class="ft__col">
+        <h2>바로가기</h2>
+        <ul><li><a href="#works">포트폴리오</a></li><li><a href="#process">진행 과정</a></li><li><a href="#contact">견적 문의</a></li></ul>
+      </div>
+      <div class="ft__col">
+        <h2>운영 시간</h2>
+        <p>평일 10:00 – 19:00<br>토요일 쇼룸 예약제<br>일요일·공휴일 휴무</p>
+      </div>
+    </div>
+    <div class="ft__bottom">
+      <span>© 2026 MOODHOUSE Interior Studio.</span>
+      <span class="ft__note">* 포트폴리오용 예시 사이트입니다.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var lenis = null;
+
+  /* ---------- smooth scroll ---------- */
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ duration: 1.15, easing: function(t){return Math.min(1, 1.001 - Math.pow(2, -10 * t))}, smoothWheel: true });
+    if (window.gsap && window.ScrollTrigger) {
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      var raf = function(t){ lenis.raf(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+  }
+  function scrollToEl(el){
+    if (!el) return;
+    if (lenis) lenis.scrollTo(el, { offset: -70 });
+    else el.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  }
+  $$('a[href^="#"]').forEach(function(a){
+    a.addEventListener("click", function(e){
+      var id = a.getAttribute("href");
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      closeMenu();
+      scrollToEl(target);
+      if (id === "#main") { target.focus({ preventScroll: true }); }
+      else {
+        var h = target.querySelector("h1,h2");
+        if (h) { h.setAttribute("tabindex","-1"); h.focus({ preventScroll: true }); }
+      }
+      history.replaceState(null, "", id);
+    });
+  });
+
+  /* ---------- header ---------- */
+  var hd = $(".hd");
+  function onScroll(){ hd.classList.toggle("is-scrolled", window.scrollY > 30); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  var menuBtn = $(".menu-btn"), mnav = $("#mnav");
+  function closeMenu(){
+    if (!mnav.classList.contains("is-open")) return;
+    mnav.classList.remove("is-open"); menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.querySelector(".sr-only").textContent = "메뉴 열기";
+    document.body.style.overflow = ""; if (lenis) lenis.start();
+  }
+  menuBtn.addEventListener("click", function(){
+    var open = !mnav.classList.contains("is-open");
+    if (!open) { closeMenu(); menuBtn.focus(); return; }
+    mnav.classList.add("is-open"); menuBtn.setAttribute("aria-expanded","true");
+    menuBtn.querySelector(".sr-only").textContent = "메뉴 닫기";
+    document.body.style.overflow = "hidden"; if (lenis) lenis.stop();
+    var first = mnav.querySelector("a"); if (first) first.focus();
+  });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && mnav.classList.contains("is-open")) { closeMenu(); menuBtn.focus(); } });
+
+  /* ---------- before / after ---------- */
+  var frame = $("[data-compare]"), handle = $(".compare__handle");
+  function setPos(p){
+    p = Math.max(0, Math.min(100, p));
+    frame.style.setProperty("--pos", p + "%");
+    handle.setAttribute("aria-valuenow", Math.round(p));
+    handle.setAttribute("aria-valuetext", "왼쪽 비포 " + Math.round(p) + "%, 오른쪽 애프터 " + (100 - Math.round(p)) + "%");
+  }
+  var dragging = false;
+  function fromEvent(e){ var r = frame.getBoundingClientRect(); return (e.clientX - r.left) / r.width * 100; }
+  frame.addEventListener("pointerdown", function(e){
+    if (e.button !== undefined && e.button !== 0) return;
+    dragging = true; frame.setPointerCapture(e.pointerId); setPos(fromEvent(e)); handle.focus({ preventScroll: true });
+  });
+  frame.addEventListener("pointermove", function(e){ if (dragging) setPos(fromEvent(e)); });
+  ["pointerup","pointercancel","lostpointercapture"].forEach(function(t){ frame.addEventListener(t, function(){ dragging = false; }); });
+  handle.addEventListener("keydown", function(e){
+    var v = +handle.getAttribute("aria-valuenow"), map = { ArrowLeft:-5, ArrowDown:-5, ArrowRight:5, ArrowUp:5, PageDown:-20, PageUp:20 };
+    if (e.key in map) { e.preventDefault(); setPos(v + map[e.key]); }
+    else if (e.key === "Home") { e.preventDefault(); setPos(0); }
+    else if (e.key === "End") { e.preventDefault(); setPos(100); }
+  });
+  setPos(50);
+
+  /* ---------- form ---------- */
+  var form = $("#quote-form"), success = $("#success");
+  var phone = $("#f-phone"), budget = $("#f-budget"), out = $("#budget-out");
+  function fmtPhone(v){
+    var d = v.replace(/\D/g, "").slice(0, 11);
+    if (d.indexOf("02") === 0) {
+      d = d.slice(0, 10);
+      if (d.length < 3) return d;
+      if (d.length < 6) return d.slice(0,2) + "-" + d.slice(2);
+      if (d.length < 10) return d.slice(0,2) + "-" + d.slice(2,5) + "-" + d.slice(5);
+      return d.slice(0,2) + "-" + d.slice(2,6) + "-" + d.slice(6);
+    }
+    if (d.length < 4) return d;
+    if (d.length < 8) return d.slice(0,3) + "-" + d.slice(3);
+    if (d.length < 11) return d.slice(0,3) + "-" + d.slice(3,6) + "-" + d.slice(6);
+    return d.slice(0,3) + "-" + d.slice(3,7) + "-" + d.slice(7);
+  }
+  phone.addEventListener("input", function(){ phone.value = fmtPhone(phone.value); });
+
+  function won(v){
+    v = +v;
+    var eok = Math.floor(v / 10000), man = v % 10000, s = "";
+    if (eok) s += eok + "억";
+    if (man) s += (eok ? " " : "") + man.toLocaleString("ko-KR") + "만원";
+    else s += "원";
+    if (v >= 15000) s += " 이상";
+    return s;
+  }
+  function syncBudget(){
+    var min = +budget.min, max = +budget.max, p = (budget.value - min) / (max - min) * 100;
+    budget.style.setProperty("--p", p + "%");
+    out.textContent = won(budget.value);
+    budget.setAttribute("aria-valuetext", won(budget.value));
+  }
+  budget.addEventListener("input", syncBudget); syncBudget();
+
+  var rules = {
+    name: function(v){ v = v.trim(); if (!v) return "이름을 입력해 주세요."; if (v.length < 2) return "이름을 두 글자 이상 입력해 주세요."; if (!/^[가-힣a-zA-Z\s]+$/.test(v)) return "이름은 한글 또는 영문으로 입력해 주세요."; return ""; },
+    phone: function(v){ if (!v) return "연락받으실 번호를 입력해 주세요."; if (!/^(01[016789]-\d{3,4}-\d{4}|0\d{1,2}-\d{3,4}-\d{4})$/.test(v)) return "번호 형식을 확인해 주세요. 예) 010-1234-5678"; return ""; },
+    size: function(v){ v = v.trim(); if (!v) return "평수를 입력해 주세요. 대략적인 숫자도 괜찮아요."; var n = parseFloat(v); if (!/^\d+(\.\d+)?$/.test(v) || n < 1 || n > 500) return "1에서 500 사이 숫자로 입력해 주세요."; return ""; },
+    type: function(v){ return v ? "" : "공사 유형을 선택해 주세요."; },
+    message: function(v){ v = v.trim(); if (!v) return "문의 내용을 적어 주세요."; if (v.length < 10) return "상담에 도움이 되도록 10자 이상 적어 주세요."; return ""; },
+    agree: function(v, el){ return el.checked ? "" : "개인정보 수집·이용에 동의해 주셔야 접수할 수 있어요."; }
+  };
+  var errIds = { name:"e-name", phone:"e-phone", size:"e-size", type:"e-type", message:"e-msg", agree:"e-agree" };
+  function check(el){
+    var msg = rules[el.name](el.value, el), field = el.closest(".field"), err = document.getElementById(errIds[el.name]);
+    err.textContent = msg;
+    field.classList.toggle("has-error", !!msg);
+    if (msg) el.setAttribute("aria-invalid", "true"); else el.removeAttribute("aria-invalid");
+    return !msg;
+  }
+  Object.keys(rules).forEach(function(k){
+    var el = form.elements[k];
+    el.addEventListener("blur", function(){ if (el.dataset.touched || el.value) { el.dataset.touched = "1"; check(el); } });
+    el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", function(){ if (el.dataset.touched) check(el); });
+  });
+  var submitBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var firstBad = null;
+    Object.keys(rules).forEach(function(k){ var el = form.elements[k]; el.dataset.touched = "1"; if (!check(el) && !firstBad) firstBad = el; });
+    if (firstBad) { firstBad.focus({ preventScroll: true }); scrollToEl(firstBad.closest(".field")); return; }
+    submitBtn.setAttribute("aria-busy", "true");
+    setTimeout(function(){
+      submitBtn.removeAttribute("aria-busy");
+      var d = new Date(), no = "MH-" + String(d.getFullYear()).slice(2) + String(d.getMonth()+1).padStart(2,"0") + String(d.getDate()).padStart(2,"0") + "-" + String(Math.floor(Math.random()*9000)+1000);
+      $("#s-name").textContent = form.elements.name.value.trim();
+      $("#s-no").textContent = no;
+      $("#s-phone").textContent = form.elements.phone.value.replace(/-(\d{3,4})-/, "-****-");
+      $("#s-type").textContent = form.elements.type.value;
+      $("#s-budget").textContent = won(budget.value);
+      form.hidden = true; success.classList.add("is-on"); success.focus({ preventScroll: true });
+      scrollToEl($(".form-wrap"));
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    }, 900);
+  });
+  $("#reset-form").addEventListener("click", function(){
+    form.reset(); Object.keys(rules).forEach(function(k){ var el = form.elements[k]; delete el.dataset.touched; el.removeAttribute("aria-invalid"); el.closest(".field").classList.remove("has-error"); document.getElementById(errIds[k]).textContent = ""; });
+    syncBudget(); success.classList.remove("is-on"); form.hidden = false; form.elements.name.focus();
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  });
+
+  /* ---------- motion (GSAP + ScrollTrigger) ---------- */
+  if (!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  var mm = gsap.matchMedia();
+
+  mm.add("(prefers-reduced-motion: no-preference)", function(){
+    // hero intro
+    var tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+    tl.from("[data-hero-meta]", { opacity: 0, y: -12, duration: .9 })
+      .from(".hero h1 .line > span", { yPercent: 110, duration: 1.3, stagger: .12 }, "-=.6")
+      .fromTo("[data-hero-frame]", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.6, ease: "expo.inOut" }, "-=1.3")
+      .from("[data-hero-frame] svg", { scale: 1.25, duration: 2, ease: "expo.out" }, "<.3")
+      .from(".hero__caption", { opacity: 0, x: -16, duration: .8 }, "-=1.1")
+      .from("[data-hero-fade]", { opacity: 0, y: 24, duration: 1, stagger: .12 }, "-=1.2")
+;
+
+    gsap.to("[data-parallax]", { yPercent: -8, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+
+    // clip-path image reveals
+    $$("[data-reveal]").forEach(function(el){
+      var inner = el.querySelector("svg");
+      var t = gsap.timeline({ scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+      t.fromTo(el, { clipPath: "inset(18% 12% 18% 12%)", opacity: .001 }, { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 1.4, ease: "expo.out" });
+      if (inner) t.from(inner, { scale: 1.2, duration: 1.8, ease: "expo.out" }, 0);
+    });
+    $$(".work__idx").forEach(function(el){
+      gsap.fromTo(el, { yPercent: 40 }, { yPercent: -40, ease: "none", scrollTrigger: { trigger: el.parentNode, start: "top bottom", end: "bottom top", scrub: true } });
+    });
+    $$(".work__cap").forEach(function(el){
+      gsap.from(el.children, { opacity: 0, y: 22, duration: 1, stagger: .06, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } });
+    });
+
+    // fade-ups
+    $$("[data-fade]").forEach(function(el){
+      gsap.from(el, { opacity: 0, y: 40, duration: 1.1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 88%", once: true } });
+    });
+
+    // counters
+    $$("[data-count]").forEach(function(el){
+      var end = +el.dataset.count, o = { v: 0 };
+      if (!end) return;
+      el.textContent = "0";
+      gsap.to(o, { v: end, duration: 2, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 90%", once: true }, onUpdate: function(){ el.textContent = Math.round(o.v); } });
+    });
+
+    // compare hint
+    var hint = { p: 50 };
+    gsap.timeline({ scrollTrigger: { trigger: frame, start: "top 70%", once: true } })
+      .to(hint, { p: 28, duration: .9, ease: "power2.inOut", onUpdate: function(){ if (!dragging) setPos(hint.p); } })
+      .to(hint, { p: 62, duration: 1, ease: "power2.inOut", onUpdate: function(){ if (!dragging) setPos(hint.p); } })
+      .to(hint, { p: 50, duration: .7, ease: "power2.out", onUpdate: function(){ if (!dragging) setPos(hint.p); } });
+
+    // reviews quote marks
+    $$(".review__q").forEach(function(q){
+      gsap.from(q, { scale: .4, opacity: 0, duration: 1.2, ease: "back.out(2)", scrollTrigger: { trigger: q, start: "top 88%", once: true } });
+    });
+  });
+
+  // pinned horizontal process (desktop only)
+  mm.add("(min-width: 1081px) and (prefers-reduced-motion: no-preference)", function(){
+    var sec = $(".process"), track = $(".process__track"), bar = $(".process__bar i");
+    sec.classList.add("is-horizontal");
+    function dist(){ var vp = $(".process__viewport"); var pad = parseFloat(getComputedStyle(vp).paddingRight) || 0; return Math.max(0, track.scrollWidth - (vp.clientWidth - pad * 2)); }
+    var tw = gsap.to(track, { x: function(){ return -dist(); }, ease: "none",
+      scrollTrigger: { trigger: sec, pin: ".process__pin", start: "top top", end: function(){ return "+=" + dist(); }, scrub: 1, invalidateOnRefresh: true,
+        onUpdate: function(self){ bar.style.transform = "scaleX(" + self.progress + ")"; } } });
+    gsap.from(".step__n", { opacity: 0, y: 60, stagger: .08, duration: 1.1, ease: "expo.out", scrollTrigger: { trigger: sec, start: "top 70%", once: true } });
+    return function(){ sec.classList.remove("is-horizontal"); gsap.set(track, { clearProps: "transform" }); };
+  });
+
+  window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>

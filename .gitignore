@@ -1,0 +1,4 @@
+_check/
+sites/*/shot-*.png
+*.py
+__pycache__/

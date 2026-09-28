@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>브릿지 수학학원 | 분당 중·고등 수학 전문</title>
+<meta name="description" content="분당 중·고등 수학 전문 브릿지 수학학원. 개념에서 유형, 오답 클리닉까지 이어지는 3단계 수업과 소수정예 반 운영.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --ink:#0A1233;
+  --ink-2:#121C45;
+  --ink-3:#1E2A5C;
+  --volt:#FFD60A;
+  --volt-deep:#E8BF00;
+  --paper:#F3F0E6;
+  --paper-2:#E9E4D4;
+  --line:rgba(10,18,51,.16);
+  --line-inv:rgba(243,240,230,.16);
+  --muted:#5A6180;
+  --muted-inv:#A9AFCB;
+  --err:#D6361F;
+  --display:"Black Han Sans","Pretendard",sans-serif;
+  --body:"Pretendard",-apple-system,"Apple SD Gothic Neo",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --gut:clamp(16px,4vw,56px);
+  --max:1320px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;letter-spacing:-.01em;overflow-x:clip;-webkit-font-smoothing:antialiased;word-break:keep-all}
+img,svg,canvas{display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--volt);outline-offset:3px;border-radius:2px}
+.on-paper :focus-visible, main section.paper :focus-visible{outline-color:var(--ink)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--volt);color:var(--ink);padding:10px 16px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--mono);letter-spacing:0}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--paper);transition:background .3s,box-shadow .3s}
+.hdr.solid{background:rgba(10,18,51,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line-inv)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:34px;height:34px;background:var(--volt);color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:22px;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.logo-txt{display:flex;flex-direction:column;line-height:1.05}
+.logo-txt b{font-family:var(--display);font-weight:400;font-size:19px;letter-spacing:.02em}
+.logo-txt small{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted-inv)}
+.nav{display:flex;gap:28px;font-size:14.5px;font-weight:600}
+.nav a{text-decoration:none;opacity:.82;position:relative;padding:6px 0}
+.nav a:hover{opacity:1}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--volt);transition:right .25s}
+.nav a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;border:0;cursor:pointer;padding:14px 22px;font-size:15px;transition:transform .2s,background .2s,color .2s}
+.btn-volt{background:var(--volt);color:var(--ink)}
+.btn-volt:hover{background:#fff}
+.btn-ghost{color:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line-inv)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--paper)}
+.btn .arr{font-family:var(--mono);transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+.hdr .btn{padding:10px 16px;font-size:14px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;background:var(--ink);color:var(--paper);overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 7vw),0 100%);padding-bottom:7vw}
+#field{position:absolute;inset:0;z-index:0}
+#field canvas{width:100%!important;height:100%!important}
+.hero-grid{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line-inv) 1px,transparent 1px),linear-gradient(90deg,var(--line-inv) 1px,transparent 1px);background-size:88px 88px;mask-image:radial-gradient(ellipse at 70% 40%,#000 20%,transparent 75%);opacity:.45}
+.hero-inner{position:relative;z-index:2;pointer-events:none;min-height:100svh;display:grid;grid-template-columns:repeat(12,1fr);align-content:center;gap:0 24px;padding-top:110px;padding-bottom:80px}
+.hero-inner a,.hero-inner button{pointer-events:auto}
+.eyebrow{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--volt);text-transform:uppercase;margin-bottom:28px}
+.eyebrow::before{content:"";width:40px;height:2px;background:var(--volt)}
+.hero h1{grid-column:1/9;margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,7vw,108px);text-shadow:0 0 30px rgba(10,18,51,.6);line-height:.98;letter-spacing:-.02em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{font-style:normal;color:var(--volt)}
+.hero h1 .strike{position:relative;white-space:nowrap}
+.hero h1 .strike::after{content:"";position:absolute;left:0;right:-4%;bottom:-.02em;height:.12em;background:var(--volt);transform:skewY(-2deg);transform-origin:left;z-index:-1}
+.hero h1 .strike{z-index:0}
+.hero-lede{grid-column:1/7;margin:36px 0 0;font-size:clamp(16px,1.35vw,19px);color:var(--muted-inv);max-width:520px}
+.hero-lede strong{color:var(--paper);font-weight:700}
+.hero-cta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.hero-meta{position:absolute;z-index:2;right:var(--gut);bottom:calc(7vw + 36px);display:flex;gap:34px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted-inv);text-align:right}
+.hero-meta b{display:block;color:var(--paper);font-size:13px;letter-spacing:.06em;margin-top:4px;font-weight:700}
+.fx-label{position:absolute;z-index:1;font-family:var(--mono);font-size:12px;color:var(--volt);pointer-events:none;opacity:0}
+.static-curve{display:none}
+
+/* ---------- section scaffolding ---------- */
+section{position:relative}
+.sec{padding:clamp(88px,11vw,160px) 0}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.sec-no{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.sec-no b{background:var(--ink);color:var(--volt);padding:3px 8px;letter-spacing:.06em}
+.sec-no::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec-title{grid-column:1/8;margin:0;font-family:var(--display);font-weight:400;font-size:clamp(36px,5.2vw,76px);line-height:1.02;letter-spacing:-.02em}
+.sec-title .hl{background:linear-gradient(transparent 62%,var(--volt) 62%,var(--volt) 92%,transparent 92%)}
+.sec-desc{grid-column:9/13;margin:0;color:var(--muted);font-size:15.5px}
+.inv{background:var(--ink);color:var(--paper)}
+.inv .sec-no{color:var(--muted-inv)}
+.inv .sec-no b{background:var(--volt);color:var(--ink)}
+.inv .sec-no::after{background:var(--line-inv)}
+.inv .sec-desc{color:var(--muted-inv)}
+.inv .sec-title .hl{background:none;color:var(--volt)}
+.glyph{position:absolute;font-family:"Times New Roman",serif;font-style:italic;line-height:1;pointer-events:none;user-select:none;z-index:0}
+
+/* ---------- stats ---------- */
+.stats{margin-top:-7vw;padding-top:calc(7vw + clamp(72px,9vw,120px));padding-bottom:clamp(72px,9vw,120px);overflow:hidden}
+.stats .glyph{right:-4vw;top:2vw;font-size:clamp(260px,38vw,560px);color:var(--ink);opacity:.05}
+.stat-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.stat{padding:28px 24px 8px 0;border-right:1px solid var(--line);position:relative}
+.stat + .stat{padding-left:24px}
+.stat:last-child{border-right:0}
+.stat-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.stat-v{display:flex;align-items:baseline;gap:6px;font-family:var(--display);font-size:clamp(64px,8.4vw,132px);line-height:1;margin:18px 0 12px;letter-spacing:-.03em}
+.stat-v small{font-family:var(--body);font-weight:800;font-size:clamp(16px,1.6vw,22px);letter-spacing:-.02em}
+.stat-v .sign{color:var(--volt-deep);font-size:.6em;align-self:center;margin-right:-2px}
+.stat p{margin:0;font-size:14px;color:var(--muted)}
+.stat:first-child .stat-v{color:var(--ink)}
+.stat-note{position:relative;z-index:1;margin-top:28px;font-size:12.5px;color:var(--muted)}
+
+/* ---------- curriculum ---------- */
+.curri{overflow:hidden}
+.curri .glyph{left:-3vw;bottom:-6vw;font-size:clamp(280px,40vw,600px);color:var(--volt);opacity:.07}
+.tablist{position:relative;z-index:1;display:flex;border-bottom:1px solid var(--line-inv);margin-bottom:40px;overflow-x:auto;scrollbar-width:none}
+.tablist::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;background:none;border:0;cursor:pointer;padding:18px 28px 16px;font-weight:700;font-size:16px;color:var(--muted-inv);position:relative;display:flex;align-items:baseline;gap:10px}
+.tab .mono{font-size:11px;opacity:.7}
+.tab:hover{color:var(--paper)}
+.tab[aria-selected="true"]{color:var(--ink);background:var(--volt)}
+.tab[aria-selected="true"] .mono{opacity:1}
+.panel{position:relative;z-index:1}
+.panel[hidden]{display:none}
+.panel-intro{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-bottom:28px}
+.panel-intro h3{grid-column:1/6;margin:0;font-family:var(--display);font-weight:400;font-size:clamp(26px,2.8vw,38px);line-height:1.15}
+.panel-intro p{grid-column:7/13;margin:0;color:var(--muted-inv)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line-inv)}
+.card{padding:30px 28px 32px;border-right:1px solid var(--line-inv);position:relative;background:var(--ink);transition:background .25s}
+.card:last-child{border-right:0}
+.card:hover{background:var(--ink-2)}
+.card-tag{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--volt)}
+.card-tag span+span{font-family:var(--body);letter-spacing:0;font-size:12.5px;font-weight:700;color:var(--muted-inv)}
+.card h4{margin:22px 0 10px;font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.card p{margin:0 0 22px;color:var(--muted-inv);font-size:14.5px}
+.card ul{list-style:none;margin:0;padding:18px 0 0;border-top:1px dashed var(--line-inv);display:grid;gap:8px;font-size:14px}
+.card li{display:flex;gap:10px}
+.card li::before{content:"→";font-family:var(--mono);color:var(--volt)}
+.card-foot{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:700;padding:4px 10px;border:1px solid var(--line-inv);color:var(--paper)}
+.chip.y{background:var(--volt);color:var(--ink);border-color:var(--volt)}
+
+/* ---------- method ---------- */
+.method{overflow:hidden}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;position:relative}
+.step{position:relative;padding:0 32px 0 0}
+.step + .step{padding-left:32px;border-left:1px solid var(--line)}
+.step-num{font-family:var(--display);font-size:clamp(110px,13vw,200px);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:2px var(--ink);display:flex;align-items:flex-end;gap:12px}
+.step:nth-child(2) .step-num{color:var(--ink)}
+.step:nth-child(3) .step-num{color:var(--volt);-webkit-text-stroke:2px var(--ink)}
+.step-sym{font-family:"Times New Roman",serif;font-style:italic;-webkit-text-stroke:0;color:var(--ink);font-size:.32em;line-height:1;margin-bottom:.15em}
+.step h3{margin:30px 0 6px;font-size:26px;font-weight:800;letter-spacing:-.03em}
+.step .en{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.step p{margin:16px 0 0;color:var(--muted);font-size:15px}
+.step dl{margin:24px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:13.5px;padding-top:18px;border-top:2px solid var(--ink)}
+.step dt{font-weight:800}
+.step dd{margin:0;color:var(--muted)}
+.bar{height:6px;background:var(--paper-2);margin-top:40px;position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(var(--p,1))}
+.bar i::after{content:"";position:absolute;right:0;top:0;bottom:0;width:30%;background:var(--volt)}
+
+/* ---------- teachers ---------- */
+.teachers{background:var(--paper-2);clip-path:polygon(0 4vw,100% 0,100% 100%,0 100%);padding-top:calc(clamp(88px,11vw,160px) + 4vw)}
+.t-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.t{background:var(--paper);padding:0 0 26px;position:relative;transition:transform .3s}
+.t:hover{transform:translateY(-6px)}
+.t-av{aspect-ratio:1/1.05;background:var(--ink);position:relative;overflow:hidden;display:grid;place-items:center;clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
+.t-av .ini{font-family:var(--display);font-size:clamp(90px,9vw,140px);color:var(--volt);line-height:1;position:relative;z-index:1}
+.t-av .bg{position:absolute;font-family:"Times New Roman",serif;font-style:italic;font-size:260px;color:rgba(243,240,230,.07);right:-20px;bottom:-60px;line-height:1}
+.t-av .role{position:absolute;left:16px;top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--muted-inv)}
+.t:nth-child(2) .t-av{background:var(--volt)}
+.t:nth-child(2) .t-av .ini{color:var(--ink)}
+.t:nth-child(2) .t-av .bg{color:rgba(10,18,51,.08)}
+.t:nth-child(2) .t-av .role{color:var(--ink)}
+.t-body{padding:0 22px}
+.t h3{margin:14px 0 2px;font-size:22px;font-weight:800;letter-spacing:-.03em}
+.t h3 span{font-size:14px;font-weight:600;color:var(--muted);margin-left:6px}
+.t .sp{font-size:14px;color:var(--ink);font-weight:700}
+.t ul{list-style:none;padding:14px 0 0;margin:14px 0 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:grid;gap:4px}
+.t li::before{content:"· ";color:var(--ink)}
+
+/* ---------- timetable ---------- */
+.tt-bar{display:flex;flex-wrap:wrap;gap:0;margin-bottom:24px;border:1.5px solid var(--ink);width:max-content;max-width:100%}
+.flt{background:none;border:0;cursor:pointer;padding:11px 18px;font-weight:700;font-size:14px;border-right:1.5px solid var(--ink)}
+.flt:last-child{border-right:0}
+.flt[aria-pressed="true"]{background:var(--ink);color:var(--volt)}
+.flt:not([aria-pressed="true"]):hover{background:var(--volt)}
+.tt-wrap{overflow-x:auto;border-top:2px solid var(--ink);-webkit-overflow-scrolling:touch}
+.tt{width:100%;min-width:820px;border-collapse:collapse;table-layout:fixed}
+.tt th,.tt td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0;vertical-align:top}
+.tt th:last-child,.tt td:last-child{border-right:0}
+.tt thead th{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-align:left;padding:14px 12px;font-weight:700}
+.tt thead th:first-child{width:92px}
+.tt tbody th{font-family:var(--mono);font-size:12px;font-weight:500;text-align:left;padding:14px 12px;color:var(--muted)}
+.tt tbody th b{display:block;color:var(--ink);font-size:14px}
+.cls{margin:6px;transition:opacity .3s,background .3s,color .3s,border-color .3s;padding:10px 12px;min-height:70px;background:var(--paper);border-left:4px solid var(--ink);font-size:13px;line-height:1.35}
+.cls b{display:block;font-size:14px;font-weight:800;letter-spacing:-.02em}
+.cls span{color:var(--muted);font-size:12px}
+.cls[data-g="m"]{border-left-color:#7A86B8}
+.cls[data-g="h1"]{border-left-color:var(--ink)}
+.cls[data-g="h2"]{border-left-color:var(--volt-deep);background:#FFF7CC}
+.cls[data-g="h3"]{border-left-color:var(--ink);background:var(--ink);color:var(--paper)}
+.cls[data-g="h3"] span{color:var(--muted-inv)}
+.cls.dim{opacity:.35;background:transparent!important;color:var(--muted)!important;border-left-color:var(--line)!important}
+.cls.dim span{color:var(--muted)!important}
+.cls.dim b{font-weight:600}
+.tt-legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px;font-size:12.5px;color:var(--muted)}
+.tt-legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.tt-hint{display:none;font-size:12px;color:var(--muted);margin:0 0 10px;font-family:var(--mono)}
+
+/* ---------- reviews ---------- */
+.reviews{overflow:hidden}
+.reviews .glyph{right:4vw;top:6vw;font-size:clamp(200px,24vw,380px);color:var(--volt);opacity:.12}
+.rv-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:24px}
+.rv{border-top:2px solid var(--volt);padding:26px 0 0;margin:0;display:flex;flex-direction:column}
+.rv blockquote{margin:0;font-size:16px;line-height:1.75;color:var(--paper);flex:1}
+.rv:first-child blockquote{font-size:clamp(19px,1.8vw,24px);line-height:1.55;font-weight:600;letter-spacing:-.03em}
+.rv blockquote::before{content:"“";display:block;font-family:var(--display);font-size:64px;line-height:.6;color:var(--volt);margin-bottom:14px}
+.rv figcaption{margin-top:24px;display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted-inv)}
+.rv figcaption b{color:var(--paper)}
+.rv .delta{font-family:var(--mono);color:var(--volt);white-space:nowrap}
+
+/* ---------- apply ---------- */
+.apply .wrap{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px)}
+.apply-side h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,5.2vw,76px);line-height:1.02;letter-spacing:-.02em}
+.apply-side p{color:var(--muted);margin:24px 0 0}
+.flow{list-style:none;margin:36px 0 0;padding:0;border-top:2px solid var(--ink)}
+.flow li{display:grid;grid-template-columns:56px 1fr;padding:16px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.flow li b{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.flow li strong{display:block;font-size:15.5px}
+.contact{margin-top:28px;font-size:14px;color:var(--muted)}
+.contact b{font-family:var(--display);font-weight:400;font-size:30px;color:var(--ink);display:block;letter-spacing:.01em}
+form{background:#fff;padding:clamp(24px,4vw,48px);box-shadow:12px 12px 0 var(--ink);border:2px solid var(--ink);position:relative}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fld{margin-bottom:22px;min-width:0}
+.fld > label,.fld legend{display:block;font-weight:800;font-size:14px;margin-bottom:8px;padding:0}
+.fld .req{color:var(--err);margin-left:3px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.inp{width:100%;border:0;border-bottom:2px solid var(--ink);background:var(--paper);padding:13px 14px;font-size:16px;border-radius:0;transition:background .2s}
+.inp:focus{background:#FFF7CC;outline:none;box-shadow:0 2px 0 0 var(--ink)}
+.inp:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+textarea.inp{min-height:110px;resize:vertical}
+.fld.bad .inp{border-bottom-color:var(--err);background:#FDEDEA}
+.errm{display:block;color:var(--err);font-size:13px;font-weight:600;margin-top:6px;min-height:0}
+.errm:empty{display:none}
+.range-row{display:flex;align-items:center;gap:18px}
+.range-out{font-family:var(--display);font-size:34px;min-width:92px;line-height:1}
+.range-out small{font-family:var(--body);font-size:14px;font-weight:700;margin-left:2px}
+input[type=range]{flex:1;appearance:none;height:28px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:6px;background:linear-gradient(90deg,var(--ink) var(--fill,50%),var(--paper-2) var(--fill,50%))}
+input[type=range]::-moz-range-track{height:6px;background:var(--paper-2)}
+input[type=range]::-moz-range-progress{height:6px;background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:22px;height:22px;background:var(--volt);border:2px solid var(--ink);margin-top:-8px;transform:rotate(45deg)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--volt);border:2px solid var(--ink);border-radius:0}
+.range-scale{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:2px solid var(--ink)}
+.day{position:relative}
+.day input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.day span{display:block;text-align:center;padding:11px 0;font-weight:800;border-right:2px solid var(--ink);transition:background .15s}
+.day:last-child span{border-right:0}
+.day input:checked + span{background:var(--ink);color:var(--volt)}
+.day input:focus-visible + span{outline:3px solid var(--volt);outline-offset:-5px}
+.day input:hover:not(:checked) + span{background:var(--paper)}
+.fld > label.agree{display:flex;gap:12px;align-items:flex-start;font-size:14px;font-weight:500;cursor:pointer;margin:0}
+.agree input{width:22px;height:22px;accent-color:var(--ink);margin:1px 0 0;flex:0 0 auto}
+.agree small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px;font-weight:400}
+.submit{width:100%;justify-content:center;padding:18px;font-size:17px;background:var(--ink);color:var(--volt);margin-top:6px}
+.submit:hover{background:var(--volt);color:var(--ink)}
+.done{text-align:left;padding:12px 0}
+.done .ok{font-family:var(--display);font-size:clamp(64px,8vw,110px);line-height:1;color:var(--ink);display:flex;align-items:center;gap:16px}
+.done .ok i{font-style:normal;background:var(--volt);width:.9em;height:.9em;display:grid;place-items:center;font-size:.6em}
+.done h3{font-size:26px;margin:22px 0 8px;letter-spacing:-.03em}
+.done p{color:var(--muted);margin:0 0 24px}
+.done dl{display:grid;grid-template-columns:110px 1fr;gap:10px;font-size:14px;border-top:2px solid var(--ink);padding-top:18px;margin:0 0 28px}
+.done dt{font-weight:800}
+.done dd{margin:0;color:var(--muted)}
+.linkbtn{background:none;border:0;padding:0;cursor:pointer;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:var(--muted-inv);padding:72px 0 40px;font-size:13px;overflow:hidden;position:relative}
+.ftr-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--line-inv)}
+.ftr h2{font-family:var(--display);font-weight:400;color:var(--paper);font-size:clamp(34px,4vw,56px);margin:0;line-height:1}
+.ftr h2 em{font-style:normal;color:var(--volt)}
+.ftr h3{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--volt);margin:0 0 12px;font-weight:700}
+.ftr p{margin:0 0 4px}
+.ftr-biz{padding-top:28px;display:flex;flex-wrap:wrap;gap:6px 18px;line-height:1.7}
+.ftr-note{margin-top:18px;color:var(--volt);font-weight:700}
+
+/* ---------- reveal base (JS sets initial states) ---------- */
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav{display:none}
+  .t-grid{grid-template-columns:repeat(2,1fr)}
+  .rv-grid{grid-template-columns:1fr 1fr}
+  .rv:first-child{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .hero h1{grid-column:1/-1}
+  .hero-lede{grid-column:1/-1}
+  .hero-meta{display:none}
+  .sec-title{grid-column:1/-1}
+  .sec-desc{grid-column:1/-1}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:24px 16px 20px 0;border-bottom:1px solid var(--line)}
+  .stat + .stat{padding-left:0}
+  .stat:nth-child(even){padding-left:16px;border-right:0}
+  .cards{grid-template-columns:1fr}
+  .card{border-right:0;border-bottom:1px solid var(--line-inv)}
+  .card:last-child{border-bottom:0}
+  .panel-intro h3,.panel-intro p{grid-column:1/-1}
+  .steps{grid-template-columns:1fr;gap:56px}
+  .step,.step + .step{padding:0;border-left:0}
+  .apply .wrap{grid-template-columns:1fr}
+  .ftr-top{grid-template-columns:1fr}
+  .tt-hint{display:block}
+}
+@media (max-width:560px){
+  .hdr .wrap{height:62px}
+  .logo-txt small{display:none}
+  .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),0 100%);padding-bottom:44px}
+  .hero-inner{padding-top:96px;padding-bottom:64px;align-content:end}
+  .hero h1{font-size:clamp(42px,12.6vw,60px)}
+  .hero-lede{margin-top:24px;font-size:15.5px}
+  .hero-cta{margin-top:28px}
+  .eb-en{display:none}
+  .eyebrow{margin-bottom:18px}
+  .hero-cta .btn{flex:1;justify-content:center;padding:14px 12px}
+  .stats{margin-top:-44px;padding-top:calc(44px + 64px)}
+  .stat-v{font-size:56px}
+  .t-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .t-body{padding:0 14px}
+  .t h3{font-size:18px}
+  .t h3 span{display:block;margin:0}
+  .t ul{display:none}
+  .rv-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr;gap:0}
+  form{box-shadow:6px 6px 0 var(--ink)}
+  .tab{padding:14px 18px 12px;font-size:15px}
+  .flt{padding:10px 13px;font-size:13px}
+  .teachers{clip-path:polygon(0 28px,100% 0,100% 100%,0 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .t:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="브릿지 수학학원 처음으로">
+      <span class="logo-mark" aria-hidden="true">∫</span>
+      <span class="logo-txt"><b>브릿지 수학</b><small>BRIDGE MATH · BUNDANG</small></span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#curriculum">교육 과정</a>
+      <a href="#method">수업 방식</a>
+      <a href="#teachers">강사진</a>
+      <a href="#timetable">시간표</a>
+      <a href="#reviews">후기</a>
+    </nav>
+    <a class="btn btn-volt" href="#apply">레벨테스트 신청 <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div id="field" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="eb-en">Middle &amp; High School Math ·&nbsp;</span>분당 정자</p>
+      <h1 id="hero-title">
+        <span class="ln"><span>개념과 점수 사이,</span></span>
+        <span class="ln"><span><em>다리</em>를 놓는</span></span>
+        <span class="ln"><span><span class="strike">수학학원</span></span></span>
+      </h1>
+      <p class="hero-lede">문제를 많이 푸는 반이 아니라, <strong>틀린 이유를 끝까지 추적하는 반</strong>입니다. 한 반 12명, 개념 → 유형 → 오답 클리닉의 세 단계로 중1부터 N수까지 가르칩니다.</p>
+      <div class="hero-cta">
+        <a class="btn btn-volt" href="#apply">무료 레벨테스트 <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#curriculum">교육 과정 보기</a>
+      </div>
+    </div>
+    <div class="hero-meta" aria-hidden="true">
+      <div>CLASS SIZE<b>≤ 12명</b></div>
+      <div>SINCE<b>2014</b></div>
+      <div>f(x)<b>→ 1등급</b></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" aria-labelledby="stats-title">
+    <span class="glyph" aria-hidden="true">∑</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>01</b> Bridge in numbers</p>
+        <h2 class="sec-title" id="stats-title">숫자로 보는 <span class="hl">브릿지</span></h2>
+        <p class="sec-desc">과장 없이, 지난 학기 원내 데이터 그대로 공개합니다.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat reveal">
+          <div class="stat-k">Students</div>
+          <div class="stat-v"><span class="count" data-to="386">386</span><small>명</small></div>
+          <p>2026년 2학기 재원생</p>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-k">Grade Up</div>
+          <div class="stat-v"><span class="sign">+</span><span class="count" data-to="1.7" data-dec="1">1.7</span><small>등급</small></div>
+          <p>6개월 이상 재원생 내신 평균 향상</p>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-k">Classes</div>
+          <div class="stat-v"><span class="count" data-to="28">28</span><small>개 반</small></div>
+          <p>학년·레벨별 이번 학기 개강 반</p>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-k">Clinic</div>
+          <div class="stat-v"><span class="count" data-to="94">94</span><small>%</small></div>
+          <p>오답 클리닉 주간 이수율</p>
+        </div>
+      </div>
+      <p class="stat-note">* 원내 자체 집계 기준이며, 개인별 결과는 학습 상황에 따라 다릅니다.</p>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="sec inv curri" id="curriculum" aria-labelledby="cur-title">
+    <span class="glyph" aria-hidden="true">π</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>02</b> Curriculum</p>
+        <h2 class="sec-title" id="cur-title">학년마다 다른 <span class="hl">질문</span>에 답합니다</h2>
+        <p class="sec-desc">같은 단원이라도 중2와 고2가 막히는 지점은 다릅니다. 학년별로 반을 나누고, 레벨테스트 결과로 한 번 더 나눕니다.</p>
+      </div>
+
+      <div class="tablist" role="tablist" aria-label="학년별 교육 과정">
+        <button class="tab" role="tab" id="tab-m" aria-controls="p-m" aria-selected="true" tabindex="0"><span class="mono">A</span>중등</button>
+        <button class="tab" role="tab" id="tab-h1" aria-controls="p-h1" aria-selected="false" tabindex="-1"><span class="mono">B</span>고1</button>
+        <button class="tab" role="tab" id="tab-h2" aria-controls="p-h2" aria-selected="false" tabindex="-1"><span class="mono">C</span>고2</button>
+        <button class="tab" role="tab" id="tab-h3" aria-controls="p-h3" aria-selected="false" tabindex="-1"><span class="mono">D</span>고3·N수</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-m" aria-labelledby="tab-m" tabindex="0">
+        <div class="panel-intro">
+          <h3>고등 수학을 버틸 체력, 중등에서 만듭니다</h3>
+          <p>계산 실수와 서술형 감점이 가장 많이 나오는 시기입니다. 풀이를 말로 설명하게 하고, 매주 서술형 첨삭을 돌려드립니다.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-tag"><span>M-CORE</span><span>중1–중2</span></div><h4>정규 개념반</h4><p>교과서 개념을 증명 수준까지 이해하고 학교 시험 유형으로 연결합니다.</p><ul><li>주 2회 · 회당 150분</li><li>매 수업 10분 개념 구술 테스트</li><li>시험 4주 전 학교별 기출반 전환</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">서술형 첨삭</span></div></article>
+          <article class="card"><div class="card-tag"><span>M-ADV</span><span>중2–중3</span></div><h4>심화 사고력반</h4><p>함수와 도형 단원을 중심으로 한 문제를 여러 방법으로 푸는 연습을 합니다.</p><ul><li>주 2회 · 회당 150분</li><li>경시 대비 아닌 고등 선행 연결형</li><li>월 1회 풀이 발표 수업</li></ul><div class="card-foot"><span class="chip y">정원 10명</span><span class="chip">레벨테스트 필수</span></div></article>
+          <article class="card"><div class="card-tag"><span>M-PRE</span><span>중3</span></div><h4>고1 수학 선행반</h4><p>다항식부터 경우의 수까지, 고1 공통수학을 한 학기에 두 바퀴 돌립니다.</p><ul><li>주 3회 · 회당 120분</li><li>1회독 개념, 2회독 유형</li><li>겨울방학 모의 내신 2회</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">공통수학1·2</span></div></article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-h1" aria-labelledby="tab-h1" tabindex="0" hidden>
+        <div class="panel-intro">
+          <h3>첫 내신이 3년의 방향을 정합니다</h3>
+          <p>분당권 고교 기출을 학교별로 분석해 반을 운영합니다. 첫 중간고사 전 8주가 가장 중요합니다.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-tag"><span>H1-SCH</span><span>공통수학1</span></div><h4>학교별 내신반</h4><p>서현·낙생·분당·수내 등 학교별 출제 경향에 맞춰 반을 분리합니다.</p><ul><li>주 2회 · 회당 180분</li><li>학교 부교재 전 문항 해설</li><li>시험 2주 전 주말 직전 특강</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">학교별 분반</span></div></article>
+          <article class="card"><div class="card-tag"><span>H1-MOCK</span><span>공통수학1·2</span></div><h4>모의고사 기초반</h4><p>3월·6월 학력평가에 맞춰 시간 배분과 문항 선택 전략을 익힙니다.</p><ul><li>주 1회 · 회당 150분</li><li>격주 실전 모의 + 해설</li><li>개인별 취약 단원 리포트</li></ul><div class="card-foot"><span class="chip y">정원 14명</span><span class="chip">실전형</span></div></article>
+          <article class="card"><div class="card-tag"><span>H1-PRE</span><span>대수 선행</span></div><h4>고2 대수 선행반</h4><p>지수·로그와 삼각함수를 고1 겨울 전에 정리해 고2 부담을 줄입니다.</p><ul><li>주 2회 · 회당 150분</li><li>내신 기간에는 휴강 후 보강</li><li>단원 종료 시 누적 테스트</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">방학 집중</span></div></article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-h2" aria-labelledby="tab-h2" tabindex="0" hidden>
+        <div class="panel-intro">
+          <h3>선택과목이 갈리는 해, 전략이 필요합니다</h3>
+          <p>대수·미적분Ⅰ·확률과 통계를 병행하면서 수능형 사고로 넘어가는 다리를 놓습니다.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-tag"><span>H2-SCH</span><span>대수 · 미적Ⅰ</span></div><h4>내신 집중반</h4><p>학교별 기출 변형 문항과 고난도 서술형을 따로 훈련합니다.</p><ul><li>주 2회 · 회당 180분</li><li>킬러 문항 전담 클리닉</li><li>시험 후 1:1 결과 상담</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">학교별 분반</span></div></article>
+          <article class="card"><div class="card-tag"><span>H2-CSAT</span><span>수능 기초</span></div><h4>수능 전환반</h4><p>평가원 기출을 연도별이 아닌 발상별로 묶어 풀며 수능 문법을 익힙니다.</p><ul><li>주 1회 · 회당 180분</li><li>기출 분석 노트 제공</li><li>월 1회 실전 모의</li></ul><div class="card-foot"><span class="chip y">정원 14명</span><span class="chip">기출 중심</span></div></article>
+          <article class="card"><div class="card-tag"><span>H2-STAT</span><span>확률과 통계</span></div><h4>확통 단과</h4><p>경우의 수에서 흔들리는 학생을 위한 8주 완성 단과 과정입니다.</p><ul><li>주 1회 · 회당 150분</li><li>8주 완성 · 학기 2회 개강</li><li>유형별 오답 카드</li></ul><div class="card-foot"><span class="chip y">정원 10명</span><span class="chip">단과</span></div></article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-h3" aria-labelledby="tab-h3" tabindex="0" hidden>
+        <div class="panel-intro">
+          <h3>남은 시간을 점수로 바꾸는 계산</h3>
+          <p>현재 백분위와 목표 사이의 거리를 단원별로 쪼개, 주 단위 학습 계획표를 함께 만듭니다.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-tag"><span>H3-MAIN</span><span>공통 + 선택</span></div><h4>수능 정규반</h4><p>공통과목 22문항을 기준으로 선택과목까지 한 흐름으로 관리합니다.</p><ul><li>주 3회 · 회당 180분</li><li>매주 30문항 실전 테스트</li><li>주간 성적 추이 학부모 발송</li></ul><div class="card-foot"><span class="chip y">정원 12명</span><span class="chip">미적분 · 확통</span></div></article>
+          <article class="card"><div class="card-tag"><span>H3-KILL</span><span>상위권</span></div><h4>고난도 문항반</h4><p>21·22·30번급 문항만 다룹니다. 풀이 시간을 재고, 풀이 경로를 비교합니다.</p><ul><li>주 1회 · 회당 150분</li><li>문항당 제한 시간 훈련</li><li>풀이 경로 비교 세미나</li></ul><div class="card-foot"><span class="chip y">정원 8명</span><span class="chip">선발제</span></div></article>
+          <article class="card"><div class="card-tag"><span>N-RE</span><span>N수</span></div><h4>N수 리빌드반</h4><p>지난해 성적표를 분석해 무너진 단원부터 다시 쌓습니다. 평일 낮 운영.</p><ul><li>주 4회 · 평일 오전</li><li>자습 관리 + 질의응답</li><li>격주 담임 상담</li></ul><div class="card-foot"><span class="chip y">정원 10명</span><span class="chip">주간반</span></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="sec method paper" id="method" aria-labelledby="method-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>03</b> Method</p>
+        <h2 class="sec-title" id="method-title">모든 수업은 <span class="hl">세 단계</span>로 흐릅니다</h2>
+        <p class="sec-desc">개념을 알아도 틀리고, 유형을 외워도 틀립니다. 그래서 마지막 단계는 언제나 ‘왜 틀렸는가’입니다.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step reveal">
+          <div class="step-num" aria-hidden="true">01<span class="step-sym">√</span></div>
+          <span class="en">CONCEPT</span>
+          <h3>개념</h3>
+          <p>공식을 외우기 전에 왜 그 공식이 나오는지 직접 유도합니다. 수업 끝 10분, 배운 개념을 학생이 칠판에서 설명합니다.</p>
+          <dl><dt>비중</dt><dd>수업 시간의 35%</dd><dt>확인</dt><dd>구술 테스트 · 개념 노트</dd></dl>
+          <div class="bar" aria-hidden="true"><i style="--p:.35"></i></div>
+        </li>
+        <li class="step reveal">
+          <div class="step-num" aria-hidden="true">02<span class="step-sym">∫</span></div>
+          <span class="en">PATTERN</span>
+          <h3>유형</h3>
+          <p>기출을 유형별로 묶어, 처음 보는 문제에서도 출발점을 찾도록 훈련합니다. 문제 수보다 풀이 경로의 수를 늘립니다.</p>
+          <dl><dt>비중</dt><dd>수업 시간의 45%</dd><dt>확인</dt><dd>주간 테스트 · 풀이 시간 기록</dd></dl>
+          <div class="bar" aria-hidden="true"><i style="--p:.8"></i></div>
+        </li>
+        <li class="step reveal">
+          <div class="step-num" aria-hidden="true">03<span class="step-sym">∞</span></div>
+          <span class="en">ERROR CLINIC</span>
+          <h3>오답 클리닉</h3>
+          <p>틀린 문제를 ‘계산·개념·해석·시간’ 네 가지 원인으로 분류하고, 같은 원인의 문제를 다시 풀 때까지 클리닉 조교가 붙습니다.</p>
+          <dl><dt>비중</dt><dd>수업 외 주 1회 90분</dd><dt>확인</dt><dd>오답 원인 리포트 · 재시험</dd></dl>
+          <div class="bar" aria-hidden="true"><i style="--p:1"></i></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+  <section class="sec teachers paper" id="teachers" aria-labelledby="t-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>04</b> Teachers</p>
+        <h2 class="sec-title" id="t-title">가르치는 사람이 <span class="hl">직접</span> 채점합니다</h2>
+        <p class="sec-desc">모든 강사는 담당 반의 주간 테스트와 오답 리포트를 직접 채점하고 코멘트를 남깁니다.</p>
+      </div>
+      <div class="t-grid">
+        <article class="t reveal">
+          <div class="t-av" aria-hidden="true"><span class="role">DIRECTOR</span><span class="bg">∫</span><span class="ini">한</span></div>
+          <div class="t-body"><h3>한도윤<span>원장</span></h3><div class="sp">고3·N수 · 미적분</div><ul><li>수학교육 전공, 강의 경력 14년</li><li>수능 정규반·고난도 문항반</li><li>주간 학습 계획 설계 총괄</li></ul></div>
+        </article>
+        <article class="t reveal">
+          <div class="t-av" aria-hidden="true"><span class="role">HIGH · 2</span><span class="bg">Σ</span><span class="ini">서</span></div>
+          <div class="t-body"><h3>서지민<span>부원장</span></h3><div class="sp">고2 · 대수 · 확률과 통계</div><ul><li>통계학 전공, 강의 경력 10년</li><li>학교별 내신 기출 분석 담당</li><li>확통 단과 8주 과정 개발</li></ul></div>
+        </article>
+        <article class="t reveal">
+          <div class="t-av" aria-hidden="true"><span class="role">HIGH · 1</span><span class="bg">π</span><span class="ini">김</span></div>
+          <div class="t-body"><h3>김태오<span>강사</span></h3><div class="sp">고1 · 공통수학</div><ul><li>수학과 전공, 강의 경력 7년</li><li>학교별 내신반·모의고사 기초반</li><li>서술형 채점 기준표 제작</li></ul></div>
+        </article>
+        <article class="t reveal">
+          <div class="t-av" aria-hidden="true"><span class="role">MIDDLE</span><span class="bg">√</span><span class="ini">윤</span></div>
+          <div class="t-body"><h3>윤채린<span>강사</span></h3><div class="sp">중등 · 개념 · 심화</div><ul><li>수학교육 전공, 강의 경력 6년</li><li>중등 정규·심화 사고력반</li><li>개념 구술 테스트 운영</li></ul></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMETABLE -->
+  <section class="sec paper" id="timetable" aria-labelledby="tt-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>05</b> Weekly Timetable</p>
+        <h2 class="sec-title" id="tt-title">이번 학기 <span class="hl">주간 시간표</span></h2>
+        <p class="sec-desc">학년을 선택하면 해당 반만 강조됩니다. 반 편성은 레벨테스트 후 상담으로 확정합니다.</p>
+      </div>
+      <div class="tt-bar" role="group" aria-label="학년 필터">
+        <button class="flt" type="button" data-f="all" aria-pressed="true">전체</button>
+        <button class="flt" type="button" data-f="m" aria-pressed="false">중등</button>
+        <button class="flt" type="button" data-f="h1" aria-pressed="false">고1</button>
+        <button class="flt" type="button" data-f="h2" aria-pressed="false">고2</button>
+        <button class="flt" type="button" data-f="h3" aria-pressed="false">고3·N수</button>
+      </div>
+      <p class="tt-hint" aria-hidden="true">← 표를 옆으로 밀어서 보세요 →</p>
+      <p class="sr-only" id="tt-status" aria-live="polite"></p>
+      <div class="tt-wrap" tabindex="0" role="region" aria-label="주간 시간표 (가로 스크롤)">
+        <table class="tt" id="tt">
+          <caption class="sr-only">요일·시간대별 개설 반</caption>
+          <thead><tr><th scope="col">TIME</th><th scope="col">MON 월</th><th scope="col">TUE 화</th><th scope="col">WED 수</th><th scope="col">THU 목</th><th scope="col">FRI 금</th><th scope="col">SAT 토</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="tt-legend" aria-hidden="true">
+        <span><i style="background:#7A86B8"></i>중등</span>
+        <span><i style="background:var(--ink);border:1px solid var(--ink);background:var(--paper)"></i>고1</span>
+        <span><i style="background:#FFF7CC;border:1px solid var(--volt-deep)"></i>고2</span>
+        <span><i style="background:var(--ink)"></i>고3·N수</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec inv reviews" id="reviews" aria-labelledby="rv-title">
+    <span class="glyph" aria-hidden="true">“</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-no"><b>06</b> Parents' Notes</p>
+        <h2 class="sec-title" id="rv-title">학부모님이 보내주신 <span class="hl">이야기</span></h2>
+        <p class="sec-desc">상담 기록과 설문에서 동의를 받은 내용만 옮겼습니다.</p>
+      </div>
+      <div class="rv-grid">
+        <figure class="rv reveal">
+          <blockquote>아이가 틀린 문제를 들고 와서 “이건 계산 실수가 아니라 조건을 안 읽은 거래” 하고 설명하더라고요. 점수보다 그 말이 더 반가웠습니다.</blockquote>
+          <figcaption><span><b>고2 학부모</b> · 정자동</span><span class="delta">4 → 2등급</span></figcaption>
+        </figure>
+        <figure class="rv reveal">
+          <blockquote>매주 오는 오답 리포트 덕분에 집에서 잔소리가 줄었어요. 뭘 틀렸는지 제가 먼저 알고 있으니까요.</blockquote>
+          <figcaption><span><b>중2 학부모</b> · 수내동</span><span class="delta">서술형 감점 ↓</span></figcaption>
+        </figure>
+        <figure class="rv reveal">
+          <blockquote>반수 결정하고 불안했는데, 첫 상담에서 단원별로 몇 주씩 쓸지 표로 받아서 마음이 놓였습니다.</blockquote>
+          <figcaption><span><b>N수생 학부모</b> · 서현동</span><span class="delta">주간반 재원</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="sec apply paper" id="apply" aria-labelledby="ap-title">
+    <div class="wrap">
+      <div class="apply-side">
+        <p class="sec-no" style="margin:0 0 28px"><b>07</b> Level Test</p>
+        <h2 id="ap-title">레벨테스트 &amp;<br>상담 신청</h2>
+        <p>테스트는 무료이며 약 50분 걸립니다. 결과지를 앞에 두고 담당 강사가 직접 30분 상담합니다. 등록을 권유하는 자리가 아닙니다.</p>
+        <ol class="flow">
+          <li><b>01</b><span><strong>신청서 접수</strong>희망 요일을 기준으로 일정을 잡아 연락드립니다.</span></li>
+          <li><b>02</b><span><strong>레벨테스트 50분</strong>학년별 진단 문항 · 서술형 1문항 포함</span></li>
+          <li><b>03</b><span><strong>결과 상담 30분</strong>단원별 진단표와 추천 반 안내</span></li>
+        </ol>
+        <p class="contact">전화 상담 · 평일 14:00–22:00<b class="mono">031-000-0000</b></p>
+      </div>
+
+      <div id="formbox">
+        <form id="applyForm" novalidate aria-describedby="form-note">
+          <p id="form-note" class="sr-only">별표 항목은 필수입니다.</p>
+          <div class="frow">
+            <div class="fld">
+              <label for="f-name">학생 이름<span class="req" aria-hidden="true">*</span></label>
+              <input class="inp" id="f-name" name="name" autocomplete="off" required aria-describedby="e-name" placeholder="홍길동">
+              <span class="errm" id="e-name" aria-live="polite"></span>
+            </div>
+            <div class="fld">
+              <label for="f-phone">학부모 연락처<span class="req" aria-hidden="true">*</span></label>
+              <input class="inp" id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required aria-describedby="e-phone" placeholder="010-0000-0000" maxlength="13">
+              <span class="errm" id="e-phone" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f-grade">학년<span class="req" aria-hidden="true">*</span></label>
+            <select class="inp" id="f-grade" name="grade" required aria-describedby="e-grade">
+              <option value="">학년을 선택해 주세요</option>
+              <optgroup label="중학교"><option>중1</option><option>중2</option><option>중3</option></optgroup>
+              <optgroup label="고등학교"><option>고1</option><option>고2</option><option>고3</option></optgroup>
+              <option>N수생</option>
+            </select>
+            <span class="errm" id="e-grade" aria-live="polite"></span>
+          </div>
+          <div class="fld">
+            <label for="f-score">현재 수학 성적 <span style="font-weight:500;color:var(--muted)">(최근 내신 또는 모의고사 등급)</span></label>
+            <div class="range-row">
+              <output class="range-out" id="o-score" for="f-score">5<small>등급</small></output>
+              <input type="range" id="f-score" name="score" min="1" max="9" step="1" value="5" aria-valuetext="5등급">
+            </div>
+            <div class="range-scale" aria-hidden="true"><span>1등급</span><span>5</span><span>9등급</span></div>
+          </div>
+          <fieldset class="fld" aria-describedby="e-days">
+            <legend>희망 요일<span class="req" aria-hidden="true">*</span> <span style="font-weight:500;color:var(--muted)">(복수 선택)</span></legend>
+            <div class="days">
+              <label class="day"><input type="checkbox" name="days" value="월"><span>월</span></label>
+              <label class="day"><input type="checkbox" name="days" value="화"><span>화</span></label>
+              <label class="day"><input type="checkbox" name="days" value="수"><span>수</span></label>
+              <label class="day"><input type="checkbox" name="days" value="목"><span>목</span></label>
+              <label class="day"><input type="checkbox" name="days" value="금"><span>금</span></label>
+              <label class="day"><input type="checkbox" name="days" value="토"><span>토</span></label>
+            </div>
+            <span class="errm" id="e-days" aria-live="polite"></span>
+          </fieldset>
+          <div class="fld">
+            <label for="f-msg">문의 내용</label>
+            <textarea class="inp" id="f-msg" name="msg" maxlength="500" placeholder="현재 다니는 학원, 고민되는 단원, 목표 등을 자유롭게 적어 주세요."></textarea>
+          </div>
+          <div class="fld">
+            <label class="agree"><input type="checkbox" id="f-agree" name="agree" aria-describedby="e-agree"><span><b>개인정보 수집·이용에 동의합니다.</b> <span class="req" aria-hidden="true">*</span><small>수집 항목: 학생 이름, 연락처, 학년 · 목적: 레벨테스트 일정 안내 · 보유 기간: 상담 완료 후 6개월</small></span></label>
+            <span class="errm" id="e-agree" aria-live="polite"></span>
+          </div>
+          <button class="btn submit" type="submit">레벨테스트 신청하기 <span class="arr" aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div><h2>BRIDGE<em>∫</em>MATH</h2><p style="margin-top:16px">개념과 점수 사이에 다리를 놓는 수학학원</p></div>
+      <div><h3>HOURS</h3><p>평일 14:00 – 22:00</p><p>토요일 10:00 – 18:00</p><p>일요일·공휴일 휴무</p></div>
+      <div><h3>VISIT</h3><p>경기도 성남시 분당구 정자일로 000, 0층</p><p>신분당선 정자역 0번 출구 도보 0분</p><p>Tel 031-000-0000</p></div>
+    </div>
+    <div class="ftr-biz">
+      <span>상호 브릿지 수학학원</span><span>대표 000</span><span>사업자등록번호 000-00-00000</span><span>학원등록번호 제0000-00호</span><span>교습과목 수학</span>
+    </div>
+    <p class="ftr-note">* 포트폴리오용 예시 사이트입니다. 실제 학원·인물·수치와 관계없습니다.</p>
+    <p style="margin-top:10px">© 2026 BRIDGE MATH (sample)</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasG = typeof window.gsap !== 'undefined';
+  if (hasG && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- header solid on scroll ---------- */
+  var hdr = document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* ---------- HERO FIELD (PixiJS) ---------- */
+  var host = document.getElementById('field');
+  var hero = document.querySelector('.hero');
+  var INK = 0x0A1233, VOLT = 0xFFD60A, PAPER = 0xF3F0E6;
+  var SYMS = ['∑','∫','π','√','∞','Δ','θ','x²','dx','f(x)','lim','≤','±','÷','e','sin','log','n!','∂','λ'];
+
+  function initField(){
+    if (!window.PIXI) return;
+    var app = new PIXI.Application();
+    app.init({ resizeTo: hero, backgroundAlpha: 0, antialias: true, resolution: Math.min(window.devicePixelRatio||1, 2), autoDensity: true, preference: 'webgl' })
+    .then(function(){
+      host.appendChild(app.canvas);
+      var W = function(){ return app.screen.width; }, H = function(){ return app.screen.height; };
+      var mobile = W() < 700;
+
+      // graph layer (axes + curve)
+      var axes = new PIXI.Graphics(); var curve = new PIXI.Graphics(); var dot = new PIXI.Graphics();
+      app.stage.addChild(axes);
+
+      // symbol particles
+      var layer = new PIXI.Container(); app.stage.addChild(layer);
+      app.stage.addChild(curve); app.stage.addChild(dot);
+      var parts = [];
+      var N = mobile ? 26 : 58;
+      for (var i=0;i<N;i++){
+        var big = Math.random() < .12;
+        var isVolt = Math.random() < .16;
+        var t = new PIXI.Text({ text: SYMS[i % SYMS.length], style: {
+          fontFamily: 'Times New Roman, serif', fontStyle: 'italic',
+          fontSize: big ? 56 + Math.random()*40 : 16 + Math.random()*22,
+          fill: isVolt ? VOLT : PAPER }});
+        t.anchor.set(.5);
+        t.alpha = isVolt ? .85 : (big ? .13 : .22 + Math.random()*.3);
+        var hx = Math.random(), hy = Math.random();
+        // keep the headline zone calm: few, faint glyphs behind the copy
+        if (!mobile && hx < .52 && hy > .15 && hy < .9){ if (isVolt || big) hx = .55 + Math.random()*.43; else t.alpha *= .5; }
+        if (mobile && hy > .45){ t.alpha *= .55; if (isVolt) hy = Math.random()*.4; }
+        t.x = hx * W(); t.y = hy * H();
+        t.rotation = (Math.random()-.5)*.4;
+        layer.addChild(t);
+        parts.push({ s:t, hx:hx, hy:hy, vx:0, vy:0, ph:Math.random()*Math.PI*2, sp:.2+Math.random()*.5, amp: 6+Math.random()*14 });
+      }
+
+      // function to plot: damped wave rising — "성적 그래프"
+      function f(u){ // u in [0,1] -> y in [0,1] (1 = top)
+        return .18 + .62*u + .09*Math.sin(u*Math.PI*5.2)*(1-u*.7);
+      }
+      var G = {};
+      function layoutGraph(){
+        var w = W(), h = H();
+        if (w < 700){ G.x0 = w*.06; G.x1 = w*.94; G.y0 = h*.38; G.y1 = h*.13; }
+        else { G.x0 = w*.585; G.x1 = w*.95; G.y0 = h*.70; G.y1 = h*.22; }
+        axes.clear();
+        // axes
+        axes.moveTo(G.x0, G.y0).lineTo(G.x1, G.y0).stroke({ width: 1.5, color: PAPER, alpha: .35 });
+        axes.moveTo(G.x0, G.y0).lineTo(G.x0, G.y1 - 10).stroke({ width: 1.5, color: PAPER, alpha: .35 });
+        // ticks
+        for (var k=1;k<=8;k++){
+          var tx = G.x0 + (G.x1-G.x0)*k/8;
+          axes.moveTo(tx, G.y0).lineTo(tx, G.y0+6).stroke({ width: 1, color: PAPER, alpha: .35 });
+          var ty = G.y0 + (G.y1-G.y0)*k/8;
+          axes.moveTo(G.x0-6, ty).lineTo(G.x0, ty).stroke({ width: 1, color: PAPER, alpha: .35 });
+          axes.moveTo(G.x0, ty).lineTo(G.x1, ty).stroke({ width: 1, color: PAPER, alpha: .05 });
+        }
+      }
+      function px(u){ return G.x0 + (G.x1-G.x0)*u; }
+      function py(u){ return G.y0 + (G.y1-G.y0)*f(u); }
+      function drawCurve(p){
+        curve.clear(); dot.clear();
+        if (p <= 0) return;
+        var steps = 160, n = Math.max(2, Math.floor(steps*p));
+        // soft glow under-stroke
+        curve.moveTo(px(0), py(0));
+        for (var j=1;j<=n;j++){ var u = Math.min(p, j/steps); curve.lineTo(px(u), py(u)); }
+        curve.stroke({ width: 10, color: VOLT, alpha: .12, cap:'round', join:'round' });
+        curve.moveTo(px(0), py(0));
+        for (var j2=1;j2<=n;j2++){ var u2 = Math.min(p, j2/steps); curve.lineTo(px(u2), py(u2)); }
+        curve.stroke({ width: 3, color: VOLT, alpha: 1, cap:'round', join:'round' });
+        var ex = px(p), ey = py(p);
+        dot.circle(ex, ey, 7).fill(VOLT);
+        dot.circle(ex, ey, 16).stroke({ width: 1.5, color: VOLT, alpha: .5 });
+        dot.moveTo(ex, ey).lineTo(ex, G.y0).stroke({ width: 1, color: VOLT, alpha: .35 });
+      }
+
+      var labelFx = new PIXI.Text({ text: 'f(t) = 개념 + 유형 + 오답', style: { fontFamily: 'JetBrains Mono, monospace', fontSize: mobile?11:13, fill: VOLT, fontWeight: '700' }});
+      labelFx.alpha = 0; app.stage.addChild(labelFx);
+      function placeLabel(){ labelFx.x = px(1) - labelFx.width; labelFx.y = py(1) - (mobile?34:44); }
+
+      layoutGraph(); placeLabel();
+
+      var mouse = { x: -9999, y: -9999, on: false };
+      window.addEventListener('pointermove', function(e){
+        var r = app.canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+        mouse.on = mouse.y > 0 && mouse.y < r.height;
+      }, {passive:true});
+      hero.addEventListener('pointerleave', function(){ mouse.on = false; mouse.x = mouse.y = -9999; });
+
+      var prog = { p: 0 };
+      app.renderer.on('resize', function(){ layoutGraph(); placeLabel(); drawCurve(prog.p); parts.forEach(function(o){ o.s.x = o.hx*W(); o.s.y = o.hy*H(); }); });
+
+      if (RM){
+        prog.p = 1; drawCurve(1); labelFx.alpha = 1; app.render(); app.ticker.stop();
+        return;
+      }
+      if (hasG){
+        gsap.to(prog, { p: 1, duration: 2.8, delay: .7, ease: 'power2.inOut', onUpdate: function(){ drawCurve(prog.p); } });
+        gsap.to(labelFx, { alpha: 1, duration: .6, delay: 3.2 });
+      } else { prog.p = 1; drawCurve(1); labelFx.alpha = 1; }
+
+      var visible = true;
+      new IntersectionObserver(function(en){ visible = en[0].isIntersecting; visible ? app.ticker.start() : app.ticker.stop(); }).observe(hero);
+
+      var time = 0, R = mobile ? 110 : 170;
+      app.ticker.add(function(tk){
+        var dt = tk.deltaTime; time += dt/60;
+        var w = W(), h = H();
+        for (var i=0;i<parts.length;i++){
+          var o = parts[i], s = o.s;
+          var bx = o.hx*w + Math.cos(time*o.sp + o.ph)*o.amp;
+          var by = o.hy*h + Math.sin(time*o.sp*1.3 + o.ph)*o.amp;
+          // repel
+          var dx = s.x - mouse.x, dy = s.y - mouse.y, d2 = dx*dx+dy*dy;
+          if (mouse.on && d2 < R*R){
+            var d = Math.sqrt(d2)||1, force = (1 - d/R) * 2.2;
+            o.vx += dx/d*force*dt; o.vy += dy/d*force*dt;
+          }
+          // spring home
+          o.vx += (bx - s.x)*.012*dt; o.vy += (by - s.y)*.012*dt;
+          o.vx *= Math.pow(.9, dt); o.vy *= Math.pow(.9, dt);
+          s.x += o.vx*dt; s.y += o.vy*dt;
+          s.rotation += o.vx*.002;
+        }
+        dot.alpha = .75 + .25*Math.sin(time*3);
+      });
+    }).catch(function(){ /* WebGL unavailable: hero stays typographic */ });
+  }
+  initField();
+
+  /* ---------- hero intro ---------- */
+  if (hasG && !RM){
+    gsap.from('.hero h1 .ln > span', { yPercent: 110, duration: 1.1, ease: 'power4.out', stagger: .12, delay: .1 });
+    gsap.from('.eyebrow, .hero-lede, .hero-cta, .hero-meta', { y: 24, autoAlpha: 0, duration: .9, ease: 'power3.out', stagger: .1, delay: .55 });
+  }
+
+  /* ---------- scroll reveals + count-up ---------- */
+  var counts = document.querySelectorAll('.count');
+  function fmt(v, dec){ return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('ko-KR'); }
+  if (hasG && window.ScrollTrigger && !RM){
+    ScrollTrigger.batch('.reveal', {
+      start: 'top 88%', once: true,
+      onEnter: function(els){ gsap.fromTo(els, { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: 'power3.out', stagger: .1, overwrite: true }); }
+    });
+    gsap.set('.reveal', { autoAlpha: 0, y: 40 });
+    counts.forEach(function(el){
+      var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec||'0',10), o = { v: 0 };
+      el.textContent = fmt(0, dec);
+      gsap.to(o, { v: to, duration: 2, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+        onUpdate: function(){ el.textContent = fmt(o.v, dec); } });
+    });
+    document.querySelectorAll('.bar i').forEach(function(b){
+      gsap.from(b, { scaleX: 0, duration: 1.4, ease: 'power3.inOut', scrollTrigger: { trigger: b, start: 'top 90%', once: true } });
+    });
+    gsap.utils.toArray('.glyph').forEach(function(g){
+      gsap.to(g, { yPercent: -18, rotation: 8, ease: 'none', scrollTrigger: { trigger: g.parentElement, start: 'top bottom', end: 'bottom top', scrub: 1 } });
+    });
+  }
+
+  /* ---------- tabs (WAI-ARIA, roving tabindex) ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role=tab]'));
+  function selectTab(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+    var panel = document.getElementById(tab.getAttribute('aria-controls'));
+    if (hasG && !RM){
+      gsap.fromTo(panel.querySelector('.panel-intro'), { y: 16, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, ease: 'power3.out' });
+      gsap.fromTo(panel.querySelectorAll('.card'), { y: 36, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .6, ease: 'power3.out', stagger: .08, delay: .05 });
+    }
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ if (t.getAttribute('aria-selected') !== 'true') selectTab(t); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i+1)%tabs.length];
+      else if (e.key === 'ArrowLeft') n = tabs[(i-1+tabs.length)%tabs.length];
+      else if (e.key === 'Home') n = tabs[0];
+      else if (e.key === 'End') n = tabs[tabs.length-1];
+      if (n){ e.preventDefault(); selectTab(n, true); }
+    });
+  });
+
+  /* ---------- timetable ---------- */
+  var TIMES = [['10:00','N수 주간'],['16:00','1교시'],['18:00','2교시'],['20:00','3교시']];
+  var DAYS = ['월','화','수','목','금','토'];
+  // [row, dayIndex, grade, name, teacher·room]
+  var CLS = [
+    [0,0,'h3','N수 리빌드','한도윤 · 301'],[0,1,'h3','N수 리빌드','한도윤 · 301'],[0,3,'h3','N수 리빌드','한도윤 · 301'],[0,4,'h3','N수 리빌드','한도윤 · 301'],
+    [0,5,'m','중1 정규 개념','윤채린 · 101'],
+    [1,0,'m','중2 정규 개념','윤채린 · 101'],[1,1,'m','중3 고1 선행','윤채린 · 102'],[1,2,'m','중2 정규 개념','윤채린 · 101'],[1,3,'m','중3 고1 선행','윤채린 · 102'],[1,4,'m','중3 고1 선행','윤채린 · 102'],
+    [1,5,'h2','확통 단과 8주','서지민 · 201'],
+    [2,0,'h1','고1 내신 · 서현','김태오 · 202'],[2,1,'h2','고2 내신 · 낙생','서지민 · 201'],[2,2,'h1','고1 내신 · 서현','김태오 · 202'],[2,3,'h2','고2 내신 · 낙생','서지민 · 201'],[2,4,'h1','모의고사 기초','김태오 · 202'],
+    [2,5,'h3','고난도 문항','한도윤 · 301'],
+    [3,0,'h3','수능 정규','한도윤 · 301'],[3,1,'m','중등 심화 사고력','윤채린 · 101'],[3,2,'h3','수능 정규','한도윤 · 301'],[3,3,'h1','고2 대수 선행','김태오 · 202'],[3,4,'h3','수능 정규','한도윤 · 301'],
+    [3,5,'h2','수능 전환','서지민 · 201']
+  ];
+  var tbody = document.querySelector('#tt tbody');
+  var html = '';
+  TIMES.forEach(function(tm, r){
+    html += '<tr><th scope="row"><b>' + tm[0] + '</b>' + tm[1] + '</th>';
+    DAYS.forEach(function(d, c){
+      var hit = CLS.filter(function(x){ return x[0]===r && x[1]===c; })[0];
+      html += '<td>' + (hit ? '<div class="cls" data-g="' + hit[2] + '"><b>' + hit[3] + '</b><span>' + hit[4] + '</span></div>' : '') + '</td>';
+    });
+    html += '</tr>';
+  });
+  tbody.innerHTML = html;
+
+  var flts = document.querySelectorAll('.flt'), status = document.getElementById('tt-status');
+  var LABEL = { all:'전체', m:'중등', h1:'고1', h2:'고2', h3:'고3·N수' };
+  flts.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.dataset.f;
+      flts.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+      var cells = document.querySelectorAll('.cls'), shown = [], hidden = [];
+      cells.forEach(function(c){ (f === 'all' || c.dataset.g === f ? shown : hidden).push(c); });
+      if (hasG && !RM){
+        var pop = shown.filter(function(c){ return c.classList.contains('dim'); });
+        if (pop.length) gsap.fromTo(pop, { scale: .92 }, { scale: 1, duration: .5, ease: 'back.out(2.2)', stagger: .03, overwrite: true });
+      }
+      hidden.forEach(function(c){ c.classList.add('dim'); }); shown.forEach(function(c){ c.classList.remove('dim'); });
+      hidden.forEach(function(c){ c.setAttribute('aria-hidden','true'); }); shown.forEach(function(c){ c.removeAttribute('aria-hidden'); });
+      status.textContent = LABEL[f] + ' 반 ' + shown.length + '개 표시';
+    });
+  });
+
+  /* ---------- form ---------- */
+  var form = document.getElementById("applyForm"), F = form.elements;
+  var phone = document.getElementById('f-phone');
+  var range = document.getElementById('f-score'), out = document.getElementById('o-score');
+  function hyphen(v){
+    v = v.replace(/\D/g,'').slice(0,11);
+    if (v.length < 4) return v;
+    if (v.indexOf('02') === 0){
+      if (v.length < 6) return v.slice(0,2)+'-'+v.slice(2);
+      if (v.length < 10) return v.slice(0,2)+'-'+v.slice(2,5)+'-'+v.slice(5);
+      return v.slice(0,2)+'-'+v.slice(2,6)+'-'+v.slice(6,10);
+    }
+    if (v.length < 8) return v.slice(0,3)+'-'+v.slice(3);
+    if (v.length < 11) return v.slice(0,3)+'-'+v.slice(3,6)+'-'+v.slice(6);
+    return v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7);
+  }
+  phone.addEventListener('input', function(){ phone.value = hyphen(phone.value); if (phone.closest('.fld').classList.contains('bad')) check('phone'); });
+  function syncRange(){
+    var v = range.value; out.innerHTML = v + '<small>등급</small>';
+    range.setAttribute('aria-valuetext', v + '등급');
+    range.style.setProperty('--fill', ((v-1)/8*100) + '%');
+  }
+  range.addEventListener('input', syncRange); syncRange();
+
+  var rules = {
+    name: function(){ var v = F.name.value.trim(); if (!v) return '학생 이름을 입력해 주세요.'; if (!/^[가-힣a-zA-Z\s]{2,20}$/.test(v)) return '이름은 한글 또는 영문 2자 이상으로 입력해 주세요.'; },
+    phone: function(){ var d = F.phone.value.replace(/\D/g,''); if (!d) return '연락받으실 번호를 입력해 주세요.'; if (!/^01[016789]\d{7,8}$/.test(d) && !/^0\d{8,10}$/.test(d)) return '전화번호 형식을 확인해 주세요. (예: 010-1234-5678)'; },
+    grade: function(){ if (!F.grade.value) return '학년을 선택해 주세요.'; },
+    days: function(){ if (!form.querySelectorAll('[name=days]:checked').length) return '희망 요일을 하나 이상 선택해 주세요.'; },
+    agree: function(){ if (!F.agree.checked) return '개인정보 수집·이용에 동의하셔야 신청할 수 있습니다.'; }
+  };
+  var errIds = { name:'e-name', phone:'e-phone', grade:'e-grade', days:'e-days', agree:'e-agree' };
+  var inputs = { name: F.name, phone: F.phone, grade: F.grade, days: form.querySelector('[name=days]'), agree: F.agree };
+  function check(k){
+    var msg = rules[k]() || '';
+    var e = document.getElementById(errIds[k]); e.textContent = msg;
+    var fld = e.closest('.fld'); fld.classList.toggle('bad', !!msg);
+    if (k === 'days') fld.setAttribute('aria-invalid', !!msg); else inputs[k].setAttribute('aria-invalid', !!msg);
+    return !msg;
+  }
+  ['name','grade'].forEach(function(k){ inputs[k].addEventListener('blur', function(){ if (inputs[k].value) check(k); }); inputs[k].addEventListener('change', function(){ check(k); }); });
+  phone.addEventListener('blur', function(){ if (phone.value) check('phone'); });
+  form.querySelectorAll('[name=days]').forEach(function(c){ c.addEventListener('change', function(){ if (document.getElementById('e-days').textContent) check('days'); }); });
+  F.agree.addEventListener('change', function(){ check('agree'); });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var order = ['name','phone','grade','days','agree'], first = null;
+    order.forEach(function(k){ if (!check(k) && !first) first = k; });
+    if (first){
+      inputs[first].focus();
+      if (hasG && !RM) gsap.fromTo(form, { x: -8 }, { x: 0, duration: .5, ease: 'elastic.out(1,.3)' });
+      return;
+    }
+    var days = Array.prototype.map.call(form.querySelectorAll('[name=days]:checked'), function(c){ return c.value; }).join('·');
+    var esc = function(s){ return s.replace(/[&<>"']/g, function(ch){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]; }); };
+    var box = document.getElementById('formbox');
+    var btn = form.querySelector('.submit'); btn.disabled = true; btn.firstChild.textContent = '접수 중… ';
+    setTimeout(function(){
+      box.innerHTML = '<form class="done" tabindex="-1" aria-live="polite" onsubmit="return false">' +
+        '<div class="ok"><i aria-hidden="true">✓</i>접수 완료</div>' +
+        '<h3>' + esc(F.name.value.trim()) + ' 학생의 신청을 받았습니다.</h3>' +
+        '<p>영업일 기준 하루 안에 입력하신 번호로 레벨테스트 일정을 안내해 드립니다.</p>' +
+        '<dl><dt>연락처</dt><dd>' + esc(F.phone.value) + '</dd><dt>학년</dt><dd>' + esc(F.grade.value) + '</dd><dt>현재 성적</dt><dd>' + range.value + '등급</dd><dt>희망 요일</dt><dd>' + days + '</dd></dl>' +
+        '<p style="font-size:12.5px">* 예시 사이트이므로 실제로 전송되지 않았습니다.</p>' +
+        '<button type="button" class="linkbtn" id="again">다시 작성하기</button></form>';
+      var done = box.querySelector('.done'); done.focus({preventScroll:true});
+      if (hasG && !RM) gsap.from(done.children, { y: 20, autoAlpha: 0, stagger: .07, duration: .6, ease: 'power3.out' });
+      document.getElementById('again').addEventListener('click', function(){ location.hash = ''; location.reload(); });
+    }, 700);
+  });
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>

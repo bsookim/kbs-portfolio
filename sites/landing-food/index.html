@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>그린밀 GREENMEAL | 첫 주문 40% 샐러드·건강 도시락 정기배송</title>
+<meta name="description" content="매일 새벽 문 앞에 도착하는 샐러드·건강 도시락 정기배송 그린밀. 이번 주 신규 고객 첫 주문 40% 할인 쿠폰을 받아보세요.">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF6EC;
+  --bg-2:#F4EEDF;
+  --card:#FFFFFF;
+  --ink:#13251A;
+  --ink-2:#3C4E42;
+  --muted:#5E6B61;
+  --line:#E6DECB;
+  --leaf:#1E7B3C;
+  --leaf-deep:#0F4D25;
+  --leaf-vivid:#43B85C;
+  --leaf-soft:#DDEFD7;
+  --tomato:#E5461F;
+  --tomato-deep:#C2360F;
+  --tomato-soft:#FFE1D6;
+  --citrus:#FFC43A;
+  --citrus-soft:#FFF0C2;
+  --plum:#7D4B91;
+  --err:#C2260E;
+  --r-sm:12px; --r-md:20px; --r-lg:32px; --r-xl:44px;
+  --shadow-1:0 1px 0 rgba(19,37,26,.06), 0 8px 24px -12px rgba(19,37,26,.18);
+  --shadow-2:0 2px 0 rgba(19,37,26,.08), 0 24px 48px -24px rgba(19,37,26,.35);
+  --f-body:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-num:"Bricolage Grotesque","Pretendard Variable",sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;letter-spacing:-.01em;overflow-x:clip;word-break:keep-all;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px;border-radius:10px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.skip:focus{top:12px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.num{font-family:var(--f-num);font-feature-settings:"tnum" 1;letter-spacing:-.02em}
+section{position:relative}
+.sec{padding:112px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;letter-spacing:.02em;color:var(--leaf);text-transform:uppercase}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.h2{font-size:clamp(32px,4.6vw,56px);line-height:1.12;font-weight:900;letter-spacing:-.045em;margin:14px 0 16px}
+.lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink-2);max-width:560px;margin:0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+
+/* buttons */
+.btn{--h:56px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--h);padding:0 26px;border-radius:999px;border:0;font-weight:800;font-size:17px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background-color .2s;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--tomato-deep);color:#fff;box-shadow:0 4px 0 #8E2608,0 14px 28px -12px rgba(194,54,15,.7)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 0 #8E2608,0 20px 32px -12px rgba(194,54,15,.7);background:#B3300B}
+.btn-primary:active{transform:translateY(2px);box-shadow:0 2px 0 #8E2608}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn-lg{--h:64px;font-size:19px;padding:0 34px}
+
+/* announcement */
+.announce{background:var(--ink);color:#F3EDDD;font-weight:700;font-size:14px;overflow:hidden;height:40px;display:flex;align-items:center}
+.announce-track{display:flex;gap:40px;white-space:nowrap;animation:marquee 32s linear infinite;padding-left:20px}
+.announce-track span{display:inline-flex;align-items:center;gap:40px}
+.announce-track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--citrus)}
+.announce b{color:var(--citrus)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(251,246,236,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}
+.logo-mark{width:38px;height:38px}
+.logo-txt{display:flex;flex-direction:column;line-height:1}
+.logo-txt b{font-size:19px;letter-spacing:-.04em}
+.logo-txt small{font-family:var(--f-num);font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--leaf);margin-top:3px}
+.nav{display:flex;gap:4px}
+.nav a{text-decoration:none;font-weight:700;font-size:15px;padding:10px 14px;border-radius:999px;color:var(--ink-2);transition:background-color .2s,color .2s}
+.nav a:hover{background:var(--bg-2);color:var(--ink)}
+.hdr .btn{--h:46px;font-size:15px;padding:0 20px}
+
+/* hero */
+.hero{padding:56px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% auto;width:780px;height:780px;border-radius:50%;background:radial-gradient(closest-side,rgba(67,184,92,.18),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:7px 14px 7px 8px;font-weight:800;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+.pill i{display:inline-grid;place-items:center;background:var(--tomato-deep);color:#fff;font-style:normal;border-radius:999px;padding:3px 10px;font-size:12px;letter-spacing:.04em}
+.hero h1{margin:26px 0 20px;font-weight:900;letter-spacing:-.055em;line-height:.98;font-size:clamp(46px,7.4vw,108px)}
+.hero h1 .l1{display:block;font-size:clamp(21px,2.5vw,36px);margin-bottom:.35em;letter-spacing:-.04em;line-height:1.15;color:var(--ink-2);font-weight:800}
+.hero h1 .big{display:inline-flex;align-items:baseline;gap:.12em;color:var(--leaf)}
+.hero h1 .pct{font-family:var(--f-num);font-weight:800;color:var(--tomato);font-size:1.28em;letter-spacing:-.06em;line-height:.8;position:relative}
+.hero h1 .pct small{font-size:.5em;margin-left:.02em}
+.hero h1 .u{position:relative;white-space:nowrap}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-.14em;width:104%;height:.3em;overflow:visible}
+.hero-sub{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:520px;margin:0 0 32px}
+.hero-sub b{color:var(--ink)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero-meta{display:flex;gap:26px;margin-top:40px;flex-wrap:wrap}
+.hero-meta div{display:flex;flex-direction:column}
+.hero-meta b{font-family:var(--f-num);font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.1}
+.hero-meta span{font-size:14px;color:var(--muted);font-weight:600}
+.hero-art{position:relative;aspect-ratio:1/1;width:100%;max-width:600px;justify-self:center}
+.hero-art svg.bowl{width:100%;height:100%;overflow:visible}
+.ing{transform-box:fill-box;transform-origin:50% 100%}
+.sticker{position:absolute;display:grid;place-items:center;text-align:center;font-weight:900;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);z-index:2}
+.st-off{right:2%;top:4%;width:132px;height:132px;border-radius:50%;background:var(--citrus);transform:rotate(12deg)}
+.st-off .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 18s linear infinite}
+.st-off .in{line-height:1}
+.st-off .in b{display:block;font-family:var(--f-num);font-size:44px;letter-spacing:-.06em}
+.st-off .in span{font-size:13px;font-weight:900}
+@keyframes spin{to{transform:rotate(360deg)}}
+.st-dawn{left:0;bottom:12%;background:var(--card);border-radius:18px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:10px;transform:rotate(-5deg);text-align:left}
+.st-dawn .ic{width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center;color:var(--leaf)}
+.st-dawn b{display:block;font-size:15px}
+.st-dawn span{font-size:12.5px;color:var(--muted);font-weight:700}
+.st-kcal{right:6%;bottom:6%;background:var(--leaf);color:#fff;border-radius:999px;padding:10px 18px;font-size:14px;transform:rotate(-8deg)}
+.float{animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{translate:0 -8px}}
+
+/* value strip */
+.strip{background:var(--leaf-deep);color:#EAF4E4;padding:22px 0}
+.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.strip li{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15.5px}
+.strip li svg{width:26px;height:26px;color:var(--citrus);flex:none}
+
+/* pains */
+.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pain{background:var(--card);border-radius:var(--r-lg);padding:30px 26px 28px;border:1.5px solid var(--line);position:relative;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+.pain:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--shadow-2);border-color:var(--ink)}
+.pain .ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px}
+.pain .ic svg{width:28px;height:28px}
+.pain:nth-child(1) .ic{background:var(--tomato-soft);color:var(--tomato-deep)}
+.pain:nth-child(2) .ic{background:var(--citrus-soft);color:#9A6A00}
+.pain:nth-child(3) .ic{background:var(--leaf-soft);color:var(--leaf)}
+.pain:nth-child(4) .ic{background:#EFE3F4;color:var(--plum)}
+.pain q{display:block;font-size:20px;font-weight:800;letter-spacing:-.035em;line-height:1.35;quotes:none;margin-bottom:12px}
+.pain p{margin:0;color:var(--muted);font-size:15px}
+.pain .fix{margin-top:18px;padding-top:16px;border-top:1.5px dashed var(--line);font-weight:800;font-size:14.5px;color:var(--leaf);display:flex;gap:8px;align-items:flex-start}
+.pain .fix svg{width:18px;height:18px;flex:none;margin-top:2px}
+
+/* menu */
+.menu-sec{background:var(--bg-2)}
+.menu-sec::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(19,37,26,.07) 1.2px,transparent 1.3px);background-size:22px 22px;pointer-events:none;mask-image:linear-gradient(transparent,#000 20%,#000 80%,transparent)}
+.week-tag{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:800;font-size:14.5px}
+.week-tag i{width:10px;height:10px;border-radius:50%;background:var(--leaf-vivid);box-shadow:0 0 0 4px rgba(67,184,92,.2)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+.dish{background:var(--card);border-radius:var(--r-lg);overflow:hidden;border:1.5px solid var(--line);display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow-2)}
+.dish-art{position:relative;aspect-ratio:16/11;display:grid;place-items:center;overflow:hidden}
+.dish-art svg{width:74%;height:auto;transition:transform .6s var(--ease)}
+.dish:hover .dish-art svg{transform:rotate(14deg) scale(1.04)}
+.dish-art .tag{position:absolute;left:16px;top:16px;background:var(--ink);color:#fff;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px}
+.dish-art .tag.hot{background:var(--tomato-deep)}
+.dish-art .tag.new{background:var(--citrus);color:var(--ink)}
+.wedge{transform-box:fill-box;transform-origin:center}
+.dish-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dish-body h3{margin:0;font-size:21px;font-weight:900;letter-spacing:-.04em}
+.dish-body p{margin:0;color:var(--muted);font-size:14.5px}
+.nut{display:flex;gap:8px;margin-top:auto;padding-top:16px;flex-wrap:wrap}
+.nut span{display:inline-flex;align-items:baseline;gap:4px;background:var(--bg);border-radius:10px;padding:7px 11px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.nut span b{font-family:var(--f-num);font-size:17px;color:var(--ink);font-weight:800}
+.nut span.p b{color:var(--leaf)}
+.menu-note{margin-top:22px;font-size:13.5px;color:var(--muted)}
+
+/* plan */
+.plan-box{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:var(--card);border:2px solid var(--ink);border-radius:var(--r-xl);overflow:hidden;box-shadow:8px 8px 0 var(--ink)}
+.plan-opts{padding:44px 44px 40px}
+.opt-group{border:0;margin:0 0 30px;padding:0}
+.opt-group legend{font-weight:900;font-size:18px;letter-spacing:-.03em;margin-bottom:14px;padding:0;display:flex;align-items:center;gap:10px}
+.opt-group legend span{font-family:var(--f-num);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:14px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{position:relative;display:flex;flex-direction:column;gap:2px;padding:18px 20px;border-radius:var(--r-md);border:2px solid var(--line);cursor:pointer;transition:border-color .2s,background-color .2s,transform .2s var(--ease);min-height:44px}
+.seg label:hover{border-color:var(--ink-2)}
+.seg label b{font-size:19px;font-weight:900;letter-spacing:-.03em}
+.seg label span{font-size:14px;color:var(--muted);font-weight:600}
+.seg label em{position:absolute;right:12px;top:-11px;font-style:normal;background:var(--citrus);border:1.5px solid var(--ink);font-size:11.5px;font-weight:900;padding:2px 9px;border-radius:999px}
+.seg label::after{content:"";position:absolute;right:16px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;border:2px solid var(--line);background:#fff;transition:all .2s}
+.seg input:checked+label{border-color:var(--leaf);background:#F1F8EE}
+.seg input:checked+label::after{border-color:var(--leaf);background:var(--leaf);box-shadow:inset 0 0 0 4px #fff}
+.seg input:focus-visible+label{outline:3px solid var(--tomato);outline-offset:3px}
+.plan-inc{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.plan-inc li{display:flex;gap:8px;align-items:center;font-weight:700;font-size:14.5px;color:var(--ink-2)}
+.plan-inc svg{width:18px;height:18px;color:var(--leaf);flex:none}
+.plan-price{background:var(--leaf-deep);color:#EFF6EA;padding:44px 40px 40px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.plan-price::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,196,58,.14)}
+.plan-price .lbl{font-weight:800;font-size:14.5px;color:#BFD9B8;position:relative}
+.plan-price .sel{font-size:22px;font-weight:900;letter-spacing:-.03em;margin:4px 0 26px;position:relative}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);position:relative}
+.price-row s{color:#BFD9B8}
+.price-row .dc{color:var(--citrus);font-weight:800}
+.final{margin-top:22px;position:relative}
+.final .t{font-weight:800;font-size:15px;color:#BFD9B8;display:flex;align-items:center;gap:8px}
+.final .t i{font-style:normal;background:var(--tomato);color:#fff;border-radius:999px;padding:2px 10px;font-size:12.5px}
+.final .v{font-family:var(--f-num);font-size:clamp(46px,5vw,64px);font-weight:800;letter-spacing:-.05em;line-height:1.05;color:#fff}
+.final .v small{font-family:var(--f-body);font-size:22px;font-weight:800;margin-left:4px}
+.final .per{font-weight:700;font-size:15px;color:#DCEBD5;margin-top:4px}
+.final .per b{color:var(--citrus)}
+.plan-price .btn{margin-top:28px;width:100%}
+.plan-price .fine{font-size:12.5px;color:#A9C8A1;margin:14px 0 0;position:relative}
+
+/* delivery */
+.deliv{background:var(--ink);color:#EEF0E6;overflow:hidden}
+.deliv .eyebrow{color:var(--citrus)}
+.deliv .lead{color:#C4CCBF}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.tl-wrap{position:relative}
+.tl-wrap::before{content:"";position:absolute;left:4%;right:4%;top:37px;height:3px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 10px,transparent 10px 20px)}
+.tl-wrap .prog{position:absolute;left:4%;top:37px;height:3px;width:92%;background:var(--citrus);transform-origin:left;transform:scaleX(0)}
+.tl{position:relative}
+.tl .dot{width:76px;height:76px;border-radius:24px;background:#223A2A;border:2px solid #3E5B47;display:grid;place-items:center;color:var(--citrus);position:relative;z-index:1}
+.tl .dot svg{width:32px;height:32px}
+.tl time{display:block;font-family:var(--f-num);font-weight:800;font-size:30px;letter-spacing:-.04em;margin:22px 0 4px;color:#fff}
+.tl h3{margin:0 0 6px;font-size:19px;font-weight:900;letter-spacing:-.03em}
+.tl p{margin:0;color:#B8C2B4;font-size:15px}
+.deliv-note{margin-top:56px;display:flex;gap:14px;flex-wrap:wrap}
+.deliv-note span{border:1.5px solid #3E5B47;border-radius:999px;padding:10px 18px;font-weight:700;font-size:14.5px;color:#DCE4D6;display:inline-flex;gap:8px;align-items:center}
+.deliv-note svg{width:18px;height:18px;color:var(--leaf-vivid)}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.rv-card{background:var(--card);border-radius:var(--r-lg);padding:28px;border:1.5px solid var(--line)}
+.rv-card:nth-child(2){background:var(--citrus-soft);border-color:#F2DE9B;margin-top:36px}
+.rv-card:nth-child(3){margin-top:-12px}
+.rv-card:nth-child(5){background:var(--leaf-soft);border-color:#C5E0BC;margin-top:-4px}
+.stars{display:flex;gap:2px;color:var(--tomato);margin-bottom:14px}
+.stars svg{width:18px;height:18px}
+.rv-card blockquote{margin:0;font-size:17px;font-weight:700;letter-spacing:-.025em;line-height:1.55}
+.rv-who{display:flex;align-items:center;gap:12px;margin-top:20px}
+.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;font-size:16px}
+.rv-who b{display:block;font-size:15px}
+.rv-who span{font-size:13px;color:var(--muted);font-weight:600}
+
+/* countdown */
+.cd-wrap{padding:0 0 112px}
+.cd{background:var(--tomato-deep);color:#fff;border-radius:var(--r-xl);padding:56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative;overflow:hidden}
+.cd::before,.cd::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.cd::before{width:340px;height:340px;right:-120px;bottom:-180px;background:rgba(255,196,58,.28)}
+.cd::after{width:120px;height:120px;left:44%;top:-60px;background:rgba(255,255,255,.08)}
+.cd h2{margin:0 0 10px;font-size:clamp(28px,3.6vw,44px);font-weight:900;letter-spacing:-.045em;line-height:1.15;position:relative}
+.cd p{margin:0;color:#FFE3D8;font-weight:600;position:relative}
+.cd-clock{display:flex;gap:10px;position:relative}
+.cd-unit{background:#fff;color:var(--ink);border-radius:20px;min-width:92px;padding:14px 10px 10px;text-align:center;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+.cd-unit b{display:block;font-family:var(--f-num);font-size:46px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.cd-unit span{font-size:13px;font-weight:800;color:var(--muted)}
+.cd-date{position:relative;margin-top:18px;font-weight:800;font-size:14.5px;display:inline-flex;gap:8px;align-items:center;background:rgba(0,0,0,.18);border-radius:999px;padding:8px 14px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq details{border-bottom:1.5px solid var(--line)}
+.faq details:first-child{border-top:1.5px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 4px;font-size:18px;font-weight:800;letter-spacing:-.03em;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:34px;height:34px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background-color .2s}
+.faq summary .pm svg{width:16px;height:16px}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--citrus);border-color:var(--ink)}
+.faq summary:hover .pm{border-color:var(--ink)}
+.faq .ans{padding:0 4px 24px;color:var(--ink-2);font-size:16px;max-width:640px}
+.faq .ans p{margin:0}
+
+/* apply form */
+.apply{background:var(--leaf);padding:112px 0;overflow:hidden}
+.apply::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 90% 10%,rgba(255,196,58,.22),transparent 70%),radial-gradient(500px 400px at 0% 100%,rgba(15,77,37,.6),transparent 70%);pointer-events:none}
+.apply-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;position:relative}
+.apply-copy{color:#fff}
+.apply-copy .eyebrow{color:var(--citrus)}
+.apply-copy .h2{color:#fff}
+.apply-copy .lead{color:#D8EDD2}
+.coupon{margin-top:36px;position:relative;background:var(--citrus);color:var(--ink);border-radius:24px;padding:26px 28px;display:flex;align-items:center;gap:22px;max-width:440px;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--leaf-deep)}
+.coupon::before,.coupon::after{content:"";position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:var(--leaf)}
+.coupon::before{left:-13px}.coupon::after{right:-13px}
+.coupon .v{font-family:var(--f-num);font-size:58px;font-weight:800;letter-spacing:-.06em;line-height:1}
+.coupon .v small{font-size:.5em}
+.coupon .d{border-left:2px dashed rgba(19,37,26,.35);padding-left:22px}
+.coupon .d b{display:block;font-size:17px;font-weight:900}
+.coupon .d span{font-size:13.5px;font-weight:700;color:#5A4A12}
+.form-card{background:var(--card);border-radius:var(--r-xl);padding:40px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.form-card h3{margin:0 0 4px;font-size:24px;font-weight:900;letter-spacing:-.04em}
+.form-card .sub{margin:0 0 26px;color:var(--muted);font-size:15px}
+.field{margin-bottom:18px}
+.field label.l{display:block;font-weight:800;font-size:15px;margin-bottom:8px}
+.field label.l i{color:var(--tomato-deep);font-style:normal;margin-left:2px}
+.inp{width:100%;min-height:54px;border:2px solid var(--line);background:#FDFBF6;border-radius:14px;padding:0 16px;font-size:16px;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
+.inp::placeholder{color:#8F978F}
+.inp:hover{border-color:#C9BFA8}
+.inp:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(30,123,60,.18)}
+.sel-wrap{position:relative}
+.sel-wrap svg{position:absolute;right:16px;top:50%;width:18px;height:18px;margin-top:-9px;pointer-events:none;color:var(--ink-2)}
+.field.bad .inp{border-color:var(--err);background:#FFF6F3}
+.err{display:none;margin:7px 0 0;color:var(--err);font-size:14px;font-weight:700;align-items:center;gap:6px}
+.err svg{width:16px;height:16px;flex:none}
+.field.bad .err{display:flex}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.summary{background:var(--bg);border:1.5px dashed #D3C8AE;border-radius:16px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.summary .s1{font-weight:900;font-size:16px}
+.summary .s2{font-size:13.5px;color:var(--muted);font-weight:600}
+.summary .sp{font-family:var(--f-num);font-weight:800;font-size:24px;color:var(--tomato-deep);letter-spacing:-.04em}
+.summary a{font-size:13.5px;font-weight:800;color:var(--leaf);text-underline-offset:3px}
+.chk{display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:6px 0;min-height:44px}
+.chk input{position:absolute;opacity:0;width:1px;height:1px}
+.chk .box{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid #BDB29A;background:#fff;display:grid;place-items:center;transition:all .2s;margin-top:1px}
+.chk .box svg{width:16px;height:16px;color:#fff;opacity:0;transform:scale(.5);transition:all .2s var(--ease)}
+.chk input:checked+.box{background:var(--leaf);border-color:var(--leaf)}
+.chk input:checked+.box svg{opacity:1;transform:scale(1)}
+.chk input:focus-visible+.box{outline:3px solid var(--tomato);outline-offset:3px}
+.chk .t{font-size:15px;font-weight:700}
+.chk .t small{display:block;font-weight:500;color:var(--muted);font-size:13.5px}
+.form-card .btn{width:100%;margin-top:10px}
+.btn[aria-busy="true"]{opacity:.8;pointer-events:none}
+.spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .8s linear infinite}
+.success{display:none;text-align:center;padding:24px 0 8px}
+.success.show{display:block}
+.success .badge{width:96px;height:96px;margin:0 auto 20px;border-radius:50%;background:var(--leaf-soft);display:grid;place-items:center;color:var(--leaf)}
+.success .badge svg{width:48px;height:48px}
+.success h3{font-size:26px}
+.code{display:inline-flex;align-items:center;margin:18px 0 8px;background:var(--citrus-soft);border:2px dashed #D9A928;border-radius:14px;padding:12px 20px;font-family:var(--f-num);font-size:24px;font-weight:800;letter-spacing:.06em}
+.success p{color:var(--muted);margin:6px 0 0}
+
+/* footer */
+.ftr{background:var(--ink);color:#AEB8A9;padding:56px 0 48px;font-size:13.5px}
+.ftr-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #2B3D31;margin-bottom:24px}
+.ftr .logo{color:#fff}
+.ftr .logo-txt small{color:var(--leaf-vivid)}
+.ftr-links{display:flex;gap:22px;flex-wrap:wrap}
+.ftr-links a{text-decoration:none;font-weight:700;color:#D6DDD2;padding:6px 0}
+.ftr-links a:hover{color:#fff}
+.biz{line-height:1.9;margin:0}
+.biz span{white-space:nowrap}
+.biz span+span::before{content:"|";margin:0 10px;color:#4A5C4F}
+.demo-note{margin:18px 0 0;color:var(--citrus);font-weight:800}
+
+/* sticky mobile cta */
+.mcta{display:none}
+
+/* reveal default (no-JS safe) */
+.js .rv{opacity:0;transform:translateY(24px)}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}
+  .pains{grid-template-columns:repeat(2,1fr)}
+  .strip ul{grid-template-columns:repeat(2,1fr)}
+  .plan-box{grid-template-columns:1fr}
+  .timeline{grid-template-columns:repeat(2,1fr);row-gap:44px}
+  .tl-wrap::before,.tl-wrap .prog{display:none}
+}
+@media (max-width:860px){
+  .sec{padding:80px 0}
+  .hero{padding:28px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:12px}
+  .hero-art{max-width:460px;order:-1;margin-top:-4px}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews{grid-template-columns:1fr 1fr}
+  .rv-card:nth-child(n){margin-top:0}
+  .cd{grid-template-columns:1fr;padding:40px 28px}
+  .faq-grid,.apply-grid{grid-template-columns:1fr;gap:36px}
+  .apply{padding:80px 0}
+  .cd-wrap{padding-bottom:80px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hdr-in{height:62px}
+  .hdr .btn{display:none}
+  .hero h1{margin:18px 0 16px}
+  .hero-cta .btn{flex:1 1 100%}
+  .hero-meta{gap:18px;margin-top:28px;justify-content:space-between}
+  .hero-meta b{font-size:24px}
+  .hero-meta span{font-size:12.5px}
+  .st-off{width:104px;height:104px;right:0}
+  .st-off .in b{font-size:34px}
+  .st-off .in span{font-size:11px}
+  .st-dawn{bottom:8%;padding:9px 12px 9px 9px}
+  .st-dawn .ic{width:34px;height:34px}
+  .st-dawn b{font-size:13.5px}
+  .st-kcal{font-size:12.5px;padding:8px 14px}
+  .strip li{font-size:14px}
+  .pains,.menu-grid,.reviews,.timeline{grid-template-columns:1fr}
+  .pain{padding:24px 22px}
+  .plan-opts{padding:28px 20px 24px}
+  .plan-price{padding:30px 22px 26px}
+  .plan-box{box-shadow:5px 5px 0 var(--ink);border-radius:32px}
+  .seg label{padding:16px 14px}
+  .seg label b{font-size:17px}
+  .seg label::after{display:none}
+  .plan-inc{grid-template-columns:1fr}
+  .cd{padding:34px 20px;border-radius:32px}
+  .cd-clock{gap:8px}
+  .cd-unit{min-width:0;flex:1;padding:12px 4px 8px;border-radius:16px}
+  .cd-unit b{font-size:34px}
+  .form-card{padding:28px 20px;border-radius:28px}
+  .row2{grid-template-columns:1fr;gap:0}
+  .coupon{padding:20px;gap:16px}
+  .coupon .v{font-size:46px}
+  .faq summary{font-size:16.5px;padding:20px 2px}
+  .biz span{display:block;white-space:normal}
+  .biz span+span::before{content:none}
+  .biz br{display:none}
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:12px;align-items:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(251,246,236,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .3s var(--ease)}
+  .mcta.hide{transform:translateY(110%)}
+  .mcta .p{display:flex;flex-direction:column;line-height:1.2;flex:none}
+  .mcta .p span{font-size:12px;color:var(--muted);font-weight:700}
+  .mcta .p b{font-family:var(--f-num);font-size:21px;font-weight:800;color:var(--tomato-deep);letter-spacing:-.04em}
+  .mcta .btn{flex:1;--h:52px;font-size:16px;padding:0 16px}
+  body{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .announce-track{animation:none}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3.5V16h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-13 15"/><path d="M5 19l8-8"/></g></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="M9.5 4.5L12 6l2.5-1.5M9.5 19.5L12 18l2.5 1.5"/></g></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14a4 4 0 01-.5-7.9A5 5 0 0117 5.2 4 4 0 0117 14"/><path d="M7 14v6h10v-6M7 17h10"/></g></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3v.2"/></g></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0113.7-5.6L20 8.7"/><path d="M20 4v4.7h-4.7M20 12a8 8 0 01-13.7 5.6L4 15.3"/><path d="M4 20v-4.7h4.7"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="announce" role="region" aria-label="이벤트 안내">
+  <div class="announce-track" aria-hidden="true">
+    <span>신규 고객 <b>첫 주문 40%</b> 할인</span><span>매일 새벽 7시 전 문 앞 도착</span><span>배송비 무료</span><span>언제든 건너뛰기·일시정지</span><span>이벤트 마감 <b class="ann-left">D-5</b></span>
+    <span>신규 고객 <b>첫 주문 40%</b> 할인</span><span>매일 새벽 7시 전 문 앞 도착</span><span>배송비 무료</span><span>언제든 건너뛰기·일시정지</span><span>이벤트 마감 <b class="ann-left">D-5</b></span>
+  </div>
+  <p class="sr-only">신규 고객 첫 주문 40% 할인, 새벽 배송, 배송비 무료 이벤트 진행 중</p>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="그린밀 홈">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#1E7B3C"/><path d="M11 25c0-8 5.5-14 18-14 0 11-6.5 16-15 16" fill="#43B85C"/><path d="M11 29l10-10" stroke="#FBF6EC" stroke-width="2.4" stroke-linecap="round"/><circle cx="28" cy="27" r="4" fill="#E5461F"/></svg>
+      <span class="logo-txt"><b>그린밀</b><small>GREENMEAL</small></span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#menu">이번 주 메뉴</a>
+      <a href="#plan">플랜·가격</a>
+      <a href="#delivery">새벽배송</a>
+      <a href="#reviews">후기</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+    <a class="btn btn-primary" href="#apply">40% 쿠폰 받기</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill hx"><i>EVENT</i>신규 고객 한정 · 첫 주문 쿠폰</span>
+      <h1 id="hero-title" class="hx">
+        <span class="l1">내일 아침 문 앞에 도착하는 한 그릇</span>
+        <span class="big">첫 주문&nbsp;<span class="pct num">40<small>%</small></span></span><br>
+        <span class="u">할인
+          <svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path class="u-path" d="M4 14 C 70 4, 150 4, 296 10" fill="none" stroke="#FFC43A" stroke-width="9" stroke-linecap="round"/></svg>
+        </span>
+      </h1>
+      <p class="hero-sub hx">매주 바뀌는 샐러드·건강 도시락을 <b>새벽배송</b>으로. 원하는 요일, 원하는 끼니만 골라 정기배송으로 받아보세요.</p>
+      <div class="hero-cta hx">
+        <a class="btn btn-primary btn-lg" href="#apply">40% 쿠폰 받고 시작하기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#menu">이번 주 메뉴 보기</a>
+      </div>
+      <div class="hero-meta hx" aria-label="서비스 요약">
+        <div><b class="num">22<small style="font-size:.6em">종</small></b><span>매주 순환 메뉴</span></div>
+        <div><b class="num">07:00</b><span>이전 문 앞 도착</span></div>
+        <div><b class="num">0<small style="font-size:.6em">원</small></b><span>배송비·가입비</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg class="bowl" viewBox="0 0 520 520">
+        <defs>
+          <radialGradient id="g-bg" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#FFE59A"/><stop offset="1" stop-color="#FFC43A"/></radialGradient>
+          <linearGradient id="g-bowl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1E7B3C"/><stop offset="1" stop-color="#0F4D25"/></linearGradient>
+          <linearGradient id="g-shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        </defs>
+        <circle class="bg-disc" cx="260" cy="262" r="224" fill="url(#g-bg)"/>
+        <g class="orbit" fill="none" stroke="#13251A" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity=".35"><circle cx="260" cy="262" r="246"/></g>
+        <!-- flying garnish -->
+        <g class="ing fly"><path d="M70 120c10-26 40-32 58-20-8 24-36 34-58 20z" fill="#43B85C"/><path d="M72 119l50-16" stroke="#1E7B3C" stroke-width="2.5" stroke-linecap="round"/></g>
+        <g class="ing fly"><circle cx="440" cy="130" r="17" fill="#E5461F"/><circle cx="434" cy="124" r="5" fill="#fff" opacity=".45"/><path d="M440 113l-5-7M440 113l6-6M440 113v-9" stroke="#1E7B3C" stroke-width="3" stroke-linecap="round"/></g>
+        <g class="ing fly"><ellipse cx="455" cy="360" rx="14" ry="10" fill="#E9C58A" transform="rotate(-20 455 360)"/></g>
+        <g class="ing fly"><path d="M52 330c14-10 34-8 42 6-14 10-34 8-42-6z" fill="#8FD17B"/></g>
+
+        <!-- inner bowl -->
+        <ellipse cx="260" cy="272" rx="196" ry="38" fill="#0B3B1C"/>
+        <!-- ingredients (back → front) -->
+        <g class="ing"><path d="M236 250c-30-56-6-104 40-112 26 40 8 90-40 112z" fill="#4FA744"/><path d="M240 244c8-36 20-70 34-100" stroke="#2E7F30" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="ing"><path d="M150 250c-40-34-36-80 0-96 34 22 34 66 0 96z" fill="#8FD17B"/><path d="M150 244c-4-30-2-60 0-86" stroke="#4FA744" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="ing"><path d="M372 252c36-32 34-76 0-92-32 22-32 64 0 92z" fill="#3E9A3A"/><path d="M372 246c4-28 2-56 0-82" stroke="#2A7A2A" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="ing"><path d="M100 272c-6-46 28-78 70-70 10 30-10 64-70 70z" fill="#3E9A3A"/><path d="M104 268c18-22 38-42 62-60" stroke="#2A7A2A" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="ing"><path d="M420 272c6-50-30-80-74-68-8 32 14 64 74 68z" fill="#5DBB4A"/><path d="M414 266c-18-22-38-40-62-56" stroke="#3E9A3A" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="ing"><path d="M200 262c-18-60 26-96 76-86 6 44-28 78-76 86z" fill="#7BC95E"/><path d="M206 256c18-28 38-54 64-74" stroke="#4FA744" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <!-- purple cabbage -->
+        <g class="ing"><path d="M300 256c10-18 30-26 52-22M296 266c14-16 36-22 58-16M306 246c10-12 26-18 42-16" stroke="#8C4FA0" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+        <!-- carrot ribbons -->
+        <g class="ing"><path d="M130 262c14-24 34-30 56-26M140 270c12-16 30-22 48-18" stroke="#FF8A3D" stroke-width="8" fill="none" stroke-linecap="round"/></g>
+        <!-- avocado -->
+        <g class="ing"><g transform="rotate(-24 330 214)"><ellipse cx="330" cy="214" rx="40" ry="26" fill="#3D6B1F"/><ellipse cx="330" cy="214" rx="35" ry="21" fill="#C8DB6A"/><ellipse cx="330" cy="214" rx="24" ry="13" fill="#EEF0A6"/><circle cx="340" cy="214" r="10" fill="#8A5A2B"/><circle cx="337" cy="211" r="3" fill="#B98552"/></g></g>
+        <!-- egg -->
+        <g class="ing"><ellipse cx="208" cy="212" rx="34" ry="26" fill="#FFFDF5" stroke="#EDE3C8" stroke-width="2"/><circle cx="210" cy="214" r="15" fill="#FFB627"/><circle cx="205" cy="209" r="4.5" fill="#FFE08A"/></g>
+        <!-- chicken slices -->
+        <g class="ing"><g transform="rotate(10 262 232)"><rect x="232" y="214" width="62" height="18" rx="9" fill="#E7B377"/><path d="M240 223h46" stroke="#C98B4E" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/><rect x="236" y="236" width="58" height="18" rx="9" fill="#D9A064"/><path d="M244 245h42" stroke="#B87A3F" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/></g></g>
+        <!-- tomatoes -->
+        <g class="ing"><circle cx="150" cy="232" r="21" fill="#E5461F"/><circle cx="143" cy="225" r="6" fill="#fff" opacity=".45"/><path d="M150 212l-5-6M150 212l6-6" stroke="#1E7B3C" stroke-width="3" stroke-linecap="round"/></g>
+        <g class="ing"><circle cx="384" cy="238" r="19" fill="#F05A2F"/><circle cx="378" cy="232" r="5" fill="#fff" opacity=".45"/><path d="M384 220l-5-6M384 220l6-5" stroke="#1E7B3C" stroke-width="3" stroke-linecap="round"/></g>
+        <!-- corn -->
+        <g class="ing"><g fill="#FFD23F" stroke="#E0A800" stroke-width="1.5"><rect x="276" y="258" width="12" height="11" rx="4"/><rect x="290" y="256" width="12" height="11" rx="4"/><rect x="283" y="246" width="12" height="11" rx="4"/><rect x="170" y="258" width="12" height="11" rx="4"/><rect x="184" y="260" width="12" height="11" rx="4"/></g></g>
+        <!-- chickpeas -->
+        <g class="ing"><g fill="#E9C58A" stroke="#C9A060" stroke-width="1.5"><circle cx="236" cy="266" r="8"/><circle cx="252" cy="270" r="8"/><circle cx="244" cy="258" r="7"/><circle cx="360" cy="266" r="8"/></g></g>
+        <!-- sesame -->
+        <g class="ing"><g fill="#FFFDF5"><ellipse cx="226" cy="236" rx="2.2" ry="3.5"/><ellipse cx="290" cy="206" rx="2.2" ry="3.5" transform="rotate(30 290 206)"/><ellipse cx="180" cy="248" rx="2.2" ry="3.5" transform="rotate(-30 180 248)"/><ellipse cx="316" cy="240" rx="2.2" ry="3.5"/><ellipse cx="262" cy="200" rx="2.2" ry="3.5" transform="rotate(50 262 200)"/></g></g>
+
+        <!-- bowl front -->
+        <path class="bowl-body" d="M64 272 A196 38 0 0 0 456 272 C 452 380 372 452 260 452 C 148 452 68 380 64 272 Z" fill="url(#g-bowl)"/>
+        <path d="M92 300 C 110 380 170 424 240 432" stroke="url(#g-shine)" stroke-width="16" fill="none" stroke-linecap="round"/>
+        <path d="M64 272 A196 38 0 0 0 456 272" stroke="#43B85C" stroke-width="6" fill="none"/>
+        <ellipse cx="260" cy="462" rx="120" ry="12" fill="#13251A" opacity=".12"/>
+      </svg>
+      <div class="sticker st-off float">
+        <svg class="ring" viewBox="0 0 132 132"><defs><path id="circ" d="M66 66m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text font-size="10.5" font-weight="900" fill="#13251A"><textPath href="#circ" textLength="312" lengthAdjust="spacing">FIRST ORDER · 40% OFF · GREENMEAL · </textPath></text></svg>
+        <div class="in"><b>40%</b><span>첫 주문 OFF</span></div>
+      </div>
+      <div class="sticker st-dawn">
+        <span class="ic"><svg width="22" height="22"><use href="#i-moon"/></svg></span>
+        <span><b>밤 11시 주문</b><span>→ 아침 7시 전 도착</span></span>
+      </div>
+      <div class="sticker st-kcal">한 끼 420~590kcal</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" role="region" aria-label="서비스 특징">
+  <div class="wrap">
+    <ul>
+      <li><svg aria-hidden="true"><use href="#i-snow"/></svg>당일 조리 · 냉장 새벽배송</li>
+      <li><svg aria-hidden="true"><use href="#i-recycle"/></svg>매주 바뀌는 순환 메뉴</li>
+      <li><svg aria-hidden="true"><use href="#i-pause"/></svg>건너뛰기·일시정지 자유</li>
+      <li><svg aria-hidden="true"><use href="#i-box"/></svg>재활용 가능한 종이 포장</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PAINS -->
+<section class="sec" aria-labelledby="pain-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">For you</span>
+        <h2 class="h2" id="pain-title">이런 분께 딱 맞아요</h2>
+        <p class="lead">장보기, 손질, 메뉴 고민까지. 한 끼를 챙기는 데 드는 번거로움을 그린밀이 대신 준비합니다.</p>
+      </div>
+    </div>
+    <div class="pains">
+      <article class="pain rv">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></div>
+        <q>"아침은 늘 거르고 점심은 편의점이에요"</q>
+        <p>출근 준비에 쫓겨 끼니를 대충 넘기는 날이 많은 직장인</p>
+        <div class="fix"><svg aria-hidden="true"><use href="#i-check"/></svg>눈 뜨면 문 앞에 도착해 있어요</div>
+      </article>
+      <article class="pain rv">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div>
+        <q>"채소를 사면 반은 버리게 돼요"</q>
+        <p>1~2인 가구라 재료가 남고, 손질이 번거로운 분</p>
+        <div class="fix"><svg aria-hidden="true"><use href="#i-check"/></svg>한 끼 분량만 손질해서 담았어요</div>
+      </article>
+      <article class="pain rv">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-recycle"/></svg></div>
+        <q>"샐러드는 매번 똑같아서 질려요"</q>
+        <p>닭가슴살·양상추 조합에 지쳐 오래 못 가는 분</p>
+        <div class="fix"><svg aria-hidden="true"><use href="#i-check"/></svg>매주 22종에서 골라 순환돼요</div>
+      </article>
+      <article class="pain rv">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-chef"/></svg></div>
+        <q>"영양 성분을 매번 찾아보기 귀찮아요"</q>
+        <p>칼로리·단백질을 확인하며 식단을 꾸리고 싶은 분</p>
+        <div class="fix"><svg aria-hidden="true"><use href="#i-check"/></svg>메뉴마다 kcal·단백질 표기</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sec menu-sec" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">This week</span>
+        <h2 class="h2" id="menu-title">이번 주 메뉴</h2>
+        <p class="lead">셰프가 매주 새로 짜는 6가지 대표 메뉴. 정기배송 고객은 요일별로 원하는 메뉴를 바꿀 수 있어요.</p>
+      </div>
+      <span class="week-tag"><i aria-hidden="true"></i><span id="weekLabel">이번 주 메뉴</span></span>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="menu-note rv">* 영양 정보는 1인분 기준 예시 수치이며, 원재료 수급에 따라 구성이 일부 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section class="sec" id="plan" aria-labelledby="plan-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Choose your plan</span>
+        <h2 class="h2" id="plan-title">나에게 맞는 플랜 고르기</h2>
+        <p class="lead">배송 횟수와 하루 끼니 수만 고르면 첫 주 결제 금액이 바로 계산돼요. 40% 할인은 첫 주문에 자동 적용됩니다.</p>
+      </div>
+    </div>
+    <div class="plan-box rv">
+      <div class="plan-opts">
+        <fieldset class="opt-group">
+          <legend><span>1</span>일주일에 몇 번 받을까요?</legend>
+          <div class="seg">
+            <input type="radio" name="days" id="d3" value="3"><label for="d3"><b>주 3회</b><span>월 · 수 · 금</span></label>
+            <input type="radio" name="days" id="d5" value="5" checked><label for="d5"><em>인기</em><b>주 5회</b><span>월 ~ 금</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="opt-group">
+          <legend><span>2</span>하루에 몇 끼 받을까요?</legend>
+          <div class="seg">
+            <input type="radio" name="meals" id="m1" value="1" checked><label for="m1"><b>1식</b><span>끼당 8,900원</span></label>
+            <input type="radio" name="meals" id="m2" value="2"><label for="m2"><em>끼당 500원↓</em><b>2식</b><span>끼당 8,400원</span></label>
+          </div>
+        </fieldset>
+        <ul class="plan-inc" aria-label="모든 플랜 공통 혜택">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>새벽배송비 무료</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>요일별 메뉴 변경</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>건너뛰기·일시정지</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>해지 위약금 없음</li>
+        </ul>
+      </div>
+      <div class="plan-price" aria-live="polite">
+        <span class="lbl">선택한 플랜</span>
+        <div class="sel" id="selLabel">주 5회 · 1식 (주 5끼)</div>
+        <div class="price-row"><span>1주 정가</span><s class="num" id="pRegular">44,500원</s></div>
+        <div class="price-row"><span>첫 주문 40% 할인</span><span class="dc num" id="pDiscount">-17,800원</span></div>
+        <div class="price-row"><span>새벽배송비</span><span class="num">0원</span></div>
+        <div class="final">
+          <div class="t">첫 주 결제 금액 <i>40% OFF</i></div>
+          <div class="v"><span id="pFinal">26,700</span><small>원</small></div>
+          <div class="per">한 끼 약 <b class="num" id="pPer">5,340원</b> · 둘째 주부터 <span class="num" id="pAfter">44,500원</span>/주</div>
+        </div>
+        <a class="btn btn-primary btn-lg" href="#apply" id="planCta">이 플랜으로 쿠폰 받기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="fine">* 할인 금액은 100원 단위 반올림. 쿠폰은 신규 고객 첫 주문 1회 적용됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="sec deliv" id="delivery" aria-labelledby="deliv-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Dawn delivery</span>
+        <h2 class="h2" id="deliv-title">자는 동안 도착하는 새벽배송</h2>
+        <p class="lead">전날 밤 주문 마감부터 아침 문 앞까지, 냉장 상태를 유지하며 배송해요.</p>
+      </div>
+    </div>
+    <div class="tl-wrap" id="timeline">
+    <span class="prog" aria-hidden="true"></span>
+    <ol class="timeline">
+      <li class="tl rv"><div class="dot"><svg aria-hidden="true"><use href="#i-moon"/></svg></div><time class="num">23:00</time><h3>주문·변경 마감</h3><p>전날 밤 11시까지 메뉴 변경과 건너뛰기가 가능해요.</p></li>
+      <li class="tl rv"><div class="dot"><svg aria-hidden="true"><use href="#i-chef"/></svg></div><time class="num">01:00</time><h3>당일 조리·포장</h3><p>새벽에 조리한 메뉴를 한 끼씩 소분해 담아요.</p></li>
+      <li class="tl rv"><div class="dot"><svg aria-hidden="true"><use href="#i-truck"/></svg></div><time class="num">03:00</time><h3>냉장 차량 출발</h3><p>냉장 탑차로 권역별 배송을 시작해요.</p></li>
+      <li class="tl rv"><div class="dot"><svg aria-hidden="true"><use href="#i-sun"/></svg></div><time class="num">~07:00</time><h3>문 앞 도착</h3><p>도착하면 문자로 알려드려요. 바로 냉장 보관해 주세요.</p></li>
+    </ol>
+    </div>
+    <div class="deliv-note rv">
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>서울·경기·인천 새벽배송</span>
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>그 외 지역 택배 익일 도착</span>
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>공동현관 비밀번호 입력 지원</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews" aria-labelledby="rv-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Reviews</span>
+        <h2 class="h2" id="rv-title">먼저 받아본 분들의 이야기</h2>
+        <p class="lead">정기배송 고객이 남긴 후기 중 일부를 소개해요. <small style="font-size:.8em;opacity:.7">(포트폴리오용 예시 후기)</small></p>
+      </div>
+    </div>
+    <div class="reviews">
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>출근 전에 문 열면 바로 있어서 아침 챙기는 게 습관이 됐어요. 소스가 따로 담겨 와서 눅눅하지 않은 게 좋아요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#1E7B3C">김</span><span><b>김*윤 님</b><span>주 5회 · 1식 · 3개월째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>매주 메뉴가 바뀌니까 질리지가 않네요. 연어 포케는 거의 매주 고르고 있어요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#C2360F">박</span><span><b>박*진 님</b><span>주 3회 · 2식 · 6주째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>출장 주간엔 앱에서 건너뛰기만 누르면 돼서 부담이 없어요. 포장도 종이라 분리수거가 편해요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#7D4B91">이</span><span><b>이*아 님</b><span>주 5회 · 1식 · 5개월째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 4점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true" style="opacity:.25"><use href="#i-star"/></svg></div><blockquote>양이 생각보다 든든해요. 단백질 표기가 있어서 운동하는 날엔 그걸 보고 골라요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#9A6A00">최</span><span><b>최*호 님</b><span>주 5회 · 2식 · 2개월째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>혼자 살면서 채소 사면 늘 버렸는데, 이제 장바구니가 가벼워졌어요.</blockquote><figcaption class="rv-who"><span class="av" style="background:#0F4D25">정</span><span><b>정*은 님</b><span>주 3회 · 1식 · 4주째</span></span></figcaption></figure>
+      <figure class="rv-card rv"><div class="stars" aria-label="별점 5점 만점에 5점"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>새벽 6시 전에 도착 문자가 와요. 배송 시간이 일정해서 믿고 먹습니다.</blockquote><figcaption class="rv-who"><span class="av" style="background:#E5461F">한</span><span><b>한*수 님</b><span>주 5회 · 1식 · 8주째</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="cd-wrap">
+  <div class="wrap">
+    <section class="cd rv" aria-labelledby="cd-title">
+      <div>
+        <h2 id="cd-title">첫 주문 40% 쿠폰,<br>곧 마감돼요</h2>
+        <p>이벤트 기간 안에 쿠폰을 받아두면 원하는 날짜에 첫 배송을 시작할 수 있어요.</p>
+        <span class="cd-date"><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg><span id="cdDate">마감일 계산 중</span></span>
+      </div>
+      <div class="cd-clock" role="timer" aria-live="off" aria-label="이벤트 마감까지 남은 시간">
+        <div class="cd-unit"><b id="cdD">05</b><span>일</span></div>
+        <div class="cd-unit"><b id="cdH">00</b><span>시간</span></div>
+        <div class="cd-unit"><b id="cdM">00</b><span>분</span></div>
+        <div class="cd-unit"><b id="cdS">00</b><span>초</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2" id="faq-title">자주 묻는 질문</h2>
+      <p class="lead">더 궁금한 점은 고객센터 채팅으로 문의해 주세요. 평일 09:00~18:00 운영해요.</p>
+    </div>
+    <div class="faq rv">
+      <details><summary>40% 할인 쿠폰은 어떻게 적용되나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>신청서를 제출하면 쿠폰 코드가 발급되고, 첫 정기배송 결제 시 1주 금액에 자동으로 40% 할인이 적용돼요. 신규 고객 1인 1회 사용 가능합니다.</p></div></details>
+      <details><summary>중간에 건너뛰거나 해지할 수 있나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>네. 배송 전날 밤 11시까지 앱에서 건너뛰기·일시정지·해지를 직접 할 수 있고, 위약금은 없어요.</p></div></details>
+      <details><summary>새벽배송이 안 되는 지역은 어떻게 받나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>서울·경기·인천 일부 지역은 새벽배송, 그 외 지역은 냉장 택배로 다음 날 받아보실 수 있어요. 도서산간 지역은 배송이 어려울 수 있습니다.</p></div></details>
+      <details><summary>메뉴는 직접 고를 수 있나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>매주 목요일에 다음 주 메뉴가 공개되고, 요일별로 원하는 메뉴를 바꿀 수 있어요. 따로 고르지 않으면 추천 조합으로 배송돼요.</p></div></details>
+      <details><summary>알레르기 정보는 어디서 확인하나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>메뉴 상세와 제품 라벨에 알레르기 유발 성분을 모두 표기하고 있어요. 식이 제한이 있다면 섭취 전 꼭 확인해 주세요.</p></div></details>
+      <details><summary>받은 도시락은 언제까지 먹어야 하나요?<span class="pm" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><div class="ans"><p>샐러드는 수령 당일, 도시락은 수령 후 이틀 안에 드시는 걸 권장해요. 받는 즉시 냉장 보관해 주세요.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply" aria-labelledby="apply-title">
+  <div class="wrap apply-grid">
+    <div class="apply-copy rv">
+      <span class="eyebrow">Get the coupon</span>
+      <h2 class="h2" id="apply-title">쿠폰 받고<br>정기배송 신청하기</h2>
+      <p class="lead">신청서를 남기면 담당 매니저가 배송 가능 여부와 첫 배송일을 안내해 드려요. 결제는 안내 후 진행됩니다.</p>
+      <div class="coupon" aria-hidden="true">
+        <div class="v num">40<small>%</small></div>
+        <div class="d"><b>첫 주문 할인 쿠폰</b><span>신규 고객 1회 · <span class="cp-until">마감일까지</span></span></div>
+      </div>
+    </div>
+
+    <div class="form-card rv">
+      <form id="applyForm" novalidate>
+        <h3>정기배송 신청서</h3>
+        <p class="sub">표시(<span style="color:var(--tomato-deep)">*</span>)된 항목은 필수 입력이에요.</p>
+
+        <div class="row2">
+          <div class="field" id="f-name">
+            <label class="l" for="name">이름<i aria-hidden="true">*</i></label>
+            <input class="inp" id="name" name="name" type="text" autocomplete="name" placeholder="홍길동" aria-describedby="e-name" required>
+            <p class="err" id="e-name" role="alert"><svg aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+          <div class="field" id="f-phone">
+            <label class="l" for="phone">연락처<i aria-hidden="true">*</i></label>
+            <input class="inp num" id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" aria-describedby="e-phone" required>
+            <p class="err" id="e-phone" role="alert"><svg aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+        </div>
+
+        <div class="field" id="f-region">
+          <label class="l" for="region">배송 지역<i aria-hidden="true">*</i></label>
+          <div class="sel-wrap">
+            <select class="inp" id="region" name="region" aria-describedby="e-region" required>
+              <option value="">지역을 선택해 주세요</option>
+              <option>서울특별시 (새벽배송)</option>
+              <option>경기도 (새벽배송)</option>
+              <option>인천광역시 (새벽배송)</option>
+              <option>부산광역시 (택배)</option>
+              <option>대구광역시 (택배)</option>
+              <option>대전광역시 (택배)</option>
+              <option>광주광역시 (택배)</option>
+              <option>울산광역시 (택배)</option>
+              <option>세종특별자치시 (택배)</option>
+              <option>강원·충청 (택배)</option>
+              <option>전라·경상 (택배)</option>
+            </select>
+            <svg aria-hidden="true"><use href="#i-down"/></svg>
+          </div>
+          <p class="err" id="e-region" role="alert"><svg aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+        </div>
+
+        <div class="field">
+          <span class="l" style="display:block;font-weight:800;font-size:15px;margin-bottom:8px" id="sumLbl">선택한 플랜</span>
+          <div class="summary" aria-labelledby="sumLbl" aria-live="polite">
+            <div><div class="s1" id="sumPlan">주 5회 · 1식</div><div class="s2" id="sumSub">주 5끼 · 정가 44,500원</div></div>
+            <div style="text-align:right"><div class="sp" id="sumPrice">26,700원</div><a href="#plan">플랜 변경</a></div>
+          </div>
+          <input type="hidden" name="plan" id="planField">
+        </div>
+
+        <div class="field" id="f-agree">
+          <label class="chk">
+            <input type="checkbox" id="agree" name="agree" aria-describedby="e-agree">
+            <span class="box" aria-hidden="true"><svg><use href="#i-check"/></svg></span>
+            <span class="t">[필수] 개인정보 수집·이용에 동의합니다<small>수집 항목: 이름, 연락처, 배송 지역 · 이용 목적: 상담 및 배송 안내 · 보유 기간: 상담 종료 후 1년</small></span>
+          </label>
+          <p class="err" id="e-agree" role="alert"><svg aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+        </div>
+        <label class="chk">
+          <input type="checkbox" id="mkt" name="mkt">
+          <span class="box" aria-hidden="true"><svg><use href="#i-check"/></svg></span>
+          <span class="t">[선택] 신메뉴·이벤트 소식 받기</span>
+        </label>
+
+        <button class="btn btn-primary btn-lg" type="submit" id="submitBtn"><span class="lbl">40% 쿠폰 받고 신청하기</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+
+      <div class="success" id="success" tabindex="-1" role="status">
+        <div class="badge"><svg aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3>신청이 접수됐어요</h3>
+        <p><b id="okName">고객</b>님, 담당 매니저가 곧 연락드릴게요.</p>
+        <div class="code" aria-label="쿠폰 코드">GREEN40-<span id="okCode">0000</span></div>
+        <p id="okPlan">선택 플랜 · 첫 주 금액</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <a class="logo" href="#top" aria-label="그린밀 맨 위로">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#1E7B3C"/><path d="M11 25c0-8 5.5-14 18-14 0 11-6.5 16-15 16" fill="#43B85C"/><path d="M11 29l10-10" stroke="#13251A" stroke-width="2.4" stroke-linecap="round"/><circle cx="28" cy="27" r="4" fill="#E5461F"/></svg>
+        <span class="logo-txt"><b>그린밀</b><small>GREENMEAL</small></span>
+      </a>
+      <nav class="ftr-links" aria-label="하단 메뉴">
+        <a href="#menu">이번 주 메뉴</a><a href="#plan">플랜·가격</a><a href="#faq">자주 묻는 질문</a><a href="#apply">신청하기</a>
+      </nav>
+    </div>
+    <p class="biz">
+      <span>상호 (주)그린밀</span><span>대표 홍길동</span><span>사업자등록번호 000-00-00000</span><span>통신판매업신고 제0000-서울00-0000호</span><br>
+      <span>주소 서울특별시 00구 00로 00, 0층</span><span>고객센터 0000-0000</span><span>이메일 hello@greenmeal.example</span>
+    </p>
+    <p class="demo-note">* 포트폴리오용 예시 페이지입니다. 실제 판매·배송이 이루어지지 않으며, 표기된 가격·후기·영양 정보는 모두 가상의 예시입니다.</p>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta">
+  <div class="p"><span>첫 주 40% 할인가</span><b id="mPrice">26,700원</b></div>
+  <a class="btn btn-primary" href="#apply">쿠폰 받고 신청하기</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  document.documentElement.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var won = function(n){ return Math.round(n).toLocaleString("ko-KR") + "원"; };
+  var $ = function(s, c){ return (c||document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ---------- Menu cards ---------- */
+  var DISHES = [
+    { name:"연어 아보카도 포케", desc:"생연어, 아보카도, 적양배추, 현미밥", kcal:548, pro:31, tag:"BEST", tagCls:"hot", bg:"#FFE7DA",
+      w:["#FF8A65","#C8DB6A","#8C4FA0","#FFD23F","#7BC95E"], top:"#F4A28C" },
+    { name:"그릴드 치킨 시저볼", desc:"허브 닭가슴살, 로메인, 파르메산, 크루통", kcal:486, pro:38, tag:"고단백", tagCls:"", bg:"#EAF4E4",
+      w:["#7BC95E","#E7B377","#5DBB4A","#FFF3C9","#E7B377"], top:"#D9A064" },
+    { name:"두부 된장 곡물볼", desc:"구운 두부, 된장 드레싱, 퀴노아, 시금치", kcal:452, pro:24, tag:"NEW", tagCls:"new", bg:"#FFF3CC",
+      w:["#F3E2B8","#3E9A3A","#FF8A3D","#E9C58A","#8FD17B"], top:"#F3E2B8" },
+    { name:"불고기 현미 도시락", desc:"저당 불고기, 현미밥, 나물 3종", kcal:589, pro:33, tag:"든든", tagCls:"", bg:"#F6E6DA",
+      w:["#8A5A2B","#F3EDE0","#5DBB4A","#FF8A3D","#C9A060"], top:"#A86B3C" },
+    { name:"새우 콥 샐러드", desc:"통새우, 삶은 달걀, 옥수수, 방울토마토", kcal:421, pro:29, tag:"가벼움", tagCls:"", bg:"#E4F0FA",
+      w:["#FFB8A0","#FFD23F","#E5461F","#7BC95E","#FFFDF5"], top:"#FF9E80" },
+    { name:"병아리콩 팔라펠 랩볼", desc:"팔라펠, 후무스, 오이, 토마토 살사", kcal:507, pro:21, tag:"비건", tagCls:"", bg:"#EFE3F4",
+      w:["#C99A5B","#E9C58A","#43B85C","#E5461F","#F3E2B8"], top:"#B8864A" }
+  ];
+  function arc(cx, cy, r, a0, a1){
+    var rad = function(a){ return (a-90) * Math.PI/180; };
+    var x0 = cx + r*Math.cos(rad(a0)), y0 = cy + r*Math.sin(rad(a0));
+    var x1 = cx + r*Math.cos(rad(a1)), y1 = cy + r*Math.sin(rad(a1));
+    var large = (a1-a0) > 180 ? 1 : 0;
+    return "M"+cx+" "+cy+" L"+x0.toFixed(2)+" "+y0.toFixed(2)+" A"+r+" "+r+" 0 "+large+" 1 "+x1.toFixed(2)+" "+y1.toFixed(2)+" Z";
+  }
+  function dishSVG(d, i){
+    var s = '<svg viewBox="0 0 200 200" aria-hidden="true">';
+    s += '<circle cx="100" cy="104" r="92" fill="#13251A" opacity=".08"/>';
+    s += '<circle cx="100" cy="98" r="92" fill="#FFFFFF" stroke="#E6DECB" stroke-width="2"/>';
+    s += '<circle cx="100" cy="98" r="80" fill="#F7F2E6"/>';
+    var n = d.w.length, step = 360/n;
+    for (var k=0;k<n;k++){
+      s += '<path class="wedge" d="'+arc(100,98,76,k*step+2,(k+1)*step-2)+'" fill="'+d.w[k]+'"/>';
+      // texture dots per wedge
+      var mid = (k*step + step/2 - 90) * Math.PI/180;
+      for (var j=0;j<3;j++){
+        var rr = 34 + j*13, a = mid + (j-1)*0.16;
+        s += '<circle class="wedge" cx="'+(100+rr*Math.cos(a)).toFixed(1)+'" cy="'+(98+rr*Math.sin(a)).toFixed(1)+'" r="'+(3.5-j*.6).toFixed(1)+'" fill="#fff" opacity=".45"/>';
+      }
+    }
+    s += '<circle class="wedge" cx="100" cy="98" r="26" fill="'+d.top+'" stroke="#fff" stroke-width="4"/>';
+    s += '<path class="wedge" d="M88 92c8-12 22-12 28-2-8 10-20 10-28 2z" fill="#43B85C"/>';
+    s += '<g class="wedge" fill="#13251A" opacity=".55"><circle cx="94" cy="106" r="1.6"/><circle cx="104" cy="109" r="1.6"/><circle cx="110" cy="101" r="1.6"/></g>';
+    s += '</svg>';
+    return s;
+  }
+  var grid = $("#menuGrid");
+  grid.innerHTML = DISHES.map(function(d, i){
+    return '<article class="dish rv">'+
+      '<div class="dish-art" style="background:'+d.bg+'"><span class="tag '+d.tagCls+'">'+d.tag+'</span>'+dishSVG(d,i)+'</div>'+
+      '<div class="dish-body"><h3>'+d.name+'</h3><p>'+d.desc+'</p>'+
+      '<div class="nut"><span><b>'+d.kcal.toLocaleString("ko-KR")+'</b>kcal</span><span class="p">단백질 <b>'+d.pro+'</b>g</span></div></div>'+
+      '</article>';
+  }).join("");
+
+  // week label
+  (function(){
+    var now = new Date(), day = now.getDay() || 7;
+    var mon = new Date(now); mon.setDate(now.getDate() - day + 1);
+    var fri = new Date(mon); fri.setDate(mon.getDate() + 4);
+    var f = function(d){ return (d.getMonth()+1) + "." + d.getDate(); };
+    $("#weekLabel").textContent = f(mon) + " – " + f(fri) + " 배송 메뉴";
+  })();
+
+  /* ---------- Plan calculator ---------- */
+  var UNIT = { 1: 8900, 2: 8400 };
+  var DISC = 0.4;
+  var state = { days: 5, meals: 1, final: 0 };
+  var shownFinal = { v: 0 };
+  function calc(){
+    var meals = state.days * state.meals;
+    var regular = meals * UNIT[state.meals];
+    var final = Math.round(regular * (1 - DISC) / 100) * 100;
+    return { meals: meals, regular: regular, final: final, discount: regular - final, per: Math.round(final / meals / 10) * 10 };
+  }
+  function renderPlan(animate){
+    var c = calc();
+    var label = "주 " + state.days + "회 · " + state.meals + "식";
+    $("#selLabel").textContent = label + " (주 " + c.meals + "끼)";
+    $("#pRegular").textContent = won(c.regular);
+    $("#pDiscount").textContent = "-" + won(c.discount);
+    $("#pPer").textContent = won(c.per);
+    $("#pAfter").textContent = won(c.regular);
+    $("#sumPlan").textContent = label;
+    $("#sumSub").textContent = "주 " + c.meals + "끼 · 정가 " + won(c.regular) + " · 40% 할인 적용";
+    $("#sumPrice").textContent = won(c.final);
+    $("#mPrice").textContent = won(c.final);
+    $("#planField").value = label + " / 첫 주 " + won(c.final);
+    var el = $("#pFinal");
+    if (animate && !reduce && window.anime){
+      anime.remove(shownFinal);
+      anime({ targets: shownFinal, v: c.final, duration: 650, easing: "easeOutExpo",
+        update: function(){ el.textContent = (Math.round(shownFinal.v/100)*100).toLocaleString("ko-KR"); },
+        complete: function(){ el.textContent = c.final.toLocaleString("ko-KR"); } });
+      anime({ targets: ".final .v", scale: [1.06, 1], duration: 500, easing: "easeOutBack" });
+    } else {
+      shownFinal.v = c.final;
+      el.textContent = c.final.toLocaleString("ko-KR");
+    }
+  }
+  $$('input[name="days"], input[name="meals"]').forEach(function(r){
+    r.addEventListener("change", function(){
+      state[r.name] = parseInt(r.value, 10);
+      renderPlan(true);
+    });
+  });
+  renderPlan(false);
+
+  /* ---------- Countdown (runtime: 5 days ahead, 23:59:59) ---------- */
+  var deadline = new Date(); deadline.setDate(deadline.getDate() + 5); deadline.setHours(23,59,59,0);
+  var wd = ["일","월","화","수","목","금","토"];
+  var dText = (deadline.getMonth()+1) + "월 " + deadline.getDate() + "일(" + wd[deadline.getDay()] + ") 23:59 마감";
+  $("#cdDate").textContent = dText;
+  $$(".cp-until").forEach(function(e){ e.textContent = (deadline.getMonth()+1) + "/" + deadline.getDate() + "까지"; });
+  var pad = function(n){ return (n < 10 ? "0" : "") + n; };
+  function tick(){
+    var ms = Math.max(0, deadline - new Date());
+    var d = Math.floor(ms / 864e5), h = Math.floor(ms % 864e5 / 36e5), m = Math.floor(ms % 36e5 / 6e4), s = Math.floor(ms % 6e4 / 1e3);
+    $("#cdD").textContent = pad(d); $("#cdH").textContent = pad(h); $("#cdM").textContent = pad(m); $("#cdS").textContent = pad(s);
+    $$(".ann-left").forEach(function(e){ e.textContent = "D-" + d; });
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- Header / sticky CTA ---------- */
+  var hdr = $("#hdr"), mcta = $("#mcta");
+  window.addEventListener("scroll", function(){ hdr.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });
+  if ("IntersectionObserver" in window){
+    var hideFor = new Set();
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) hideFor.add(e.target); else hideFor.delete(e.target); });
+      mcta.classList.toggle("hide", hideFor.size > 0);
+    }, { threshold: 0.05 });
+    io.observe($("#apply")); io.observe($(".hero-cta"));
+  }
+
+  /* ---------- Form ---------- */
+  var form = $("#applyForm");
+  var phone = $("#phone");
+  function fmtPhone(v){
+    var d = v.replace(/\D/g, "").slice(0, 11);
+    if (d.length < 4) return d;
+    if (d.length < 8) return d.slice(0,3) + "-" + d.slice(3);
+    if (d.length === 10) return d.slice(0,3) + "-" + d.slice(3,6) + "-" + d.slice(6);
+    return d.slice(0,3) + "-" + d.slice(3,7) + "-" + d.slice(7);
+  }
+  phone.addEventListener("input", function(){ phone.value = fmtPhone(phone.value); });
+  var rules = {
+    name: function(v){ v = v.trim(); if (!v) return "이름을 입력해 주세요."; if (v.length < 2) return "이름을 2자 이상 입력해 주세요."; if (!/^[가-힣a-zA-Z\s]+$/.test(v)) return "이름은 한글 또는 영문으로 입력해 주세요."; return ""; },
+    phone: function(v){ if (!v) return "연락처를 입력해 주세요."; if (!/^01[016789]-\d{3,4}-\d{4}$/.test(v)) return "휴대폰 번호 형식이 올바르지 않아요. 예) 010-1234-5678"; return ""; },
+    region: function(v){ return v ? "" : "배송 지역을 선택해 주세요."; },
+    agree: function(v, el){ return el.checked ? "" : "개인정보 수집·이용에 동의해 주세요."; }
+  };
+  function check(id){
+    var el = $("#" + id), f = $("#f-" + id), msg = rules[id](el.value, el);
+    f.classList.toggle("bad", !!msg);
+    el.setAttribute("aria-invalid", msg ? "true" : "false");
+    $("#e-" + id + " span").textContent = msg;
+    return !msg;
+  }
+  ["name","phone","region"].forEach(function(id){
+    var el = $("#" + id);
+    el.addEventListener("blur", function(){ if (el.value) check(id); });
+    el.addEventListener(id === "region" ? "change" : "input", function(){ if ($("#f-" + id).classList.contains("bad")) check(id); });
+  });
+  $("#agree").addEventListener("change", function(){ check("agree"); });
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var ids = ["name","phone","region","agree"], firstBad = null;
+    ids.forEach(function(id){ if (!check(id) && !firstBad) firstBad = id; });
+    if (firstBad){ $("#" + firstBad).focus(); return; }
+    var btn = $("#submitBtn");
+    btn.setAttribute("aria-busy", "true");
+    btn.innerHTML = '<span class="spin" aria-hidden="true"></span><span>쿠폰 발급 중…</span>';
+    setTimeout(function(){
+      var c = calc();
+      $("#okName").textContent = $("#name").value.trim();
+      $("#okCode").textContent = String(Math.floor(1000 + Math.random() * 9000));
+      $("#okPlan").textContent = "주 " + state.days + "회 · " + state.meals + "식 · 첫 주 " + won(c.final) + " (40% 할인 적용)";
+      form.style.display = "none";
+      var ok = $("#success"); ok.classList.add("show"); ok.focus();
+      if (!reduce && window.anime){
+        anime({ targets: "#success .badge", scale: [0, 1], rotate: [-30, 0], duration: 800, easing: "easeOutElastic(1, .6)" });
+        anime({ targets: "#success h3, #success p, #success .code", opacity: [0, 1], translateY: [14, 0], delay: anime.stagger(80, { start: 200 }), easing: "easeOutQuad", duration: 450 });
+      }
+    }, 900);
+  });
+
+  /* ---------- Motion ---------- */
+  if (reduce || !window.gsap){
+    $$(".rv").forEach(function(el){ el.style.opacity = 1; el.style.transform = "none"; });
+    var p0 = $(".tl-wrap .prog"); if (p0) p0.style.transform = "scaleX(1)";
+    return;
+  }
+
+  // Hero: anime.js — bowl assembles, ingredients pop in with stagger (lottie-like)
+  var ings = $$(".hero-art .ing:not(.fly)");
+  var flys = $$(".hero-art .fly");
+  if (window.anime){
+    anime.set(".bowl-body, .bg-disc", { opacity: 0 });
+    anime.set(ings, { opacity: 0, translateY: -140, scale: .4, rotate: function(){ return anime.random(-40, 40); } });
+    anime.set(flys, { opacity: 0, scale: 0 });
+    anime.set(".hero-art .sticker", { opacity: 0, scale: .6 });
+    anime.set(".hx", { opacity: 0, translateY: 26 });
+    anime.set(".u-path", { strokeDasharray: 320, strokeDashoffset: 320 });
+    var tl = anime.timeline({ easing: "easeOutExpo" });
+    tl.add({ targets: ".hx", opacity: [0,1], translateY: [26,0], duration: 800, delay: anime.stagger(80) })
+      .add({ targets: ".bg-disc", opacity: [0,1], scale: [.7,1], duration: 700, easing: "easeOutBack" }, 100)
+      .add({ targets: ".bowl-body", opacity: [0,1], translateY: [60,0], duration: 700, easing: "easeOutBack" }, 250)
+      .add({ targets: ings, opacity: [0,1], translateY: [-140,0], scale: [.4,1], rotate: 0, duration: 900,
+             easing: "easeOutElastic(1, .7)", delay: anime.stagger(70) }, 520)
+      .add({ targets: flys, opacity: [0,1], scale: [0,1], duration: 700, easing: "easeOutBack", delay: anime.stagger(90) }, 1100)
+      .add({ targets: ".hero-art .sticker", opacity: [0,1], scale: [.6,1], duration: 700, easing: "easeOutElastic(1, .6)", delay: anime.stagger(120) }, 1200)
+      .add({ targets: ".u-path", strokeDashoffset: [320, 0], duration: 700, easing: "easeInOutQuad" }, 900);
+    // idle float for garnish
+    tl.finished.then(function(){
+      anime({ targets: flys, translateY: function(){ return anime.random(-10, -4); }, rotate: function(){ return anime.random(-8, 8); },
+              direction: "alternate", loop: true, duration: function(){ return anime.random(1800, 2600); }, easing: "easeInOutSine" });
+    });
+  }
+
+  // GSAP ScrollTrigger reveals
+  gsap.registerPlugin(ScrollTrigger);
+  $$(".rv").forEach(function(el){
+    if (el.classList.contains("dish") || el.classList.contains("tl")) return;
+    gsap.to(el, { opacity: 1, y: 0, duration: .7, ease: "expo.out",
+      scrollTrigger: { trigger: el, start: "top 88%", once: true } });
+  });
+  // Menu: staggered cards + anime.js wedge pop
+  ScrollTrigger.batch(".dish", {
+    start: "top 88%", once: true,
+    onEnter: function(batch){
+      gsap.to(batch, { opacity: 1, y: 0, duration: .8, ease: "expo.out", stagger: .08 });
+      batch.forEach(function(card, i){
+        if (!window.anime) return;
+        anime({ targets: $$(".wedge", card), scale: [0, 1], opacity: [0, 1], duration: 700, easing: "easeOutBack",
+                delay: anime.stagger(22, { start: 150 + i * 90 }) });
+      });
+    }
+  });
+  // Delivery timeline
+  ScrollTrigger.batch(".tl", { start: "top 85%", once: true,
+    onEnter: function(b){ gsap.to(b, { opacity: 1, y: 0, duration: .7, ease: "expo.out", stagger: .15 }); } });
+  gsap.to(".tl-wrap .prog", { scaleX: 1, ease: "none",
+    scrollTrigger: { trigger: "#timeline", start: "top 75%", end: "bottom 55%", scrub: .6 } });
+  // hero art parallax
+  gsap.to(".hero-art .bowl", { y: 40, rotate: -4, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>

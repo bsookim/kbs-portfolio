@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>맑은결 피부과</title>
+<meta name="description" content="맑은결 피부과 — 피부의 결을 먼저 읽고, 필요한 만큼만 권하는 서울의 피부과 의원. (포트폴리오용 예시 사이트)">
+<meta name="theme-color" content="#F6FAF8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --pearl:#F6FAF8;
+  --pearl-2:#EEF5F2;
+  --mint:#DCF0EA;
+  --aqua:#BDE3DD;
+  --aqua-deep:#8CCBC2;
+  --teal-900:#0D3638;
+  --teal-800:#164A4C;
+  --teal-600:#2F6B6B;
+  --teal-400:#5E9690;
+  --shell:#EFE3DC;
+  --line:rgba(13,54,56,.12);
+  --line-strong:rgba(13,54,56,.22);
+  --glass:rgba(255,255,255,.52);
+  --glass-strong:rgba(255,255,255,.72);
+  --err:#B4463A;
+  --serif:"Nanum Myeongjo", "Noto Serif KR", serif;
+  --sans:"Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --radius:22px;
+  --gutter:clamp(20px, 5vw, 72px);
+  --maxw:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--pearl);color:var(--teal-900);
+  font-family:var(--sans);font-size:16px;line-height:1.7;letter-spacing:-.01em;
+  word-break:keep-all;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--aqua);color:var(--teal-900)}
+:focus-visible{outline:2px solid var(--teal-600);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--teal-900);color:var(--pearl);padding:10px 16px;border-radius:10px;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+
+/* grain */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .2 0 0 0 0 .2 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.wrap{width:100%;max-width:calc(var(--maxw) + var(--gutter)*2);margin:0 auto;padding:0 var(--gutter)}
+
+/* ---------- header ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;padding:14px 0;transition:padding .4s var(--ease)}
+.site-header .bar{
+  position:relative;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:10px 12px 10px 22px;border-radius:999px;
+  background:rgba(246,250,248,.0);border:1px solid transparent;
+  transition:background .4s var(--ease),border-color .4s,box-shadow .4s, backdrop-filter .4s;
+}
+.site-header.scrolled .bar{background:rgba(246,250,248,.72);border-color:var(--line);box-shadow:0 10px 40px -20px rgba(13,54,56,.25);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:30px;height:30px;flex:none}
+.brand-name{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:-.02em}
+.brand-name small{display:block;font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.28em;color:var(--teal-400);margin-top:-2px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{font-size:14.5px;font-weight:500;text-decoration:none;padding:10px 14px;border-radius:999px;color:var(--teal-800);transition:background .25s,color .25s}
+.nav a:hover{background:rgba(189,227,221,.45)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;
+  padding:0 24px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  font-weight:600;font-size:15px;text-decoration:none;letter-spacing:-.01em;
+  transition:transform .25s var(--ease),background .25s,box-shadow .25s,color .25s;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--teal-900);color:var(--pearl);box-shadow:0 12px 30px -14px rgba(13,54,56,.6)}
+.btn-primary:hover{background:var(--teal-800);transform:translateY(-1px)}
+.btn-ghost{background:var(--glass);border-color:var(--line-strong);color:var(--teal-900);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-ghost:hover{background:var(--glass-strong)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(3px)}
+.nav .btn{margin-left:8px;min-height:44px;padding:0 20px;font-size:14px}
+.nav a.btn{color:var(--pearl)}
+.nav .btn:hover{background:var(--teal-800)}
+.menu-btn{display:none;width:48px;height:48px;border-radius:999px;border:1px solid var(--line-strong);background:var(--glass);cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span{position:relative;width:18px;height:1.5px;background:var(--teal-900);transition:background .2s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--teal-900);transition:transform .3s var(--ease)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;padding:140px 0 72px}
+.hero-bg{
+  position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(60% 55% at 78% 30%, rgba(189,227,221,.9), transparent 70%),
+    radial-gradient(45% 50% at 15% 80%, rgba(239,227,220,.85), transparent 70%),
+    radial-gradient(50% 45% at 45% 55%, rgba(220,240,234,.9), transparent 75%),
+    var(--pearl);
+}
+.hero-bg.drift{animation:drift 22s ease-in-out infinite alternate;background-size:140% 140%}
+@keyframes drift{0%{background-position:0% 0%}100%{background-position:100% 60%}}
+.ripple{position:absolute;right:-6vw;top:8%;width:min(62vw,820px);aspect-ratio:1;z-index:-1;pointer-events:none;color:var(--teal-600);opacity:.32}
+.ripple circle{fill:none;stroke:currentColor;stroke-width:.6}
+@media (max-width:900px){.ripple{width:120vw;right:-50vw;top:2%;opacity:.35}}
+#fog{position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity 2.2s ease}
+#fog.on{opacity:.9}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;z-index:-1;background:linear-gradient(to bottom, transparent, var(--pearl))}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:48px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.24em;color:var(--teal-600);text-transform:uppercase}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.hero h1{
+  font-family:var(--serif);font-weight:400;margin:22px 0 0;
+  font-size:clamp(40px, 6.6vw, 96px);line-height:1.12;letter-spacing:-.045em;color:var(--teal-900);
+}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:inline-block}
+.hero h1 em{font-style:normal;position:relative;color:var(--teal-600)}
+.hero h1 em svg{position:absolute;left:-2%;bottom:-.2em;width:104%;height:.3em;overflow:visible}
+.hero-lead{max-width:470px;margin:30px 0 0;font-size:clamp(15.5px,1.2vw,17.5px);color:var(--teal-800);line-height:1.85}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.today{
+  position:relative;padding:26px 26px 22px;border-radius:26px;
+  background:linear-gradient(160deg, rgba(255,255,255,.7), rgba(255,255,255,.34));
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 30px 60px -30px rgba(13,54,56,.3), inset 0 1px 0 rgba(255,255,255,.9);
+  backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);
+}
+.today-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;letter-spacing:.14em;color:var(--teal-400);font-weight:600}
+.status{display:flex;align-items:center;gap:10px;margin-top:14px;font-family:var(--serif);font-size:26px;letter-spacing:-.03em}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--teal-400);position:relative;flex:none}
+.dot.live{background:#3FA58F}
+.dot.live::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid #3FA58F;animation:ping 2.4s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.status-sub{font-size:14px;color:var(--teal-600);margin-top:2px}
+.today dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:20px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:14px}
+.today dt{color:var(--teal-400)}
+.today dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;color:var(--teal-800);font-weight:500}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;letter-spacing:.3em;color:var(--teal-400)}
+.scroll-cue i{width:1px;height:38px;background:linear-gradient(var(--teal-400),transparent);animation:cue 2.6s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- section common ---------- */
+section{position:relative;overflow-x:clip}
+.sec{padding:clamp(88px, 11vw, 160px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,80px)}
+.sec-no{font-family:var(--serif);font-size:14px;color:var(--teal-400);display:flex;align-items:center;gap:14px;letter-spacing:.06em}
+.sec-no::after{content:"";width:48px;height:1px;background:var(--line-strong)}
+.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,54px);line-height:1.22;letter-spacing:-.04em;margin:18px 0 0}
+.sec-desc{margin:0;color:var(--teal-600);max-width:520px;font-size:16px;justify-self:end}
+
+/* ---------- treatments ---------- */
+.treat{background:linear-gradient(180deg,var(--pearl) 0%, var(--pearl-2) 100%)}
+.treat::before{content:"";position:absolute;right:-12vw;top:12%;width:48vw;height:48vw;border-radius:50%;background:radial-gradient(circle, rgba(189,227,221,.55), transparent 65%);filter:blur(10px);pointer-events:none}
+.cards{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;position:relative}
+.card{
+  grid-column:span 4;position:relative;display:flex;flex-direction:column;
+  padding:30px 28px 28px;border-radius:var(--radius);min-height:300px;
+  background:linear-gradient(165deg, rgba(255,255,255,.78), rgba(255,255,255,.4));
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset, 0 24px 50px -34px rgba(13,54,56,.35);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.card:nth-child(1){grid-column:span 5}
+.card:nth-child(2){grid-column:span 4}
+.card:nth-child(3){grid-column:span 3}
+.card:nth-child(4){grid-column:span 3}
+.card:nth-child(5){grid-column:span 4}
+.card:nth-child(6){grid-column:span 5}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(255,255,255,.9) inset, 0 34px 60px -30px rgba(13,54,56,.4)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.card .ic{width:56px;height:56px;color:var(--teal-600)}
+.card .ic path,.card .ic circle,.card .ic line,.card .ic ellipse,.card .ic polyline,.card .ic rect{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.card .num{font-family:var(--serif);font-size:13px;color:var(--teal-400)}
+.card h3{margin:auto 0 0;padding-top:34px;font-family:var(--serif);font-weight:700;font-size:23px;letter-spacing:-.03em;line-height:1.3}
+.card h3 span{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;color:var(--teal-400);text-transform:uppercase;margin-bottom:6px}
+.card p{margin:10px 0 0;font-size:14.5px;color:var(--teal-600);line-height:1.75}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.card .tags li{list-style:none;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(220,240,234,.8);color:var(--teal-800)}
+.card .tags{padding:0}
+.notice{margin-top:28px;font-size:13px;color:var(--teal-400);display:flex;gap:10px;align-items:flex-start;max-width:760px}
+.notice svg{flex:none;margin-top:4px}
+
+/* ---------- doctor ---------- */
+.doctor-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,7vw,110px);align-items:center}
+.arch{
+  position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;
+  background:
+    radial-gradient(80% 60% at 30% 20%, rgba(255,255,255,.95), transparent 60%),
+    radial-gradient(90% 70% at 80% 90%, rgba(140,203,194,.7), transparent 70%),
+    linear-gradient(180deg, var(--mint), var(--shell));
+  box-shadow:0 50px 80px -50px rgba(13,54,56,.45);
+}
+.arch svg.rings{position:absolute;inset:0;width:100%;height:100%}
+.arch .glyph{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:clamp(110px,14vw,200px);color:rgba(13,54,56,.82);line-height:1}
+.arch .cap{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;font-size:12px;letter-spacing:.2em;color:var(--teal-800)}
+.doctor h2{margin-top:18px}
+.quote{font-family:var(--serif);font-size:clamp(19px,1.7vw,23px);line-height:1.75;letter-spacing:-.03em;margin:30px 0 0;color:var(--teal-800);padding-left:22px;border-left:1px solid var(--aqua-deep)}
+.dname{display:flex;align-items:baseline;gap:14px;margin-top:34px}
+.dname strong{font-family:var(--serif);font-size:28px;font-weight:700;letter-spacing:-.03em}
+.dname span{font-size:14px;color:var(--teal-400)}
+.cred{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.cred li{padding:13px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--teal-800);display:flex;gap:12px}
+.cred li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--aqua-deep);margin-top:10px}
+
+/* ---------- equipment ---------- */
+.equip{background:var(--teal-900);color:var(--pearl);overflow:hidden}
+.equip::before{content:"";position:absolute;left:-10%;top:-30%;width:70%;height:90%;background:radial-gradient(closest-side, rgba(94,150,144,.35), transparent);pointer-events:none}
+.equip .sec-no{color:var(--aqua-deep)}
+.equip .sec-no::after{background:rgba(246,250,248,.25)}
+.equip .sec-desc{color:rgba(246,250,248,.7)}
+.eq-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(246,250,248,.18);position:relative}
+.eq{
+  display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,.8fr) minmax(0,1.3fr);gap:24px;align-items:center;
+  padding:28px 8px;border-bottom:1px solid rgba(246,250,248,.18);position:relative;
+}
+.eq::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(189,227,221,.12), transparent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease);z-index:0}
+.eq:hover::before{transform:scaleX(1)}
+.eq > *{position:relative;z-index:1}
+.eq .i{font-family:var(--serif);color:var(--aqua-deep);font-size:14px}
+.eq h3{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(20px,2vw,27px);letter-spacing:-.03em}
+.eq .k{font-size:12.5px;letter-spacing:.16em;color:var(--aqua);text-transform:uppercase}
+.eq p{margin:0;font-size:14.5px;color:rgba(246,250,248,.72)}
+.equip-foot{display:flex;justify-content:space-between;gap:24px;margin-top:34px;font-size:13px;color:rgba(246,250,248,.55)}
+
+/* ---------- hours + map ---------- */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.panel{
+  border-radius:28px;padding:clamp(26px,3.4vw,44px);
+  background:linear-gradient(165deg, rgba(255,255,255,.85), rgba(255,255,255,.5));
+  border:1px solid rgba(255,255,255,.95);
+  box-shadow:0 30px 60px -40px rgba(13,54,56,.35);
+}
+.panel h3{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:-.03em;margin:0 0 20px}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours caption{text-align:left;font-size:13px;color:var(--teal-400);caption-side:bottom;padding-top:16px}
+.hours th,.hours td{padding:17px 4px;border-bottom:1px solid var(--line);text-align:left;font-size:15.5px}
+.hours thead th{font-size:12px;letter-spacing:.18em;color:var(--teal-400);font-weight:600;padding-top:0;text-transform:uppercase}
+.hours tbody th{font-weight:600}
+.hours td{text-align:right;color:var(--teal-800)}
+.hours thead th:last-child{text-align:right}
+.hours tr.hl th,.hours tr.hl td{color:var(--teal-900)}
+.hours .badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--mint);color:var(--teal-800);margin-left:8px;vertical-align:2px}
+.hours tr.off td{color:var(--err)}
+.map{position:relative;border-radius:20px;overflow:hidden;background:#EAF3F0;aspect-ratio:16/11;border:1px solid var(--line)}
+.map svg{width:100%;height:100%}
+.addr{margin-top:22px;display:grid;gap:14px}
+.addr div{display:grid;grid-template-columns:72px 1fr;gap:12px;font-size:14.5px}
+.addr dt,.addr b{color:var(--teal-400);font-weight:500}
+.addr span{color:var(--teal-800)}
+
+/* ---------- reservation ---------- */
+.book{background:
+  radial-gradient(50% 60% at 90% 10%, rgba(189,227,221,.8), transparent 70%),
+  radial-gradient(40% 50% at 0% 100%, rgba(239,227,220,.8), transparent 70%),
+  var(--pearl-2)}
+.book-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,90px);align-items:start}
+.book-side .sec-title{margin-bottom:22px}
+.book-side p{color:var(--teal-600);margin:0 0 30px}
+.call{display:flex;flex-direction:column;gap:4px;padding:22px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+.call small{font-size:12px;letter-spacing:.2em;color:var(--teal-400)}
+.call a{font-family:var(--serif);font-size:32px;text-decoration:none;letter-spacing:-.02em}
+.steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px;font-size:14.5px;color:var(--teal-800)}
+.steps li{display:flex;gap:14px;align-items:baseline}
+.steps b{font-family:var(--serif);color:var(--teal-400);font-weight:400;font-size:13px}
+form.panel{padding:clamp(24px,3.6vw,48px)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+.f{display:flex;flex-direction:column;gap:8px;min-width:0}
+.f.full{grid-column:1/-1}
+.f > label,.f legend{font-size:13.5px;font-weight:600;color:var(--teal-800)}
+.req{color:var(--teal-400);font-weight:500;margin-left:4px}
+.in{
+  width:100%;min-height:52px;padding:14px 16px;border-radius:14px;border:1px solid var(--line-strong);
+  background:rgba(255,255,255,.75);font-size:16px;transition:border-color .2s, box-shadow .2s, background .2s;
+  -webkit-appearance:none;appearance:none;
+}
+.in::placeholder{color:rgba(47,107,107,.5)}
+.in:hover{border-color:var(--teal-400)}
+.in:focus{outline:none;border-color:var(--teal-600);box-shadow:0 0 0 4px rgba(140,203,194,.35);background:#fff}
+select.in{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%232F6B6B' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+textarea.in{min-height:120px;resize:vertical;line-height:1.6}
+.in[aria-invalid="true"]{border-color:var(--err);background:#FFF8F6}
+.err{font-size:13px;color:var(--err);min-height:0;display:none}
+.err.show{display:flex;gap:6px;align-items:center}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+fieldset legend{margin-bottom:8px;padding:0}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;border-radius:14px;border:1px solid var(--line-strong);background:rgba(255,255,255,.6);font-size:14.5px;font-weight:600;transition:all .2s;line-height:1.3}
+.seg span small{font-size:11.5px;font-weight:400;color:var(--teal-400)}
+.seg input:checked + span{background:var(--teal-900);color:var(--pearl);border-color:var(--teal-900)}
+.seg input:checked + span small{color:var(--aqua)}
+.seg input:focus-visible + span{outline:2px solid var(--teal-600);outline-offset:3px}
+.seg label:hover span{border-color:var(--teal-400)}
+.agree{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--teal-800);cursor:pointer;padding:6px 0}
+.agree input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;border-radius:7px;border:1.5px solid var(--teal-400);background:#fff;margin:1px 0 0;display:grid;place-items:center;cursor:pointer;transition:all .2s}
+.agree input::after{content:"";width:10px;height:6px;border-left:2px solid var(--pearl);border-bottom:2px solid var(--pearl);transform:rotate(-45deg) translate(1px,-1px) scale(0);transition:transform .2s var(--ease)}
+.agree input:checked{background:var(--teal-900);border-color:var(--teal-900)}
+.agree input:checked::after{transform:rotate(-45deg) translate(1px,-1px) scale(1)}
+.agree small{display:block;color:var(--teal-400);font-size:12.5px;margin-top:2px}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:10px;flex-wrap:wrap}
+.form-foot p{margin:0;font-size:12.5px;color:var(--teal-400)}
+.form-foot .btn{min-width:200px}
+.success{display:none;text-align:center;padding:40px 10px}
+.success.show{display:block}
+.success svg{width:84px;height:84px;margin:0 auto 20px;color:var(--teal-600)}
+.success svg circle,.success svg path{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.success h3{font-size:28px;margin:0 0 10px}
+.success p{color:var(--teal-600);margin:0 auto;max-width:380px}
+.success .summary{margin:24px auto 0;max-width:360px;text-align:left;font-size:14px;border-top:1px solid var(--line)}
+.success .summary div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+.success .summary dt{color:var(--teal-400)}
+.success .summary dd{margin:0;font-weight:600}
+.success .btn{margin-top:26px}
+
+/* ---------- footer ---------- */
+footer{background:var(--teal-900);color:rgba(246,250,248,.72);padding:72px 0 40px;font-size:13.5px}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(246,250,248,.14)}
+footer .brand-name{color:var(--pearl);font-size:24px}
+footer .brand-name small{color:var(--aqua-deep)}
+.foot-slogan{font-family:var(--serif);font-size:clamp(22px,2.6vw,34px);color:var(--pearl);letter-spacing:-.03em;line-height:1.4;margin:0;max-width:520px}
+.foot-links{display:flex;gap:6px 22px;flex-wrap:wrap}
+.foot-links a{text-decoration:none;padding:8px 0;min-height:44px;display:inline-flex;align-items:center}
+.foot-links a:hover{color:var(--pearl)}
+.biz{margin-top:30px;display:flex;flex-wrap:wrap;gap:6px 18px;line-height:1.8}
+.biz span{white-space:nowrap}
+.foot-bottom{margin-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:rgba(246,250,248,.5)}
+.pf-note{color:var(--aqua)}
+
+/* ---------- reveal (JS enhancement only) ---------- */
+.js .rv{opacity:0}
+.js .card{opacity:0}
+.ripple g{transform-origin:200px 200px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav a:not(.btn){padding:10px 10px;font-size:14px}
+  .card,.card:nth-child(n){grid-column:span 6}
+}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav{
+    position:absolute;left:0;right:0;top:calc(100% + 10px);flex-direction:column;align-items:stretch;gap:2px;padding:14px;
+    border-radius:24px;background:rgba(246,250,248,.985);border:1px solid var(--line);
+    box-shadow:0 30px 60px -30px rgba(13,54,56,.4);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s, transform .3s var(--ease), visibility .3s;
+  }
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav a:not(.btn){padding:14px 16px;font-size:16px;min-height:48px}
+  .nav .btn{margin:8px 0 0;min-height:52px}
+  .site-header .bar{background:rgba(246,250,248,.6);border-color:var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .hero{padding:120px 0 64px;align-items:flex-end}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .today{max-width:440px}
+  .sec-head{grid-template-columns:1fr;gap:18px}
+  .sec-desc{justify-self:start}
+  .doctor-grid,.visit-grid,.book-grid{grid-template-columns:1fr}
+  .arch{max-width:420px;width:100%;aspect-ratio:1/1.05}
+  .eq{grid-template-columns:44px 1fr;gap:6px 14px;padding:24px 4px}
+  .eq .k{grid-column:2;grid-row:1}
+  .eq h3{grid-column:2}
+  .eq p{grid-column:2}
+  .eq .i{grid-row:1 / span 3;align-self:start;padding-top:2px}
+  .scroll-cue{display:none}
+}
+@media (max-width:620px){
+  body{font-size:15.5px}
+  .card,.card:nth-child(n){grid-column:1/-1;min-height:0}
+  .card h3{padding-top:26px}
+  .cred{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(36px,10.4vw,48px)}
+  .hero-cta .btn{flex:1 1 auto}
+  .brand-name{font-size:17px}
+  .form-foot .btn{width:100%}
+  .equip-foot{flex-direction:column;gap:6px}
+  .hours th,.hours td{font-size:14.5px;padding:15px 2px}
+  .call a{font-size:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero-bg.drift{animation:none}
+  .js .rv,.js .card{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top" aria-label="맑은결 피부과 처음으로">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="#0D3638" stroke-width="1.1"/>
+          <path d="M6 17c3-3 6-3 10 0s7 3 10 0" fill="none" stroke="#2F6B6B" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M8.5 21.5c2.5-2 5-2 7.5 0s5 2 7.5 0" fill="none" stroke="#8CCBC2" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="10" r="1.6" fill="#0D3638"/>
+        </svg>
+        <span class="brand-name">맑은결 피부과<small>MALGEUNGYEOL</small></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기"><span></span></button>
+      <nav class="nav" id="nav" aria-label="주요 메뉴">
+        <a href="#treat">진료 과목</a>
+        <a href="#doctor">원장 소개</a>
+        <a href="#equip">장비</a>
+        <a href="#visit">진료 시간·오시는 길</a>
+        <a class="btn btn-primary" href="#book">온라인 예약</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+    <div id="fog" aria-hidden="true"></div>
+    <svg class="ripple" viewBox="0 0 400 400" aria-hidden="true"><g><circle cx="200" cy="200" r="40" opacity="0.90"/><circle cx="200" cy="200" r="72" opacity="0.75"/><circle cx="200" cy="200" r="106" opacity="0.60"/><circle cx="200" cy="200" r="142" opacity="0.48"/><circle cx="200" cy="200" r="180" opacity="0.36"/><circle cx="200" cy="200" r="198" opacity="0.25"/></g></svg>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow rv">Dermatology Clinic · Seoul</span>
+          <h1 id="hero-title">
+            <span class="ln"><span>피부의 결을</span></span>
+            <span class="ln"><span>먼저 읽고,</span></span>
+            <span class="ln"><span><em>필요한 만큼만<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path id="swash" d="M2 14 C 40 4, 80 18, 120 9 S 180 6, 198 11" fill="none" stroke="#8CCBC2" stroke-width="3" stroke-linecap="round"/></svg></em></span></span>
+            <span class="ln"><span>권합니다.</span></span>
+          </h1>
+          <p class="hero-lead rv">맑은결 피부과는 한 사람의 피부 상태와 생활 습관을 충분히 살핀 뒤 진료 계획을 세웁니다. 과한 시술보다 오래 편안한 피부를 목표로 합니다.</p>
+          <div class="hero-cta rv">
+            <a class="btn btn-primary" href="#book">진료 예약하기 <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#treat">진료 과목 보기</a>
+          </div>
+        </div>
+        <aside class="today rv" aria-label="오늘의 진료 안내">
+          <div class="today-top"><span>TODAY</span><span id="todayDate">—</span></div>
+          <div class="status" aria-live="polite"><span class="dot" id="statusDot"></span><span id="statusText">진료 시간 확인 중</span></div>
+          <div class="status-sub" id="statusSub">&nbsp;</div>
+          <dl>
+            <dt>평일</dt><dd>10:00 – 19:00</dd>
+            <dt>수요일 야간</dt><dd>10:00 – 21:00</dd>
+            <dt>토요일</dt><dd>10:00 – 15:00</dd>
+            <dt>점심시간</dt><dd>13:00 – 14:00</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">SCROLL<i></i></div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section class="sec treat" id="treat" aria-labelledby="treat-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no rv">01 · 진료 과목</div>
+          <h2 class="sec-title rv" id="treat-title">고민은 같아도<br>처방은 다릅니다</h2>
+        </div>
+        <p class="sec-desc rv">같은 여드름, 같은 기미라도 원인과 피부 두께, 생활 패턴에 따라 접근이 달라집니다. 진료 전 충분한 상담으로 지금 필요한 것부터 순서를 정합니다.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="20"/><circle cx="21" cy="24" r="2.6"/><circle cx="33" cy="20" r="1.8"/><circle cx="34" cy="33" r="3.2"/><path d="M18 36c2 1.5 4 1.5 6 0"/></svg>
+            <span class="num">01</span>
+          </div>
+          <h3><span>Acne</span>여드름 · 흉터</h3>
+          <p>염증성 여드름은 원인에 따라 약물·압출·광치료를 조합하고, 남은 자국과 패인 흉터는 염증이 가라앉은 뒤 단계적으로 다룹니다.</p>
+          <ul class="tags"><li>염증성 여드름</li><li>붉은 자국</li><li>패인 흉터</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="20"/><ellipse cx="22" cy="25" rx="5" ry="3.5"/><ellipse cx="34" cy="31" rx="4" ry="2.8"/><path d="M14 40l28-24"/></svg>
+            <span class="num">02</span>
+          </div>
+          <h3><span>Pigment</span>색소 · 기미</h3>
+          <p>기미, 잡티, 주근깨처럼 겉보기에 비슷한 색소도 깊이와 성격이 다릅니다. 진단 후 레이저와 외용제, 생활 관리를 함께 설계합니다.</p>
+          <ul class="tags"><li>기미</li><li>잡티</li><li>주근깨</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><path d="M14 38c4-10 8-18 14-22s10-2 14 0"/><path d="M28 16v-8"/><polyline points="24,11 28,7 32,11"/><path d="M12 46h32"/></svg>
+            <span class="num">03</span>
+          </div>
+          <h3><span>Lifting</span>리프팅</h3>
+          <p>초음파·고주파 장비로 처진 윤곽과 탄력 저하를 관리합니다. 피부 두께와 지방층을 확인한 뒤 강도를 정합니다.</p>
+          <ul class="tags"><li>탄력 저하</li><li>윤곽</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><rect x="22" y="10" width="12" height="26" rx="3"/><line x1="28" y1="36" x2="28" y2="48"/><line x1="18" y1="10" x2="38" y2="10"/><line x1="22" y1="18" x2="27" y2="18"/><line x1="22" y1="24" x2="27" y2="24"/><line x1="22" y1="30" x2="27" y2="30"/></svg>
+            <span class="num">04</span>
+          </div>
+          <h3><span>Botox · Filler</span>보톡스 · 필러</h3>
+          <p>표정 습관과 얼굴 비율을 먼저 살피고, 자연스러운 인상을 해치지 않는 선에서 용량과 부위를 정합니다.</p>
+          <ul class="tags"><li>주름</li><li>볼륨</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="7"/><path d="M28 8v6M28 42v6M8 28h6M42 28h6M14 14l4.2 4.2M37.8 37.8L42 42M14 42l4.2-4.2M37.8 18.2L42 14"/></svg>
+            <span class="num">05</span>
+          </div>
+          <h3><span>Laser Toning</span>레이저 토닝</h3>
+          <p>낮은 에너지로 여러 번 나누어 조사해 칙칙한 톤과 옅은 색소를 관리합니다. 피부 자극을 살피며 간격을 조절합니다.</p>
+          <ul class="tags"><li>피부 톤</li><li>옅은 색소</li><li>모공</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="ic" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 8c7 10 12 17 12 24a12 12 0 0 1-24 0c0-7 5-14 12-24z"/><path d="M22 33a6 6 0 0 0 6 6"/></svg>
+            <span class="num">06</span>
+          </div>
+          <h3><span>Skin Booster</span>스킨부스터</h3>
+          <p>건조하고 얇아진 피부에 수분과 재생 성분을 채우는 주사 치료입니다. 피부 상태에 맞는 제제를 상담 후 선택합니다.</p>
+          <ul class="tags"><li>속건조</li><li>잔주름</li><li>피부 결</li></ul>
+        </article>
+      </div>
+      <p class="notice rv">
+        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor"/><path d="M7 4v3.6M7 9.6v.2" stroke="currentColor" stroke-linecap="round"/></svg>
+        <span>모든 시술은 개인에 따라 효과와 회복 기간이 다를 수 있으며, 붓기·멍·색소 변화 등의 부작용이 생길 수 있습니다. 시술 전 전문의와 충분히 상담하세요.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- DOCTOR -->
+  <section class="sec doctor" id="doctor" aria-labelledby="doctor-title">
+    <div class="wrap doctor-grid">
+      <div class="arch rv" aria-hidden="true">
+        <svg class="rings" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="rgba(13,54,56,.18)" stroke-width="1">
+            <circle cx="200" cy="220" r="90" class="ring"/>
+            <circle cx="200" cy="220" r="130" class="ring"/>
+            <circle cx="200" cy="220" r="175" class="ring"/>
+            <circle cx="200" cy="220" r="225" class="ring"/>
+          </g>
+          <path d="M40 420c50-24 90-24 140 0s90 24 140 0 60-18 80-10" fill="none" stroke="rgba(47,107,107,.35)" stroke-width="1.2" class="ring"/>
+        </svg>
+        <span class="glyph">결</span>
+        <div class="cap"><span>SINCE 2016</span><span>SEOUL</span></div>
+      </div>
+      <div>
+        <div class="sec-no rv">02 · 대표원장</div>
+        <h2 class="sec-title rv" id="doctor-title">오늘 할 시술보다<br>십 년 뒤 피부를 봅니다</h2>
+        <p class="quote rv">“피부는 한 번에 바뀌지 않습니다. 무엇을 더할지보다 무엇을 하지 않아도 되는지를 먼저 말씀드리는 것이 제 진료의 시작입니다.”</p>
+        <div class="dname rv"><strong>한서윤</strong><span>대표원장 · 피부과 전문의</span></div>
+        <ul class="cred rv">
+          <li>피부과 전문의</li>
+          <li>의학박사 (피부과학 전공)</li>
+          <li>대학병원 피부과 임상강사 역임</li>
+          <li>피부과 관련 학회 정회원</li>
+          <li>레이저·색소 질환 진료 10년 이상</li>
+          <li>국내외 학술대회 연자 활동</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT -->
+  <section class="sec equip" id="equip" aria-labelledby="equip-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no rv">03 · 장비 소개</div>
+          <h2 class="sec-title rv" id="equip-title">장비는 많을수록이 아니라<br>정확할수록 좋습니다</h2>
+        </div>
+        <p class="sec-desc rv">정품 인증 장비만 사용하며, 소모품은 1인 1회 원칙을 지킵니다. 장비별 정기 점검 기록을 원내에 비치하고 있습니다.</p>
+      </div>
+      <ul class="eq-list">
+        <li class="eq rv"><span class="i">01</span><span class="k">Diagnosis</span><h3>피부 진단 이미징 시스템</h3><p>색소·혈관·모공 상태를 층별로 촬영해 상담의 기준으로 삼습니다.</p></li>
+        <li class="eq rv"><span class="i">02</span><span class="k">Pigment</span><h3>피코초 레이저</h3><p>짧은 파장 폭으로 색소를 잘게 부숴 주변 조직의 열 손상을 줄입니다.</p></li>
+        <li class="eq rv"><span class="i">03</span><span class="k">Toning</span><h3>Nd:YAG 토닝 레이저</h3><p>낮은 에너지로 넓게 조사해 톤 관리와 옅은 색소 치료에 사용합니다.</p></li>
+        <li class="eq rv"><span class="i">04</span><span class="k">Lifting</span><h3>고강도 집속 초음파(HIFU)</h3><p>피부 깊은 층에 열을 모아 처짐과 탄력 저하를 관리합니다.</p></li>
+        <li class="eq rv"><span class="i">05</span><span class="k">Lifting</span><h3>고주파(RF) 리프팅 장비</h3><p>진피층을 고르게 데워 피부 결과 탄력 관리에 활용합니다.</p></li>
+      </ul>
+      <div class="equip-foot rv"><span>* 장비명은 일반 명칭으로 표기했습니다.</span><span>장비 선택은 진료 후 전문의가 결정합니다.</span></div>
+    </div>
+  </section>
+
+  <!-- HOURS + MAP -->
+  <section class="sec visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no rv">04 · 진료 안내</div>
+          <h2 class="sec-title rv" id="visit-title">진료 시간과<br>오시는 길</h2>
+        </div>
+        <p class="sec-desc rv">수요일은 퇴근 후에도 들르실 수 있도록 저녁 9시까지 진료합니다. 토요일은 점심시간 없이 진료합니다.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="panel rv">
+          <h3>진료 시간표</h3>
+          <table class="hours">
+            <caption>접수는 진료 종료 30분 전에 마감됩니다.</caption>
+            <thead><tr><th scope="col">구분</th><th scope="col">시간</th></tr></thead>
+            <tbody>
+              <tr class="hl"><th scope="row">평일 <small style="font-weight:400;color:var(--teal-400)">월·화·목·금</small></th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">수요일<span class="badge">야간</span></th><td>10:00 – 21:00</td></tr>
+              <tr><th scope="row">토요일</th><td>10:00 – 15:00</td></tr>
+              <tr><th scope="row">점심시간 <small style="font-weight:400;color:var(--teal-400)">평일</small></th><td>13:00 – 14:00</td></tr>
+              <tr class="off"><th scope="row">휴진</th><td>일요일 · 공휴일</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel rv">
+          <h3>오시는 길</h3>
+          <div class="map" role="img" aria-label="약도: 맑은역 3번 출구에서 큰길을 따라 도보 약 3분, 맑은빌딩 5층">
+            <svg viewBox="0 0 480 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" fill="none" stroke="rgba(13,54,56,.05)"/></pattern>
+                <radialGradient id="pin-glow"><stop offset="0" stop-color="#8CCBC2" stop-opacity=".7"/><stop offset="1" stop-color="#8CCBC2" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="480" height="330" fill="#EDF5F2"/>
+              <rect width="480" height="330" fill="url(#grid)"/>
+              <!-- park & river -->
+              <path d="M-10 260 C 80 230, 160 290, 260 262 S 420 238, 500 270 L 500 340 L -10 340Z" fill="#D5ECE6"/>
+              <path d="M-10 272 C 80 244, 160 304, 260 276 S 420 252, 500 284" fill="none" stroke="#fff" stroke-width="1.5" opacity=".8"/>
+              <rect x="30" y="30" width="96" height="70" rx="14" fill="#E0EFE6"/>
+              <text x="78" y="70" text-anchor="middle" font-size="11" fill="#5E9690" font-family="Pretendard, sans-serif">맑은공원</text>
+              <!-- blocks -->
+              <g fill="#fff" stroke="rgba(13,54,56,.06)">
+                <rect x="160" y="30" width="90" height="70" rx="6"/><rect x="290" y="30" width="70" height="70" rx="6"/><rect x="390" y="30" width="80" height="70" rx="6"/>
+                <rect x="30" y="150" width="96" height="70" rx="6"/><rect x="160" y="150" width="90" height="70" rx="6"/><rect x="390" y="150" width="80" height="70" rx="6"/>
+              </g>
+              <!-- roads -->
+              <g stroke="#fff" stroke-linecap="round">
+                <path d="M-10 125 H 490" stroke-width="22"/>
+                <path d="M143 -10 V 250" stroke-width="12"/>
+                <path d="M375 -10 V 250" stroke-width="12"/>
+                <path d="M270 -10 V 250" stroke-width="8"/>
+              </g>
+              <path d="M-10 125 H 490" stroke="rgba(13,54,56,.12)" stroke-width="1" stroke-dasharray="6 8"/>
+              <text x="60" y="118" font-size="10" fill="#5E9690" font-family="Pretendard, sans-serif" letter-spacing="1">맑은대로</text>
+              <!-- subway -->
+              <g>
+                <circle cx="143" cy="125" r="12" fill="#0D3638"/>
+                <text x="143" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#F6FAF8" font-family="Pretendard, sans-serif">M</text>
+                <text x="143" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#0D3638" font-family="Pretendard, sans-serif">맑은역</text>
+                <rect x="152" y="136" width="18" height="14" rx="4" fill="#5E9690"/>
+                <text x="161" y="146" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" font-family="Pretendard, sans-serif">3</text>
+              </g>
+              <!-- route -->
+              <path id="route" d="M161 150 V 170 Q 161 176 167 176 H 265 Q 270 176 270 171 V 170 Q 290 170 320 170 Q 326 170 326 164 V 150" fill="none" stroke="#2F6B6B" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+              <!-- clinic -->
+              <rect x="290" y="150" width="70" height="70" rx="8" fill="#BDE3DD"/>
+              <circle cx="326" cy="140" r="30" fill="url(#pin-glow)" class="pulse"/>
+              <g transform="translate(326 142)">
+                <path d="M0 0 C -10 -12, -12 -18, -12 -24 A 12 12 0 1 1 12 -24 C 12 -18, 10 -12, 0 0Z" fill="#0D3638"/>
+                <circle cx="0" cy="-24" r="4.5" fill="#F6FAF8"/>
+              </g>
+              <g transform="translate(326 206)">
+                <rect x="-44" y="-12" width="88" height="22" rx="11" fill="#0D3638"/>
+                <text x="0" y="3" text-anchor="middle" font-size="10.5" font-weight="600" fill="#F6FAF8" font-family="Pretendard, sans-serif">맑은결 피부과</text>
+              </g>
+              <!-- compass -->
+              <g transform="translate(446 294)" fill="none" stroke="#2F6B6B" stroke-width="1"><circle r="14"/><path d="M0 -9 L4 3 L0 0 L-4 3Z" fill="#2F6B6B"/></g>
+            </svg>
+          </div>
+          <dl class="addr">
+            <div><dt>주소</dt><dd style="margin:0"><span>서울특별시 ○○구 맑은대로 000, 맑은빌딩 5층</span></dd></div>
+            <div><dt>지하철</dt><dd style="margin:0"><span>맑은역 3번 출구에서 도보 약 3분</span></dd></div>
+            <div><dt>주차</dt><dd style="margin:0"><span>건물 지하 주차장 이용 (진료 시 2시간 지원)</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="sec book" id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div class="book-side">
+        <div class="sec-no rv">05 · 온라인 예약</div>
+        <h2 class="sec-title rv" id="book-title">편한 시간을<br>남겨 주세요</h2>
+        <p class="rv">접수 후 진료 시간 내에 상담실에서 전화로 예약을 확정해 드립니다. 원하시는 날짜에 예약이 어려우면 가까운 시간을 안내해 드려요.</p>
+        <div class="call rv"><small>전화 예약</small><a href="tel:0200000000">02-000-0000</a></div>
+        <ol class="steps rv">
+          <li><b>01</b>예약 신청서 작성</li>
+          <li><b>02</b>상담실 확인 전화 (영업일 기준 당일~익일)</li>
+          <li><b>03</b>내원 후 전문의 상담 및 진료</li>
+        </ol>
+      </div>
+
+      <div>
+        <form class="panel rv" id="bookForm" novalidate aria-describedby="formNote">
+          <div class="fgrid" id="formFields">
+            <div class="f">
+              <label for="name">이름<span class="req">필수</span></label>
+              <input class="in" id="name" name="name" type="text" autocomplete="name" placeholder="홍길동" aria-describedby="name-err">
+              <span class="err" id="name-err" role="alert"></span>
+            </div>
+            <div class="f">
+              <label for="phone">연락처<span class="req">필수</span></label>
+              <input class="in" id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" aria-describedby="phone-err">
+              <span class="err" id="phone-err" role="alert"></span>
+            </div>
+            <div class="f">
+              <label for="subject">희망 진료<span class="req">필수</span></label>
+              <select class="in" id="subject" name="subject" aria-describedby="subject-err">
+                <option value="">선택해 주세요</option>
+                <option>여드름 · 흉터</option>
+                <option>색소 · 기미</option>
+                <option>리프팅</option>
+                <option>보톡스 · 필러</option>
+                <option>레이저 토닝</option>
+                <option>스킨부스터</option>
+                <option>일반 피부 진료 · 상담</option>
+              </select>
+              <span class="err" id="subject-err" role="alert"></span>
+            </div>
+            <div class="f">
+              <label for="date">희망 날짜<span class="req">필수</span></label>
+              <input class="in" id="date" name="date" type="date" aria-describedby="date-err">
+              <span class="err" id="date-err" role="alert"></span>
+            </div>
+            <fieldset class="f full" aria-describedby="time-err">
+              <legend>희망 시간대<span class="req">필수</span></legend>
+              <div class="seg">
+                <label><input type="radio" name="time" value="오전"><span>오전<small>10 – 13시</small></span></label>
+                <label><input type="radio" name="time" value="오후"><span>오후<small>14 – 18시</small></span></label>
+                <label><input type="radio" name="time" value="저녁"><span>저녁<small>수 18 – 21시</small></span></label>
+              </div>
+              <span class="err" id="time-err" role="alert"></span>
+            </fieldset>
+            <div class="f full">
+              <label for="msg">문의 내용 <span class="req">선택</span></label>
+              <textarea class="in" id="msg" name="msg" maxlength="500" placeholder="현재 고민이나 이전 시술 경험이 있다면 적어 주세요."></textarea>
+            </div>
+            <div class="f full">
+              <label class="agree"><input type="checkbox" id="agree" name="agree" aria-describedby="agree-err"><span>개인정보 수집·이용에 동의합니다. <span class="req">필수</span><small>수집 항목: 이름, 연락처 · 목적: 예약 확인 연락 · 보유 기간: 상담 완료 후 6개월</small></span></label>
+              <span class="err" id="agree-err" role="alert"></span>
+            </div>
+          </div>
+          <div class="form-foot" id="formFoot">
+            <p id="formNote">예시 사이트로, 입력 내용은 어디에도 전송되지 않습니다.</p>
+            <button class="btn btn-primary" type="submit">예약 신청하기 <span class="arr" aria-hidden="true">→</span></button>
+          </div>
+          <div class="success" id="success" tabindex="-1" aria-live="polite">
+            <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="38"/><path d="M27 43l10 10 20-22"/></svg>
+            <h3 style="font-family:var(--serif)">예약 신청이 접수되었습니다</h3>
+            <p><b id="sName"></b>님, 진료 시간 내에 상담실에서 확인 전화를 드리겠습니다.</p>
+            <dl class="summary" id="sum"></dl>
+            <button class="btn btn-ghost" type="button" id="again">새로 작성하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <p class="brand-name">맑은결 피부과<small>MALGEUNGYEOL DERMATOLOGY</small></p>
+        <nav class="foot-links" aria-label="하단 메뉴" style="margin-top:20px">
+          <a href="#treat">진료 과목</a><a href="#doctor">원장 소개</a><a href="#equip">장비</a><a href="#visit">오시는 길</a><a href="#book">예약</a>
+        </nav>
+      </div>
+      <p class="foot-slogan">서두르지 않는 진료가<br>오래 가는 피부를 만듭니다.</p>
+    </div>
+    <div class="biz">
+      <span>상호 맑은결 피부과의원</span><span>대표자 한서윤</span><span>사업자등록번호 000-00-00000</span><span>주소 서울특별시 ○○구 맑은대로 000, 5층</span><span>대표전화 02-000-0000</span>
+    </div>
+    <div class="foot-bottom">
+      <span class="pf-note">* 포트폴리오용 예시 사이트입니다. 실존 의료기관이 아니며 의료 광고가 아닙니다.</span>
+      <span>© 2026 Malgeungyeol. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<script>
+(function(){
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasAnime = typeof window.anime === 'function';
+  if (hasAnime && !reduce) root.classList.add('js');
+
+  /* ---------- header ---------- */
+  var header = document.querySelector('.site-header');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 30); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  function setMenu(open){
+    menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+    menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    nav.classList.toggle('open', open);
+  }
+  menuBtn.addEventListener('click', function(){ setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+  /* ---------- today status ---------- */
+  (function(){
+    var now = new Date(), d = now.getDay(), m = now.getHours()*60 + now.getMinutes();
+    var days = ['일','월','화','수','목','금','토'];
+    document.getElementById('todayDate').textContent = (now.getMonth()+1) + '.' + String(now.getDate()).padStart(2,'0') + ' (' + days[d] + ')';
+    var open = 600, close = d === 3 ? 1260 : (d === 6 ? 900 : 1140);
+    var text, sub, live = false;
+    var hhmm = function(x){ return String(Math.floor(x/60)).padStart(2,'0') + ':' + String(x%60).padStart(2,'0'); };
+    if (d === 0) { text = '오늘은 휴진입니다'; sub = '월요일 오전 10시에 진료를 시작합니다'; }
+    else if (m < open) { text = '곧 진료를 시작해요'; sub = '오늘 ' + hhmm(open) + ' – ' + hhmm(close); }
+    else if (m >= close) { text = '오늘 진료가 끝났어요'; sub = '온라인 예약은 언제든 가능합니다'; }
+    else if (d !== 6 && m >= 780 && m < 840) { text = '점심시간입니다'; sub = '14:00부터 진료를 이어갑니다'; }
+    else { text = '지금 진료 중'; sub = hhmm(close) + '까지 · 접수 마감 ' + hhmm(close-30); live = true; }
+    document.getElementById('statusText').textContent = text;
+    document.getElementById('statusSub').textContent = sub;
+    if (live) document.getElementById('statusDot').classList.add('live');
+  })();
+
+  /* ---------- hero background: Vanta FOG (desktop, motion OK) ---------- */
+  var heroBg = document.getElementById('heroBg');
+  var fogEl = document.getElementById('fog');
+  var lowPower = window.matchMedia('(max-width: 767px), (pointer: coarse)').matches ||
+                 (navigator.connection && navigator.connection.saveData);
+  function loadScript(src){
+    return new Promise(function(res, rej){
+      var s = document.createElement('script'); s.src = src; s.async = true;
+      s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    });
+  }
+  if (!reduce && !lowPower) {
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js')
+      .then(function(){ return loadScript('https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js'); })
+      .then(function(){
+        if (!window.VANTA || !window.VANTA.FOG) throw new Error('vanta');
+        var fx = window.VANTA.FOG({
+          el: fogEl, THREE: window.THREE,
+          mouseControls: true, touchControls: false, gyroControls: false,
+          minHeight: 200, minWidth: 200,
+          highlightColor: 0xf4fbf8, midtoneColor: 0xc4e7e1, lowlightColor: 0xdfeef0, baseColor: 0xf6faf8,
+          blurFactor: 0.62, speed: 0.7, zoom: 0.85
+        });
+        fogEl.classList.add('on');
+        window.__fog = fx;
+        /* pause when hero offscreen */
+        var paused = false;
+        var io = new IntersectionObserver(function(entries){
+          var vis = entries[0].isIntersecting;
+          if (!vis && !paused && fx.req) { cancelAnimationFrame(fx.req); paused = true; }
+          else if (vis && paused && typeof fx.animationLoop === 'function') { paused = false; fx.animationLoop(); }
+        }, {threshold: 0});
+        io.observe(document.querySelector('.hero'));
+      })
+      .catch(function(){ heroBg.classList.add('drift'); });
+  } else if (!reduce) {
+    heroBg.classList.add('drift');
+  }
+
+  /* ---------- line-draw helper ---------- */
+  function drawTargets(scope){
+    return Array.prototype.slice.call(scope.querySelectorAll('path,circle,line,ellipse,polyline,rect'));
+  }
+
+  if (!hasAnime || reduce) return initForm();
+
+  /* ---------- hero intro ---------- */
+  var swash = document.getElementById('swash');
+  anime.set(swash, {strokeDashoffset: anime.setDashoffset});
+  anime.timeline({easing:'easeOutExpo'})
+    .add({targets:'.hero h1 .ln > span', translateY:['110%','0%'], duration:1300, delay:anime.stagger(110, {start:150})})
+    .add({targets:'.hero .rv', opacity:[0,1], translateY:[18,0], duration:1100, delay:anime.stagger(120)}, '-=900')
+    .add({targets:swash, strokeDashoffset:[anime.setDashoffset,0], duration:1400, easing:'easeInOutSine'}, '-=1100')
+    .add({targets:'.ripple circle', strokeDashoffset:[anime.setDashoffset,0], duration:2600, easing:'easeInOutSine', delay:anime.stagger(140)}, 0);
+  anime({targets:'.ripple g', rotate:360, duration:180000, easing:'linear', loop:true});
+
+  /* ---------- scroll reveals ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      io.unobserve(en.target);
+      var el = en.target;
+      if (el.classList.contains('cards')) {
+        var cards = el.querySelectorAll('.card');
+        anime({targets:cards, opacity:[0,1], translateY:[40,0], scale:[.97,1], duration:1100, easing:'easeOutQuart', delay:anime.stagger(90)});
+        cards.forEach(function(c, i){
+          var parts = drawTargets(c.querySelector('.ic'));
+          anime({targets:parts, strokeDashoffset:[anime.setDashoffset,0], duration:1500, easing:'easeInOutSine', delay:320 + i*90 + anime.stagger(80)()});
+        });
+      } else if (el.classList.contains('eq-list')) {
+        anime({targets:el.querySelectorAll('.eq'), opacity:[0,1], translateX:[-24,0], duration:1000, easing:'easeOutQuart', delay:anime.stagger(100)});
+      } else if (el.classList.contains('arch')) {
+        anime({targets:el, opacity:[0,1], translateY:[30,0], duration:1300, easing:'easeOutQuart'});
+        anime({targets:el.querySelectorAll('.ring'), strokeDashoffset:[anime.setDashoffset,0], duration:2400, easing:'easeInOutSine', delay:anime.stagger(180, {start:200})});
+      } else {
+        anime({targets:el, opacity:[0,1], translateY:[24,0], duration:1000, easing:'easeOutQuart'});
+      }
+    });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:0.05});
+
+  document.querySelectorAll('main .rv').forEach(function(el){
+    if (el.closest('.hero') || el.closest('.eq-list')) return;
+    io.observe(el);
+  });
+  io.observe(document.querySelector('.cards'));
+  io.observe(document.querySelector('.eq-list'));
+
+  /* re-draw icon on hover */
+  document.querySelectorAll('.card').forEach(function(c){
+    var parts = drawTargets(c.querySelector('.ic')), busy = false;
+    c.addEventListener('mouseenter', function(){
+      if (busy) return; busy = true;
+      anime({targets:parts, strokeDashoffset:[anime.setDashoffset,0], duration:900, easing:'easeInOutSine', delay:anime.stagger(60), complete:function(){ busy = false; }});
+    });
+  });
+
+  initForm();
+
+  /* ---------- form ---------- */
+  function initForm(){
+    var form = document.getElementById('bookForm');
+    var f = {
+      name: form.elements.name, phone: form.elements.phone, subject: form.elements.subject,
+      date: form.elements.date, agree: form.elements.agree
+    };
+    var pad = function(n){ return String(n).padStart(2,'0'); };
+    var t = new Date(); var todayStr = t.getFullYear() + '-' + pad(t.getMonth()+1) + '-' + pad(t.getDate());
+    var mx = new Date(t.getTime() + 1000*60*60*24*90);
+    f.date.min = todayStr;
+    f.date.max = mx.getFullYear() + '-' + pad(mx.getMonth()+1) + '-' + pad(mx.getDate());
+
+    f.phone.addEventListener('input', function(){
+      var v = this.value.replace(/\D/g,'').slice(0,11), out;
+      if (v.indexOf('02') === 0) {
+        v = v.slice(0,10);
+        out = v.length < 3 ? v : v.length < 6 ? v.slice(0,2)+'-'+v.slice(2) : v.length < 10 ? v.slice(0,2)+'-'+v.slice(2,5)+'-'+v.slice(5) : v.slice(0,2)+'-'+v.slice(2,6)+'-'+v.slice(6);
+      } else {
+        out = v.length < 4 ? v : v.length < 8 ? v.slice(0,3)+'-'+v.slice(3) : v.length < 11 ? v.slice(0,3)+'-'+v.slice(3,6)+'-'+v.slice(6) : v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7);
+      }
+      this.value = out;
+      if (this.getAttribute('aria-invalid') === 'true') check('phone');
+    });
+
+    var rules = {
+      name: function(){ var v = f.name.value.trim(); if (!v) return '이름을 입력해 주세요.'; if (v.length < 2) return '이름을 두 글자 이상 입력해 주세요.'; if (!/^[가-힣a-zA-Z\s]+$/.test(v)) return '이름은 한글 또는 영문으로 입력해 주세요.'; },
+      phone: function(){ var v = f.phone.value; if (!v) return '연락받으실 번호를 입력해 주세요.'; if (!/^(01[016789]-\d{3,4}-\d{4}|02-\d{3,4}-\d{4}|0[3-9]\d-\d{3,4}-\d{4})$/.test(v)) return '연락처 형식을 확인해 주세요. (예: 010-1234-5678)'; },
+      subject: function(){ if (!f.subject.value) return '희망 진료를 선택해 주세요.'; },
+      date: function(){
+        var v = f.date.value; if (!v) return '희망 날짜를 선택해 주세요.';
+        if (v < f.date.min) return '오늘 이후 날짜를 선택해 주세요.';
+        if (v > f.date.max) return '예약은 오늘부터 90일 이내만 가능합니다.';
+        var p = v.split('-'), day = new Date(+p[0], +p[1]-1, +p[2]).getDay();
+        if (day === 0) return '일요일은 휴진입니다. 다른 날짜를 선택해 주세요.';
+      },
+      time: function(){
+        var r = form.querySelector('input[name="time"]:checked');
+        if (!r) return '희망 시간대를 선택해 주세요.';
+        if (f.date.value) {
+          var p = f.date.value.split('-'), day = new Date(+p[0], +p[1]-1, +p[2]).getDay();
+          if (r.value === '저녁' && day !== 3) return '저녁 진료는 수요일에만 가능합니다.';
+          if (r.value === '오후' && day === 6) return '토요일은 15시까지 진료해요. 오전을 선택하시거나 오후 2~3시를 문의란에 적어 주세요.';
+        }
+      },
+      agree: function(){ if (!f.agree.checked) return '개인정보 수집·이용에 동의해 주세요.'; }
+    };
+    function check(key){
+      var msg = rules[key]();
+      var err = document.getElementById(key + '-err');
+      var input = key === 'time' ? form.querySelector('.seg') : f[key];
+      err.innerHTML = msg ? '<svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor"/><path d="M7 4v3.6M7 9.6v.2" stroke="currentColor" stroke-linecap="round"/></svg>' + msg : '';
+      err.classList.toggle('show', !!msg);
+      if (key !== 'time') input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      return !msg;
+    }
+    ['name','phone','subject','date','agree'].forEach(function(k){
+      var ev = (k === 'subject' || k === 'agree' || k === 'date') ? 'change' : 'blur';
+      f[k].addEventListener(ev, function(){ check(k); if (k === 'date' && form.querySelector('input[name="time"]:checked')) check('time'); });
+    });
+    form.querySelectorAll('input[name="time"]').forEach(function(r){ r.addEventListener('change', function(){ check('time'); }); });
+
+    var fields = document.getElementById('formFields'), foot = document.getElementById('formFoot'), success = document.getElementById('success');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var order = ['name','phone','subject','date','time','agree'], firstBad = null;
+      order.forEach(function(k){ if (!check(k) && !firstBad) firstBad = k; });
+      if (firstBad) {
+        var target = firstBad === 'time' ? form.querySelector('input[name="time"]') : f[firstBad];
+        target.focus({preventScroll:true});
+        target.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+        if (hasAnime && !reduce) anime({targets:form, translateX:[0,-6,6,-3,0], duration:420, easing:'easeInOutSine'});
+        return;
+      }
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = '접수 중…';
+      setTimeout(function(){
+        var p = f.date.value.split('-'), days = ['일','월','화','수','목','금','토'];
+        var dayName = days[new Date(+p[0], +p[1]-1, +p[2]).getDay()];
+        document.getElementById('sName').textContent = f.name.value.trim();
+        var rows = [['희망 진료', f.subject.value], ['희망 날짜', (+p[1]) + '월 ' + (+p[2]) + '일 (' + dayName + ')'], ['시간대', form.querySelector('input[name="time"]:checked').value], ['연락처', f.phone.value]];
+        var sum = document.getElementById('sum'); sum.innerHTML = '';
+        rows.forEach(function(r){ var d = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = r[0]; dd.textContent = r[1]; d.appendChild(dt); d.appendChild(dd); sum.appendChild(d); });
+        fields.style.display = 'none'; foot.style.display = 'none';
+        success.classList.add('show'); success.focus({preventScroll:true});
+        success.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+        if (hasAnime && !reduce) {
+          anime({targets:success.querySelectorAll('svg circle, svg path'), strokeDashoffset:[anime.setDashoffset,0], duration:1100, easing:'easeInOutSine', delay:anime.stagger(350)});
+          anime({targets:success.querySelectorAll('h3, p, .summary, .btn'), opacity:[0,1], translateY:[12,0], duration:800, easing:'easeOutQuart', delay:anime.stagger(90, {start:400})});
+        }
+        btn.disabled = false; btn.innerHTML = '예약 신청하기 <span class="arr" aria-hidden="true">→</span>';
+      }, 700);
+    });
+    document.getElementById('again').addEventListener('click', function(){
+      form.reset();
+      form.querySelectorAll('.err').forEach(function(e){ e.classList.remove('show'); e.innerHTML=''; });
+      form.querySelectorAll('[aria-invalid]').forEach(function(e){ e.setAttribute('aria-invalid','false'); });
+      success.classList.remove('show'); fields.style.display = ''; foot.style.display = '';
+      f.name.focus();
+    });
+  }
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>

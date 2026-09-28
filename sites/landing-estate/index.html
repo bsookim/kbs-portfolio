@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>더 리버라인 레지던스 | 홍보관 방문 예약</title>
+<meta name="description" content="강변 하이엔드 오피스텔 '더 리버라인 레지던스' 홍보관 방문 예약 및 분양 상담 신청 (포트폴리오용 가상 프로젝트)">
+<meta name="theme-color" content="#060A12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --ink-0:#04070D;
+  --ink-1:#060A12;
+  --ink-2:#0B1220;
+  --ink-3:#111B2E;
+  --line:rgba(212,185,138,.18);
+  --line-soft:rgba(255,255,255,.08);
+  --gold:#D4B98A;
+  --gold-hi:#F1DDB2;
+  --gold-deep:#A8895A;
+  --text:#EDE8DF;
+  --text-2:#B4BBC8;
+  --text-3:#8A93A6;
+  --error:#F29C8F;
+  --ok:#9FD3B8;
+  --glass:rgba(14,22,38,.55);
+  --serif:"Noto Serif KR", "Nanum Myeongjo", serif;
+  --latin:"Cormorant Garamond", "Noto Serif KR", serif;
+  --sans:"Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --wrap:1240px;
+  --gutter:clamp(20px,4vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-variant-numeric:lining-nums}
+body{margin:0;background:var(--ink-1);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:2px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--gold);color:var(--ink-0);padding:10px 16px;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s}
+.hdr.scrolled{background:rgba(6,10,18,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line-soft)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:34px;height:34px}
+.brand b{display:block;font-family:var(--latin);font-weight:500;letter-spacing:.28em;font-size:15px;line-height:1.1}
+.brand small{display:block;font-size:11px;letter-spacing:.18em;color:var(--text-3);margin-top:2px}
+.nav{display:flex;gap:34px;font-size:14px;color:var(--text-2)}
+.nav a{position:relative;padding:6px 0;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover{color:var(--text)}
+.nav a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border:1px solid transparent;font-size:15px;font-weight:600;letter-spacing:.02em;transition:background .25s var(--ease),color .25s,border-color .25s,transform .25s var(--ease);white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-hi),var(--gold) 45%,var(--gold-deep));color:#15110A;box-shadow:0 10px 30px -12px rgba(212,185,138,.6)}
+.btn-gold:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:rgba(237,232,223,.35);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-hi)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:14px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;isolation:isolate;background:radial-gradient(120% 70% at 70% 10%,#16233D 0%,#0A1222 45%,var(--ink-0) 100%)}
+.hero-sky{position:absolute;inset:0;z-index:-1}
+.hero-sky svg{position:absolute;left:0;bottom:0;width:100%;height:100%}
+.hero-sky::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,7,13,.82) 0%,rgba(4,7,13,.55) 32%,rgba(4,7,13,0) 58%);pointer-events:none}
+@media (max-width:720px){.hero-sky::after{background:linear-gradient(180deg,rgba(4,7,13,.2) 0%,rgba(4,7,13,.75) 30%,rgba(4,7,13,.6) 62%,rgba(4,7,13,0) 80%)}}
+.hero-copy{position:relative;z-index:2;padding-top:clamp(130px,19vh,200px);padding-bottom:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--latin);font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:40px;height:1px;background:currentColor}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,6.4vw,92px);line-height:1.14;letter-spacing:-.02em;margin:26px 0 0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{font-style:normal;font-weight:600;background:linear-gradient(100deg,var(--gold-hi),var(--gold) 60%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lede{max-width:470px;margin:28px 0 0;color:var(--text-2);font-size:clamp(15px,1.25vw,17px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.hero-meta{position:absolute;z-index:2;left:0;right:0;bottom:0;border-top:1px solid var(--line-soft);background:linear-gradient(to top,rgba(4,7,13,.85),rgba(4,7,13,.35));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero-meta ul{list-style:none;margin:0 auto;padding:0 var(--gutter);max-width:var(--wrap);display:grid;grid-template-columns:repeat(4,1fr)}
+.hero-meta li{padding:22px 0 24px;border-left:1px solid var(--line-soft);padding-left:24px}
+.hero-meta li:first-child{border-left:0;padding-left:0}
+.hero-meta .k{font-size:12px;letter-spacing:.14em;color:var(--text-3)}
+.hero-meta .v{font-family:var(--latin);font-size:clamp(26px,2.6vw,38px);line-height:1.1;color:var(--text);font-weight:400;margin-top:4px}
+.hero-meta .v small{font-family:var(--sans);font-size:13px;color:var(--text-2);margin-left:4px}
+.scroll-cue{position:absolute;right:var(--gutter);top:50%;z-index:2;writing-mode:vertical-rl;font-family:var(--latin);letter-spacing:.4em;font-size:12px;color:var(--text-3);display:flex;align-items:center;gap:14px}
+.scroll-cue::after{content:"";width:1px;height:70px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* skyline pieces */
+.win{fill:#F6DFAE}
+.win.f{animation:flick var(--d,7s) ease-in-out var(--dl,0s) infinite}
+@keyframes flick{0%,100%{opacity:var(--o,.9)}45%{opacity:var(--o,.9)}50%{opacity:.08}78%{opacity:.08}82%{opacity:var(--o,.9)}}
+.ripple{animation:ripple 9s linear infinite}
+.ripple.r2{animation-duration:13s;animation-direction:reverse}
+@keyframes ripple{from{transform:translateX(0)}to{transform:translateX(-200px)}}
+.glint{animation:glint 3.6s ease-in-out infinite}
+@keyframes glint{0%,100%{opacity:.15}50%{opacity:.85}}
+.crown{animation:crown 5s ease-in-out infinite}
+@keyframes crown{0%,100%{opacity:.55}50%{opacity:1}}
+.beacon{animation:beacon 1.8s steps(1) infinite}
+@keyframes beacon{0%{opacity:1}50%{opacity:.1}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:clamp(80px,9vw,136px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:clamp(48px,6vw,80px)}
+.sec-no{font-family:var(--latin);font-size:13px;letter-spacing:.34em;color:var(--gold);display:flex;align-items:center;gap:14px}
+.sec-no::after{content:"";flex:0 0 60px;height:1px;background:var(--line)}
+.sec h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4vw,56px);line-height:1.22;letter-spacing:-.02em;margin:18px 0 0}
+.sec h2 b{font-weight:600;color:var(--gold-hi)}
+.sec-desc{color:var(--text-2);max-width:460px;justify-self:end;margin:0}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);border:0;margin:0}
+
+/* manifesto */
+.manifesto{padding:clamp(90px,11vw,150px) 0;text-align:center;background:var(--ink-1)}
+.manifesto p{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.8vw,38px);line-height:1.6;max-width:900px;margin:0 auto;color:var(--text-2)}
+.manifesto p b{color:var(--text);font-weight:600}
+.manifesto .sig{margin-top:30px;font-family:var(--latin);font-style:italic;color:var(--gold);letter-spacing:.08em;font-size:18px}
+
+/* location */
+.loc{background:linear-gradient(180deg,var(--ink-1),var(--ink-2))}
+.loc-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.map{position:relative;border:1px solid var(--line-soft);background:radial-gradient(90% 90% at 50% 40%,#0F1A2D,#070C16);overflow:hidden}
+.map svg{width:100%;height:auto}
+.map-legend{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;color:var(--text-3)}
+.route{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linecap:round;transition:stroke-width .3s,opacity .3s}
+.route-dash{fill:none;stroke:var(--gold-hi);stroke-width:2.2;stroke-dasharray:2 10;stroke-linecap:round;animation:march 1.4s linear infinite;opacity:.9}
+@keyframes march{to{stroke-dashoffset:-24}}
+.map.hl .rt{opacity:.18}
+.map.hl .rt.on{opacity:1}
+.map.hl .rt.on .route{stroke-width:3.4}
+.pulse{transform-origin:center;transform-box:fill-box;animation:pulse 2.6s var(--ease) infinite}
+@keyframes pulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.poi-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+.poi-list li{border-bottom:1px solid var(--line-soft)}
+.poi{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:16px;width:100%;padding:22px 4px;background:none;border:0;text-align:left;transition:background .25s,padding .3s var(--ease)}
+.poi:hover,.poi:focus-visible,.poi.on{background:linear-gradient(90deg,rgba(212,185,138,.08),transparent);padding-left:14px}
+.poi .n{font-family:var(--latin);font-size:30px;color:var(--gold);line-height:1}
+.poi .t{font-family:var(--serif);font-size:18px;font-weight:600}
+.poi .s{display:block;font-size:13px;color:var(--text-3);font-family:var(--sans);font-weight:400;margin-top:2px}
+.poi .m{font-family:var(--latin);font-size:26px;color:var(--text);white-space:nowrap}
+.poi .m small{font-family:var(--sans);font-size:12px;color:var(--text-3);margin-left:3px}
+
+/* overview */
+.ov{background:var(--ink-2)}
+.ov-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.ov-big{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.ov-big>div{background:var(--ink-2);padding:34px 30px 30px}
+.ov-big .num{font-family:var(--latin);font-weight:300;font-size:clamp(52px,6vw,88px);line-height:.95;color:var(--gold-hi);letter-spacing:-.02em}
+.ov-big .num small{font-size:.32em;color:var(--text-2);font-family:var(--sans);margin-left:6px;letter-spacing:0}
+.ov-big .lab{font-size:13px;color:var(--text-3);letter-spacing:.1em;margin-top:10px}
+.spec{width:100%;border-collapse:collapse;font-size:15px}
+.spec caption{text-align:left;font-family:var(--latin);letter-spacing:.3em;font-size:12px;color:var(--gold);padding-bottom:14px}
+.spec th,.spec td{padding:17px 0;border-bottom:1px solid var(--line-soft);text-align:left;vertical-align:top}
+.spec th{width:34%;font-weight:500;color:var(--text-3);font-size:14px;letter-spacing:.04em}
+.spec td{color:var(--text)}
+.spec tr:first-child th,.spec tr:first-child td{border-top:1px solid var(--line)}
+.note{font-size:12.5px;color:var(--text-3);margin-top:16px}
+
+/* plans */
+.plans{background:linear-gradient(180deg,var(--ink-2),var(--ink-1))}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line-soft);margin-bottom:clamp(28px,4vw,48px);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;background:none;border:0;padding:16px 28px 18px;min-height:56px;color:var(--text-3);text-align:left;transition:color .25s;flex:0 0 auto}
+.tab .tn{font-family:var(--latin);font-size:30px;line-height:1;display:block}
+.tab .ts{font-size:12.5px;letter-spacing:.06em;display:block;margin-top:4px}
+.tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .45s var(--ease)}
+.tab[aria-selected="true"]{color:var(--text)}
+.tab[aria-selected="true"] .tn{color:var(--gold-hi)}
+.tab[aria-selected="true"]::after{transform:scaleX(1)}
+.tab:hover{color:var(--text-2)}
+.panel{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.panel[hidden]{display:none}
+.plan-box{position:relative;border:1px solid var(--line-soft);background:
+  linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px) 0 0/24px 24px,
+  linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px) 0 0/24px 24px,#081020;padding:clamp(14px,2.4vw,30px)}
+.plan-box svg{width:100%;height:auto;overflow:visible}
+.room rect,.room path{fill:rgba(212,185,138,.03);stroke:rgba(237,232,223,.55);stroke-width:1.2;transition:fill .3s var(--ease)}
+.room text{font-family:var(--sans);font-size:13px;fill:var(--text-2);text-anchor:middle;dominant-baseline:middle;pointer-events:none;transition:fill .3s}
+.room text.dim{font-family:var(--latin);font-size:12px;fill:var(--gold);opacity:0;transition:opacity .3s}
+.room{cursor:pointer;outline:none}
+.room:hover rect,.room:focus-visible rect,.room.on rect{fill:rgba(212,185,138,.2);stroke:var(--gold)}
+.room:hover text,.room:focus-visible text{fill:var(--text)}
+.room:hover text.dim,.room:focus-visible text.dim,.room.on text.dim{opacity:1}
+.room:focus-visible rect{stroke:var(--gold-hi);stroke-width:2}
+.wall{fill:none;stroke:var(--text);stroke-width:5;stroke-linejoin:miter}
+.glass-line{stroke:#8FB6D9;stroke-width:3;opacity:.8}
+.door{fill:none;stroke:rgba(237,232,223,.35);stroke-width:1}
+.plan-readout{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;font-size:13px;color:var(--text-3);min-height:22px}
+.plan-readout b{color:var(--gold-hi);font-weight:500}
+.plan-info h3{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.3vw,32px);margin:0;line-height:1.35}
+.plan-info h3 span{font-family:var(--latin);color:var(--gold-hi);font-weight:400}
+.plan-info p{color:var(--text-2);margin:14px 0 26px}
+.plan-info dl{display:grid;grid-template-columns:auto 1fr;margin:0;border-top:1px solid var(--line)}
+.plan-info dt,.plan-info dd{padding:14px 0;border-bottom:1px solid var(--line-soft);margin:0}
+.plan-info dt{color:var(--text-3);font-size:14px;padding-right:24px}
+.plan-info dd{text-align:right;font-family:var(--latin);font-size:22px;line-height:1.2}
+.plan-info dd.kr{font-family:var(--sans);font-size:16px;font-weight:500}
+.plan-info dd small{font-family:var(--sans);font-size:12px;color:var(--text-3);margin-left:3px}
+.feat{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
+.feat li{display:flex;gap:12px;align-items:flex-start;color:var(--text-2);font-size:15px}
+.feat svg{flex:0 0 16px;width:16px;height:16px;margin-top:5px;color:var(--gold)}
+
+/* community */
+.com{background:var(--ink-1);overflow:hidden}
+.com-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line-soft);border-left:1px solid var(--line-soft)}
+.fac{position:relative;padding:clamp(28px,3vw,44px);border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);min-height:300px;display:flex;flex-direction:column;overflow:hidden;transition:background .4s var(--ease)}
+.fac::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 70% at 100% 0%,rgba(212,185,138,.14),transparent 70%);opacity:0;transition:opacity .5s var(--ease)}
+.fac:hover::before{opacity:1}
+.fac .idx{font-family:var(--latin);font-size:13px;letter-spacing:.3em;color:var(--text-3)}
+.fac .fl{position:absolute;right:clamp(20px,2.4vw,36px);top:clamp(22px,2.6vw,38px);font-family:var(--latin);font-size:13px;color:var(--gold);letter-spacing:.14em}
+.fac svg.ic{width:48px;height:48px;color:var(--gold);margin:30px 0 0;stroke-width:1.2}
+.fac h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:auto 0 8px;padding-top:36px}
+.fac p{margin:0;color:var(--text-2);font-size:14.5px}
+
+/* schedule */
+.sch{background:linear-gradient(180deg,var(--ink-1),var(--ink-2))}
+.tl-wrap{position:relative}
+.tl{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.tl-track{position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-soft)}
+.tl-fill{position:absolute;left:0;top:9px;height:1px;width:100%;background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi));transform-origin:left;transform:scaleX(1)}
+.tl li{position:relative;padding:44px 20px 0 0}
+.tl .dot{position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;border:1px solid var(--gold);background:var(--ink-1);display:grid;place-items:center}
+.tl .dot::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.tl li.now .dot{box-shadow:0 0 0 6px rgba(212,185,138,.12),0 0 24px rgba(212,185,138,.5)}
+.tl .d{font-family:var(--latin);font-size:clamp(28px,2.6vw,38px);line-height:1;color:var(--text)}
+.tl .d small{display:block;font-size:14px;color:var(--text-3);letter-spacing:.2em;margin-bottom:8px}
+.tl h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:16px 0 6px}
+.tl p{margin:0;color:var(--text-3);font-size:14px}
+.tl .tag{display:inline-block;margin-top:12px;font-size:11.5px;letter-spacing:.1em;padding:4px 10px;border:1px solid var(--gold);color:var(--gold-hi)}
+
+/* reservation */
+.rsv{background:radial-gradient(80% 60% at 20% 0%,#132038,var(--ink-1) 70%);overflow:hidden}
+.rsv-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+.rsv-aside h2{margin-bottom:22px}
+.rsv-aside p{color:var(--text-2);margin:0 0 30px}
+.perks{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line-soft)}
+.perks li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line-soft);align-items:start}
+.perks svg{width:22px;height:22px;color:var(--gold);margin-top:2px}
+.perks b{display:block;font-weight:600;font-size:15px}
+.perks span{font-size:13.5px;color:var(--text-3)}
+.call{display:flex;align-items:baseline;gap:14px;margin-top:34px}
+.call .k{font-size:12px;letter-spacing:.16em;color:var(--text-3)}
+.call a{font-family:var(--latin);font-size:40px;color:var(--gold-hi);line-height:1}
+.card{position:relative;background:var(--glass);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:clamp(24px,3.4vw,48px);box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.card::before{content:"";position:absolute;inset:-1px;pointer-events:none;border:1px solid transparent;background:linear-gradient(140deg,rgba(241,221,178,.55),transparent 30%,transparent 70%,rgba(241,221,178,.25)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.card h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:0 0 4px}
+.card .sub{color:var(--text-3);font-size:14px;margin:0 0 28px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label,.field legend{font-size:13.5px;font-weight:600;color:var(--text);letter-spacing:.02em}
+.field .req{color:var(--gold);margin-left:3px}
+.inp{width:100%;min-height:52px;padding:0 16px;background:rgba(4,7,13,.55);border:1px solid rgba(255,255,255,.14);color:var(--text);border-radius:0;font-size:16px;transition:border-color .2s,box-shadow .2s;color-scheme:dark;appearance:none;-webkit-appearance:none}
+.inp::placeholder{color:#6F788B}
+.inp:hover{border-color:rgba(255,255,255,.26)}
+.inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,185,138,.2)}
+.inp[aria-invalid="true"]{border-color:var(--error)}
+select.inp{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4B98A' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:44px}
+select.inp option{background:#0B1220;color:var(--text)}
+fieldset.field{border:0;padding:0;margin:0}
+fieldset.field legend{padding:0;margin-bottom:8px}
+.slots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.slot{position:relative}
+.slot input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.slot span{display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid rgba(255,255,255,.14);font-family:var(--latin);font-size:18px;color:var(--text-2);background:rgba(4,7,13,.45);transition:all .2s}
+.slot input:hover+span{border-color:rgba(255,255,255,.3)}
+.slot input:checked+span{border-color:var(--gold);color:#15110A;background:var(--gold)}
+.slot input:focus-visible+span{outline:2px solid var(--gold-hi);outline-offset:2px}
+.slots[aria-invalid="true"] .slot span{border-color:rgba(242,156,143,.6)}
+.err{font-size:13px;color:var(--error);min-height:0;display:flex;gap:6px;align-items:center}
+.err:empty{display:none}
+.hint{font-size:12.5px;color:var(--text-3)}
+.agree{display:flex;gap:12px;align-items:flex-start;padding:16px;border:1px solid rgba(255,255,255,.1);background:rgba(4,7,13,.35)}
+.agree input{appearance:none;-webkit-appearance:none;flex:0 0 22px;width:22px;height:22px;border:1px solid rgba(255,255,255,.35);margin:1px 0 0;background:transparent;display:grid;place-items:center;cursor:pointer;transition:all .2s}
+.agree input:checked{background:var(--gold);border-color:var(--gold)}
+.agree input:checked::after{content:"";width:6px;height:11px;border:solid #15110A;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.agree input[aria-invalid="true"]{border-color:var(--error)}
+.agree label{font-size:14px;color:var(--text-2);font-weight:400;cursor:pointer}
+.agree details{margin-top:6px;font-size:12.5px;color:var(--text-3)}
+.agree summary{cursor:pointer;color:var(--gold);width:max-content;padding:4px 0}
+.submit{width:100%;margin-top:28px;min-height:58px;font-size:16px}
+.submit[disabled]{opacity:.7;cursor:progress}
+.spin{width:18px;height:18px;border:2px solid rgba(21,17,10,.3);border-top-color:#15110A;border-radius:50%;animation:spin .8s linear infinite;display:none}
+.submit.loading .spin{display:block}
+.submit.loading .lbl-arrow{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.success{text-align:center;padding:30px 0 10px}
+.success svg{width:72px;height:72px;margin:0 auto 22px;color:var(--gold)}
+.success .ck{stroke-dasharray:60;stroke-dashoffset:60;animation:draw 1s .2s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.success h3{font-size:26px;font-weight:300;margin-bottom:12px}
+.success p{color:var(--text-2);margin:0 0 6px}
+.receipt{margin:26px auto 0;max-width:380px;text-align:left;border-top:1px solid var(--line);font-size:14px}
+.receipt div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.receipt span{color:var(--text-3)}
+.receipt b{font-weight:500}
+.again{margin-top:26px}
+
+/* footer */
+.ftr{background:var(--ink-0);border-top:1px solid var(--line-soft);padding:64px 0 120px;font-size:13px;color:var(--text-3)}
+.ftr-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid var(--line-soft)}
+.disclaimer{margin:28px 0 18px;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(212,185,138,.05);color:var(--text-2);font-size:13.5px}
+.biz{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;padding:0;list-style:none}
+.biz li{position:relative}
+.ftr small{display:block;margin-top:18px;line-height:1.7}
+
+/* sticky cta */
+.sticky{position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:40;display:flex;gap:10px;align-items:center;padding:8px;background:rgba(8,13,24,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 50px -20px rgba(0,0,0,.8);transition:transform .5s var(--ease),opacity .4s;transform:translateY(0)}
+.sticky.hide{transform:translateY(140%);opacity:0;pointer-events:none}
+.sticky .tel{display:flex;flex-direction:column;padding:0 14px 0 10px;line-height:1.2}
+.sticky .tel span{font-size:11px;color:var(--text-3);letter-spacing:.1em}
+.sticky .tel b{font-family:var(--latin);font-size:22px;font-weight:500;color:var(--gold-hi)}
+
+/* reveal fallback: visible by default */
+.rv{will-change:auto}
+
+/* ---------- responsive ---------- */
+@media (max-width:1024px){
+  .nav{display:none}
+  .loc-grid,.ov-grid,.panel,.rsv-grid{grid-template-columns:1fr}
+  .com-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sec-head{grid-template-columns:1fr}
+  .sec-desc{justify-self:start}
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl-track,.tl-fill{left:9px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .tl-fill{transform-origin:top}
+  .tl li{padding:0 0 40px 48px}
+  .tl .dot{top:4px}
+}
+@media (max-width:720px){
+  .hdr .wrap{height:64px}
+  .brand small{display:none}
+  .hdr .btn-sm{padding:0 14px}
+  .hero-copy{padding-top:112px}
+  .hero-meta ul{grid-template-columns:repeat(2,1fr)}
+  .hero-meta li{padding:14px 0 16px 16px}
+  .hero-meta li:nth-child(3){border-left:0;padding-left:0}
+  .hero-meta li:nth-child(n+3){border-top:1px solid var(--line-soft)}
+  .scroll-cue{display:none}
+  .hero-cta .btn{flex:1 1 auto}
+  .com-list{grid-template-columns:1fr}
+  .fac{min-height:0}
+  .fac svg.ic{margin:22px 0 0}
+  .fg{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ov-big>div{padding:22px 18px}
+  .room text{font-size:19px}
+  .room text.dim{display:none}
+  .plan-box{padding:10px}
+  .poi{grid-template-columns:40px 1fr auto;gap:12px}
+  .poi .n{font-size:24px}
+  .poi .m{font-size:22px}
+  .tab{padding:14px 18px 16px}
+  .tab .tn{font-size:26px}
+  .plan-info dd{font-size:20px}
+  .sticky{left:12px;right:12px;bottom:12px;justify-content:space-between}
+  .sticky .btn{flex:1}
+  .call a{font-size:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .win.f,.ripple,.glint,.crown,.beacon,.pulse,.route-dash,.scroll-cue::after{animation:none!important}
+  .success .ck{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#reserve">방문 예약으로 바로가기</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="더 리버라인 레지던스 홈">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x=".75" y=".75" width="38.5" height="38.5" stroke="#D4B98A" stroke-width="1"/><path d="M12 30V10h6.5a5 5 0 0 1 0 10H12m6.5 0L25 30" stroke="#F1DDB2" stroke-width="1.4"/><path d="M8 34c4-2 8-2 12 0s8 2 12 0" stroke="#D4B98A" stroke-width="1"/></svg>
+      <span><b>THE RIVERLINE</b><small>RESIDENCE</small></span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#location">입지</a><a href="#overview">단지 개요</a><a href="#plans">평면</a><a href="#community">커뮤니티</a><a href="#schedule">분양 일정</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="#reserve">방문 예약</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-sky" aria-hidden="true">
+    <svg id="sky" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1222" stop-opacity="0"/><stop offset=".7" stop-color="#1B2740" stop-opacity=".55"/><stop offset="1" stop-color="#2E3550" stop-opacity=".7"/></linearGradient>
+        <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E1830"/><stop offset="1" stop-color="#03060C"/></linearGradient>
+        <linearGradient id="gRefl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".55" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <mask id="mRefl" maskUnits="userSpaceOnUse" x="0" y="720" width="1600" height="280"><rect x="0" y="720" width="1600" height="280" fill="url(#gRefl)"/></mask>
+        <linearGradient id="gTower" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1A2640"/><stop offset=".5" stop-color="#101A2E"/><stop offset="1" stop-color="#0A1120"/></linearGradient>
+        <radialGradient id="gMoon" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F1DDB2" stop-opacity=".9"/><stop offset=".25" stop-color="#F1DDB2" stop-opacity=".25"/><stop offset="1" stop-color="#F1DDB2" stop-opacity="0"/></radialGradient>
+        <linearGradient id="gGlow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D4B98A" stop-opacity="0"/><stop offset="1" stop-color="#D4B98A" stop-opacity=".18"/></linearGradient>
+      </defs>
+      <rect width="1600" height="1000" fill="url(#gSky)"/>
+      <g id="stars"></g>
+      <circle cx="1270" cy="170" r="120" fill="url(#gMoon)"/>
+      <circle cx="1270" cy="170" r="16" fill="#F4E6C6" opacity=".9"/>
+      <rect x="0" y="560" width="1600" height="160" fill="url(#gGlow)"/>
+      <g id="city">
+        <g id="layerBack" class="plx" data-depth="6"></g>
+        <g id="layerMid" class="plx" data-depth="12"></g>
+        <g id="layerFront" class="plx" data-depth="20"></g>
+      </g>
+      <rect x="0" y="720" width="1600" height="280" fill="url(#gWater)"/>
+      <g mask="url(#mRefl)" opacity=".75"><use href="#city" transform="translate(0 1440) scale(1 -1)"/></g>
+      <g id="ripples" opacity=".9"></g>
+      <line x1="0" y1="720.5" x2="1600" y2="720.5" stroke="#D4B98A" stroke-opacity=".35"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-copy">
+    <p class="eyebrow hero-in">Riverside High-End Residence</p>
+    <h1 id="hero-title">
+      <span class="ln"><span>강 위에 켜지는</span></span>
+      <span class="ln"><span><em>가장 조용한</em> 불빛</span></span>
+    </h1>
+    <p class="hero-lede hero-in">리버프론트 49층, 612실. 매일 밤 강을 한 폭의 풍경으로 들이는 하이엔드 레지던스.<br>홍보관 방문은 100% 사전 예약제로 운영됩니다.</p>
+    <div class="hero-cta hero-in">
+      <a class="btn btn-gold" href="#reserve">홍보관 방문 예약<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+      <a class="btn btn-ghost" href="#plans">평면 먼저 보기</a>
+    </div>
+  </div>
+  <p class="scroll-cue" aria-hidden="true">SCROLL</p>
+  <div class="hero-meta">
+    <ul>
+      <li><div class="k">규모</div><div class="v">49<small>층</small></div></li>
+      <li><div class="k">총 실수</div><div class="v">612<small>실</small></div></li>
+      <li><div class="k">전용면적</div><div class="v">59–124<small>㎡</small></div></li>
+      <li><div class="k">입주 예정</div><div class="v">2029.08</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" aria-label="브랜드 메시지">
+  <div class="wrap">
+    <p class="rv">도시의 소음은 한 층씩 멀어지고,<br><b>창 너머에는 강만 남습니다.</b><br>더 리버라인은 머무는 시간을 설계합니다.</p>
+    <p class="sig rv">— The quiet side of the city</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="sec loc" id="location" aria-labelledby="loc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">01 &nbsp;LOCATION</p>
+        <h2 id="loc-title" class="rv">강과 역 사이,<br><b>걸어서 닿는</b> 일상</h2>
+      </div>
+      <p class="sec-desc rv">OO역과 리버파크를 모두 도보권에 둔 강변 입지. 목적지를 선택하면 지도에서 동선을 확인할 수 있습니다.</p>
+    </div>
+    <div class="loc-grid">
+      <figure class="map rv" id="map" style="margin:0">
+        <svg viewBox="0 0 800 560" role="img" aria-labelledby="map-t map-d">
+          <title id="map-t">더 리버라인 레지던스 주변 약도</title>
+          <desc id="map-d">단지에서 OO역 도보 5분, 리버파크 도보 3분, OO IC 차량 7분, 복합문화센터 도보 9분 거리를 나타낸 예시 약도</desc>
+          <defs>
+            <pattern id="pPark" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#6E8F74" opacity=".55"/></pattern>
+            <linearGradient id="gRiver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B3354"/><stop offset="1" stop-color="#11243E"/></linearGradient>
+          </defs>
+          <g stroke="rgba(255,255,255,.05)" stroke-width="1">
+            <path d="M0 80H800M0 160H800M0 240H800M0 320H800M0 400H800M0 480H800M100 0V560M200 0V560M300 0V560M400 0V560M500 0V560M600 0V560M700 0V560"/>
+          </g>
+          <path d="M-20 470 C 140 420 240 470 360 440 S 580 360 820 390 L 820 470 C 600 440 460 520 340 520 S 120 520 -20 560 Z" fill="url(#gRiver)"/>
+          <path d="M-20 470 C 140 420 240 470 360 440 S 580 360 820 390" fill="none" stroke="#3E5E86" stroke-width="1" opacity=".7"/>
+          <text x="560" y="452" fill="#6F8DB5" font-size="13" letter-spacing="6" font-family="Cormorant Garamond, serif" font-style="italic">RIVER</text>
+          <path d="M120 330 L300 300 L330 420 L160 450 Z" fill="url(#pPark)" stroke="#6E8F74" stroke-opacity=".5"/>
+          <g stroke="rgba(237,232,223,.22)" fill="none">
+            <path d="M0 250 L800 205" stroke-width="7"/>
+            <path d="M560 0 L520 560" stroke-width="5"/>
+            <path d="M0 120 L800 90" stroke-width="3"/>
+            <path d="M250 0 L300 560" stroke-width="3"/>
+            <path d="M0 380 L800 330" stroke-width="2" stroke-dasharray="1 0"/>
+          </g>
+          <path d="M60 60 L760 40" stroke="#8FB6D9" stroke-opacity=".5" stroke-width="2" stroke-dasharray="10 6" fill="none"/>
+          <!-- routes -->
+          <g class="rt" data-r="0"><path class="route draw" d="M430 300 L470 232 L560 222 L610 110"/><path class="route-dash" d="M430 300 L470 232 L560 222 L610 110"/></g>
+          <g class="rt" data-r="1"><path class="route draw" d="M430 300 L360 318 L270 368"/><path class="route-dash" d="M430 300 L360 318 L270 368"/></g>
+          <g class="rt" data-r="2"><path class="route draw" d="M430 300 L540 226 L760 208"/><path class="route-dash" d="M430 300 L540 226 L760 208"/></g>
+          <g class="rt" data-r="3"><path class="route draw" d="M430 300 L420 240 L280 250 L262 140"/><path class="route-dash" d="M430 300 L420 240 L280 250 L262 140"/></g>
+          <!-- POIs -->
+          <g font-family="Pretendard Variable, sans-serif" font-size="13" fill="#EDE8DF">
+            <g><circle cx="610" cy="110" r="7" fill="#0B1220" stroke="#D4B98A" stroke-width="2"/><text x="624" y="104">OO역</text><text x="624" y="121" fill="#8A93A6" font-size="11">도보 5분</text></g>
+            <g><circle cx="270" cy="368" r="7" fill="#0B1220" stroke="#D4B98A" stroke-width="2"/><text x="170" y="394">리버파크</text><text x="170" y="411" fill="#8A93A6" font-size="11">도보 3분</text></g>
+            <g><circle cx="760" cy="208" r="7" fill="#0B1220" stroke="#D4B98A" stroke-width="2"/><text x="690" y="186">OO IC</text><text x="690" y="170" fill="#8A93A6" font-size="11">차량 7분</text></g>
+            <g><circle cx="262" cy="140" r="7" fill="#0B1220" stroke="#D4B98A" stroke-width="2"/><text x="150" y="134">복합문화센터</text><text x="150" y="151" fill="#8A93A6" font-size="11">도보 9분</text></g>
+          </g>
+          <!-- site -->
+          <g>
+            <circle class="pulse" cx="430" cy="300" r="16" fill="none" stroke="#F1DDB2" stroke-width="1.5"/>
+            <rect x="420" y="290" width="20" height="20" transform="rotate(45 430 300)" fill="#D4B98A" stroke="#F1DDB2"/>
+            <rect x="452" y="284" width="148" height="34" fill="#04070D" stroke="#D4B98A" stroke-opacity=".6"/>
+            <text x="526" y="306" text-anchor="middle" fill="#F1DDB2" font-size="13" font-family="Noto Serif KR, serif" font-weight="600">더 리버라인</text>
+          </g>
+          <g transform="translate(740 510)" stroke="#8A93A6" fill="none"><circle r="16"/><path d="M0 -12 L4 0 L0 12 L-4 0Z" fill="#D4B98A" stroke="none"/><text y="-22" text-anchor="middle" fill="#8A93A6" stroke="none" font-size="10" font-family="Cormorant Garamond, serif">N</text></g>
+        </svg>
+        <figcaption class="map-legend">ILLUSTRATIVE MAP · 실제 축척과 다름</figcaption>
+      </figure>
+      <ul class="poi-list" aria-label="주요 목적지">
+        <li><button class="poi" type="button" data-r="0" aria-pressed="false"><span class="n">01</span><span class="t">OO역<span class="s">지하철 2개 노선 환승역(예시)</span></span><span class="m">5<small>분 도보</small></span></button></li>
+        <li><button class="poi" type="button" data-r="1" aria-pressed="false"><span class="n">02</span><span class="t">리버파크<span class="s">강변 산책로 · 자전거길 직결</span></span><span class="m">3<small>분 도보</small></span></button></li>
+        <li><button class="poi" type="button" data-r="2" aria-pressed="false"><span class="n">03</span><span class="t">OO IC<span class="s">도심·외곽 순환로 진입</span></span><span class="m">7<small>분 차량</small></span></button></li>
+        <li><button class="poi" type="button" data-r="3" aria-pressed="false"><span class="n">04</span><span class="t">복합문화센터<span class="s">공연장 · 도서관 · 쇼핑</span></span><span class="m">9<small>분 도보</small></span></button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="sec ov" id="overview" aria-labelledby="ov-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">02 &nbsp;OVERVIEW</p>
+        <h2 id="ov-title" class="rv">숫자로 보는<br><b>더 리버라인</b></h2>
+      </div>
+      <p class="sec-desc rv">지하 6층부터 지상 49층까지, 두 개의 슬림 타워가 강을 향해 나란히 섭니다.</p>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-big rv">
+        <div><div class="num"><span class="count" data-to="612">612</span><small>실</small></div><div class="lab">총 공급 실수</div></div>
+        <div><div class="num"><span class="count" data-to="49">49</span><small>F</small></div><div class="lab">최고 층수</div></div>
+        <div><div class="num"><span class="count" data-to="2">2</span><small>개동</small></div><div class="lab">슬림 트윈 타워</div></div>
+        <div><div class="num"><span class="count" data-to="1.4" data-dec="1">1.4</span><small>대</small></div><div class="lab">실당 주차 대수</div></div>
+      </div>
+      <div class="rv">
+        <table class="spec">
+          <caption>PROJECT SUMMARY</caption>
+          <tbody>
+            <tr><th scope="row">사업명</th><td>더 리버라인 레지던스 (가상)</td></tr>
+            <tr><th scope="row">대지 위치</th><td>OO시 OO구 OO동 000-0 일원</td></tr>
+            <tr><th scope="row">건축 규모</th><td>지하 6층 ~ 지상 49층, 2개동</td></tr>
+            <tr><th scope="row">공급 실수</th><td>오피스텔 612실</td></tr>
+            <tr><th scope="row">전용면적</th><td>59㎡ · 84㎡ · 124㎡ (3개 타입)</td></tr>
+            <tr><th scope="row">주차 대수</th><td>857대 (실당 1.4대)</td></tr>
+            <tr><th scope="row">입주 예정</th><td>2029년 8월 예정</td></tr>
+          </tbody>
+        </table>
+        <p class="note">※ 상기 내용은 포트폴리오용 예시이며, 실제 사업과 무관합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="sec plans" id="plans" aria-labelledby="pl-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">03 &nbsp;FLOOR PLANS</p>
+        <h2 id="pl-title" class="rv">삶의 방식에 맞춘<br><b>세 가지 평면</b></h2>
+      </div>
+      <p class="sec-desc rv">각 공간에 마우스를 올리거나 탭하면 실 이름과 치수를 확인할 수 있습니다.</p>
+    </div>
+    <div class="tabs rv" role="tablist" aria-label="평면 타입">
+      <button class="tab" role="tab" id="tab-59" aria-controls="pn-59" aria-selected="true" tabindex="0"><span class="tn">59A</span><span class="ts">1인·2인 가구</span></button>
+      <button class="tab" role="tab" id="tab-84" aria-controls="pn-84" aria-selected="false" tabindex="-1"><span class="tn">84B</span><span class="ts">가족형 3룸</span></button>
+      <button class="tab" role="tab" id="tab-124" aria-controls="pn-124" aria-selected="false" tabindex="-1"><span class="tn">124P</span><span class="ts">펜트하우스</span></button>
+    </div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="sec com" id="community" aria-labelledby="cm-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">04 &nbsp;COMMUNITY</p>
+        <h2 id="cm-title" class="rv">호텔의 하루를<br><b>집 안으로</b></h2>
+      </div>
+      <p class="sec-desc rv">입주민 전용 커뮤니티는 저층 포디움과 47층 스카이 레벨에 나누어 배치됩니다.</p>
+    </div>
+    <div class="com-list">
+      <article class="fac rv"><span class="idx">01</span><span class="fl">47F</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 34c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3"/><path d="M4 41c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3"/><path d="M14 27V9a4 4 0 0 1 8 0m4 18V9a4 4 0 0 1 8 0M14 15h12M14 21h12"/></svg>
+        <h3>스카이 인피니티 풀</h3><p>강을 수평선처럼 마주하는 47층 실내 수영장.</p></article>
+      <article class="fac rv"><span class="idx">02</span><span class="fl">47F</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 38h32M12 38V24h24v14M18 24V14h12v10"/><path d="M24 8v6M14 30h4m12 0h4"/><circle cx="24" cy="30" r="2"/></svg>
+        <h3>리버뷰 라운지 &amp; 바</h3><p>입주민 초청 모임을 위한 프라이빗 라운지.</p></article>
+      <article class="fac rv"><span class="idx">03</span><span class="fl">B1</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 24h4m28 0h4M10 18v12m28-12v12M14 14v20m20-20v20M14 24h20"/></svg>
+        <h3>피트니스 &amp; 필라테스</h3><p>퍼스널 트레이닝 존과 GX룸을 갖춘 웰니스 센터.</p></article>
+      <article class="fac rv"><span class="idx">04</span><span class="fl">3F</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 10h12a4 4 0 0 1 4 4v26a3 3 0 0 0-3-3H8zM40 10H28a4 4 0 0 0-4 4v26a3 3 0 0 1 3-3h13z"/></svg>
+        <h3>라이브러리 &amp; 워크 라운지</h3><p>조용한 몰입을 위한 1인 부스와 미팅룸.</p></article>
+      <article class="fac rv"><span class="idx">05</span><span class="fl">1F</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 40V20L24 8l16 12v20z"/><path d="M19 40V28h10v12M8 40h32"/></svg>
+        <h3>컨시어지 로비</h3><p>택배·세탁·차량 호출을 돕는 상주 데스크 운영(예정).</p></article>
+      <article class="fac rv"><span class="idx">06</span><span class="fl">RF</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true"><path d="M24 40V22"/><path d="M24 22c0-8 6-12 14-12 0 8-6 12-14 12zM24 28c0-6-5-9-12-9 0 6 5 9 12 9z"/><path d="M10 40h28"/></svg>
+        <h3>루프탑 가든</h3><p>계절 식재와 선셋 데크가 있는 옥상 정원.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="sec sch" id="schedule" aria-labelledby="sc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-no rv">05 &nbsp;SCHEDULE</p>
+        <h2 id="sc-title" class="rv">분양 일정</h2>
+      </div>
+      <p class="sec-desc rv">일정은 사정에 따라 변경될 수 있으며, 확정 일정은 상담을 통해 안내드립니다.</p>
+    </div>
+    <div class="tl-wrap"><span class="tl-track" aria-hidden="true"></span><span class="tl-fill" aria-hidden="true"></span>
+    <ol class="tl" id="tl">
+      <li class="now rv"><span class="dot" aria-hidden="true"></span><div class="d"><small>2026</small>10.10</div><h3>홍보관 오픈</h3><p>사전 예약 방문 운영</p><span class="tag">진행 중</span></li>
+      <li class="rv"><span class="dot" aria-hidden="true"></span><div class="d"><small>2026</small>10.21</div><h3>청약 접수</h3><p>온라인 접수 (1일간)</p></li>
+      <li class="rv"><span class="dot" aria-hidden="true"></span><div class="d"><small>2026</small>10.24</div><h3>당첨자 발표</h3><p>개별 문자 안내</p></li>
+      <li class="rv"><span class="dot" aria-hidden="true"></span><div class="d"><small>2026</small>10.28</div><h3>정당 계약</h3><p>홍보관 내 계약 진행</p></li>
+      <li class="rv"><span class="dot" aria-hidden="true"></span><div class="d"><small>2029</small>08</div><h3>입주 예정</h3><p>입주 지정 기간 별도 안내</p></li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="sec rsv" id="reserve" aria-labelledby="rs-title">
+  <div class="wrap rsv-grid">
+    <div class="rsv-aside">
+      <p class="sec-no rv">06 &nbsp;VISIT</p>
+      <h2 id="rs-title" class="rv">홍보관 방문,<br><b>예약하신 시간은</b><br>온전히 한 분께</h2>
+      <p class="rv">예약제로 운영되어 대기 없이 전담 상담사와 1:1로 유니트와 평면을 둘러보실 수 있습니다.</p>
+      <ul class="perks rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><div><b>1:1 전담 상담</b><span>관심 타입 중심으로 약 60분 진행</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M8 2v4m8-4v4"/></svg><div><b>원하는 날짜·시간 선택</b><span>평일·주말 10:00 – 18:00</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 17h14l-1-6H6zM7 11l2-5h6l2 5M7 20v-3m10 3v-3"/></svg><div><b>전용 주차 제공</b><span>예약 확인 문자 제시 시 무료</span></div></li>
+      </ul>
+      <div class="call rv"><span class="k">분양 문의</span><a href="tel:0000-0000">0000-0000</a></div>
+    </div>
+
+    <div class="card rv" id="formCard">
+      <div id="formWrap">
+        <h3>방문 예약 신청</h3>
+        <p class="sub">표시(<span class="req" style="color:var(--gold)">*</span>)된 항목은 필수입니다. 확인 후 상담사가 연락드립니다.</p>
+        <form id="rsvForm" novalidate>
+          <div class="fg">
+            <div class="field">
+              <label for="f-name">이름<span class="req" aria-hidden="true">*</span></label>
+              <input class="inp" id="f-name" name="name" type="text" autocomplete="name" placeholder="홍길동" required aria-describedby="e-name">
+              <p class="err" id="e-name" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-tel">연락처<span class="req" aria-hidden="true">*</span></label>
+              <input class="inp" id="f-tel" name="tel" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" required aria-describedby="e-tel">
+              <p class="err" id="e-tel" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-date">방문 희망일<span class="req" aria-hidden="true">*</span></label>
+              <input class="inp" id="f-date" name="date" type="date" required aria-describedby="h-date e-date">
+              <span class="hint" id="h-date">내일부터 60일 이내 선택 가능</span>
+              <p class="err" id="e-date" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-type">관심 타입<span class="req" aria-hidden="true">*</span></label>
+              <select class="inp" id="f-type" name="type" required aria-describedby="e-type">
+                <option value="">선택해 주세요</option>
+                <option value="59A">59A · 1인·2인 가구</option>
+                <option value="84B">84B · 가족형 3룸</option>
+                <option value="124P">124P · 펜트하우스</option>
+                <option value="미정">아직 정하지 않음</option>
+              </select>
+              <p class="err" id="e-type" role="alert"></p>
+            </div>
+            <fieldset class="field full">
+              <legend>방문 시간대<span class="req" aria-hidden="true">*</span></legend>
+              <div class="slots" id="slots" aria-describedby="e-slot">
+                <label class="slot"><input type="radio" name="slot" value="10:00"><span>10:00</span></label>
+                <label class="slot"><input type="radio" name="slot" value="12:00"><span>12:00</span></label>
+                <label class="slot"><input type="radio" name="slot" value="14:00"><span>14:00</span></label>
+                <label class="slot"><input type="radio" name="slot" value="16:00"><span>16:00</span></label>
+                <label class="slot"><input type="radio" name="slot" value="18:00"><span>18:00</span></label>
+              </div>
+              <p class="err" id="e-slot" role="alert"></p>
+            </fieldset>
+            <div class="field full">
+              <div class="agree">
+                <input type="checkbox" id="f-agree" name="agree" aria-describedby="e-agree">
+                <div>
+                  <label for="f-agree">개인정보 수집·이용에 동의합니다. <span class="req" aria-hidden="true">*</span></label>
+                  <details><summary>내용 보기</summary>수집 항목: 이름, 연락처, 방문 희망일·시간, 관심 타입 / 이용 목적: 방문 예약 확인 및 분양 상담 / 보유 기간: 상담 종료 후 6개월. 동의를 거부할 수 있으나 이 경우 예약이 제한됩니다. (예시 문구)</details>
+                </div>
+              </div>
+              <p class="err" id="e-agree" role="alert"></p>
+            </div>
+          </div>
+          <button class="btn btn-gold submit" type="submit" id="submitBtn"><span class="lbl">방문 예약 신청하기</span><span class="spin" aria-hidden="true"></span><svg class="lbl-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button>
+        </form>
+      </div>
+      <div class="success" id="success" hidden tabindex="-1">
+        <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="36" cy="36" r="34" opacity=".4"/><path class="ck" d="M22 37l9 9 19-20"/></svg>
+        <h3>예약 신청이 접수되었습니다</h3>
+        <p>담당 상담사가 영업일 기준 1일 이내에 연락드립니다.</p>
+        <p class="hint">(포트폴리오 데모 — 실제로 전송되지 않습니다)</p>
+        <div class="receipt" id="receipt"></div>
+        <button class="btn btn-ghost again" type="button" id="again">새 예약 작성</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <a class="brand" href="#top" aria-label="맨 위로">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x=".75" y=".75" width="38.5" height="38.5" stroke="#D4B98A" stroke-width="1"/><path d="M12 30V10h6.5a5 5 0 0 1 0 10H12m6.5 0L25 30" stroke="#F1DDB2" stroke-width="1.4"/><path d="M8 34c4-2 8-2 12 0s8 2 12 0" stroke="#D4B98A" stroke-width="1"/></svg>
+        <span><b>THE RIVERLINE</b><small>RESIDENCE</small></span>
+      </a>
+      <div>홍보관 운영 10:00 – 19:00 · 사전 예약제 · 분양 문의 0000-0000</div>
+    </div>
+    <p class="disclaimer">본 페이지의 이미지와 수치는 포트폴리오용 예시이며 실제와 무관합니다.</p>
+    <ul class="biz">
+      <li>상호 (주)OOOO디앤씨</li><li>대표 OOO</li><li>사업자등록번호 000-00-00000</li><li>통신판매업 제0000-OO-0000호</li><li>주소 OO시 OO구 OO로 00, 0층</li><li>대표전화 0000-0000</li>
+    </ul>
+    <small>본 홍보물의 CG, 평면, 약도는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다. 분양 조건 및 일정은 관계 법령과 사업 여건에 따라 변경될 수 있습니다.<br>© 2026 THE RIVERLINE RESIDENCE (Fictional). Portfolio demo.</small>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="tel" href="tel:0000-0000" aria-label="분양 상담 전화 0000-0000"><span>분양 상담</span><b>0000-0000</b></a>
+  <a class="btn btn-gold btn-sm" href="#reserve">방문 예약</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function el(tag, attrs, parent){ var e=document.createElementNS(NS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e; }
+  // seeded random for a stable skyline
+  var seed = 7; function rnd(){ seed = (seed*16807) % 2147483647; return (seed-1)/2147483646; }
+
+  /* ---------- SKYLINE ---------- */
+  var HORIZON = 720;
+  function building(parent, x, w, h, opt){
+    var g = el("g", {}, parent);
+    var top = HORIZON - h;
+    el("rect", {x:x, y:top, width:w, height:h, fill:opt.fill}, g);
+    if(opt.cap){ el("rect",{x:x+w*.2, y:top-opt.cap, width:w*.6, height:opt.cap, fill:opt.fill}, g); }
+    if(opt.antenna){ el("line",{x1:x+w/2,y1:top-(opt.cap||0),x2:x+w/2,y2:top-(opt.cap||0)-opt.antenna,stroke:opt.fill,"stroke-width":2},g);
+      el("circle",{cx:x+w/2,cy:top-(opt.cap||0)-opt.antenna,r:2.2,fill:"#E86A5A","class":"beacon"},g); }
+    var ww=opt.ww, wh=opt.wh, gx=opt.gx, gy=opt.gy;
+    var cols = Math.floor((w-gx)/(ww+gx)), rows = Math.floor((h-gy*2)/(wh+gy));
+    var ox = x + (w - (cols*(ww+gx)-gx))/2;
+    for(var r=0;r<rows;r++){
+      for(var c=0;c<cols;c++){
+        var p = rnd();
+        if(p < opt.lit){
+          var o = (0.35 + rnd()*0.6).toFixed(2);
+          var cls = "win" + (rnd()<0.18 ? " f" : "");
+          var rect = el("rect",{x:(ox+c*(ww+gx)).toFixed(1), y:(top+gy+r*(wh+gy)).toFixed(1), width:ww, height:wh, "class":cls, opacity:o}, g);
+          if(cls.indexOf(" f")>-1){ rect.style.setProperty("--o",o); rect.style.setProperty("--d",(5+rnd()*9).toFixed(1)+"s"); rect.style.setProperty("--dl",(-rnd()*12).toFixed(1)+"s"); }
+        }
+      }
+    }
+    return g;
+  }
+  var back = document.getElementById("layerBack"), mid = document.getElementById("layerMid"), front = document.getElementById("layerFront");
+  // back layer: hazy distant towers
+  var x = -40;
+  while(x < 1640){ var w = 40+rnd()*70, h = 120+rnd()*190; building(back,x,w,h,{fill:"#131D31",ww:2,wh:3,gx:5,gy:6,lit:.18}); x += w + rnd()*8; }
+  // mid layer
+  x = -20;
+  while(x < 1620){
+    var w2 = 50+rnd()*80, h2 = 90+rnd()*230;
+    var inHero = x > 820 && x < 1180;
+    if(inHero){ h2 = 80 + rnd()*90; }
+    building(mid,x,w2,h2,{fill:"#0C1426",ww:3,wh:5,gx:6,gy:7,lit:.24,cap:rnd()<.25?14:0,antenna:rnd()<.2?30:0});
+    x += w2 + 4 + rnd()*14;
+  }
+  // front: the Riverline twin towers + low podium
+  function tower(xx, w, h){
+    var g = el("g",{},front);
+    var top = HORIZON - h;
+    el("path",{d:"M"+xx+" "+HORIZON+" V"+(top+18)+" L"+(xx+w*.5)+" "+top+" L"+(xx+w)+" "+(top+18)+" V"+HORIZON+"Z", fill:"url(#gTower)"}, g);
+    // gold crown light
+    el("path",{d:"M"+(xx+4)+" "+(top+22)+" L"+(xx+w*.5)+" "+(top+5)+" L"+(xx+w-4)+" "+(top+22), fill:"none", stroke:"#F1DDB2","stroke-width":2,"class":"crown"}, g);
+    // vertical fins
+    for(var i=1;i<6;i++){ el("line",{x1:xx+w*i/6,y1:top+26,x2:xx+w*i/6,y2:HORIZON,stroke:"#1F2C47","stroke-width":1},g); }
+    // floor windows
+    var fh = (h-40)/49;
+    for(var f=0; f<49; f++){
+      var y = top + 30 + f*fh;
+      for(var c=0;c<6;c++){
+        if(rnd()<0.52){
+          var o=(0.45+rnd()*0.55).toFixed(2), fl = rnd()<.14;
+          var r = el("rect",{x:(xx+2+c*w/6).toFixed(1), y:y.toFixed(1), width:(w/6-4).toFixed(1), height:(fh*.55).toFixed(1), "class":"win"+(fl?" f":""), opacity:o}, g);
+          if(fl){ r.style.setProperty("--o",o); r.style.setProperty("--d",(6+rnd()*10).toFixed(1)+"s"); r.style.setProperty("--dl",(-rnd()*14).toFixed(1)+"s"); }
+        }
+      }
+    }
+  }
+  tower(930, 88, 500);
+  tower(1040, 80, 452);
+  // podium
+  el("rect",{x:900,y:HORIZON-46,width:250,height:46,fill:"#0A1120"},front);
+  for(var p=0;p<12;p++){ el("rect",{x:910+p*20,y:HORIZON-34,width:14,height:18,"class":"win",opacity:(.12+rnd()*.25).toFixed(2)},front); }
+  // left/right front low buildings
+  [[-10,120,170],[120,90,120],[220,70,210],[1240,110,190],[1360,90,140],[1460,150,230]].forEach(function(b){ building(front,b[0],b[1],b[2],{fill:"#070D19",ww:4,wh:6,gx:7,gy:8,lit:.3}); });
+
+  // stars
+  var stars = document.getElementById("stars");
+  for(var s=0;s<70;s++){ el("circle",{cx:(rnd()*1600).toFixed(0), cy:(rnd()*420).toFixed(0), r:(rnd()*1.1+.3).toFixed(2), fill:"#fff", opacity:(rnd()*.5+.1).toFixed(2)}, stars); }
+
+  // water ripples + glints
+  var rip = document.getElementById("ripples");
+  var rg1 = el("g",{"class":"ripple"},rip), rg2 = el("g",{"class":"ripple r2"},rip);
+  for(var i=0;i<46;i++){
+    var yy = HORIZON + 8 + Math.pow(rnd(),1.4)*260;
+    var len = 60 + rnd()*260;
+    el("rect",{x:(rnd()*1800-100).toFixed(0), y:yy.toFixed(1), width:len.toFixed(0), height:(1+rnd()*2.5).toFixed(1), fill:"#03060C", opacity:(.5+rnd()*.5).toFixed(2)}, i%2?rg1:rg2);
+  }
+  for(var j=0;j<26;j++){
+    var gy2 = HORIZON + 14 + rnd()*200, gx2 = 930 + (rnd()-.5)*(80 + (gy2-HORIZON)*.8) + 60;
+    var gl = el("rect",{x:gx2.toFixed(0), y:gy2.toFixed(0), width:(8+rnd()*26).toFixed(0), height:1.4, fill:"#F1DDB2","class":"glint"}, rip);
+    gl.style.animationDelay = (-rnd()*3.6).toFixed(2)+"s";
+    gl.style.animationDuration = (2.4+rnd()*3).toFixed(2)+"s";
+  }
+
+  /* ---------- FLOOR PLANS ---------- */
+  var PLANS = {
+    "59": { title:'59<span>A</span>', label:"1인·2인 가구를 위한 리버뷰 2룸", desc:"거실과 침실 모두 강을 향한 와이드 창. 현관 팬트리와 드레스룸을 갖춘 컴팩트 하이엔드.",
+      spec:[["전용면적","59.94","㎡"],["공급면적","112.30","㎡"],["구성","방2 · 욕실1",""],["공급 실수","288","실"]],
+      feat:["광폭 2.6m 리버뷰 창호","현관 팬트리 + 드레스룸","빌트인 가전 풀옵션(예시)"],
+      w:600, h:380,
+      rooms:[
+        {n:"거실·주방",d:"6.4m × 4.8m",x:40,y:40,w:300,h:190},
+        {n:"침실 1",d:"3.6m × 3.8m",x:340,y:40,w:220,h:170},
+        {n:"드레스룸",d:"2.2m × 1.8m",x:340,y:210,w:120,h:90},
+        {n:"욕실",d:"2.4m × 1.8m",x:460,y:210,w:100,h:90},
+        {n:"침실 2",d:"3.0m × 2.8m",x:40,y:230,w:170,h:110},
+        {n:"현관·팬트리",d:"2.6m × 2.2m",x:210,y:230,w:130,h:110},
+        {n:"다용도",d:"2.0m × 0.8m",x:460,y:300,w:100,h:40}
+      ], glass:[[40,40,560,40]] },
+    "84": { title:'84<span>B</span>', label:"가족을 위한 3룸 코너 설계", desc:"2면 개방 코너 유니트. 주방과 다이닝을 분리해 손님을 맞기에도 여유롭습니다.",
+      spec:[["전용면적","84.97","㎡"],["공급면적","158.44","㎡"],["구성","방3 · 욕실2",""],["공급 실수","276","실"]],
+      feat:["2면 개방 코너 파노라마","독립 다이닝 + 아일랜드 키친","안방 욕실·워크인 드레스룸"],
+      w:600, h:420,
+      rooms:[
+        {n:"거실",d:"5.2m × 4.6m",x:40,y:40,w:220,h:190},
+        {n:"다이닝·주방",d:"4.4m × 3.6m",x:260,y:40,w:170,h:150},
+        {n:"안방",d:"4.0m × 3.8m",x:430,y:40,w:130,h:190},
+        {n:"드레스룸",d:"2.4m × 1.8m",x:430,y:230,w:130,h:70},
+        {n:"안방 욕실",d:"2.4m × 1.8m",x:430,y:300,w:130,h:80},
+        {n:"침실 2",d:"3.2m × 3.0m",x:40,y:230,w:150,h:150},
+        {n:"침실 3",d:"3.0m × 2.8m",x:190,y:260,w:130,h:120},
+        {n:"욕실",d:"2.2m × 1.6m",x:320,y:290,w:110,h:90},
+        {n:"현관",d:"2.2m × 1.6m",x:320,y:190,w:110,h:100},
+        {n:"복도",d:"—",x:190,y:230,w:130,h:30},
+        {n:"팬트리",d:"1.6m × 1.4m",x:260,y:190,w:60,h:40}
+      ], glass:[[40,40,560,40],[560,40,560,230]] },
+    "124": { title:'124<span>P</span>', label:"스카이 레벨 펜트하우스", desc:"45층 이상 한정. 3면 조망 테라스와 프라이빗 라이브러리를 갖춘 시그니처 타입.",
+      spec:[["전용면적","124.86","㎡"],["공급면적","229.10","㎡"],["구성","방3 · 욕실3",""],["공급 실수","48","실"]],
+      feat:["3면 조망 + 전용 테라스","3.3m 천장고(예시)","프라이빗 라이브러리 · 와인 셀러"],
+      w:600, h:440,
+      rooms:[
+        {n:"테라스",d:"9.6m × 1.8m",x:40,y:20,w:520,h:40,terrace:1},
+        {n:"그레이트 룸",d:"7.8m × 5.2m",x:40,y:60,w:280,h:190},
+        {n:"키친·다이닝",d:"4.6m × 4.2m",x:320,y:60,w:150,h:150},
+        {n:"라이브러리",d:"2.8m × 3.6m",x:470,y:60,w:90,h:150},
+        {n:"마스터 스위트",d:"4.8m × 4.4m",x:40,y:250,w:190,h:170},
+        {n:"마스터 욕실",d:"3.0m × 2.4m",x:230,y:330,w:110,h:90},
+        {n:"워크인 드레스",d:"3.0m × 2.0m",x:230,y:250,w:110,h:80},
+        {n:"침실 2",d:"3.4m × 3.2m",x:440,y:210,w:120,h:120},
+        {n:"침실 3",d:"3.2m × 3.0m",x:440,y:330,w:120,h:90},
+        {n:"게스트 욕실",d:"2.2m × 1.8m",x:340,y:330,w:100,h:90},
+        {n:"갤러리 현관",d:"3.2m × 2.4m",x:340,y:210,w:100,h:120},
+        {n:"파우더",d:"1.4m × 1.2m",x:320,y:210,w:20,h:40,hide:1}
+      ], glass:[[40,60,560,60],[560,60,560,330],[40,60,40,250]] }
+  };
+  var checkIcon = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8.5 6 12l8-8"/></svg>';
+  var panelsHost = document.getElementById("panels");
+  Object.keys(PLANS).forEach(function(k, idx){
+    var P = PLANS[k];
+    var sec = document.createElement("div");
+    sec.className = "panel"; sec.id = "pn-"+k; sec.setAttribute("role","tabpanel"); sec.setAttribute("aria-labelledby","tab-"+k); sec.tabIndex = 0;
+    if(idx) sec.hidden = true;
+    var dl = P.spec.map(function(s){ return "<dt>"+s[0]+"</dt><dd"+(/[가-힣]/.test(s[1])?' class="kr"':'')+">"+s[1]+(s[2]?"<small>"+s[2]+"</small>":"")+"</dd>"; }).join("");
+    var fl = P.feat.map(function(f){ return "<li>"+checkIcon+"<span>"+f+"</span></li>"; }).join("");
+    sec.innerHTML = '<div><div class="plan-box"></div><p class="plan-readout" aria-live="polite"><span class="ro">공간을 선택해 보세요</span><span>UNIT PLAN · NOT TO SCALE</span></p></div>' +
+      '<div class="plan-info"><h3>'+P.title+' · '+P.label+'</h3><p>'+P.desc+'</p><dl>'+dl+'</dl><ul class="feat">'+fl+'</ul></div>';
+    panelsHost.appendChild(sec);
+    var svg = el("svg",{viewBox:"0 0 "+P.w+" "+P.h, role:"group", "aria-label":"타입 "+k+" 평면도"});
+    sec.querySelector(".plan-box").appendChild(svg);
+    var readout = sec.querySelector(".ro");
+    P.rooms.forEach(function(r){
+      var g = el("g",{"class":"room", tabindex: r.hide? "-1":"0", role:"button", "aria-label": r.n + (r.d!=="—" ? ", "+r.d : "")}, svg);
+      var rc = el("rect",{x:r.x,y:r.y,width:r.w,height:r.h}, g);
+      if(r.terrace){ rc.setAttribute("stroke-dasharray","4 4"); }
+      if(!r.hide){
+        var t = el("text",{x:r.x+r.w/2, y:r.y+r.h/2 - (r.h>60?8:0)}, g); t.textContent = r.n;
+        if(r.h>60){ var t2 = el("text",{x:r.x+r.w/2, y:r.y+r.h/2+12,"class":"dim"}, g); t2.textContent = r.d; }
+      }
+      function on(){ readout.innerHTML = "<b>"+r.n+"</b> · "+r.d; g.classList.add("on"); }
+      function off(){ g.classList.remove("on"); }
+      g.addEventListener("mouseenter",on); g.addEventListener("focus",on);
+      g.addEventListener("mouseleave",off); g.addEventListener("blur",off);
+      g.addEventListener("click",function(){ on(); });
+      g.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); on(); } });
+    });
+    // outer walls
+    var minX=Infinity,minY=Infinity,maxX=0,maxY=0;
+    P.rooms.forEach(function(r){ if(r.terrace) return; minX=Math.min(minX,r.x); minY=Math.min(minY,r.y); maxX=Math.max(maxX,r.x+r.w); maxY=Math.max(maxY,r.y+r.h); });
+    el("rect",{x:minX,y:minY,width:maxX-minX,height:maxY-minY,"class":"wall"},svg);
+    P.glass.forEach(function(gl){ var v = gl[0]===gl[2]; el("line",{x1:v?gl[0]:gl[0]+12,y1:v?gl[1]+12:gl[1],x2:v?gl[2]:gl[2]-12,y2:v?gl[3]-12:gl[3],"class":"glass-line"},svg); });
+    // entry door arc (bottom)
+    var dx = minX + (maxX-minX)*0.55;
+    el("path",{d:"M"+dx+" "+maxY+" a34 34 0 0 1 34 -34 v34","class":"door"},svg);
+    el("text",{x:maxX,y:maxY+22,"text-anchor":"end",fill:"#8A93A6","font-size":"11","font-family":"Cormorant Garamond, serif","letter-spacing":"3"},svg).textContent="RIVER SIDE ↑";
+  });
+
+  /* ---------- TABS ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function selectTab(t, focus){
+    tabs.forEach(function(x){ var sel = x===t; x.setAttribute("aria-selected", sel); x.tabIndex = sel?0:-1; document.getElementById(x.getAttribute("aria-controls")).hidden = !sel; });
+    if(focus) t.focus();
+    var pn = document.getElementById(t.getAttribute("aria-controls"));
+    if(!reduce && window.gsap){ gsap.fromTo(pn.querySelectorAll(".plan-box, .plan-info > *"),{opacity:0,y:14},{opacity:1,y:0,duration:.6,stagger:.05,ease:"power2.out"}); }
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener("click",function(){ selectTab(t,false); });
+    t.addEventListener("keydown",function(e){
+      var n=null;
+      if(e.key==="ArrowRight") n=tabs[(i+1)%tabs.length];
+      else if(e.key==="ArrowLeft") n=tabs[(i-1+tabs.length)%tabs.length];
+      else if(e.key==="Home") n=tabs[0];
+      else if(e.key==="End") n=tabs[tabs.length-1];
+      if(n){ e.preventDefault(); selectTab(n,true); }
+    });
+  });
+
+  /* ---------- MAP interaction ---------- */
+  var map = document.getElementById("map");
+  var pois = Array.prototype.slice.call(document.querySelectorAll(".poi"));
+  function hl(i){
+    map.classList.toggle("hl", i!==null);
+    Array.prototype.forEach.call(map.querySelectorAll(".rt"),function(g){ g.classList.toggle("on", String(i)===g.getAttribute("data-r")); });
+    pois.forEach(function(p){ var on = String(i)===p.getAttribute("data-r"); p.classList.toggle("on",on); p.setAttribute("aria-pressed",on); });
+  }
+  var pinned = null;
+  pois.forEach(function(p){
+    var i = p.getAttribute("data-r");
+    p.addEventListener("mouseenter",function(){ hl(i); });
+    p.addEventListener("mouseleave",function(){ hl(pinned); });
+    p.addEventListener("focus",function(){ hl(i); });
+    p.addEventListener("blur",function(){ hl(pinned); });
+    p.addEventListener("click",function(){ pinned = (pinned===i)?null:i; hl(pinned); });
+  });
+
+  /* ---------- header + sticky ---------- */
+  var hdr = document.getElementById("hdr"), sticky = document.getElementById("sticky");
+  var heroEl = document.querySelector(".hero"), rsvEl = document.getElementById("reserve");
+  var heroVisible = true, rsvVisible = false;
+  function upd(){ sticky.classList.toggle("hide", heroVisible || rsvVisible); }
+  function onScroll(){ hdr.classList.toggle("scrolled", window.scrollY > 40); }
+  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ heroVisible = e.isIntersecting && e.intersectionRatio > .35; }); upd(); },{threshold:[0,.35,1]}).observe(heroEl);
+    new IntersectionObserver(function(es){ es.forEach(function(e){ rsvVisible = e.isIntersecting; }); upd(); },{threshold:.15}).observe(rsvEl);
+  }
+  upd();
+
+  /* ---------- FORM ---------- */
+  var form = document.getElementById("rsvForm");
+  var fName = document.getElementById("f-name"), fTel = document.getElementById("f-tel"), fDate = document.getElementById("f-date"), fType = document.getElementById("f-type"), fAgree = document.getElementById("f-agree"), slots = document.getElementById("slots");
+  function ymd(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  var t0 = new Date(); t0.setDate(t0.getDate()+1); var t1 = new Date(); t1.setDate(t1.getDate()+60);
+  fDate.min = ymd(t0); fDate.max = ymd(t1);
+
+  function fmtTel(v){
+    var d = v.replace(/\D/g,"").slice(0,11);
+    if(d.indexOf("02")===0){
+      if(d.length<3) return d;
+      if(d.length<6) return d.slice(0,2)+"-"+d.slice(2);
+      if(d.length<10) return d.slice(0,2)+"-"+d.slice(2,5)+"-"+d.slice(5);
+      return d.slice(0,2)+"-"+d.slice(2,6)+"-"+d.slice(6,10);
+    }
+    if(d.length<4) return d;
+    if(d.length<8) return d.slice(0,3)+"-"+d.slice(3);
+    if(d.length<11) return d.slice(0,3)+"-"+d.slice(3,6)+"-"+d.slice(6);
+    return d.slice(0,3)+"-"+d.slice(3,7)+"-"+d.slice(7);
+  }
+  fTel.addEventListener("input",function(){ fTel.value = fmtTel(fTel.value); if(fTel.getAttribute("aria-invalid")==="true") vTel(); });
+
+  function setErr(input, id, msg){
+    document.getElementById(id).textContent = msg ? msg : "";
+    input.setAttribute("aria-invalid", msg ? "true" : "false");
+    return !msg;
+  }
+  function vName(){ var v = fName.value.trim(); return setErr(fName,"e-name", !v ? "이름을 입력해 주세요." : (v.length<2 ? "이름은 2자 이상 입력해 주세요." : (/[0-9!@#$%^&*]/.test(v) ? "이름에 숫자나 특수문자는 쓸 수 없어요." : ""))); }
+  function vTel(){ var d = fTel.value.replace(/\D/g,""); return setErr(fTel,"e-tel", !d ? "연락처를 입력해 주세요." : (!/^(01[016789]\d{7,8}|0[2-6]\d{7,9})$/.test(d) ? "연락처 형식을 확인해 주세요. 예) 010-1234-5678" : "")); }
+  function vDate(){ var v = fDate.value; var msg = ""; if(!v) msg = "방문 희망일을 선택해 주세요."; else if(v < fDate.min || v > fDate.max) msg = "내일부터 60일 이내의 날짜를 선택해 주세요."; return setErr(fDate,"e-date",msg); }
+  function vType(){ return setErr(fType,"e-type", fType.value ? "" : "관심 타입을 선택해 주세요."); }
+  function vSlot(){ var c = form.querySelector('input[name="slot"]:checked'); return setErr(slots,"e-slot", c ? "" : "방문 시간대를 선택해 주세요."); }
+  function vAgree(){ return setErr(fAgree,"e-agree", fAgree.checked ? "" : "예약 확인을 위해 개인정보 수집·이용 동의가 필요합니다."); }
+
+  fName.addEventListener("blur", function(){ if(fName.value) vName(); });
+  fName.addEventListener("input", function(){ if(fName.getAttribute("aria-invalid")==="true") vName(); });
+  fTel.addEventListener("blur", function(){ if(fTel.value) vTel(); });
+  fDate.addEventListener("change", vDate);
+  fType.addEventListener("change", vType);
+  fAgree.addEventListener("change", vAgree);
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="slot"]'), function(r){ r.addEventListener("change", vSlot); });
+
+  var btn = document.getElementById("submitBtn");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var checks = [[vName,fName],[vTel,fTel],[vDate,fDate],[vType,fType],[vSlot,form.querySelector('input[name="slot"]')],[vAgree,fAgree]];
+    var firstBad = null;
+    checks.forEach(function(c){ if(!c[0]() && !firstBad) firstBad = c[1]; });
+    if(firstBad){ firstBad.focus(); return; }
+    btn.disabled = true; btn.classList.add("loading"); btn.querySelector(".lbl").textContent = "접수 중…";
+    setTimeout(function(){
+      var slot = form.querySelector('input[name="slot"]:checked').value;
+      var dd = new Date(fDate.value+"T00:00:00"); var wd = "일월화수목금토"[dd.getDay()];
+      var no = "RL-" + fDate.value.replace(/-/g,"").slice(2) + "-" + String(Math.floor(1000+Math.random()*9000));
+      var rows = [["예약 번호",no],["성함",fName.value.trim()+" 님"],["방문 일시",fDate.value.replace(/-/g,".")+" ("+wd+") "+slot],["관심 타입",fType.value]];
+      var rc = document.getElementById("receipt"); rc.innerHTML = "";
+      rows.forEach(function(r){ var d = document.createElement("div"); var s=document.createElement("span"); s.textContent=r[0]; var b=document.createElement("b"); b.textContent=r[1]; d.appendChild(s); d.appendChild(b); rc.appendChild(d); });
+      document.getElementById("formWrap").hidden = true;
+      var ok = document.getElementById("success"); ok.hidden = false; ok.focus();
+      if(!reduce && window.gsap){ gsap.from(ok.children,{opacity:0,y:12,stagger:.08,duration:.6,ease:"power2.out"}); }
+    }, 900);
+  });
+  document.getElementById("again").addEventListener("click", function(){
+    form.reset(); ["e-name","e-tel","e-date","e-type","e-slot","e-agree"].forEach(function(id){ document.getElementById(id).textContent=""; });
+    [fName,fTel,fDate,fType,slots,fAgree].forEach(function(i){ i.removeAttribute("aria-invalid"); });
+    btn.disabled = false; btn.classList.remove("loading"); btn.querySelector(".lbl").textContent = "방문 예약 신청하기";
+    document.getElementById("success").hidden = true; document.getElementById("formWrap").hidden = false; fName.focus();
+  });
+
+  /* ---------- MOTION (GSAP) ---------- */
+  if(!window.gsap || reduce) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // hero intro
+  var tl = gsap.timeline({defaults:{ease:"power3.out"}});
+  tl.from("#layerBack",{y:40,opacity:0,duration:2.2},0)
+    .from("#layerMid",{y:70,opacity:0,duration:2.2},.15)
+    .from("#layerFront",{y:110,opacity:0,duration:2.4},.3)
+    .from(".hero h1 .ln > span",{yPercent:110,duration:1.4,stagger:.14,ease:"expo.out"},.5)
+    .from(".hero-in",{opacity:0,y:18,duration:1.1,stagger:.12},.9)
+    .from(".hero-meta li",{opacity:0,y:20,duration:1,stagger:.08},1.1);
+
+  // hero scroll parallax (decorative layers only)
+  gsap.to("#sky",{yPercent:8,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+  gsap.to(".hero-copy",{opacity:0,y:-40,ease:"none",scrollTrigger:{trigger:".hero",start:"30% top",end:"80% top",scrub:true}});
+
+  // pointer parallax on desktop
+  if(window.matchMedia("(pointer:fine)").matches){
+    var layers = Array.prototype.slice.call(document.querySelectorAll(".plx"));
+    var setters = layers.map(function(l){ return gsap.quickTo(l,"x",{duration:1.2,ease:"power3.out"}); });
+    heroEl.addEventListener("pointermove",function(e){
+      var r = (e.clientX / window.innerWidth) - .5;
+      layers.forEach(function(l,i){ setters[i](-r * parseFloat(l.getAttribute("data-depth"))); });
+    });
+  }
+
+  // generic reveals (content is visible without JS)
+  gsap.set(".rv",{opacity:0});
+  ScrollTrigger.batch(".rv",{
+    start:"top 88%", once:true,
+    onEnter:function(b){ gsap.fromTo(b,{opacity:0,y:28},{opacity:1,y:0,duration:1.1,stagger:.1,ease:"power3.out",overwrite:true}); }
+  });
+
+  // route draw
+  var routes = document.querySelectorAll("#map .route.draw");
+  Array.prototype.forEach.call(routes,function(p){ var L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+  gsap.to(routes,{strokeDashoffset:0,duration:1.6,stagger:.25,ease:"power2.inOut",scrollTrigger:{trigger:"#map",start:"top 70%",once:true}});
+  gsap.from("#map .route-dash",{opacity:0,duration:.8,delay:1.4,scrollTrigger:{trigger:"#map",start:"top 70%",once:true}});
+
+  // counters
+  Array.prototype.forEach.call(document.querySelectorAll(".count"),function(c){
+    var to = parseFloat(c.getAttribute("data-to")), dec = parseInt(c.getAttribute("data-dec")||"0",10), o = {v:0};
+    gsap.to(o,{v:to,duration:2,ease:"power2.out",scrollTrigger:{trigger:c,start:"top 85%",once:true},onUpdate:function(){ c.textContent = dec ? o.v.toFixed(dec) : Math.round(o.v).toLocaleString("ko-KR"); }});
+  });
+
+  // timeline progress
+  var mq = window.matchMedia("(max-width:1024px)");
+  gsap.fromTo(".tl-fill",{scaleX: mq.matches?1:0, scaleY: mq.matches?0:1},{scaleX:1,scaleY:1,ease:"none",scrollTrigger:{trigger:"#tl",start:"top 80%",end:"bottom 60%",scrub:.6}});
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>

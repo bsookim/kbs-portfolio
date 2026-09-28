@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한결경영파트너스 | 정책자금 · 경영 컨설팅</title>
+<meta name="description" content="중소기업 정책자금, 기업 인증, 경영 컨설팅. 무료 상담 신청.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --navy:#0E2A5C; --navy2:#16397A; --navy3:#0A1F45; --gold:#C9A45C; --gold2:#E3C98F;
+  --ink:#141A26; --mute:#5F6878; --line:#E4E8EF; --bg:#F6F8FB; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:Pretendard,"Malgun Gothic",sans-serif;color:var(--ink);background:var(--white);word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.16em;color:var(--gold);margin-bottom:16px}
+.h2{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.3;letter-spacing:-.02em}
+.lead{font-size:clamp(16px,1.6vw,19px);color:var(--mute);line-height:1.75;margin-top:16px}
+section{padding:120px 0;position:relative}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:22px 0}
+.hd.on{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line);padding:14px 0;backdrop-filter:blur(8px)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:#fff;transition:color .35s}
+.logo i{width:34px;height:34px;border:2px solid var(--gold);border-radius:8px;display:grid;place-items:center;font-style:normal;color:var(--gold);font-size:15px}
+.hd.on .logo{color:var(--navy)}
+.nav{display:flex;gap:36px;font-weight:600;font-size:16px}
+.nav a{color:rgba(255,255,255,.88);position:relative;transition:color .35s}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav a:hover::after{width:100%}
+.hd.on .nav a{color:var(--ink)}
+.hd .cta{background:var(--gold);color:var(--navy3);padding:11px 20px;border-radius:999px;font-weight:700;font-size:15px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+.hd.on .burger{color:var(--navy)}
+
+/* hero */
+.hero{min-height:100vh;padding:0;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--navy3) 0%,var(--navy) 45%,var(--navy2) 100%)}
+.hero .grid-bg{position:absolute;inset:-20% -10%;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;transform:perspective(900px) rotateX(55deg) translateY(10%);transform-origin:center bottom}
+.hero .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.orb.a{width:520px;height:520px;background:#2F5FD0;right:-120px;top:-80px}
+.orb.b{width:380px;height:380px;background:var(--gold);left:-120px;bottom:-120px;opacity:.25}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 16px;font-size:14px;color:rgba(255,255,255,.85)}
+.hero .badge b{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.2)}
+.hero h1{font-size:clamp(36px,6.4vw,76px);font-weight:800;line-height:1.18;letter-spacing:-.03em;margin:28px 0 24px}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:inline-block}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p{font-size:clamp(16px,1.8vw,20px);color:rgba(255,255,255,.75);line-height:1.7;max-width:620px}
+.hero .btns{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 30px;border-radius:999px;font-weight:700;font-size:17px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.gold{background:var(--gold);color:var(--navy3);box-shadow:0 14px 30px rgba(201,164,92,.35)}
+.btn.line{border:1px solid rgba(255,255,255,.35);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:20px;overflow:hidden;margin-top:72px;max-width:900px}
+.stat{background:rgba(10,31,69,.55);padding:26px 24px;backdrop-filter:blur(6px)}
+.stat b{display:block;font-size:clamp(26px,3vw,36px);font-weight:800;color:#fff}
+.stat b small{font-size:.55em;margin-left:2px;color:var(--gold2)}
+.stat>span{font-size:14px;color:rgba(255,255,255,.6)}
+.scroll-cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.5);z-index:2}
+.scroll-cue::after{content:"";display:block;width:1px;height:40px;background:linear-gradient(var(--gold),transparent);margin:10px auto 0;animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* why */
+.why{background:var(--bg)}
+.why .top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 28px;transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(14,42,92,.12);border-color:transparent}
+.card .num{font-size:14px;font-weight:800;color:var(--gold);letter-spacing:.1em}
+.card .ic{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:grid;place-items:center;margin:18px 0 22px}
+.card .ic svg{width:28px;height:28px;stroke:var(--gold2)}
+.card h3{font-size:21px;font-weight:800;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--mute);line-height:1.65}
+
+/* funds */
+.funds .head{text-align:center;max-width:720px;margin:0 auto 64px}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fund{position:relative;border-radius:24px;padding:36px 32px;overflow:hidden;background:#fff;border:1px solid var(--line);min-height:260px;display:flex;flex-direction:column}
+.fund::before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,var(--navy),var(--navy3));transform:translateY(101%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.fund>*{position:relative;z-index:1;transition:color .4s}
+.fund:hover::before{transform:translateY(0)}
+.fund:hover h3,.fund:hover li{color:#fff}
+.fund:hover .tag{background:rgba(255,255,255,.12);color:var(--gold2)}
+.fund .tag{align-self:flex-start;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:#EEF2FA;color:var(--navy2);margin-bottom:22px;transition:background .4s,color .4s}
+.fund h3{font-size:24px;font-weight:800;margin-bottom:16px}
+.fund ul{list-style:none;margin-top:auto}
+.fund li{font-size:15.5px;color:var(--mute);padding:8px 0;border-top:1px solid rgba(20,26,38,.07);display:flex;gap:10px}
+.fund li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:9px;flex:none}
+
+/* process */
+.process{background:var(--navy3);color:#fff;overflow:hidden}
+.process .lead{color:rgba(255,255,255,.65)}
+.track-wrap{margin-top:70px}
+.track{display:flex;gap:24px;width:max-content;padding-right:24px}
+.step{width:360px;flex:none;border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:40px 34px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.01))}
+.step .n{font-size:64px;font-weight:800;line-height:1;background:linear-gradient(var(--gold2),rgba(201,164,92,.2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:24px;font-weight:800;margin:26px 0 12px}
+.step p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7}
+.progress{height:3px;background:rgba(255,255,255,.12);border-radius:3px;margin-top:40px;overflow:hidden}
+.progress i{display:block;height:100%;width:100%;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+
+/* cases */
+.cases .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:56px;flex-wrap:wrap}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{border-radius:22px;border:1px solid var(--line);padding:30px;background:#fff}
+.case .who{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);margin-bottom:22px}
+.case .who b{color:var(--navy2);font-weight:700}
+.case .amt{font-size:38px;font-weight:800;color:var(--navy)}
+.case .amt small{font-size:18px;margin-left:4px}
+.case .kind{font-size:16px;font-weight:700;margin:6px 0 18px}
+.case p{font-size:15px;color:var(--mute);line-height:1.65}
+.case .bar{height:6px;background:#EEF2FA;border-radius:6px;margin-top:22px;overflow:hidden}
+.case .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--navy2),var(--gold));width:0}
+.note{font-size:13px;color:#9AA3B2;margin-top:18px}
+.marquee{margin-top:90px;border-block:1px solid var(--line);padding:26px 0;overflow:hidden;white-space:nowrap}
+.marquee .row{display:inline-flex;gap:56px;font-size:clamp(22px,3vw,34px);font-weight:800;color:#C9D1DE}
+.marquee .row span{display:inline-flex;align-items:center;gap:56px}
+.marquee .row span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--gold)}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--navy3),var(--navy));color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:start}
+.contact .lead{color:rgba(255,255,255,.7)}
+.info{margin-top:40px;display:grid;gap:14px}
+.info div{display:flex;gap:14px;align-items:center;font-size:17px}
+.info i{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-style:normal;color:var(--gold2)}
+form{background:#fff;color:var(--ink);border-radius:28px;padding:40px;box-shadow:0 30px 70px rgba(0,0,0,.3)}
+form h3{font-size:24px;font-weight:800;margin-bottom:6px}
+form .sub{font-size:15px;color:var(--mute);margin-bottom:26px}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font:inherit;font-size:16px;background:var(--bg);transition:border-color .2s,background .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--navy2);background:#fff}
+.fld textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.agree{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--mute);margin:6px 0 22px}
+.agree input{width:18px;height:18px;accent-color:var(--navy2)}
+.err{color:#D14343;font-size:13px;margin-top:6px;display:none}
+form button{width:100%;border:0;cursor:pointer;background:var(--navy);color:#fff;font:inherit;font-weight:800;font-size:18px;padding:18px;border-radius:14px;transition:background .25s}
+form button:hover{background:var(--navy2)}
+.done{display:none;text-align:center;padding:40px 10px}
+.done b{display:block;font-size:24px;margin:16px 0 8px}
+
+footer{background:#081733;color:rgba(255,255,255,.5);font-size:14px;padding:40px 0;line-height:1.8}
+footer b{color:#fff}
+
+.float{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--gold);color:var(--navy3);font-weight:800;border-radius:999px;padding:16px 22px;box-shadow:0 14px 30px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+.float::before{content:"";width:10px;height:10px;border-radius:50%;background:#16A34A;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}100%{box-shadow:0 0 0 12px rgba(22,163,74,0)}}
+
+.reveal{opacity:0;transform:translateY(40px)}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--gold);color:var(--navy3);padding:12px 18px;border-radius:10px;font-weight:700;transition:top .2s}
+.skip:focus{top:16px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+:focus:not(:focus-visible){outline:none}
+.btn:active,form button:active,.float:active{transform:scale(.96)}
+.btn,.hd .cta,.float,.nav a{min-height:44px;display:inline-flex;align-items:center}
+.cursor{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:200;mix-blend-mode:difference;opacity:0}
+.cursor-ring{position:fixed;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:1.5px solid var(--gold);pointer-events:none;z-index:199;opacity:0}
+@media (hover:none),(pointer:coarse){.cursor,.cursor-ring{display:none}}
+
+@media (max-width:960px){
+  .nav,.hd .cta{display:none}
+  .burger{display:block}
+  .nav.open{display:flex;position:fixed;inset:64px 0 auto 0;flex-direction:column;background:#fff;padding:24px;gap:18px;box-shadow:0 20px 30px rgba(0,0,0,.1)}
+  .nav.open a{color:var(--ink)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .why .top,.contact .grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .fgrid,.cgrid{grid-template-columns:1fr}
+  section{padding:90px 0}
+  .step{width:100%}
+  .hero{padding:110px 0 90px}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  form{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .cursor,.cursor-ring{display:none}
+}
+</style>
+</head>
+<body>
+<a href="#contact" class="skip">상담 신청으로 바로가기</a>
+<div class="cursor" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+
+<header class="hd" id="hd">
+  <div class="wrap">
+    <a href="#top" class="logo"><i>HK</i>한결경영파트너스</a>
+    <nav class="nav" id="nav">
+      <a href="#why">회사소개</a>
+      <a href="#funds">정책자금</a>
+      <a href="#cases">진행사례</a>
+      <a href="#contact">고객센터</a>
+    </nav>
+    <a href="#contact" class="cta">무료 상담 신청</a>
+    <button class="burger" id="burger" aria-label="메뉴 열기">&#9776;</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="grid-bg"></div>
+  <div class="orb a"></div><div class="orb b"></div>
+  <div class="wrap">
+    <span class="badge"><b></b>2026년 하반기 정책자금 접수 중</span>
+    <h1>
+      <span class="line"><span>풍부한 경험과 전문성으로</span></span>
+      <span class="line"><span><em>기업의 성장</em>을 돕습니다</span></span>
+    </h1>
+    <p class="hero-p">정책자금 · 기업 인증 · 경영 컨설팅까지. 우리 회사에 맞는 자금을 찾아 신청부터 승인까지 함께합니다.</p>
+    <div class="btns">
+      <a href="#contact" class="btn gold">무료 진단 받기 &rarr;</a>
+      <a href="#funds" class="btn line">정책자금 알아보기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b><span class="count" data-to="1200">0</span><small>+</small></b><span>누적 상담 기업</span></div>
+      <div class="stat"><b><span class="count" data-to="380">0</span><small>억</small></b><span>누적 자금 조달</span></div>
+      <div class="stat"><b><span class="count" data-to="92">0</span><small>%</small></b><span>재의뢰율</span></div>
+      <div class="stat"><b><span class="count" data-to="15">0</span><small>년</small></b><span>평균 전문가 경력</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="top">
+      <div class="reveal">
+        <span class="eyebrow">WHY US</span>
+        <h2 class="h2">한결경영파트너스를<br>믿고 선택하는 이유</h2>
+      </div>
+      <p class="lead reveal">자금이 필요한 시점, 받을 수 있는 한도, 서류 준비까지. 대표님이 본업에 집중하시는 동안 복잡한 절차는 저희가 맡습니다.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="num">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>무료 기업 진단</h3><p>재무 상태와 업종을 분석해 받을 수 있는 자금과 한도를 먼저 알려드립니다.</p></div>
+      <div class="card"><span class="num">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>맞춤 전략 수립</h3><p>기관별 심사 기준에 맞춰 사업계획서와 신청 전략을 설계합니다.</p></div>
+      <div class="card"><span class="num">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><h3>서류 준비 대행</h3><p>번거로운 서류 준비와 제출을 전담 매니저가 처음부터 끝까지 챙깁니다.</p></div>
+      <div class="card"><span class="num">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>사후 관리</h3><p>자금 집행 이후 인증, 추가 자금, 세무까지 성장 단계별로 관리합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="funds" id="funds">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">POLICY FUND</span>
+      <h2 class="h2">우리 회사에 맞는 정책자금</h2>
+      <p class="lead">정부와 공공기관이 지원하는 저금리 자금을 기업 상황에 맞게 연결해 드립니다.</p>
+    </div>
+    <div class="fgrid">
+      <div class="fund"><span class="tag">운전 자금</span><h3>중소기업 운전자금</h3><ul><li>원자재 구입, 인건비 등 운영 자금</li><li>시중보다 낮은 정책 금리</li><li>업력 · 매출 기준 맞춤 한도</li></ul></div>
+      <div class="fund"><span class="tag">시설 자금</span><h3>시설 · 설비 자금</h3><ul><li>공장 · 사옥 매입 및 설비 도입</li><li>장기 분할 상환 가능</li><li>스마트공장 연계 지원</li></ul></div>
+      <div class="fund"><span class="tag">창업 자금</span><h3>창업 · 청년 자금</h3><ul><li>업력 7년 이내 창업 기업</li><li>청년 창업자 우대 조건</li><li>사업계획서 작성 지원</li></ul></div>
+      <div class="fund"><span class="tag">보증</span><h3>신용보증기금 · 기술보증</h3><ul><li>담보 없이 보증서로 대출</li><li>기술력 평가 기반 보증</li><li>보증 한도 상향 전략</li></ul></div>
+      <div class="fund"><span class="tag">인증</span><h3>벤처 · 이노비즈 인증</h3><ul><li>정책자금 가점과 세제 혜택</li><li>인증 요건 사전 진단</li><li>취득 절차 전 과정 대행</li></ul></div>
+      <div class="fund"><span class="tag">R&amp;D</span><h3>연구개발 · 고용 지원금</h3><ul><li>정부 R&amp;D 과제 신청</li><li>고용 창출 지원금 확인</li><li>기업부설연구소 설립</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="eyebrow">PROCESS</span>
+    <h2 class="h2">상담부터 자금 집행까지<br>5단계로 끝납니다</h2>
+    <p class="lead">한 명의 전담 매니저가 전 과정을 책임집니다.</p>
+  </div>
+  <div class="track-wrap">
+    <div class="wrap"><div class="track" id="track">
+      <div class="step"><div class="n">01</div><h3>무료 상담 신청</h3><p>아래 상담 폼이나 전화로 간단한 기업 정보를 남겨주세요.</p></div>
+      <div class="step"><div class="n">02</div><h3>기업 진단</h3><p>재무제표와 업종을 분석해 가능한 자금 목록과 예상 한도를 안내합니다.</p></div>
+      <div class="step"><div class="n">03</div><h3>서류 준비 · 신청</h3><p>사업계획서와 제출 서류를 함께 준비하고 기관에 접수합니다.</p></div>
+      <div class="step"><div class="n">04</div><h3>심사 대응 · 집행</h3><p>현장 실사와 심사에 동행하고, 승인 후 자금 집행까지 확인합니다.</p></div>
+      <div class="step"><div class="n">05</div><h3>사후 관리</h3><p>추가 자금, 인증, 세무까지 다음 성장 단계를 함께 준비합니다.</p></div>
+    </div></div>
+    <div class="wrap"><div class="progress"><i id="prog"></i></div></div>
+  </div>
+</section>
+
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal">
+        <span class="eyebrow">SUCCESS CASE</span>
+        <h2 class="h2">진행 사례</h2>
+      </div>
+      <p class="lead reveal" style="max-width:460px">업종과 규모가 달라도, 맞는 자금은 있습니다.</p>
+    </div>
+    <div class="cgrid">
+      <div class="case"><div class="who"><b>제조업</b><span>업력 6년 · 대구</span></div><div class="amt"><span class="count" data-to="5">0</span><small>억 원</small></div><div class="kind">시설자금 승인</div><p>노후 설비 교체가 필요했던 부품 제조사. 스마트공장 연계로 한도를 높였습니다.</p><div class="bar"><i data-w="92"></i></div></div>
+      <div class="case"><div class="who"><b>IT 서비스</b><span>업력 2년 · 서울</span></div><div class="amt"><span class="count" data-to="3">0</span><small>억 원</small></div><div class="kind">기술보증 + 창업자금</div><p>매출이 적은 초기 기업. 기술력 평가로 보증을 받아 운전자금을 확보했습니다.</p><div class="bar"><i data-w="74"></i></div></div>
+      <div class="case"><div class="who"><b>유통 · 도소매</b><span>업력 9년 · 경북</span></div><div class="amt"><span class="count" data-to="2">0</span><small>억 원</small></div><div class="kind">운전자금 + 벤처 인증</div><p>벤처 인증을 먼저 취득해 가점을 받고 운전자금 한도를 늘렸습니다.</p><div class="bar"><i data-w="63"></i></div></div>
+    </div>
+    <p class="note">* 예시 화면입니다. 실제 사례와 수치는 고객사 자료로 교체됩니다.</p>
+  </div>
+  <div class="marquee"><div class="row" id="marquee">
+    <span>운전자금</span><span>시설자금</span><span>창업자금</span><span>기술보증</span><span>벤처 인증</span><span>이노비즈</span><span>R&amp;D 과제</span><span>고용지원금</span>
+    <span>운전자금</span><span>시설자금</span><span>창업자금</span><span>기술보증</span><span>벤처 인증</span><span>이노비즈</span><span>R&amp;D 과제</span><span>고용지원금</span>
+  </div></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow">CONTACT</span>
+      <h2 class="h2">무료 경영 컨설팅 신청</h2>
+      <p class="lead">정책자금 지원 상담을 남겨주시면 담당 매니저가 영업일 기준 24시간 안에 연락드립니다.</p>
+      <div class="info">
+        <div><i>&#9742;</i>1600-0000</div>
+        <div><i>&#9719;</i>평일 09:00 - 18:00</div>
+        <div><i>&#9993;</i>contact@example.com</div>
+      </div>
+    </div>
+    <form id="form" class="reveal" novalidate>
+      <div id="formBody">
+        <h3>상담 신청</h3>
+        <p class="sub">입력하신 정보는 상담 목적으로만 사용됩니다.</p>
+        <div class="row2">
+          <div class="fld"><label for="name">이름</label><input id="name" placeholder="홍길동"><p class="err" id="eName">이름을 입력해 주세요.</p></div>
+          <div class="fld"><label for="tel">연락처</label><input id="tel" inputmode="numeric" placeholder="010-1234-5678"><p class="err" id="eTel">연락처를 정확히 입력해 주세요.</p></div>
+        </div>
+        <div class="fld"><label for="type">관심 분야</label>
+          <select id="type"><option>정책자금</option><option>기업 인증</option><option>경영 컨설팅</option><option>기타</option></select>
+        </div>
+        <div class="fld"><label for="msg">내용</label><textarea id="msg" placeholder="업종, 업력, 필요한 자금 규모 등을 적어주세요."></textarea></div>
+        <label class="agree"><input type="checkbox" id="agree"> 개인정보 수집 및 이용에 동의합니다.</label>
+        <p class="err" id="eAgree" style="margin:-14px 0 16px">개인정보 수집에 동의해 주세요.</p>
+        <button type="submit">상담 신청하기</button>
+      </div>
+      <div class="done" id="done" role="status" aria-live="polite">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+        <b>상담 신청이 접수됐어요</b>
+        <p style="color:var(--mute)">담당 매니저가 곧 연락드리겠습니다.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>한결경영파트너스</b><br>
+    상호명: 한결경영파트너스 | 대표: 홍길동 | 사업자등록번호: 000-00-00000<br>
+    이용약관 · 개인정보처리방침<br>
+    COPYRIGHT 한결경영파트너스 &copy; 2026. ALL RIGHTS RESERVED.
+  </div>
+</footer>
+
+<a href="#contact" class="float">무료 상담</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const hd = document.getElementById('hd');
+ScrollTrigger.create({ start: 80, onUpdate: s => hd.classList.toggle('on', s.scroll() > 80) });
+
+document.getElementById('burger').addEventListener('click', () => document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  const id = a.getAttribute('href');
+  if (id.length < 2) return;
+  e.preventDefault();
+  document.getElementById('nav').classList.remove('open');
+  gsap.to(window, { duration: reduce ? 0 : 1.1, scrollTo: { y: id, offsetY: 60 }, ease: 'power3.inOut' });
+}));
+
+function countUp(el) {
+  const to = +el.dataset.to, obj = { v: 0 };
+  gsap.to(obj, { v: to, duration: 2, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(obj.v).toLocaleString() });
+}
+
+if (!reduce) {
+  const intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
+  intro.from('.hero .badge', { y: 20, opacity: 0, duration: .8 })
+    .from('.hero h1 .line span', { yPercent: 110, duration: 1.1, stagger: .14 }, '-=.4')
+    .from('.hero-p', { y: 24, opacity: 0, duration: .9 }, '-=.7')
+    .from('.hero .btn', { y: 20, opacity: 0, duration: .7, stagger: .1 }, '-=.6')
+    .from('.stat', { y: 30, opacity: 0, duration: .8, stagger: .08 }, '-=.5')
+    .add(() => document.querySelectorAll('.hero .count').forEach(countUp), '-=.6');
+
+  gsap.to('.orb.a', { yPercent: 40, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.grid-bg', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.hero .wrap', { yPercent: -12, opacity: .2, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  gsap.utils.toArray('.reveal').forEach(el => gsap.to(el, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%' } }));
+
+  gsap.from('.card', { y: 60, opacity: 0, duration: .9, stagger: .12, ease: 'power3.out', scrollTrigger: { trigger: '.cards', start: 'top 80%' } });
+  gsap.from('.fund', { y: 50, opacity: 0, scale: .96, duration: .9, stagger: { each: .08, grid: 'auto', from: 'start' }, ease: 'power3.out', scrollTrigger: { trigger: '.fgrid', start: 'top 80%' } });
+
+  ScrollTrigger.matchMedia({
+    '(min-width: 961px)': () => {
+      const track = document.getElementById('track');
+      const dist = () => track.scrollWidth - track.parentElement.clientWidth;
+      gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '.process', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true } });
+      gsap.to('#prog', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.process', start: 'top top', end: () => '+=' + dist(), scrub: 1, invalidateOnRefresh: true } });
+    },
+    '(max-width: 960px)': () => {
+      document.getElementById('track').style.cssText = 'flex-direction:column;width:auto;padding:0';
+      gsap.from('.step', { y: 40, opacity: 0, stagger: .12, scrollTrigger: { trigger: '#track', start: 'top 80%' } });
+      gsap.to('#prog', { scaleX: 1, scrollTrigger: { trigger: '#track', start: 'top 70%', end: 'bottom 60%', scrub: true } });
+    }
+  });
+
+  ScrollTrigger.batch('.case', { start: 'top 85%', once: true, onEnter: batch => {
+    gsap.from(batch, { y: 50, opacity: 0, duration: .9, stagger: .12, ease: 'power3.out' });
+    batch.forEach(c => { countUp(c.querySelector('.count')); const b = c.querySelector('.bar i'); gsap.to(b, { width: b.dataset.w + '%', duration: 1.6, delay: .3, ease: 'power3.out' }); });
+  }});
+
+  const mq = document.getElementById('marquee');
+  const loop = gsap.to(mq, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
+  ScrollTrigger.create({ trigger: '.marquee', onUpdate: s => gsap.to(loop, { timeScale: s.direction * (1 + Math.min(Math.abs(s.getVelocity()) / 400, 4)), duration: .3, overwrite: true, onComplete: () => gsap.to(loop, { timeScale: s.direction, duration: .6 }) }) });
+
+  gsap.from('.float', { y: 80, opacity: 0, duration: .8, delay: 1.6, ease: 'back.out(1.6)' });
+
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    const dot = document.querySelector('.cursor'), ring = document.querySelector('.cursor-ring');
+    const dx = gsap.quickTo(dot, 'x', { duration: .15 }), dy = gsap.quickTo(dot, 'y', { duration: .15 });
+    const rx = gsap.quickTo(ring, 'x', { duration: .5, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: .5, ease: 'power3' });
+    window.addEventListener('mousemove', e => { gsap.set([dot, ring], { opacity: 1 }); dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY); });
+    document.querySelectorAll('a, button, .fund, .case, input, select, textarea').forEach(el => {
+      el.addEventListener('mouseenter', () => gsap.to(ring, { scale: 1.8, borderColor: '#E3C98F', duration: .3 }));
+      el.addEventListener('mouseleave', () => gsap.to(ring, { scale: 1, duration: .3 }));
+    });
+    document.querySelectorAll('.btn, .hd .cta, .float').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        gsap.to(btn, { x: (e.clientX - r.left - r.width / 2) * .25, y: (e.clientY - r.top - r.height / 2) * .35, duration: .4, ease: 'power3.out' });
+      });
+      btn.addEventListener('mouseleave', () => gsap.to(btn, { x: 0, y: 0, duration: .6, ease: 'elastic.out(1,.4)' }));
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+        gsap.to(card, { rotationY: px * 8, rotationX: -py * 8, transformPerspective: 800, duration: .4 });
+      });
+      card.addEventListener('mouseleave', () => gsap.to(card, { rotationY: 0, rotationX: 0, duration: .6 }));
+    });
+  }
+} else {
+  document.querySelectorAll('.count').forEach(el => el.textContent = (+el.dataset.to).toLocaleString());
+  document.querySelectorAll('.bar i').forEach(b => b.style.width = b.dataset.w + '%');
+}
+
+const form = document.getElementById('form');
+const show = (id, on) => document.getElementById(id).style.display = on ? 'block' : 'none';
+['name', 'tel'].forEach(id => document.getElementById(id).addEventListener('input', () => show(id === 'name' ? 'eName' : 'eTel', false)));
+document.getElementById('agree').addEventListener('change', () => show('eAgree', false));
+document.getElementById('tel').addEventListener('input', e => {
+  const d = e.target.value.replace(/\D/g, '').slice(0, 11);
+  e.target.value = d.length < 4 ? d : d.length < 8 ? d.slice(0, 3) + '-' + d.slice(3) : d.slice(0, 3) + '-' + d.slice(3, d.length - 4) + '-' + d.slice(-4);
+});
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nameOk = document.getElementById('name').value.trim().length > 0;
+  const telOk = /^01\d-\d{3,4}-\d{4}$/.test(document.getElementById('tel').value);
+  const agreeOk = document.getElementById('agree').checked;
+  show('eName', !nameOk); show('eTel', !telOk); show('eAgree', !agreeOk);
+  if (!nameOk || !telOk || !agreeOk) return;
+  gsap.to('#formBody', { opacity: 0, y: -10, duration: .3, onComplete: () => {
+    show('formBody', false); show('done', true);
+    gsap.from('#done', { opacity: 0, scale: .9, duration: .5, ease: 'back.out(1.7)' });
+  }});
+});
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);transition:transform .2s}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+</body>
+</html>
