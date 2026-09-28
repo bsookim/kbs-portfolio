@@ -2,3 +2,5 @@ _check/
 sites/*/shot-*.png
 *.py
 __pycache__/
+sites/*/full/
+sites/*/*.png
