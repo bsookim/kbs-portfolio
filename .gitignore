@@ -4,3 +4,4 @@ sites/*/shot-*.png
 __pycache__/
 sites/*/full/
 sites/*/*.png
+_photos/

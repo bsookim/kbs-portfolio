@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>허니팝 파티 · 풍선장식 · 포토존 · 파티 스타일링</title>
+<meta name="description" content="돌잔치, 생일파티, 기업행사, 학교행사 풍선장식과 포토존. 허니팝 파티가 공간을 가장 즐거운 순간으로 바꿔 드립니다.">
+<meta name="theme-color" content="#FFD43B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&family=Bagel+Fat+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --honey:#FFD43B; --honey-2:#FFE680; --honey-3:#FFF4C2; --cream:#FFFBEA;
+  --ink:#1F1A12; --ink-2:#4A4232; --ink-3:#7A705C;
+  --pink:#FF7EB6; --sky:#6CC4FF; --mint:#5FD3A5; --orange:#FF9A3C;
+  --r:28px; --line:2.5px;
+  --f-disp:"Jua","Pretendard",sans-serif;
+  --f-latin:"Bagel Fat One","Jua",sans-serif;
+  --f-body:"Pretendard","Gowun Dodum",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7;word-break:keep-all;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:var(--honey);border-bottom:var(--line) solid var(--ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-latin);font-size:24px;letter-spacing:.5px;line-height:1}
+.logo i{width:30px;height:36px;background:var(--pink);border:var(--line) solid var(--ink);border-radius:50% 50% 48% 48%/58% 58% 42% 42%;position:relative;display:block}
+.logo i::after{content:"";position:absolute;left:50%;bottom:-9px;width:2px;height:8px;background:var(--ink);transform:translateX(-50%)}
+.logo small{display:block;font-family:var(--f-disp);font-size:12px;letter-spacing:0;margin-top:3px;color:var(--ink-2)}
+.nav{display:flex;gap:4px}
+.nav a{font-family:var(--f-disp);font-size:17px;padding:8px 14px;border-radius:999px;transition:background .2s}
+.nav a:hover{background:var(--honey-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;border:var(--line) solid var(--ink);font-family:var(--f-disp);font-size:18px;cursor:pointer;background:var(--ink);color:var(--honey);box-shadow:4px 4px 0 var(--ink);transition:transform .15s var(--ease),box-shadow .15s var(--ease)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.alt{background:#fff;color:var(--ink)}
+.btn.pink{background:var(--pink);color:var(--ink)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:var(--line) solid var(--ink);background:#fff;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2.5px;background:var(--ink);margin:3px auto;border-radius:2px}
+.cat-bar{background:#fff;border-bottom:var(--line) solid var(--ink)}
+.cat-bar .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 0;scrollbar-width:none}
+.cat-bar .wrap::-webkit-scrollbar{display:none}
+.cat-bar a{flex:none;font-family:var(--f-disp);font-size:15px;padding:6px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--cream);transition:background .2s}
+.cat-bar a:hover{background:var(--honey)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--honey);border-bottom:var(--line) solid var(--ink);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:70px 0 90px;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 14px;font-family:var(--f-disp);font-size:15px}
+.eyebrow b{width:8px;height:8px;border-radius:50%;background:var(--pink);display:block}
+.hero h1{font-family:var(--f-disp);font-weight:400;font-size:clamp(44px,6.4vw,86px);line-height:1.08;margin:18px 0 18px;letter-spacing:-1px}
+.hero h1 .hl{position:relative;display:inline-block;padding:0 .12em}
+.hero h1 .hl::before{content:"";position:absolute;inset:.52em -.02em .06em;background:var(--pink);border-radius:10px;z-index:-1;transform:rotate(-1.5deg)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);color:var(--ink-2);max-width:520px;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.stats div{font-family:var(--f-disp);font-size:15px;color:var(--ink-2)}
+.stats b{display:block;font-family:var(--f-latin);font-size:34px;color:var(--ink);line-height:1.1;font-weight:400}
+.hero-art{position:relative;aspect-ratio:1/1.05}
+.hero-art .photo{position:absolute;border:var(--line) solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:8px 8px 0 var(--ink);background:#fff}
+.hero-art .photo img{width:100%;height:100%;object-fit:cover}
+.hero-art .p1{inset:0 18% 20% 0;transform:rotate(-3deg)}
+.hero-art .p2{width:52%;aspect-ratio:1;right:0;bottom:0;transform:rotate(4deg)}
+.sticker{position:absolute;z-index:3;left:-10px;bottom:10%;background:#fff;border:var(--line) solid var(--ink);border-radius:18px;padding:10px 14px;font-family:var(--f-disp);font-size:16px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-6deg)}
+.sticker b{color:#E0457F}
+.balloons{position:absolute;inset:0;z-index:1;pointer-events:none}
+.bl{position:absolute;width:var(--s,70px);height:calc(var(--s,70px)*1.18);border:var(--line) solid var(--ink);border-radius:50% 50% 48% 48%/56% 56% 44% 44%;background:var(--c,var(--pink));opacity:.95}
+.bl::before{content:"";position:absolute;left:22%;top:16%;width:22%;height:18%;border-radius:50%;background:rgba(255,255,255,.7);transform:rotate(-30deg)}
+.bl::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:120px;background:var(--ink);transform:translateX(-50%);opacity:.6}
+.wave{position:absolute;left:0;right:0;bottom:-2px;height:40px;z-index:2}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:var(--honey);overflow:hidden;border-bottom:var(--line) solid var(--ink)}
+.marquee .track{display:flex;width:max-content;animation:mq 26s linear infinite}
+.marquee span{font-family:var(--f-disp);font-size:22px;padding:14px 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
+.marquee span::after{content:"✦";color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- section ---------- */
+section{padding:96px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--f-disp);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.15;margin:8px 0 0;letter-spacing:-.5px}
+.sec-head p{max-width:420px;margin:0;color:var(--ink-2)}
+.tag{font-family:var(--f-latin);font-size:15px;letter-spacing:1px;color:#E0457F}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;background:#fff;border:var(--line) solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 var(--ink);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.card:hover{transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:10px 10px 0 var(--ink)}
+.card .img{aspect-ratio:4/3;overflow:hidden;border-bottom:var(--line) solid var(--ink)}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.card:hover .img img{transform:scale(1.06)}
+.card .body{padding:20px 22px 24px}
+.card h3{font-family:var(--f-disp);font-weight:400;font-size:26px;margin:0 0 4px}
+.card p{margin:0;color:var(--ink-2);font-size:15px}
+.card .num{position:absolute;top:14px;left:14px;background:var(--honey);border:2px solid var(--ink);border-radius:999px;padding:2px 12px;font-family:var(--f-latin);font-size:14px}
+.card .price{display:inline-block;margin-top:12px;font-family:var(--f-disp);font-size:16px;background:var(--honey-3);border-radius:8px;padding:2px 10px}
+
+/* portfolio */
+.pf{background:var(--honey-3);border-block:var(--line) solid var(--ink)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{font-family:var(--f-disp);font-size:16px;padding:8px 18px;border-radius:999px;border:2px solid var(--ink);background:#fff;cursor:pointer;transition:background .2s}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--honey)}
+.grid{columns:3 280px;column-gap:18px}
+.grid figure{break-inside:avoid;margin:0 0 18px;border:var(--line) solid var(--ink);border-radius:22px;overflow:hidden;background:#fff;position:relative;cursor:zoom-in}
+.grid figure img{width:100%;transition:transform .6s var(--ease)}
+.grid figure:hover img{transform:scale(1.04)}
+.grid figcaption{position:absolute;left:12px;bottom:12px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:2px 12px;font-family:var(--f-disp);font-size:14px}
+.grid figure.hide{display:none}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:#fff;border:var(--line) solid var(--ink);border-radius:var(--r);padding:26px 22px;position:relative}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--f-latin);font-size:40px;line-height:1;display:block;margin-bottom:14px;color:var(--c)}
+.step h3{font-family:var(--f-disp);font-weight:400;font-size:22px;margin:0 0 6px}
+.step p{margin:0;font-size:15px;color:var(--ink-2)}
+
+/* pricing */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border:var(--line) solid var(--ink);border-radius:var(--r);padding:30px 26px;display:flex;flex-direction:column;box-shadow:6px 6px 0 var(--ink)}
+.plan.best{background:var(--honey);transform:translateY(-10px)}
+.plan .badge{align-self:flex-start;background:var(--pink);border:2px solid var(--ink);border-radius:999px;padding:0 12px;font-family:var(--f-disp);font-size:14px;margin-bottom:10px}
+.plan h3{font-family:var(--f-disp);font-weight:400;font-size:26px;margin:0}
+.plan .amt{font-family:var(--f-latin);font-size:40px;line-height:1.2;margin:10px 0 4px}
+.plan .amt small{font-family:var(--f-disp);font-size:16px}
+.plan ul{list-style:none;padding:0;margin:16px 0 24px;display:grid;gap:8px;font-size:15px}
+.plan li{display:flex;gap:8px}
+.plan li::before{content:"●";color:#E0457F;font-size:10px;margin-top:7px}
+.plan .btn{margin-top:auto}
+
+/* reviews */
+.reviews{background:var(--ink);color:var(--cream)}
+.reviews .sec-head p{color:#d8cfbd}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv blockquote{margin:0;background:#2C2619;border:2px solid #4A4232;border-radius:var(--r);padding:26px}
+.rv .stars{color:var(--honey);letter-spacing:3px;margin-bottom:10px}
+.rv p{margin:0 0 16px}
+.rv cite{font-style:normal;font-family:var(--f-disp);color:var(--honey-2)}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:860px}
+.faq details{background:#fff;border:var(--line) solid var(--ink);border-radius:20px;padding:0 22px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:var(--f-disp);font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--f-latin);font-size:24px;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;color:var(--ink-2)}
+
+/* quote */
+.quote{background:var(--pink);border-top:var(--line) solid var(--ink)}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.quote h2{font-family:var(--f-disp);font-weight:400;font-size:clamp(36px,4.6vw,60px);line-height:1.12;margin:10px 0 16px}
+.form{background:#fff;border:var(--line) solid var(--ink);border-radius:var(--r);padding:28px;box-shadow:8px 8px 0 var(--ink);display:grid;gap:16px}
+.form label{font-family:var(--f-disp);font-size:16px;display:block;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;min-height:48px;border:2px solid var(--ink);border-radius:14px;padding:10px 14px;background:var(--cream)}
+.form textarea{min-height:100px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{margin:0;cursor:pointer;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-size:15px;background:#fff;transition:background .2s}
+.chips input:checked+label{background:var(--honey)}
+.chips input:focus-visible+label{outline:3px solid var(--pink);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{font-size:13px;color:var(--ink-3);margin:0}
+.toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,20px);background:var(--ink);color:var(--honey);padding:14px 22px;border-radius:999px;font-family:var(--f-disp);opacity:0;pointer-events:none;transition:.3s var(--ease);z-index:90}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+footer{background:var(--ink);color:#cfc6b2;padding:48px 0 120px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:var(--honey)}
+footer .logo small{color:#cfc6b2}
+
+/* floating */
+.fab{position:fixed;right:18px;bottom:22px;z-index:60;display:grid;gap:10px}
+.fab a{width:58px;height:58px;border-radius:50%;border:var(--line) solid var(--ink);display:grid;place-items:center;font-family:var(--f-disp);font-size:13px;line-height:1.1;text-align:center;box-shadow:3px 3px 0 var(--ink);transition:transform .2s var(--ease)}
+.fab a:hover{transform:translateY(-3px)}
+.fab .q{background:var(--pink)}
+.fab .k{background:var(--honey)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(31,26,18,.88);z-index:95;display:none;place-items:center;padding:20px}
+.lb.on{display:grid}
+.lb img{max-height:86vh;border-radius:18px;border:3px solid var(--honey)}
+.lb button{position:absolute;top:16px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:var(--honey);font-size:22px;cursor:pointer}
+
+.reveal{opacity:0;transform:translateY(28px)}
+
+@media (max-width:960px){
+  .nav,.top .btn{display:none}
+  .menu-btn{display:block}
+  .nav.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--honey);border-bottom:var(--line) solid var(--ink);padding:10px 16px 18px}
+  .hero .wrap{grid-template-columns:1fr;padding:44px 0 70px}
+  .bl{display:none}
+  .bl:nth-child(4){display:block;--s:40px!important;top:3%!important;right:3%!important}
+  .hero-art{max-width:460px;width:100%;margin:10px auto 0}
+  .svc,.rv,.pricing{grid-template-columns:1fr}
+  .plan.best{transform:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .quote .wrap{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding:72px 0}
+  .steps,.row2{grid-template-columns:1fr}
+  .stats{gap:18px}
+  .stats b{font-size:28px}
+  .form{padding:20px}
+  .fab{right:12px;bottom:14px}
+  .fab a{width:52px;height:52px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">본문 바로가기</a>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="허니팝 파티 홈"><i></i><span>HONEYPOP<small>풍선장식 · 포토존 · 파티 스타일링</small></span></a>
+    <nav class="nav" id="nav" aria-label="주 메뉴">
+      <a href="#service">서비스</a><a href="#portfolio">포트폴리오</a><a href="#process">진행과정</a><a href="#price">가격</a><a href="#faq">FAQ</a>
+    </nav>
+    <a href="#quote" class="btn">무료 견적 받기</a>
+    <button class="menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="cat-bar" aria-label="행사 종류">
+  <div class="wrap">
+    <a href="#portfolio" data-f="first">돌잔치</a><a href="#portfolio" data-f="birthday">생일파티</a><a href="#portfolio" data-f="biz">기업행사</a><a href="#portfolio" data-f="school">학교행사</a><a href="#portfolio" data-f="welcome">웰컴풍선</a><a href="#portfolio" data-f="photo">포토존</a><a href="#service">풍선 클래스</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="hero" style="padding:0">
+  <div class="balloons" aria-hidden="true">
+    <span class="bl" style="--c:var(--pink);--s:64px;left:4%;top:18%"></span>
+    <span class="bl" style="--c:var(--sky);--s:46px;left:40%;top:8%"></span>
+    <span class="bl" style="--c:#fff;--s:38px;left:48%;top:72%"></span>
+    <span class="bl" style="--c:var(--mint);--s:54px;right:4%;top:6%"></span>
+    <span class="bl" style="--c:var(--orange);--s:40px;left:52%;top:38%"></span>
+  </div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><b></b>이번 달 주말 예약 가능 · 서울 · 경기 · 인천</span>
+      <h1>우리의 하루가<br><span class="hl">팡!</span> 터지는 순간</h1>
+      <p class="lead">돌잔치, 생일파티, 기업행사까지. 풍선 한 송이부터 대형 포토존까지 공간에 딱 맞게 디자인하고, 설치와 철거까지 한 번에 해 드립니다.</p>
+      <div class="ctas">
+        <a href="#quote" class="btn pink">견적 문의하기</a>
+        <a href="#portfolio" class="btn alt">작업 사례 보기</a>
+      </div>
+      <div class="stats">
+        <div><b data-count="1280">0</b>누적 행사</div>
+        <div><b data-count="98" data-suf="%">0</b>재의뢰 · 추천</div>
+        <div><b data-count="24" data-suf="h">0</b>견적 회신</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="photo p1"><img src="img/color.webp" alt="알록달록한 풍선이 가득 모인 파티 장식" width="960" height="638" fetchpriority="high"></div>
+      <div class="photo p2"><img src="img/smile.webp" alt="창가에 떠 있는 노란 스마일 풍선" width="1024" height="683"></div>
+      <div class="sticker">설치 · 철거 <b>포함</b></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q60 0 120 20 T240 20 T360 20 T480 20 T600 20 T720 20 T840 20 T960 20 T1080 20 T1200 20 T1320 20 T1440 20 V40 H0Z" fill="#1F1A12"/></svg>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>돌잔치 풍선</span><span>생일파티</span><span>기업 브랜드 포토존</span><span>학교 졸업식</span><span>웰컴 풍선</span><span>프러포즈 이벤트</span><span>매장 오픈</span><span>베이비샤워</span>
+  <span>돌잔치 풍선</span><span>생일파티</span><span>기업 브랜드 포토존</span><span>학교 졸업식</span><span>웰컴 풍선</span><span>프러포즈 이벤트</span><span>매장 오픈</span><span>베이비샤워</span>
+</div></div>
+
+<section id="service">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag">SERVICE</span><h2>어떤 행사든<br>허니팝이 채워요</h2></div>
+      <p>행사 규모와 공간 사진만 보내주시면 어울리는 컬러와 구성을 먼저 제안드려요.</p>
+    </div>
+    <div class="svc">
+      <article class="card reveal"><span class="num">01</span><div class="img"><img src="img/cake.webp" alt="스프링클이 뿌려진 생일 케이크와 초" loading="lazy" width="960" height="640"></div><div class="body"><h3>돌잔치 · 생일파티</h3><p>아이 이름 레터링 풍선, 테이블 세팅, 가족 포토존까지 집에서도 행사장처럼.</p><span class="price">15만 원부터</span></div></article>
+      <article class="card reveal"><span class="num">02</span><div class="img"><img src="img/venue.webp" alt="전구 조명이 걸린 넓은 연회장" loading="lazy" width="960" height="640"></div><div class="body"><h3>기업 · 브랜드 행사</h3><p>로고 컬러에 맞춘 대형 아치와 포토월. 런칭, 창립기념일, 팝업스토어.</p><span class="price">별도 견적</span></div></article>
+      <article class="card reveal"><span class="num">03</span><div class="img"><img src="img/sky.webp" alt="파란 하늘 아래 빨강 노랑 파랑 풍선 다발" loading="lazy" width="1024" height="768"></div><div class="body"><h3>학교 · 단체 행사</h3><p>입학식, 졸업식, 체육대회 무대 장식. 학교 예산에 맞춰 구성해 드려요.</p><span class="price">30만 원부터</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="pf">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag">PORTFOLIO</span><h2>최근 작업</h2></div>
+      <div class="filters" role="group" aria-label="포트폴리오 분류">
+        <button aria-pressed="true" data-f="all">전체</button><button aria-pressed="false" data-f="birthday">생일 · 돌</button><button aria-pressed="false" data-f="biz">기업</button><button aria-pressed="false" data-f="photo">포토존</button><button aria-pressed="false" data-f="welcome">웰컴</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <figure data-c="photo"><img src="img/gold.webp" alt="천장에 매달린 금색과 흰색 풍선 설치" loading="lazy" width="960" height="1438"><figcaption>골드 실링 포토존</figcaption></figure>
+      <figure data-c="birthday first"><img src="img/dessert.webp" alt="생일 파티 테이블의 컵케이크와 고깔모자" loading="lazy" width="960" height="640"><figcaption>민트 생일파티</figcaption></figure>
+      <figure data-c="welcome"><img src="img/dots.webp" alt="흰 벽돌 벽 앞의 도트무늬 풍선 다발" loading="lazy" width="960" height="1118"><figcaption>웰컴 풍선 다발</figcaption></figure>
+      <figure data-c="biz"><img src="img/drinks.webp" alt="민트색 테이블 위 오렌지 주스 잔" loading="lazy" width="960" height="640"><figcaption>브런치 행사 세팅</figcaption></figure>
+      <figure data-c="birthday"><img src="img/pile.webp" alt="바닥을 가득 채운 형광 풍선" loading="lazy" width="960" height="638"><figcaption>풍선 풀 이벤트</figcaption></figure>
+      <figure data-c="photo school"><img src="img/girl.webp" alt="안개 낀 바닷가에서 노란 풍선을 든 사람" loading="lazy" width="1024" height="683"><figcaption>야외 촬영 소품</figcaption></figure>
+      <figure data-c="biz photo"><img src="img/venue.webp" alt="전구 조명 아래 긴 연회 테이블" loading="lazy" width="960" height="640"><figcaption>기업 연회 스타일링</figcaption></figure>
+      <figure data-c="birthday first"><img src="img/cake.webp" alt="초가 꽂힌 스프링클 케이크" loading="lazy" width="960" height="640"><figcaption>돌상 케이크 테이블</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag">PROCESS</span><h2>4단계면 끝나요</h2></div>
+      <p>처음 맡겨보셔도 괜찮아요. 필요한 건 행사 날짜와 공간 사진뿐이에요.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="--c:#E0457F"><h3>견적 문의</h3><p>행사 종류, 날짜, 장소를 남겨주세요. 24시간 안에 연락드려요.</p></div>
+      <div class="step reveal" style="--c:#2B9BE0"><h3>시안 제안</h3><p>공간 사진을 보고 컬러와 구성 시안 2가지를 보내드려요.</p></div>
+      <div class="step reveal" style="--c:#2FA877"><h3>설치</h3><p>행사 2~3시간 전에 도착해서 설치하고 사진까지 찍어 드려요.</p></div>
+      <div class="step reveal" style="--c:#F07A1A"><h3>철거</h3><p>행사가 끝나면 풍선과 구조물을 깨끗하게 수거해 가요.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag">PRICE</span><h2>가격이 먼저 보여야<br>마음이 편하죠</h2></div>
+      <p>출장비는 서울 기준 포함, 경기·인천은 거리에 따라 1~3만 원 추가돼요.</p>
+    </div>
+    <div class="pricing">
+      <div class="plan reveal"><h3>미니</h3><div class="amt">15<small>만 원~</small></div><ul><li>풍선 가랜드 2m</li><li>레터링 풍선 1개</li><li>테이블 풍선 2개</li><li>설치 · 철거 포함</li></ul><a href="#quote" class="btn alt" data-plan="미니">이걸로 문의</a></div>
+      <div class="plan best reveal"><span class="badge">가장 많이 찾아요</span><h3>스탠다드</h3><div class="amt">35<small>만 원~</small></div><ul><li>포토존 배경 1세트 (2.4m)</li><li>풍선 아치 또는 가랜드 4m</li><li>이름 · 문구 레터링</li><li>현장 사진 촬영 10컷</li></ul><a href="#quote" class="btn" data-plan="스탠다드">이걸로 문의</a></div>
+      <div class="plan reveal"><h3>프리미엄</h3><div class="amt">70<small>만 원~</small></div><ul><li>대형 포토월 + 천장 장식</li><li>브랜드 컬러 맞춤 제작</li><li>입구 웰컴 풍선 2세트</li><li>행사 당일 현장 담당자</li></ul><a href="#quote" class="btn alt" data-plan="프리미엄">이걸로 문의</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" style="color:var(--honey)">REVIEW</span><h2>다녀간 고객님 이야기</h2></div>
+      <p>행사 후기는 고객님 동의를 받고 옮겼어요.</p>
+    </div>
+    <div class="rv">
+      <blockquote class="reveal"><div class="stars" aria-label="별점 5점">★★★★★</div><p>집에서 하는 돌잔치라 걱정했는데 거실이 완전히 달라졌어요. 사진이 다 잘 나와서 가족들이 계속 물어봐요.</p><cite>돌잔치 · 김○○ 님</cite></blockquote>
+      <blockquote class="reveal"><div class="stars" aria-label="별점 5점">★★★★★</div><p>회사 로고 색을 정확히 맞춰주셔서 브랜드 행사 사진이 공식 채널에 그대로 올라갔어요.</p><cite>기업 런칭 행사 · 마케팅팀</cite></blockquote>
+      <blockquote class="reveal"><div class="stars" aria-label="별점 5점">★★★★★</div><p>시안을 두 가지로 보여주셔서 고르기 쉬웠어요. 철거도 깔끔하게 해 주셔서 관리실에서도 좋아했어요.</p><cite>초등학교 졸업식 · 담임선생님</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="tag">FAQ</span><h2>자주 묻는 질문</h2></div></div>
+    <div class="faq">
+      <details class="reveal"><summary>예약은 언제까지 해야 하나요?</summary><p>주말은 2~3주 전 예약을 권해 드려요. 평일은 일주일 전에도 대부분 가능하니 먼저 날짜를 남겨주세요.</p></details>
+      <details class="reveal"><summary>풍선은 얼마나 유지되나요?</summary><p>실내 기준 일반 풍선은 2~3일, 헬륨 풍선은 12~24시간 정도예요. 행사 시간에 맞춰 당일 설치해 드려요.</p></details>
+      <details class="reveal"><summary>설치 장소에 제한이 있나요?</summary><p>집, 호텔, 연회장, 학교, 매장 모두 가능해요. 대관 장소는 설치 가능 시간만 미리 확인해 주세요.</p></details>
+      <details class="reveal"><summary>원하는 문구나 로고도 넣을 수 있나요?</summary><p>이름, 날짜, 문구 레터링은 기본으로 가능하고, 로고는 파일을 보내주시면 시트지나 배너로 제작해 드려요.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="quote">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="tag" style="color:var(--ink)">CONTACT</span>
+      <h2>행사 날짜만 알려주셔도<br>견적이 나와요</h2>
+      <p>남겨주신 내용을 보고 24시간 안에 시안 방향과 예상 금액을 안내드려요. 상담은 무료예요.</p>
+    </div>
+    <form class="form reveal" id="qform" novalidate>
+      <div><label>행사 종류</label>
+        <div class="chips">
+          <input type="radio" name="type" id="t1" value="돌잔치" checked><label for="t1">돌잔치</label>
+          <input type="radio" name="type" id="t2" value="생일파티"><label for="t2">생일파티</label>
+          <input type="radio" name="type" id="t3" value="기업행사"><label for="t3">기업행사</label>
+          <input type="radio" name="type" id="t4" value="학교행사"><label for="t4">학교행사</label>
+          <input type="radio" name="type" id="t5" value="기타"><label for="t5">기타</label>
+        </div>
+      </div>
+      <div class="row2">
+        <div><label for="date">행사 날짜</label><input type="date" id="date" name="date" required></div>
+        <div><label for="plan">원하는 구성</label><select id="plan" name="plan"><option>아직 모르겠어요</option><option>미니</option><option>스탠다드</option><option>프리미엄</option></select></div>
+      </div>
+      <div class="row2">
+        <div><label for="name">이름</label><input id="name" name="name" autocomplete="name" required></div>
+        <div><label for="place">행사 지역</label><input id="place" name="place" placeholder="예: 서울 마포구"></div>
+      </div>
+      <div><label for="msg">원하는 분위기</label><textarea id="msg" name="msg" placeholder="컬러, 참고 사진, 공간 크기 등 편하게 적어주세요"></textarea></div>
+      <button class="btn" type="submit">견적 요청 보내기</button>
+      <p class="note">예시 사이트라 실제로 전송되지는 않아요.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="logo"><i></i><span>HONEYPOP<small>풍선장식 · 포토존 · 파티 스타일링</small></span></div><p style="margin-top:16px">서울 · 경기 · 인천 출장 스타일링<br>상담 시간 10:00 ~ 20:00 (연중무휴)</p></div>
+    <p>이 페이지는 업종별 예시 사이트입니다.<br>사진: StockSnap · rawpixel (CC0)</p>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="#quote" class="q">견적<br>문의</a>
+  <a href="#faq" class="k">자주<br>묻는<br>질문</a>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기"><img alt=""><button aria-label="닫기">✕</button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // mobile menu
+  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+
+  // portfolio filter
+  const btns=[...document.querySelectorAll('.filters button')],figs=[...document.querySelectorAll('#grid figure')];
+  function filter(f){
+    btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f||(f==='first'&&b.dataset.f==='birthday')||(f==='school'&&b.dataset.f==='all')));
+    figs.forEach(g=>g.classList.toggle('hide',!(f==='all'||g.dataset.c.split(' ').includes(f))));
+    if(window.ScrollTrigger) ScrollTrigger.refresh();
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>filter(b.dataset.f)));
+  document.querySelectorAll('.cat-bar a[data-f]').forEach(a=>a.addEventListener('click',()=>filter(a.dataset.f)));
+
+  // lightbox
+  const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  figs.forEach(g=>g.addEventListener('click',()=>{const i=g.querySelector('img');lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on');lb.querySelector('button').focus()}));
+  lb.addEventListener('click',e=>{if(e.target!==lbi)lb.classList.remove('on')});
+  addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+
+  // plan buttons -> form
+  document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('plan').value=b.dataset.plan}));
+
+  // form
+  const toast=document.getElementById('toast');
+  document.getElementById('qform').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.target;
+    if(!f.date.value||!f.name.value.trim()){toast.textContent='행사 날짜와 이름을 입력해 주세요';}
+    else{toast.textContent=f.name.value.trim()+'님, '+f.type.value+' 견적 요청이 접수됐어요 (예시)';f.reset();}
+    toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2600);
+  });
+
+  // count up
+  const counters=document.querySelectorAll('[data-count]');
+  function runCount(el){const end=+el.dataset.count,suf=el.dataset.suf||'';if(reduce){el.textContent=end.toLocaleString()+suf;return}
+    const o={v:0};gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>el.textContent=Math.round(o.v).toLocaleString()+suf})}
+
+  if(!window.gsap||reduce){document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity=1;el.style.transform='none'});counters.forEach(el=>el.textContent=(+el.dataset.count).toLocaleString()+(el.dataset.suf||''));return}
+  gsap.registerPlugin(ScrollTrigger);
+
+  // hero intro
+  const tl=gsap.timeline({defaults:{ease:'back.out(1.6)'}});
+  tl.from('.hero .eyebrow',{y:20,opacity:0,duration:.5})
+    .from('.hero h1',{y:40,opacity:0,duration:.7},'-=.2')
+    .from('.hero .hl',{scale:0,rotate:-20,duration:.6},'-=.3')
+    .from('.hero .lead,.hero .ctas',{y:20,opacity:0,stagger:.1,duration:.5},'-=.3')
+    .from('.hero-art .photo',{scale:.6,opacity:0,stagger:.15,duration:.7},'-=.6')
+    .from('.sticker',{scale:0,rotate:30,duration:.5},'-=.2')
+    .add(()=>counters.forEach(runCount),'-=.4');
+
+  // balloons float
+  gsap.utils.toArray('.bl').forEach((b,i)=>{
+    gsap.from(b,{y:420,opacity:0,duration:2.2,delay:.2+i*.15,ease:'power2.out'});
+    gsap.to(b,{y:'-=18',x:'+='+(i%2?10:-10),rotate:i%2?4:-4,duration:2.6+i*.3,repeat:-1,yoyo:true,ease:'sine.inOut',delay:2.4});
+  });
+  gsap.to('.hero-art .p1',{yPercent:-8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-art .p2',{yPercent:-18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  // reveals
+  ScrollTrigger.batch('.reveal',{start:'top 88%',once:true,onEnter:els=>gsap.to(els,{opacity:1,y:0,stagger:.1,duration:.7,ease:'power3.out'})});
+  gsap.from('#grid figure',{y:40,opacity:0,stagger:.08,duration:.6,ease:'power3.out',scrollTrigger:{trigger:'#grid',start:'top 85%'}});
+})();
+</script>
+<!-- kbs-backlink -->
+<a href="../../" class="kbs-back" aria-label="KBS 포트폴리오로 돌아가기">&larr; KBS 포트폴리오</a>
+<style>
+.kbs-back{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(11,11,12,.86);color:#EDEAE3 !important;font:600 13px/1 Pretendard,"Malgun Gothic",sans-serif;text-decoration:none !important;letter-spacing:0;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.25);border:1px solid rgba(237,234,227,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.kbs-back.kbs-on,.kbs-back:focus-visible{opacity:1;transform:none;pointer-events:auto}
+.kbs-back:hover{transform:translateY(-2px)}
+.kbs-back:focus-visible{outline:2px solid #E8FF5A;outline-offset:3px}
+@media (max-width:640px){.kbs-back{bottom:88px;left:12px;min-height:34px;padding:0 12px;font-size:12px}}
+</style>
+<script>(function(){var b=document.querySelector('.kbs-back');if(!b)return;function u(){b.classList.toggle('kbs-on',(window.scrollY||document.documentElement.scrollTop)>window.innerHeight*.6)}addEventListener('scroll',u,{passive:true});u();})();</script>
+<!-- /kbs-backlink -->
+</body>
+</html>

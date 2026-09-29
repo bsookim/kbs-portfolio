@@ -1,0 +1,62 @@
+{
+  "hero.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/happy-birthday-ICAFQZXX7W",
+    "title": "Happy Birthday"
+  },
+  "chair.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/pink-balloon-Z46FSVZ4TJ",
+    "title": "Pink Balloon"
+  },
+  "pinkwall.webp": {
+    "source": "rawpixel",
+    "license": "cc0",
+    "landing": "https://www.rawpixel.com/image/5948139/free-public-domain-cc0-photo",
+    "title": null
+  },
+  "sky.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/balloon-colorful-B3WZ460ZPB",
+    "title": "Balloon Colorful"
+  },
+  "venue.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/events-venue-5K1C2ZXZZP",
+    "title": "Events Venue"
+  },
+  "cake.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/birthday-cake-W7T1J6B7DM",
+    "title": "Birthday Cake"
+  },
+  "dessert.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/cakes-sprinkles-QQ2WDV12LM",
+    "title": "Cakes Sprinkles"
+  },
+  "lights.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/balloon-decor-0QXOAFWGP1",
+    "title": "Balloon Decor"
+  },
+  "table.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/flower-petal-PV7KCPO58W",
+    "title": "Flower Petal"
+  },
+  "dots.webp": {
+    "source": "stocksnap",
+    "license": "cc0",
+    "landing": "https://stocksnap.io/photo/wall-inside-D7XN8BXAH7",
+    "title": "Wall Inside"
+  }
+}
